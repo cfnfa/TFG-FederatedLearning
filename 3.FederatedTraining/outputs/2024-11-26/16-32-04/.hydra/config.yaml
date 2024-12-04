@@ -1,0 +1,14 @@
+num_rounds: 10
+num_clients: 12
+batch_size: 20
+num_classes: 10
+num_clients_per_round_fit: 8
+num_clients_per_round_eval: 10
+config_fit:
+  lr: 0.01
+  momentum: 0.9
+  local_epochs: 1
+sequence_length: 12
+input_dim: 4
+centralized_learning: false
+min_available_clients: 10

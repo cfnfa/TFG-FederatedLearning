@@ -1,0 +1,607 @@
+[2024-12-03 23:14:49,365][flwr][WARNING] - DEPRECATED FEATURE: flwr.simulation.start_simulation() is deprecated.
+	Instead, use the `flwr run` CLI command to start a local simulation in your Flower app, as shown for example below:
+
+		$ flwr new  # Create a new Flower app from a template
+
+		$ flwr run  # Run the Flower app in Simulation Mode
+
+	Using `start_simulation()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+[2024-12-03 23:14:49,369][flwr][INFO] - Starting Flower simulation, config: num_rounds=10, no round_timeout
+[2024-12-03 23:15:03,752][flwr][INFO] - Flower VCE: Ray initialized with resources: {'accelerator_type:G': 1.0, 'node:__internal_head__': 1.0, 'CPU': 8.0, 'memory': 3621679104.0, 'node:127.0.0.1': 1.0, 'object_store_memory': 1810839552.0, 'GPU': 1.0}
+[2024-12-03 23:15:03,809][flwr][INFO] - Optimize your simulation with Flower VCE: https://flower.ai/docs/framework/how-to-run-simulations.html
+[2024-12-03 23:15:03,810][flwr][INFO] - Flower VCE: Resources for each Virtual Client: {'num_cpus': 2, 'num_gpus': 0.5}
+[2024-12-03 23:15:03,909][flwr][INFO] - Flower VCE: Creating VirtualClientEngineActorPool with 2 actors
+[2024-12-03 23:15:03,910][flwr][INFO] - [INIT]
+[2024-12-03 23:15:03,913][flwr][INFO] - Requesting initial parameters from one random client
+[2024-12-03 23:15:17,410][flwr][WARNING] - Failed to receive initial parameters from the client. Empty initial parameters will be used.
+[2024-12-03 23:15:17,412][flwr][INFO] - Starting evaluation of initial global parameters
+[2024-12-03 23:15:29,526][flwr][INFO] - initial parameters (loss, other metrics): 0.14684054255485535, {'mae': 0.34120023250579834}
+[2024-12-03 23:15:29,528][flwr][INFO] - 
+[2024-12-03 23:15:29,529][flwr][INFO] - [ROUND 1]
+[2024-12-03 23:15:29,530][flwr][INFO] - configure_fit: strategy sampled 1 clients (out of 1)
+[2024-12-03 23:15:31,894][flwr][ERROR] - Traceback (most recent call last):
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 94, in _submit_job
+    out_mssg, updated_context = self.actor_pool.get_client_result(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 398, in get_client_result
+    return self._fetch_future_result(cid)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 279, in _fetch_future_result
+    res_cid, out_mssg, updated_context = ray.get(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\worker.py", line 2753, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\worker.py", line 904, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=2568, ip=127.0.0.1, actor_id=d331bdfbb1709084d87497f201000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x0000024CEF8A1A00>)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\message_handler\message_handler.py", line 129, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client.py", line 255, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\numpy_client.py", line 259, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\3.FederatedTraining\client.py", line 27, in fit
+    self.model.set_weights(parameters)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\keras\src\layers\layer.py", line 696, in set_weights
+    raise ValueError(
+ValueError: You called `set_weights(weights)` on layer 'sequential_1' with a weight list of length 0, but the layer was expecting 8 weights.
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=2568, ip=127.0.0.1, actor_id=d331bdfbb1709084d87497f201000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x0000024CEF8A1A00>)
+  File "python\ray\_raylet.pyx", line 1856, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1957, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1862, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1803, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\function_manager.py", line 696, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: You called `set_weights(weights)` on layer 'sequential_1' with a weight list of length 0, but the layer was expecting 8 weights.
+
+[2024-12-03 23:15:31,906][flwr][ERROR] - [36mray::ClientAppActor.run()[39m (pid=2568, ip=127.0.0.1, actor_id=d331bdfbb1709084d87497f201000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x0000024CEF8A1A00>)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\message_handler\message_handler.py", line 129, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client.py", line 255, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\numpy_client.py", line 259, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\3.FederatedTraining\client.py", line 27, in fit
+    self.model.set_weights(parameters)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\keras\src\layers\layer.py", line 696, in set_weights
+    raise ValueError(
+ValueError: You called `set_weights(weights)` on layer 'sequential_1' with a weight list of length 0, but the layer was expecting 8 weights.
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=2568, ip=127.0.0.1, actor_id=d331bdfbb1709084d87497f201000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x0000024CEF8A1A00>)
+  File "python\ray\_raylet.pyx", line 1856, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1957, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1862, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1803, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\function_manager.py", line 696, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: You called `set_weights(weights)` on layer 'sequential_1' with a weight list of length 0, but the layer was expecting 8 weights.
+[2024-12-03 23:15:31,913][flwr][INFO] - aggregate_fit: received 0 results and 1 failures
+[2024-12-03 23:15:41,402][flwr][INFO] - fit progress: (1, 0.1343459039926529, {'mae': 0.3249039351940155}, 11.873555599999989)
+[2024-12-03 23:15:41,402][flwr][INFO] - configure_evaluate: strategy sampled 1 clients (out of 1)
+[2024-12-03 23:15:43,327][flwr][ERROR] - Traceback (most recent call last):
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 94, in _submit_job
+    out_mssg, updated_context = self.actor_pool.get_client_result(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 398, in get_client_result
+    return self._fetch_future_result(cid)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 279, in _fetch_future_result
+    res_cid, out_mssg, updated_context = ray.get(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\worker.py", line 2753, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\worker.py", line 904, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=2568, ip=127.0.0.1, actor_id=d331bdfbb1709084d87497f201000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x0000024CEF8A1A00>)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\message_handler\message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\3.FederatedTraining\client.py", line 38, in evaluate
+    self.model.set_weights(parameters)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\keras\src\layers\layer.py", line 696, in set_weights
+    raise ValueError(
+ValueError: You called `set_weights(weights)` on layer 'sequential_2' with a weight list of length 0, but the layer was expecting 8 weights.
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=2568, ip=127.0.0.1, actor_id=d331bdfbb1709084d87497f201000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x0000024CEF8A1A00>)
+  File "python\ray\_raylet.pyx", line 1856, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1957, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1862, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1803, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\function_manager.py", line 696, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: You called `set_weights(weights)` on layer 'sequential_2' with a weight list of length 0, but the layer was expecting 8 weights.
+
+[2024-12-03 23:15:43,341][flwr][ERROR] - [36mray::ClientAppActor.run()[39m (pid=2568, ip=127.0.0.1, actor_id=d331bdfbb1709084d87497f201000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x0000024CEF8A1A00>)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\message_handler\message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\3.FederatedTraining\client.py", line 38, in evaluate
+    self.model.set_weights(parameters)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\keras\src\layers\layer.py", line 696, in set_weights
+    raise ValueError(
+ValueError: You called `set_weights(weights)` on layer 'sequential_2' with a weight list of length 0, but the layer was expecting 8 weights.
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=2568, ip=127.0.0.1, actor_id=d331bdfbb1709084d87497f201000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x0000024CEF8A1A00>)
+  File "python\ray\_raylet.pyx", line 1856, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1957, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1862, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1803, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\function_manager.py", line 696, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: You called `set_weights(weights)` on layer 'sequential_2' with a weight list of length 0, but the layer was expecting 8 weights.
+[2024-12-03 23:15:43,347][flwr][INFO] - aggregate_evaluate: received 0 results and 1 failures
+[2024-12-03 23:15:43,349][flwr][INFO] - 
+[2024-12-03 23:15:43,349][flwr][INFO] - [ROUND 2]
+[2024-12-03 23:15:43,350][flwr][INFO] - configure_fit: strategy sampled 1 clients (out of 1)
+[2024-12-03 23:15:45,516][flwr][ERROR] - Traceback (most recent call last):
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 94, in _submit_job
+    out_mssg, updated_context = self.actor_pool.get_client_result(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 398, in get_client_result
+    return self._fetch_future_result(cid)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 279, in _fetch_future_result
+    res_cid, out_mssg, updated_context = ray.get(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\worker.py", line 2753, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\worker.py", line 904, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=2568, ip=127.0.0.1, actor_id=d331bdfbb1709084d87497f201000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x0000024CEF8A1A00>)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\message_handler\message_handler.py", line 129, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client.py", line 255, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\numpy_client.py", line 259, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\3.FederatedTraining\client.py", line 27, in fit
+    self.model.set_weights(parameters)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\keras\src\layers\layer.py", line 696, in set_weights
+    raise ValueError(
+ValueError: You called `set_weights(weights)` on layer 'sequential_3' with a weight list of length 0, but the layer was expecting 8 weights.
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=2568, ip=127.0.0.1, actor_id=d331bdfbb1709084d87497f201000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x0000024CEF8A1A00>)
+  File "python\ray\_raylet.pyx", line 1856, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1957, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1862, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1803, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\function_manager.py", line 696, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: You called `set_weights(weights)` on layer 'sequential_3' with a weight list of length 0, but the layer was expecting 8 weights.
+
+[2024-12-03 23:15:45,527][flwr][ERROR] - [36mray::ClientAppActor.run()[39m (pid=2568, ip=127.0.0.1, actor_id=d331bdfbb1709084d87497f201000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x0000024CEF8A1A00>)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\message_handler\message_handler.py", line 129, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client.py", line 255, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\numpy_client.py", line 259, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\3.FederatedTraining\client.py", line 27, in fit
+    self.model.set_weights(parameters)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\keras\src\layers\layer.py", line 696, in set_weights
+    raise ValueError(
+ValueError: You called `set_weights(weights)` on layer 'sequential_3' with a weight list of length 0, but the layer was expecting 8 weights.
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=2568, ip=127.0.0.1, actor_id=d331bdfbb1709084d87497f201000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x0000024CEF8A1A00>)
+  File "python\ray\_raylet.pyx", line 1856, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1957, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1862, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1803, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\function_manager.py", line 696, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: You called `set_weights(weights)` on layer 'sequential_3' with a weight list of length 0, but the layer was expecting 8 weights.
+[2024-12-03 23:15:45,534][flwr][INFO] - aggregate_fit: received 0 results and 1 failures
+[2024-12-03 23:15:55,748][flwr][INFO] - fit progress: (2, 0.16095802187919617, {'mae': 0.3578759729862213}, 26.219950499999996)
+[2024-12-03 23:15:55,748][flwr][INFO] - configure_evaluate: strategy sampled 1 clients (out of 1)
+[2024-12-03 23:15:57,694][flwr][ERROR] - Traceback (most recent call last):
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 94, in _submit_job
+    out_mssg, updated_context = self.actor_pool.get_client_result(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 398, in get_client_result
+    return self._fetch_future_result(cid)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 279, in _fetch_future_result
+    res_cid, out_mssg, updated_context = ray.get(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\worker.py", line 2753, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\worker.py", line 904, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=2568, ip=127.0.0.1, actor_id=d331bdfbb1709084d87497f201000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x0000024CEF8A1A00>)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\message_handler\message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\3.FederatedTraining\client.py", line 38, in evaluate
+    self.model.set_weights(parameters)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\keras\src\layers\layer.py", line 696, in set_weights
+    raise ValueError(
+ValueError: You called `set_weights(weights)` on layer 'sequential_4' with a weight list of length 0, but the layer was expecting 8 weights.
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=2568, ip=127.0.0.1, actor_id=d331bdfbb1709084d87497f201000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x0000024CEF8A1A00>)
+  File "python\ray\_raylet.pyx", line 1856, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1957, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1862, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1803, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\function_manager.py", line 696, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: You called `set_weights(weights)` on layer 'sequential_4' with a weight list of length 0, but the layer was expecting 8 weights.
+
+[2024-12-03 23:15:57,706][flwr][ERROR] - [36mray::ClientAppActor.run()[39m (pid=2568, ip=127.0.0.1, actor_id=d331bdfbb1709084d87497f201000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x0000024CEF8A1A00>)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\message_handler\message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\3.FederatedTraining\client.py", line 38, in evaluate
+    self.model.set_weights(parameters)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\keras\src\layers\layer.py", line 696, in set_weights
+    raise ValueError(
+ValueError: You called `set_weights(weights)` on layer 'sequential_4' with a weight list of length 0, but the layer was expecting 8 weights.
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=2568, ip=127.0.0.1, actor_id=d331bdfbb1709084d87497f201000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x0000024CEF8A1A00>)
+  File "python\ray\_raylet.pyx", line 1856, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1957, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1862, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1803, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\function_manager.py", line 696, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: You called `set_weights(weights)` on layer 'sequential_4' with a weight list of length 0, but the layer was expecting 8 weights.
+[2024-12-03 23:15:57,712][flwr][INFO] - aggregate_evaluate: received 0 results and 1 failures
+[2024-12-03 23:15:57,713][flwr][INFO] - 
+[2024-12-03 23:15:57,713][flwr][INFO] - [ROUND 3]
+[2024-12-03 23:15:57,714][flwr][INFO] - configure_fit: strategy sampled 1 clients (out of 1)
+[2024-12-03 23:15:59,914][flwr][ERROR] - Traceback (most recent call last):
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 94, in _submit_job
+    out_mssg, updated_context = self.actor_pool.get_client_result(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 398, in get_client_result
+    return self._fetch_future_result(cid)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 279, in _fetch_future_result
+    res_cid, out_mssg, updated_context = ray.get(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\worker.py", line 2753, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\worker.py", line 904, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=2568, ip=127.0.0.1, actor_id=d331bdfbb1709084d87497f201000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x0000024CEF8A1A00>)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\message_handler\message_handler.py", line 129, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client.py", line 255, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\numpy_client.py", line 259, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\3.FederatedTraining\client.py", line 27, in fit
+    self.model.set_weights(parameters)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\keras\src\layers\layer.py", line 696, in set_weights
+    raise ValueError(
+ValueError: You called `set_weights(weights)` on layer 'sequential_5' with a weight list of length 0, but the layer was expecting 8 weights.
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=2568, ip=127.0.0.1, actor_id=d331bdfbb1709084d87497f201000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x0000024CEF8A1A00>)
+  File "python\ray\_raylet.pyx", line 1856, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1957, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1862, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1803, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\function_manager.py", line 696, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: You called `set_weights(weights)` on layer 'sequential_5' with a weight list of length 0, but the layer was expecting 8 weights.
+
+[2024-12-03 23:15:59,922][flwr][ERROR] - [36mray::ClientAppActor.run()[39m (pid=2568, ip=127.0.0.1, actor_id=d331bdfbb1709084d87497f201000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x0000024CEF8A1A00>)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\message_handler\message_handler.py", line 129, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client.py", line 255, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\numpy_client.py", line 259, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\3.FederatedTraining\client.py", line 27, in fit
+    self.model.set_weights(parameters)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\keras\src\layers\layer.py", line 696, in set_weights
+    raise ValueError(
+ValueError: You called `set_weights(weights)` on layer 'sequential_5' with a weight list of length 0, but the layer was expecting 8 weights.
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=2568, ip=127.0.0.1, actor_id=d331bdfbb1709084d87497f201000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x0000024CEF8A1A00>)
+  File "python\ray\_raylet.pyx", line 1856, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1957, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1862, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1803, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\function_manager.py", line 696, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: You called `set_weights(weights)` on layer 'sequential_5' with a weight list of length 0, but the layer was expecting 8 weights.
+[2024-12-03 23:15:59,928][flwr][INFO] - aggregate_fit: received 0 results and 1 failures
+[2024-12-03 23:16:10,296][flwr][INFO] - fit progress: (3, 0.1526390165090561, {'mae': 0.348261296749115}, 40.76805549999999)
+[2024-12-03 23:16:10,297][flwr][INFO] - configure_evaluate: strategy sampled 1 clients (out of 1)
+[2024-12-03 23:16:12,782][flwr][ERROR] - Traceback (most recent call last):
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 94, in _submit_job
+    out_mssg, updated_context = self.actor_pool.get_client_result(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 398, in get_client_result
+    return self._fetch_future_result(cid)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 279, in _fetch_future_result
+    res_cid, out_mssg, updated_context = ray.get(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\worker.py", line 2753, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\worker.py", line 904, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=2568, ip=127.0.0.1, actor_id=d331bdfbb1709084d87497f201000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x0000024CEF8A1A00>)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\message_handler\message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\3.FederatedTraining\client.py", line 38, in evaluate
+    self.model.set_weights(parameters)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\keras\src\layers\layer.py", line 696, in set_weights
+    raise ValueError(
+ValueError: You called `set_weights(weights)` on layer 'sequential_6' with a weight list of length 0, but the layer was expecting 8 weights.
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=2568, ip=127.0.0.1, actor_id=d331bdfbb1709084d87497f201000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x0000024CEF8A1A00>)
+  File "python\ray\_raylet.pyx", line 1856, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1957, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1862, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1803, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\function_manager.py", line 696, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: You called `set_weights(weights)` on layer 'sequential_6' with a weight list of length 0, but the layer was expecting 8 weights.
+
+[2024-12-03 23:16:12,791][flwr][ERROR] - [36mray::ClientAppActor.run()[39m (pid=2568, ip=127.0.0.1, actor_id=d331bdfbb1709084d87497f201000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x0000024CEF8A1A00>)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\message_handler\message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\3.FederatedTraining\client.py", line 38, in evaluate
+    self.model.set_weights(parameters)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\keras\src\layers\layer.py", line 696, in set_weights
+    raise ValueError(
+ValueError: You called `set_weights(weights)` on layer 'sequential_6' with a weight list of length 0, but the layer was expecting 8 weights.
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=2568, ip=127.0.0.1, actor_id=d331bdfbb1709084d87497f201000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x0000024CEF8A1A00>)
+  File "python\ray\_raylet.pyx", line 1856, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1957, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1862, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1803, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\function_manager.py", line 696, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: You called `set_weights(weights)` on layer 'sequential_6' with a weight list of length 0, but the layer was expecting 8 weights.
+[2024-12-03 23:16:12,798][flwr][INFO] - aggregate_evaluate: received 0 results and 1 failures
+[2024-12-03 23:16:12,799][flwr][INFO] - 
+[2024-12-03 23:16:12,799][flwr][INFO] - [ROUND 4]
+[2024-12-03 23:16:12,800][flwr][INFO] - configure_fit: strategy sampled 1 clients (out of 1)
+[2024-12-03 23:16:14,627][flwr][ERROR] - Traceback (most recent call last):
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 94, in _submit_job
+    out_mssg, updated_context = self.actor_pool.get_client_result(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 398, in get_client_result
+    return self._fetch_future_result(cid)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 279, in _fetch_future_result
+    res_cid, out_mssg, updated_context = ray.get(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\worker.py", line 2753, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\worker.py", line 904, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=2568, ip=127.0.0.1, actor_id=d331bdfbb1709084d87497f201000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x0000024CEF8A1A00>)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\message_handler\message_handler.py", line 129, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client.py", line 255, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\numpy_client.py", line 259, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\3.FederatedTraining\client.py", line 27, in fit
+    self.model.set_weights(parameters)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\keras\src\layers\layer.py", line 696, in set_weights
+    raise ValueError(
+ValueError: You called `set_weights(weights)` on layer 'sequential_7' with a weight list of length 0, but the layer was expecting 8 weights.
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=2568, ip=127.0.0.1, actor_id=d331bdfbb1709084d87497f201000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x0000024CEF8A1A00>)
+  File "python\ray\_raylet.pyx", line 1856, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1957, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1862, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1803, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\function_manager.py", line 696, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: You called `set_weights(weights)` on layer 'sequential_7' with a weight list of length 0, but the layer was expecting 8 weights.
+
+[2024-12-03 23:16:14,643][flwr][ERROR] - [36mray::ClientAppActor.run()[39m (pid=2568, ip=127.0.0.1, actor_id=d331bdfbb1709084d87497f201000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x0000024CEF8A1A00>)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\message_handler\message_handler.py", line 129, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client.py", line 255, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\numpy_client.py", line 259, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\3.FederatedTraining\client.py", line 27, in fit
+    self.model.set_weights(parameters)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\keras\src\layers\layer.py", line 696, in set_weights
+    raise ValueError(
+ValueError: You called `set_weights(weights)` on layer 'sequential_7' with a weight list of length 0, but the layer was expecting 8 weights.
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=2568, ip=127.0.0.1, actor_id=d331bdfbb1709084d87497f201000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x0000024CEF8A1A00>)
+  File "python\ray\_raylet.pyx", line 1856, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1957, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1862, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1803, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\function_manager.py", line 696, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: You called `set_weights(weights)` on layer 'sequential_7' with a weight list of length 0, but the layer was expecting 8 weights.
+[2024-12-03 23:16:14,650][flwr][INFO] - aggregate_fit: received 0 results and 1 failures

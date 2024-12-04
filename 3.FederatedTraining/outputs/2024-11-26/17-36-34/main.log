@@ -1,0 +1,35 @@
+[2024-11-26 17:36:54,399][flwr][INFO] - Starting Flower simulation, config: num_rounds=10, no round_timeout
+[2024-11-26 17:37:01,998][flwr][INFO] - Flower VCE: Ray initialized with resources: {'memory': 4001670759.0, 'CPU': 8.0, 'accelerator_type:G': 1.0, 'object_store_memory': 2000835379.0, 'node:127.0.0.1': 1.0, 'node:__internal_head__': 1.0, 'GPU': 1.0}
+[2024-11-26 17:37:01,999][flwr][INFO] - Optimize your simulation with Flower VCE: https://flower.ai/docs/framework/how-to-run-simulations.html
+[2024-11-26 17:37:02,000][flwr][INFO] - Flower VCE: Resources for each Virtual Client: {'num_cpus': 2, 'num_gpus': 0.5}
+[2024-11-26 17:37:02,019][flwr][INFO] - Flower VCE: Creating VirtualClientEngineActorPool with 2 actors
+[2024-11-26 17:37:02,020][flwr][INFO] - [INIT]
+[2024-11-26 17:37:02,021][flwr][INFO] - Requesting initial parameters from one random client
+[2024-11-26 17:37:09,117][flwr][WARNING] - Failed to receive initial parameters from the client. Empty initial parameters will be used.
+[2024-11-26 17:37:09,118][flwr][INFO] - Starting evaluation of initial global parameters
+[2024-11-26 17:37:10,844][tensorflow][WARNING] - Layer lstm will not use cuDNN kernels since it doesn't meet the criteria. It will use a generic GPU kernel as fallback when running on GPU.
+[2024-11-26 17:37:11,034][tensorflow][WARNING] - Layer lstm_1 will not use cuDNN kernels since it doesn't meet the criteria. It will use a generic GPU kernel as fallback when running on GPU.
+[2024-11-26 17:37:11,281][flwr][ERROR] - 'val_dataset'
+[2024-11-26 17:37:11,285][flwr][ERROR] - Traceback (most recent call last):
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\app.py", line 339, in start_simulation
+    hist = run_fl(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\server\server.py", line 492, in run_fl
+    hist, elapsed_time = server.fit(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\server\server.py", line 95, in fit
+    res = self.strategy.evaluate(0, parameters=self.parameters)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\server\strategy\fedavg.py", line 167, in evaluate
+    eval_res = self.evaluate_fn(server_round, parameters_ndarrays, {})
+  File "c:\Users\clara\Desktop\TFG\Codigo TFG\3.FederatedTraining\server.py", line 46, in evaluate_fn
+    val_loss, val_mae = model.evaluate(config["val_dataset"], verbose=0)
+KeyError: 'val_dataset'
+
+[2024-11-26 17:37:11,287][flwr][ERROR] - Your simulation crashed :(. This could be because of several reasons. The most common are: 
+	 > Sometimes, issues in the simulation code itself can cause crashes. It's always a good idea to double-check your code for any potential bugs or inconsistencies that might be contributing to the problem. For example: 
+		 - You might be using a class attribute in your clients that hasn't been defined.
+		 - There could be an incorrect method call to a 3rd party library (e.g., PyTorch).
+		 - The return types of methods in your clients/strategies might be incorrect.
+	 > Your system couldn't fit a single VirtualClient: try lowering `client_resources`.
+	 > All the actors in your pool crashed. This could be because: 
+		 - You clients hit an out-of-memory (OOM) error and actors couldn't recover from it. Try launching your simulation with more generous `client_resources` setting (i.e. it seems {'num_cpus': 2, 'num_gpus': 0.5} is not enough for your run). Use fewer concurrent actors. 
+		 - You were running a multi-node simulation and all worker nodes disconnected. The head node might still be alive but cannot accommodate any actor with resources: {'num_cpus': 2, 'num_gpus': 0.5}.
+Take a look at the Flower simulation examples for guidance <https://flower.ai/docs/framework/how-to-run-simulations.html>.

@@ -1,0 +1,119 @@
+[2024-11-26 16:32:30,766][flwr][INFO] - Starting Flower simulation, config: num_rounds=10, no round_timeout
+[2024-11-26 16:32:40,182][flwr][INFO] - Flower VCE: Ray initialized with resources: {'node:127.0.0.1': 1.0, 'CPU': 8.0, 'node:__internal_head__': 1.0, 'accelerator_type:G': 1.0, 'GPU': 1.0, 'memory': 3378514331.0, 'object_store_memory': 1689257164.0}
+[2024-11-26 16:32:40,183][flwr][INFO] - Optimize your simulation with Flower VCE: https://flower.ai/docs/framework/how-to-run-simulations.html
+[2024-11-26 16:32:40,184][flwr][INFO] - Flower VCE: Resources for each Virtual Client: {'num_cpus': 2, 'num_gpus': 0.5}
+[2024-11-26 16:32:40,213][flwr][INFO] - Flower VCE: Creating VirtualClientEngineActorPool with 2 actors
+[2024-11-26 16:32:40,215][flwr][INFO] - [INIT]
+[2024-11-26 16:32:40,216][flwr][INFO] - Requesting initial parameters from one random client
+[2024-11-26 16:32:40,247][flwr][ERROR] - Traceback (most recent call last):
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 88, in _submit_job
+    self.actor_pool.submit_client_job(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 244, in submit_client_job
+    self.submit(actor_fn, job)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 222, in submit
+    future = fn(actor, app_fn, mssg, cid, context)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 89, in <lambda>
+    lambda a, a_fn, mssg, partition_id, context: a.run.remote(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\actor.py", line 202, in remote
+    return self._remote(args, kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\util\tracing\tracing_helper.py", line 426, in _start_span
+    return method(self, args, kwargs, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\actor.py", line 345, in _remote
+    return invocation(args, kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\actor.py", line 326, in invocation
+    return actor._actor_method_call(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\actor.py", line 1479, in _actor_method_call
+    object_refs = worker.core_worker.submit_actor_task(
+  File "python\ray\_raylet.pyx", line 4253, in ray._raylet.CoreWorker.submit_actor_task
+  File "python\ray\_raylet.pyx", line 4258, in ray._raylet.CoreWorker.submit_actor_task
+  File "python\ray\_raylet.pyx", line 839, in ray._raylet.prepare_args_and_increment_put_refs
+  File "python\ray\_raylet.pyx", line 830, in ray._raylet.prepare_args_and_increment_put_refs
+  File "python\ray\_raylet.pyx", line 880, in ray._raylet.prepare_args_internal
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\serialization.py", line 556, in serialize
+    return self._serialize_to_msgpack(value)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\serialization.py", line 534, in _serialize_to_msgpack
+    pickle5_serialized_object = self._serialize_to_pickle5(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\serialization.py", line 481, in _serialize_to_pickle5
+    raise e
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\serialization.py", line 476, in _serialize_to_pickle5
+    inband = pickle.dumps(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\cloudpickle\cloudpickle.py", line 1479, in dumps
+    cp.dump(obj)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\cloudpickle\cloudpickle.py", line 1245, in dump
+    return super().dump(obj)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\tensorflow\python\framework\ops.py", line 1082, in __reduce__
+    return convert_to_tensor, (self._numpy(),)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\tensorflow\python\framework\ops.py", line 1125, in _numpy
+    raise core._status_to_exception(e) from None  # pylint: disable=protected-access
+tensorflow.python.framework.errors_impl.InvalidArgumentError: Cannot convert a Tensor of dtype variant to a NumPy array.
+
+[2024-11-26 16:32:40,271][flwr][ERROR] - Cannot convert a Tensor of dtype variant to a NumPy array.
+[2024-11-26 16:32:40,273][flwr][ERROR] - Cannot convert a Tensor of dtype variant to a NumPy array.
+[2024-11-26 16:32:40,283][flwr][ERROR] - Traceback (most recent call last):
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\app.py", line 339, in start_simulation
+    hist = run_fl(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\server\server.py", line 492, in run_fl
+    hist, elapsed_time = server.fit(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\server\server.py", line 93, in fit
+    self.parameters = self._get_initial_parameters(server_round=0, timeout=timeout)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\server\server.py", line 284, in _get_initial_parameters
+    get_parameters_res = random_client.get_parameters(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 168, in get_parameters
+    message_out = self._submit_job(message, timeout)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 108, in _submit_job
+    raise ex
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 88, in _submit_job
+    self.actor_pool.submit_client_job(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 244, in submit_client_job
+    self.submit(actor_fn, job)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 222, in submit
+    future = fn(actor, app_fn, mssg, cid, context)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 89, in <lambda>
+    lambda a, a_fn, mssg, partition_id, context: a.run.remote(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\actor.py", line 202, in remote
+    return self._remote(args, kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\util\tracing\tracing_helper.py", line 426, in _start_span
+    return method(self, args, kwargs, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\actor.py", line 345, in _remote
+    return invocation(args, kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\actor.py", line 326, in invocation
+    return actor._actor_method_call(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\actor.py", line 1479, in _actor_method_call
+    object_refs = worker.core_worker.submit_actor_task(
+  File "python\ray\_raylet.pyx", line 4253, in ray._raylet.CoreWorker.submit_actor_task
+  File "python\ray\_raylet.pyx", line 4258, in ray._raylet.CoreWorker.submit_actor_task
+  File "python\ray\_raylet.pyx", line 839, in ray._raylet.prepare_args_and_increment_put_refs
+  File "python\ray\_raylet.pyx", line 830, in ray._raylet.prepare_args_and_increment_put_refs
+  File "python\ray\_raylet.pyx", line 880, in ray._raylet.prepare_args_internal
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\serialization.py", line 556, in serialize
+    return self._serialize_to_msgpack(value)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\serialization.py", line 534, in _serialize_to_msgpack
+    pickle5_serialized_object = self._serialize_to_pickle5(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\serialization.py", line 481, in _serialize_to_pickle5
+    raise e
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\serialization.py", line 476, in _serialize_to_pickle5
+    inband = pickle.dumps(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\cloudpickle\cloudpickle.py", line 1479, in dumps
+    cp.dump(obj)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\cloudpickle\cloudpickle.py", line 1245, in dump
+    return super().dump(obj)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\tensorflow\python\framework\ops.py", line 1082, in __reduce__
+    return convert_to_tensor, (self._numpy(),)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\tensorflow\python\framework\ops.py", line 1125, in _numpy
+    raise core._status_to_exception(e) from None  # pylint: disable=protected-access
+tensorflow.python.framework.errors_impl.InvalidArgumentError: Cannot convert a Tensor of dtype variant to a NumPy array.
+
+[2024-11-26 16:32:40,311][flwr][ERROR] - Your simulation crashed :(. This could be because of several reasons. The most common are: 
+	 > Sometimes, issues in the simulation code itself can cause crashes. It's always a good idea to double-check your code for any potential bugs or inconsistencies that might be contributing to the problem. For example: 
+		 - You might be using a class attribute in your clients that hasn't been defined.
+		 - There could be an incorrect method call to a 3rd party library (e.g., PyTorch).
+		 - The return types of methods in your clients/strategies might be incorrect.
+	 > Your system couldn't fit a single VirtualClient: try lowering `client_resources`.
+	 > All the actors in your pool crashed. This could be because: 
+		 - You clients hit an out-of-memory (OOM) error and actors couldn't recover from it. Try launching your simulation with more generous `client_resources` setting (i.e. it seems {'num_cpus': 2, 'num_gpus': 0.5} is not enough for your run). Use fewer concurrent actors. 
+		 - You were running a multi-node simulation and all worker nodes disconnected. The head node might still be alive but cannot accommodate any actor with resources: {'num_cpus': 2, 'num_gpus': 0.5}.
+Take a look at the Flower simulation examples for guidance <https://flower.ai/docs/framework/how-to-run-simulations.html>.

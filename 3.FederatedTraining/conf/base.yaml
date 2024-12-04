@@ -1,0 +1,14 @@
+num_rounds: 10  # Número de rondas FL en el experimento
+num_clients: 1  # Número total de clientes disponibles
+batch_size: 32  # Tamaño del lote utilizado por los clientes durante el entrenamiento
+num_classes: 1  # Número de clases en tu dataset (1 para regresión en LSTM)
+num_clients_per_round_fit: 1  # Número de clientes a involucrar en cada ronda de ajuste
+num_clients_per_round_eval: 1  # Número de clientes a involucrar en cada ronda de evaluación
+config_fit:
+  lr: 0.01  # Tasa de aprendizaje para los clientes
+  momentum: 0.9  # Momentum usado por el optimizador SGD en el lado del cliente
+  local_epochs: 1  # Número de épocas locales para cada cliente durante el entrenamiento
+sequence_length: 12  # Longitud de la secuencia usada por el modelo LSTM
+input_dim: 4  # Número de características de entrada 
+centralized_learning: False  # Aprendizaje descentralizado (FL)
+min_available_clients: 1  # Número mínimo de clientes disponibles

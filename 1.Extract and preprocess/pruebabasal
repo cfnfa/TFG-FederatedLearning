@@ -1,0 +1,55 @@
+import pandas as pd
+import numpy as np
+
+# 1. Cargar los datos del archivo Excel
+df = pd.read_excel('C:/Users/clara/Desktop/TFG/Ensayo1/Ensayo1/Tidepool/AGM.xlsx', sheet_name="Basal")
+
+# 2. Convertir las columnas 'Local Time' en formato de fecha
+df['Local Time'] = pd.to_datetime(df['Local Time'])
+
+# 3. Calcular la insulina por minuto (Rate en U/h -> U/minuto)
+df['Insulin per min'] = df['Rate'] / 60
+
+# 4. Crear una nueva columna con el tiempo final de la administración
+df['End Time'] = df['Local Time'] + pd.to_timedelta(df['Duration (mins)'], unit='m')
+
+# 5. Crear un DataFrame vacío con intervalos de tiempo de 5 minutos
+start_time = df['Local Time'].min().floor('5T')
+end_time = df['End Time'].max().ceil('5T')
+time_range = pd.date_range(start=start_time, end=end_time, freq='5T')
+
+# 6. Crear un DataFrame vacío con los intervalos de tiempo
+result = pd.DataFrame(time_range, columns=['Time Rounded'])
+
+# 7. Crear una columna con el siguiente intervalo de 5 minutos
+result['Next Time'] = result['Time Rounded'] + pd.Timedelta(minutes=5)
+
+# 8. Inicializar una columna para las unidades de insulina
+result['Insulin Delivered (U)'] = 0
+
+# 9. Para cada fila en el DataFrame original, calcular la cantidad de insulina en cada intervalo de 5 minutos
+for index, row in df.iterrows():
+    start = row['Local Time']
+    end = row['End Time']
+    
+    # Encontrar los intervalos de tiempo que se superponen con el rango [start, end]
+    mask = (result['Time Rounded'] < end) & (result['Next Time'] > start)
+    
+    # Para los intervalos afectados, calcular la cantidad de insulina que cae en ese intervalo
+    for i in result[mask].index:
+        # Calcular la superposición en minutos de este intervalo de 5 minutos con [start, end]
+        interval_start = result.at[i, 'Time Rounded']
+        interval_end = result.at[i, 'Next Time']
+        
+        overlap_start = max(interval_start, start)
+        overlap_end = min(interval_end, end)
+        
+        overlap_minutes = (overlap_end - overlap_start).total_seconds() / 60.0
+        
+        # Sumar la insulina administrada en esos minutos
+        result.at[i, 'Insulin Delivered (U)'] += overlap_minutes * row['Insulin per min']
+
+# 10. Guardar el resultado en un nuevo archivo Excel
+result.to_excel('insulina_procesada_optimizada.xlsx', index=False)
+
+print("Preprocesamiento completo. Los datos procesados han sido guardados en 'insulina_procesada_optimizada.xlsx'")
