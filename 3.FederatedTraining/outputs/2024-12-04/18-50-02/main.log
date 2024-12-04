@@ -1,0 +1,1819 @@
+[2024-12-04 18:50:02,307][flwr][WARNING] - DEPRECATED FEATURE: flwr.simulation.start_simulation() is deprecated.
+	Instead, use the `flwr run` CLI command to start a local simulation in your Flower app, as shown for example below:
+
+		$ flwr new  # Create a new Flower app from a template
+
+		$ flwr run  # Run the Flower app in Simulation Mode
+
+	Using `start_simulation()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+[2024-12-04 18:50:02,310][flwr][INFO] - Starting Flower simulation, config: num_rounds=10, no round_timeout
+[2024-12-04 18:50:10,484][flwr][INFO] - Flower VCE: Ray initialized with resources: {'accelerator_type:G': 1.0, 'node:__internal_head__': 1.0, 'CPU': 8.0, 'memory': 3539693568.0, 'node:127.0.0.1': 1.0, 'object_store_memory': 1769846784.0, 'GPU': 1.0}
+[2024-12-04 18:50:10,485][flwr][INFO] - Optimize your simulation with Flower VCE: https://flower.ai/docs/framework/how-to-run-simulations.html
+[2024-12-04 18:50:10,485][flwr][INFO] - Flower VCE: Resources for each Virtual Client: {'num_cpus': 2, 'num_gpus': 0.5}
+[2024-12-04 18:50:10,498][flwr][INFO] - Flower VCE: Creating VirtualClientEngineActorPool with 2 actors
+[2024-12-04 18:50:10,499][flwr][INFO] - [INIT]
+[2024-12-04 18:50:10,499][flwr][INFO] - Using initial global parameters provided by strategy
+[2024-12-04 18:50:10,500][flwr][INFO] - Starting evaluation of initial global parameters
+[2024-12-04 18:50:20,123][flwr][INFO] - initial parameters (loss, other metrics): 0.1534462869167328, {'mae': 0.34914541244506836}
+[2024-12-04 18:50:20,123][flwr][INFO] - 
+[2024-12-04 18:50:20,124][flwr][INFO] - [ROUND 1]
+[2024-12-04 18:50:20,125][flwr][INFO] - configure_fit: strategy sampled 1 clients (out of 1)
+[2024-12-04 18:50:22,578][flwr][ERROR] - Traceback (most recent call last):
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 94, in _submit_job
+    out_mssg, updated_context = self.actor_pool.get_client_result(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 398, in get_client_result
+    return self._fetch_future_result(cid)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 279, in _fetch_future_result
+    res_cid, out_mssg, updated_context = ray.get(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\worker.py", line 2753, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\worker.py", line 904, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\message_handler\message_handler.py", line 129, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client.py", line 255, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\numpy_client.py", line 259, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\3.FederatedTraining\client.py", line 28, in fit
+    weights = parameters_to_ndarrays(parameters)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\common\parameter.py", line 34, in parameters_to_ndarrays
+    return [bytes_to_ndarray(tensor) for tensor in parameters.tensors]
+AttributeError: 'list' object has no attribute 'tensors'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "python\ray\_raylet.pyx", line 1856, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1957, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1862, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1803, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\function_manager.py", line 696, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: 'list' object has no attribute 'tensors'
+
+[2024-12-04 18:50:22,585][flwr][ERROR] - [36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\message_handler\message_handler.py", line 129, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client.py", line 255, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\numpy_client.py", line 259, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\3.FederatedTraining\client.py", line 28, in fit
+    weights = parameters_to_ndarrays(parameters)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\common\parameter.py", line 34, in parameters_to_ndarrays
+    return [bytes_to_ndarray(tensor) for tensor in parameters.tensors]
+AttributeError: 'list' object has no attribute 'tensors'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "python\ray\_raylet.pyx", line 1856, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1957, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1862, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1803, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\function_manager.py", line 696, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: 'list' object has no attribute 'tensors'
+[2024-12-04 18:50:22,589][flwr][INFO] - aggregate_fit: received 0 results and 1 failures
+[2024-12-04 18:50:30,521][flwr][INFO] - fit progress: (1, 0.1534462869167328, {'mae': 0.34914541244506836}, 10.397834799999998)
+[2024-12-04 18:50:30,522][flwr][INFO] - configure_evaluate: strategy sampled 1 clients (out of 1)
+[2024-12-04 18:50:31,983][flwr][ERROR] - Traceback (most recent call last):
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 94, in _submit_job
+    out_mssg, updated_context = self.actor_pool.get_client_result(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 398, in get_client_result
+    return self._fetch_future_result(cid)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 279, in _fetch_future_result
+    res_cid, out_mssg, updated_context = ray.get(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\worker.py", line 2753, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\worker.py", line 904, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\message_handler\message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\3.FederatedTraining\client.py", line 42, in evaluate
+    loss, accuracy = self.model.evaluate(self.x_test, self.y_test)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\keras\src\utils\traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\keras\src\trainers\data_adapters\data_adapter_utils.py", line 114, in check_data_cardinality
+    raise ValueError(msg)
+ValueError: Data cardinality is ambiguous. Make sure all arrays contain the same number of samples.'x' sizes: 16899
+'y' sizes: 4212
+
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "python\ray\_raylet.pyx", line 1856, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1957, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1862, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1803, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\function_manager.py", line 696, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: Data cardinality is ambiguous. Make sure all arrays contain the same number of samples.'x' sizes: 16899
+'y' sizes: 4212
+
+[2024-12-04 18:50:31,990][flwr][ERROR] - [36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\message_handler\message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\3.FederatedTraining\client.py", line 42, in evaluate
+    loss, accuracy = self.model.evaluate(self.x_test, self.y_test)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\keras\src\utils\traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\keras\src\trainers\data_adapters\data_adapter_utils.py", line 114, in check_data_cardinality
+    raise ValueError(msg)
+ValueError: Data cardinality is ambiguous. Make sure all arrays contain the same number of samples.'x' sizes: 16899
+'y' sizes: 4212
+
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "python\ray\_raylet.pyx", line 1856, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1957, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1862, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1803, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\function_manager.py", line 696, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: Data cardinality is ambiguous. Make sure all arrays contain the same number of samples.'x' sizes: 16899
+'y' sizes: 4212
+[2024-12-04 18:50:31,996][flwr][INFO] - aggregate_evaluate: received 0 results and 1 failures
+[2024-12-04 18:50:31,996][flwr][INFO] - 
+[2024-12-04 18:50:31,996][flwr][INFO] - [ROUND 2]
+[2024-12-04 18:50:31,997][flwr][INFO] - configure_fit: strategy sampled 1 clients (out of 1)
+[2024-12-04 18:50:33,353][flwr][ERROR] - Traceback (most recent call last):
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 94, in _submit_job
+    out_mssg, updated_context = self.actor_pool.get_client_result(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 398, in get_client_result
+    return self._fetch_future_result(cid)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 279, in _fetch_future_result
+    res_cid, out_mssg, updated_context = ray.get(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\worker.py", line 2753, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\worker.py", line 904, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\message_handler\message_handler.py", line 129, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client.py", line 255, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\numpy_client.py", line 259, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\3.FederatedTraining\client.py", line 28, in fit
+    weights = parameters_to_ndarrays(parameters)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\common\parameter.py", line 34, in parameters_to_ndarrays
+    return [bytes_to_ndarray(tensor) for tensor in parameters.tensors]
+AttributeError: 'list' object has no attribute 'tensors'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "python\ray\_raylet.pyx", line 1856, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1957, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1862, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1803, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\function_manager.py", line 696, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: 'list' object has no attribute 'tensors'
+
+[2024-12-04 18:50:33,362][flwr][ERROR] - [36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\message_handler\message_handler.py", line 129, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client.py", line 255, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\numpy_client.py", line 259, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\3.FederatedTraining\client.py", line 28, in fit
+    weights = parameters_to_ndarrays(parameters)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\common\parameter.py", line 34, in parameters_to_ndarrays
+    return [bytes_to_ndarray(tensor) for tensor in parameters.tensors]
+AttributeError: 'list' object has no attribute 'tensors'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "python\ray\_raylet.pyx", line 1856, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1957, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1862, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1803, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\function_manager.py", line 696, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: 'list' object has no attribute 'tensors'
+[2024-12-04 18:50:33,367][flwr][INFO] - aggregate_fit: received 0 results and 1 failures
+[2024-12-04 18:50:42,125][flwr][INFO] - fit progress: (2, 0.1534462869167328, {'mae': 0.34914541244506836}, 22.001081499999998)
+[2024-12-04 18:50:42,125][flwr][INFO] - configure_evaluate: strategy sampled 1 clients (out of 1)
+[2024-12-04 18:50:43,627][flwr][ERROR] - Traceback (most recent call last):
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 94, in _submit_job
+    out_mssg, updated_context = self.actor_pool.get_client_result(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 398, in get_client_result
+    return self._fetch_future_result(cid)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 279, in _fetch_future_result
+    res_cid, out_mssg, updated_context = ray.get(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\worker.py", line 2753, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\worker.py", line 904, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\message_handler\message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\3.FederatedTraining\client.py", line 42, in evaluate
+    loss, accuracy = self.model.evaluate(self.x_test, self.y_test)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\keras\src\utils\traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\keras\src\trainers\data_adapters\data_adapter_utils.py", line 114, in check_data_cardinality
+    raise ValueError(msg)
+ValueError: Data cardinality is ambiguous. Make sure all arrays contain the same number of samples.'x' sizes: 16899
+'y' sizes: 4212
+
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "python\ray\_raylet.pyx", line 1856, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1957, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1862, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1803, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\function_manager.py", line 696, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: Data cardinality is ambiguous. Make sure all arrays contain the same number of samples.'x' sizes: 16899
+'y' sizes: 4212
+
+[2024-12-04 18:50:43,635][flwr][ERROR] - [36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\message_handler\message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\3.FederatedTraining\client.py", line 42, in evaluate
+    loss, accuracy = self.model.evaluate(self.x_test, self.y_test)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\keras\src\utils\traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\keras\src\trainers\data_adapters\data_adapter_utils.py", line 114, in check_data_cardinality
+    raise ValueError(msg)
+ValueError: Data cardinality is ambiguous. Make sure all arrays contain the same number of samples.'x' sizes: 16899
+'y' sizes: 4212
+
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "python\ray\_raylet.pyx", line 1856, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1957, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1862, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1803, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\function_manager.py", line 696, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: Data cardinality is ambiguous. Make sure all arrays contain the same number of samples.'x' sizes: 16899
+'y' sizes: 4212
+[2024-12-04 18:50:43,640][flwr][INFO] - aggregate_evaluate: received 0 results and 1 failures
+[2024-12-04 18:50:43,640][flwr][INFO] - 
+[2024-12-04 18:50:43,641][flwr][INFO] - [ROUND 3]
+[2024-12-04 18:50:43,641][flwr][INFO] - configure_fit: strategy sampled 1 clients (out of 1)
+[2024-12-04 18:50:44,963][flwr][ERROR] - Traceback (most recent call last):
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 94, in _submit_job
+    out_mssg, updated_context = self.actor_pool.get_client_result(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 398, in get_client_result
+    return self._fetch_future_result(cid)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 279, in _fetch_future_result
+    res_cid, out_mssg, updated_context = ray.get(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\worker.py", line 2753, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\worker.py", line 904, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\message_handler\message_handler.py", line 129, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client.py", line 255, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\numpy_client.py", line 259, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\3.FederatedTraining\client.py", line 28, in fit
+    weights = parameters_to_ndarrays(parameters)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\common\parameter.py", line 34, in parameters_to_ndarrays
+    return [bytes_to_ndarray(tensor) for tensor in parameters.tensors]
+AttributeError: 'list' object has no attribute 'tensors'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "python\ray\_raylet.pyx", line 1856, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1957, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1862, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1803, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\function_manager.py", line 696, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: 'list' object has no attribute 'tensors'
+
+[2024-12-04 18:50:44,970][flwr][ERROR] - [36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\message_handler\message_handler.py", line 129, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client.py", line 255, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\numpy_client.py", line 259, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\3.FederatedTraining\client.py", line 28, in fit
+    weights = parameters_to_ndarrays(parameters)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\common\parameter.py", line 34, in parameters_to_ndarrays
+    return [bytes_to_ndarray(tensor) for tensor in parameters.tensors]
+AttributeError: 'list' object has no attribute 'tensors'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "python\ray\_raylet.pyx", line 1856, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1957, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1862, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1803, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\function_manager.py", line 696, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: 'list' object has no attribute 'tensors'
+[2024-12-04 18:50:44,973][flwr][INFO] - aggregate_fit: received 0 results and 1 failures
+[2024-12-04 18:50:53,537][flwr][INFO] - fit progress: (3, 0.1534462869167328, {'mae': 0.34914541244506836}, 33.4126229)
+[2024-12-04 18:50:53,537][flwr][INFO] - configure_evaluate: strategy sampled 1 clients (out of 1)
+[2024-12-04 18:50:54,982][flwr][ERROR] - Traceback (most recent call last):
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 94, in _submit_job
+    out_mssg, updated_context = self.actor_pool.get_client_result(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 398, in get_client_result
+    return self._fetch_future_result(cid)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 279, in _fetch_future_result
+    res_cid, out_mssg, updated_context = ray.get(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\worker.py", line 2753, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\worker.py", line 904, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\message_handler\message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\3.FederatedTraining\client.py", line 42, in evaluate
+    loss, accuracy = self.model.evaluate(self.x_test, self.y_test)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\keras\src\utils\traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\keras\src\trainers\data_adapters\data_adapter_utils.py", line 114, in check_data_cardinality
+    raise ValueError(msg)
+ValueError: Data cardinality is ambiguous. Make sure all arrays contain the same number of samples.'x' sizes: 16899
+'y' sizes: 4212
+
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "python\ray\_raylet.pyx", line 1856, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1957, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1862, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1803, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\function_manager.py", line 696, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: Data cardinality is ambiguous. Make sure all arrays contain the same number of samples.'x' sizes: 16899
+'y' sizes: 4212
+
+[2024-12-04 18:50:54,991][flwr][ERROR] - [36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\message_handler\message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\3.FederatedTraining\client.py", line 42, in evaluate
+    loss, accuracy = self.model.evaluate(self.x_test, self.y_test)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\keras\src\utils\traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\keras\src\trainers\data_adapters\data_adapter_utils.py", line 114, in check_data_cardinality
+    raise ValueError(msg)
+ValueError: Data cardinality is ambiguous. Make sure all arrays contain the same number of samples.'x' sizes: 16899
+'y' sizes: 4212
+
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "python\ray\_raylet.pyx", line 1856, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1957, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1862, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1803, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\function_manager.py", line 696, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: Data cardinality is ambiguous. Make sure all arrays contain the same number of samples.'x' sizes: 16899
+'y' sizes: 4212
+[2024-12-04 18:50:54,995][flwr][INFO] - aggregate_evaluate: received 0 results and 1 failures
+[2024-12-04 18:50:54,996][flwr][INFO] - 
+[2024-12-04 18:50:54,996][flwr][INFO] - [ROUND 4]
+[2024-12-04 18:50:54,996][flwr][INFO] - configure_fit: strategy sampled 1 clients (out of 1)
+[2024-12-04 18:50:56,438][flwr][ERROR] - Traceback (most recent call last):
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 94, in _submit_job
+    out_mssg, updated_context = self.actor_pool.get_client_result(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 398, in get_client_result
+    return self._fetch_future_result(cid)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 279, in _fetch_future_result
+    res_cid, out_mssg, updated_context = ray.get(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\worker.py", line 2753, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\worker.py", line 904, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\message_handler\message_handler.py", line 129, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client.py", line 255, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\numpy_client.py", line 259, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\3.FederatedTraining\client.py", line 28, in fit
+    weights = parameters_to_ndarrays(parameters)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\common\parameter.py", line 34, in parameters_to_ndarrays
+    return [bytes_to_ndarray(tensor) for tensor in parameters.tensors]
+AttributeError: 'list' object has no attribute 'tensors'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "python\ray\_raylet.pyx", line 1856, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1957, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1862, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1803, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\function_manager.py", line 696, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: 'list' object has no attribute 'tensors'
+
+[2024-12-04 18:50:56,445][flwr][ERROR] - [36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\message_handler\message_handler.py", line 129, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client.py", line 255, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\numpy_client.py", line 259, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\3.FederatedTraining\client.py", line 28, in fit
+    weights = parameters_to_ndarrays(parameters)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\common\parameter.py", line 34, in parameters_to_ndarrays
+    return [bytes_to_ndarray(tensor) for tensor in parameters.tensors]
+AttributeError: 'list' object has no attribute 'tensors'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "python\ray\_raylet.pyx", line 1856, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1957, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1862, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1803, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\function_manager.py", line 696, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: 'list' object has no attribute 'tensors'
+[2024-12-04 18:50:56,449][flwr][INFO] - aggregate_fit: received 0 results and 1 failures
+[2024-12-04 18:51:04,932][flwr][INFO] - fit progress: (4, 0.1534462869167328, {'mae': 0.34914541244506836}, 44.809399000000006)
+[2024-12-04 18:51:04,933][flwr][INFO] - configure_evaluate: strategy sampled 1 clients (out of 1)
+[2024-12-04 18:51:06,354][flwr][ERROR] - Traceback (most recent call last):
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 94, in _submit_job
+    out_mssg, updated_context = self.actor_pool.get_client_result(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 398, in get_client_result
+    return self._fetch_future_result(cid)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 279, in _fetch_future_result
+    res_cid, out_mssg, updated_context = ray.get(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\worker.py", line 2753, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\worker.py", line 904, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\message_handler\message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\3.FederatedTraining\client.py", line 42, in evaluate
+    loss, accuracy = self.model.evaluate(self.x_test, self.y_test)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\keras\src\utils\traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\keras\src\trainers\data_adapters\data_adapter_utils.py", line 114, in check_data_cardinality
+    raise ValueError(msg)
+ValueError: Data cardinality is ambiguous. Make sure all arrays contain the same number of samples.'x' sizes: 16899
+'y' sizes: 4212
+
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "python\ray\_raylet.pyx", line 1856, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1957, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1862, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1803, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\function_manager.py", line 696, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: Data cardinality is ambiguous. Make sure all arrays contain the same number of samples.'x' sizes: 16899
+'y' sizes: 4212
+
+[2024-12-04 18:51:06,361][flwr][ERROR] - [36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\message_handler\message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\3.FederatedTraining\client.py", line 42, in evaluate
+    loss, accuracy = self.model.evaluate(self.x_test, self.y_test)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\keras\src\utils\traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\keras\src\trainers\data_adapters\data_adapter_utils.py", line 114, in check_data_cardinality
+    raise ValueError(msg)
+ValueError: Data cardinality is ambiguous. Make sure all arrays contain the same number of samples.'x' sizes: 16899
+'y' sizes: 4212
+
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "python\ray\_raylet.pyx", line 1856, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1957, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1862, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1803, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\function_manager.py", line 696, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: Data cardinality is ambiguous. Make sure all arrays contain the same number of samples.'x' sizes: 16899
+'y' sizes: 4212
+[2024-12-04 18:51:06,365][flwr][INFO] - aggregate_evaluate: received 0 results and 1 failures
+[2024-12-04 18:51:06,366][flwr][INFO] - 
+[2024-12-04 18:51:06,366][flwr][INFO] - [ROUND 5]
+[2024-12-04 18:51:06,366][flwr][INFO] - configure_fit: strategy sampled 1 clients (out of 1)
+[2024-12-04 18:51:07,814][flwr][ERROR] - Traceback (most recent call last):
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 94, in _submit_job
+    out_mssg, updated_context = self.actor_pool.get_client_result(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 398, in get_client_result
+    return self._fetch_future_result(cid)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 279, in _fetch_future_result
+    res_cid, out_mssg, updated_context = ray.get(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\worker.py", line 2753, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\worker.py", line 904, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\message_handler\message_handler.py", line 129, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client.py", line 255, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\numpy_client.py", line 259, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\3.FederatedTraining\client.py", line 28, in fit
+    weights = parameters_to_ndarrays(parameters)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\common\parameter.py", line 34, in parameters_to_ndarrays
+    return [bytes_to_ndarray(tensor) for tensor in parameters.tensors]
+AttributeError: 'list' object has no attribute 'tensors'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "python\ray\_raylet.pyx", line 1856, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1957, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1862, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1803, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\function_manager.py", line 696, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: 'list' object has no attribute 'tensors'
+
+[2024-12-04 18:51:07,821][flwr][ERROR] - [36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\message_handler\message_handler.py", line 129, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client.py", line 255, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\numpy_client.py", line 259, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\3.FederatedTraining\client.py", line 28, in fit
+    weights = parameters_to_ndarrays(parameters)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\common\parameter.py", line 34, in parameters_to_ndarrays
+    return [bytes_to_ndarray(tensor) for tensor in parameters.tensors]
+AttributeError: 'list' object has no attribute 'tensors'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "python\ray\_raylet.pyx", line 1856, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1957, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1862, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1803, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\function_manager.py", line 696, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: 'list' object has no attribute 'tensors'
+[2024-12-04 18:51:07,825][flwr][INFO] - aggregate_fit: received 0 results and 1 failures
+[2024-12-04 18:51:16,406][flwr][INFO] - fit progress: (5, 0.1534462869167328, {'mae': 0.34914541244506836}, 56.2830997)
+[2024-12-04 18:51:16,408][flwr][INFO] - configure_evaluate: strategy sampled 1 clients (out of 1)
+[2024-12-04 18:51:17,780][flwr][ERROR] - Traceback (most recent call last):
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 94, in _submit_job
+    out_mssg, updated_context = self.actor_pool.get_client_result(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 398, in get_client_result
+    return self._fetch_future_result(cid)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 279, in _fetch_future_result
+    res_cid, out_mssg, updated_context = ray.get(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\worker.py", line 2753, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\worker.py", line 904, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\message_handler\message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\3.FederatedTraining\client.py", line 42, in evaluate
+    loss, accuracy = self.model.evaluate(self.x_test, self.y_test)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\keras\src\utils\traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\keras\src\trainers\data_adapters\data_adapter_utils.py", line 114, in check_data_cardinality
+    raise ValueError(msg)
+ValueError: Data cardinality is ambiguous. Make sure all arrays contain the same number of samples.'x' sizes: 16899
+'y' sizes: 4212
+
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "python\ray\_raylet.pyx", line 1856, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1957, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1862, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1803, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\function_manager.py", line 696, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: Data cardinality is ambiguous. Make sure all arrays contain the same number of samples.'x' sizes: 16899
+'y' sizes: 4212
+
+[2024-12-04 18:51:17,788][flwr][ERROR] - [36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\message_handler\message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\3.FederatedTraining\client.py", line 42, in evaluate
+    loss, accuracy = self.model.evaluate(self.x_test, self.y_test)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\keras\src\utils\traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\keras\src\trainers\data_adapters\data_adapter_utils.py", line 114, in check_data_cardinality
+    raise ValueError(msg)
+ValueError: Data cardinality is ambiguous. Make sure all arrays contain the same number of samples.'x' sizes: 16899
+'y' sizes: 4212
+
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "python\ray\_raylet.pyx", line 1856, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1957, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1862, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1803, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\function_manager.py", line 696, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: Data cardinality is ambiguous. Make sure all arrays contain the same number of samples.'x' sizes: 16899
+'y' sizes: 4212
+[2024-12-04 18:51:17,793][flwr][INFO] - aggregate_evaluate: received 0 results and 1 failures
+[2024-12-04 18:51:17,794][flwr][INFO] - 
+[2024-12-04 18:51:17,794][flwr][INFO] - [ROUND 6]
+[2024-12-04 18:51:17,795][flwr][INFO] - configure_fit: strategy sampled 1 clients (out of 1)
+[2024-12-04 18:51:19,247][flwr][ERROR] - Traceback (most recent call last):
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 94, in _submit_job
+    out_mssg, updated_context = self.actor_pool.get_client_result(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 398, in get_client_result
+    return self._fetch_future_result(cid)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 279, in _fetch_future_result
+    res_cid, out_mssg, updated_context = ray.get(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\worker.py", line 2753, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\worker.py", line 904, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\message_handler\message_handler.py", line 129, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client.py", line 255, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\numpy_client.py", line 259, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\3.FederatedTraining\client.py", line 28, in fit
+    weights = parameters_to_ndarrays(parameters)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\common\parameter.py", line 34, in parameters_to_ndarrays
+    return [bytes_to_ndarray(tensor) for tensor in parameters.tensors]
+AttributeError: 'list' object has no attribute 'tensors'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "python\ray\_raylet.pyx", line 1856, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1957, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1862, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1803, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\function_manager.py", line 696, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: 'list' object has no attribute 'tensors'
+
+[2024-12-04 18:51:19,254][flwr][ERROR] - [36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\message_handler\message_handler.py", line 129, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client.py", line 255, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\numpy_client.py", line 259, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\3.FederatedTraining\client.py", line 28, in fit
+    weights = parameters_to_ndarrays(parameters)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\common\parameter.py", line 34, in parameters_to_ndarrays
+    return [bytes_to_ndarray(tensor) for tensor in parameters.tensors]
+AttributeError: 'list' object has no attribute 'tensors'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "python\ray\_raylet.pyx", line 1856, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1957, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1862, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1803, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\function_manager.py", line 696, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: 'list' object has no attribute 'tensors'
+[2024-12-04 18:51:19,257][flwr][INFO] - aggregate_fit: received 0 results and 1 failures
+[2024-12-04 18:51:27,509][flwr][INFO] - fit progress: (6, 0.1534462869167328, {'mae': 0.34914541244506836}, 67.38548800000001)
+[2024-12-04 18:51:27,510][flwr][INFO] - configure_evaluate: strategy sampled 1 clients (out of 1)
+[2024-12-04 18:51:29,009][flwr][ERROR] - Traceback (most recent call last):
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 94, in _submit_job
+    out_mssg, updated_context = self.actor_pool.get_client_result(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 398, in get_client_result
+    return self._fetch_future_result(cid)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 279, in _fetch_future_result
+    res_cid, out_mssg, updated_context = ray.get(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\worker.py", line 2753, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\worker.py", line 904, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\message_handler\message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\3.FederatedTraining\client.py", line 42, in evaluate
+    loss, accuracy = self.model.evaluate(self.x_test, self.y_test)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\keras\src\utils\traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\keras\src\trainers\data_adapters\data_adapter_utils.py", line 114, in check_data_cardinality
+    raise ValueError(msg)
+ValueError: Data cardinality is ambiguous. Make sure all arrays contain the same number of samples.'x' sizes: 16899
+'y' sizes: 4212
+
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "python\ray\_raylet.pyx", line 1856, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1957, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1862, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1803, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\function_manager.py", line 696, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: Data cardinality is ambiguous. Make sure all arrays contain the same number of samples.'x' sizes: 16899
+'y' sizes: 4212
+
+[2024-12-04 18:51:29,017][flwr][ERROR] - [36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\message_handler\message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\3.FederatedTraining\client.py", line 42, in evaluate
+    loss, accuracy = self.model.evaluate(self.x_test, self.y_test)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\keras\src\utils\traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\keras\src\trainers\data_adapters\data_adapter_utils.py", line 114, in check_data_cardinality
+    raise ValueError(msg)
+ValueError: Data cardinality is ambiguous. Make sure all arrays contain the same number of samples.'x' sizes: 16899
+'y' sizes: 4212
+
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "python\ray\_raylet.pyx", line 1856, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1957, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1862, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1803, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\function_manager.py", line 696, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: Data cardinality is ambiguous. Make sure all arrays contain the same number of samples.'x' sizes: 16899
+'y' sizes: 4212
+[2024-12-04 18:51:29,022][flwr][INFO] - aggregate_evaluate: received 0 results and 1 failures
+[2024-12-04 18:51:29,023][flwr][INFO] - 
+[2024-12-04 18:51:29,023][flwr][INFO] - [ROUND 7]
+[2024-12-04 18:51:29,023][flwr][INFO] - configure_fit: strategy sampled 1 clients (out of 1)
+[2024-12-04 18:51:30,329][flwr][ERROR] - Traceback (most recent call last):
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 94, in _submit_job
+    out_mssg, updated_context = self.actor_pool.get_client_result(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 398, in get_client_result
+    return self._fetch_future_result(cid)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 279, in _fetch_future_result
+    res_cid, out_mssg, updated_context = ray.get(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\worker.py", line 2753, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\worker.py", line 904, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\message_handler\message_handler.py", line 129, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client.py", line 255, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\numpy_client.py", line 259, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\3.FederatedTraining\client.py", line 28, in fit
+    weights = parameters_to_ndarrays(parameters)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\common\parameter.py", line 34, in parameters_to_ndarrays
+    return [bytes_to_ndarray(tensor) for tensor in parameters.tensors]
+AttributeError: 'list' object has no attribute 'tensors'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "python\ray\_raylet.pyx", line 1856, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1957, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1862, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1803, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\function_manager.py", line 696, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: 'list' object has no attribute 'tensors'
+
+[2024-12-04 18:51:30,336][flwr][ERROR] - [36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\message_handler\message_handler.py", line 129, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client.py", line 255, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\numpy_client.py", line 259, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\3.FederatedTraining\client.py", line 28, in fit
+    weights = parameters_to_ndarrays(parameters)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\common\parameter.py", line 34, in parameters_to_ndarrays
+    return [bytes_to_ndarray(tensor) for tensor in parameters.tensors]
+AttributeError: 'list' object has no attribute 'tensors'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "python\ray\_raylet.pyx", line 1856, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1957, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1862, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1803, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\function_manager.py", line 696, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: 'list' object has no attribute 'tensors'
+[2024-12-04 18:51:30,339][flwr][INFO] - aggregate_fit: received 0 results and 1 failures
+[2024-12-04 18:51:38,598][flwr][INFO] - fit progress: (7, 0.1534462869167328, {'mae': 0.34914541244506836}, 78.4744422)
+[2024-12-04 18:51:38,599][flwr][INFO] - configure_evaluate: strategy sampled 1 clients (out of 1)
+[2024-12-04 18:51:40,127][flwr][ERROR] - Traceback (most recent call last):
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 94, in _submit_job
+    out_mssg, updated_context = self.actor_pool.get_client_result(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 398, in get_client_result
+    return self._fetch_future_result(cid)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 279, in _fetch_future_result
+    res_cid, out_mssg, updated_context = ray.get(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\worker.py", line 2753, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\worker.py", line 904, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\message_handler\message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\3.FederatedTraining\client.py", line 42, in evaluate
+    loss, accuracy = self.model.evaluate(self.x_test, self.y_test)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\keras\src\utils\traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\keras\src\trainers\data_adapters\data_adapter_utils.py", line 114, in check_data_cardinality
+    raise ValueError(msg)
+ValueError: Data cardinality is ambiguous. Make sure all arrays contain the same number of samples.'x' sizes: 16899
+'y' sizes: 4212
+
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "python\ray\_raylet.pyx", line 1856, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1957, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1862, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1803, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\function_manager.py", line 696, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: Data cardinality is ambiguous. Make sure all arrays contain the same number of samples.'x' sizes: 16899
+'y' sizes: 4212
+
+[2024-12-04 18:51:40,135][flwr][ERROR] - [36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\message_handler\message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\3.FederatedTraining\client.py", line 42, in evaluate
+    loss, accuracy = self.model.evaluate(self.x_test, self.y_test)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\keras\src\utils\traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\keras\src\trainers\data_adapters\data_adapter_utils.py", line 114, in check_data_cardinality
+    raise ValueError(msg)
+ValueError: Data cardinality is ambiguous. Make sure all arrays contain the same number of samples.'x' sizes: 16899
+'y' sizes: 4212
+
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "python\ray\_raylet.pyx", line 1856, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1957, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1862, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1803, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\function_manager.py", line 696, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: Data cardinality is ambiguous. Make sure all arrays contain the same number of samples.'x' sizes: 16899
+'y' sizes: 4212
+[2024-12-04 18:51:40,139][flwr][INFO] - aggregate_evaluate: received 0 results and 1 failures
+[2024-12-04 18:51:40,139][flwr][INFO] - 
+[2024-12-04 18:51:40,139][flwr][INFO] - [ROUND 8]
+[2024-12-04 18:51:40,141][flwr][INFO] - configure_fit: strategy sampled 1 clients (out of 1)
+[2024-12-04 18:51:41,462][flwr][ERROR] - Traceback (most recent call last):
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 94, in _submit_job
+    out_mssg, updated_context = self.actor_pool.get_client_result(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 398, in get_client_result
+    return self._fetch_future_result(cid)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 279, in _fetch_future_result
+    res_cid, out_mssg, updated_context = ray.get(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\worker.py", line 2753, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\worker.py", line 904, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\message_handler\message_handler.py", line 129, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client.py", line 255, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\numpy_client.py", line 259, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\3.FederatedTraining\client.py", line 28, in fit
+    weights = parameters_to_ndarrays(parameters)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\common\parameter.py", line 34, in parameters_to_ndarrays
+    return [bytes_to_ndarray(tensor) for tensor in parameters.tensors]
+AttributeError: 'list' object has no attribute 'tensors'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "python\ray\_raylet.pyx", line 1856, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1957, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1862, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1803, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\function_manager.py", line 696, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: 'list' object has no attribute 'tensors'
+
+[2024-12-04 18:51:41,469][flwr][ERROR] - [36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\message_handler\message_handler.py", line 129, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client.py", line 255, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\numpy_client.py", line 259, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\3.FederatedTraining\client.py", line 28, in fit
+    weights = parameters_to_ndarrays(parameters)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\common\parameter.py", line 34, in parameters_to_ndarrays
+    return [bytes_to_ndarray(tensor) for tensor in parameters.tensors]
+AttributeError: 'list' object has no attribute 'tensors'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "python\ray\_raylet.pyx", line 1856, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1957, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1862, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1803, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\function_manager.py", line 696, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: 'list' object has no attribute 'tensors'
+[2024-12-04 18:51:41,472][flwr][INFO] - aggregate_fit: received 0 results and 1 failures
+[2024-12-04 18:51:49,574][flwr][INFO] - fit progress: (8, 0.1534462869167328, {'mae': 0.34914541244506836}, 89.4512192)
+[2024-12-04 18:51:49,576][flwr][INFO] - configure_evaluate: strategy sampled 1 clients (out of 1)
+[2024-12-04 18:51:51,031][flwr][ERROR] - Traceback (most recent call last):
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 94, in _submit_job
+    out_mssg, updated_context = self.actor_pool.get_client_result(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 398, in get_client_result
+    return self._fetch_future_result(cid)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 279, in _fetch_future_result
+    res_cid, out_mssg, updated_context = ray.get(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\worker.py", line 2753, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\worker.py", line 904, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\message_handler\message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\3.FederatedTraining\client.py", line 42, in evaluate
+    loss, accuracy = self.model.evaluate(self.x_test, self.y_test)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\keras\src\utils\traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\keras\src\trainers\data_adapters\data_adapter_utils.py", line 114, in check_data_cardinality
+    raise ValueError(msg)
+ValueError: Data cardinality is ambiguous. Make sure all arrays contain the same number of samples.'x' sizes: 16899
+'y' sizes: 4212
+
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "python\ray\_raylet.pyx", line 1856, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1957, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1862, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1803, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\function_manager.py", line 696, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: Data cardinality is ambiguous. Make sure all arrays contain the same number of samples.'x' sizes: 16899
+'y' sizes: 4212
+
+[2024-12-04 18:51:51,038][flwr][ERROR] - [36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\message_handler\message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\3.FederatedTraining\client.py", line 42, in evaluate
+    loss, accuracy = self.model.evaluate(self.x_test, self.y_test)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\keras\src\utils\traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\keras\src\trainers\data_adapters\data_adapter_utils.py", line 114, in check_data_cardinality
+    raise ValueError(msg)
+ValueError: Data cardinality is ambiguous. Make sure all arrays contain the same number of samples.'x' sizes: 16899
+'y' sizes: 4212
+
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "python\ray\_raylet.pyx", line 1856, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1957, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1862, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1803, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\function_manager.py", line 696, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: Data cardinality is ambiguous. Make sure all arrays contain the same number of samples.'x' sizes: 16899
+'y' sizes: 4212
+[2024-12-04 18:51:51,043][flwr][INFO] - aggregate_evaluate: received 0 results and 1 failures
+[2024-12-04 18:51:51,043][flwr][INFO] - 
+[2024-12-04 18:51:51,044][flwr][INFO] - [ROUND 9]
+[2024-12-04 18:51:51,044][flwr][INFO] - configure_fit: strategy sampled 1 clients (out of 1)
+[2024-12-04 18:51:52,349][flwr][ERROR] - Traceback (most recent call last):
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 94, in _submit_job
+    out_mssg, updated_context = self.actor_pool.get_client_result(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 398, in get_client_result
+    return self._fetch_future_result(cid)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 279, in _fetch_future_result
+    res_cid, out_mssg, updated_context = ray.get(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\worker.py", line 2753, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\worker.py", line 904, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\message_handler\message_handler.py", line 129, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client.py", line 255, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\numpy_client.py", line 259, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\3.FederatedTraining\client.py", line 28, in fit
+    weights = parameters_to_ndarrays(parameters)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\common\parameter.py", line 34, in parameters_to_ndarrays
+    return [bytes_to_ndarray(tensor) for tensor in parameters.tensors]
+AttributeError: 'list' object has no attribute 'tensors'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "python\ray\_raylet.pyx", line 1856, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1957, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1862, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1803, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\function_manager.py", line 696, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: 'list' object has no attribute 'tensors'
+
+[2024-12-04 18:51:52,355][flwr][ERROR] - [36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\message_handler\message_handler.py", line 129, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client.py", line 255, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\numpy_client.py", line 259, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\3.FederatedTraining\client.py", line 28, in fit
+    weights = parameters_to_ndarrays(parameters)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\common\parameter.py", line 34, in parameters_to_ndarrays
+    return [bytes_to_ndarray(tensor) for tensor in parameters.tensors]
+AttributeError: 'list' object has no attribute 'tensors'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "python\ray\_raylet.pyx", line 1856, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1957, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1862, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1803, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\function_manager.py", line 696, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: 'list' object has no attribute 'tensors'
+[2024-12-04 18:51:52,361][flwr][INFO] - aggregate_fit: received 0 results and 1 failures
+[2024-12-04 18:52:00,586][flwr][INFO] - fit progress: (9, 0.1534462869167328, {'mae': 0.34914541244506836}, 100.46188369999999)
+[2024-12-04 18:52:00,587][flwr][INFO] - configure_evaluate: strategy sampled 1 clients (out of 1)
+[2024-12-04 18:52:02,075][flwr][ERROR] - Traceback (most recent call last):
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 94, in _submit_job
+    out_mssg, updated_context = self.actor_pool.get_client_result(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 398, in get_client_result
+    return self._fetch_future_result(cid)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 279, in _fetch_future_result
+    res_cid, out_mssg, updated_context = ray.get(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\worker.py", line 2753, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\worker.py", line 904, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\message_handler\message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\3.FederatedTraining\client.py", line 42, in evaluate
+    loss, accuracy = self.model.evaluate(self.x_test, self.y_test)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\keras\src\utils\traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\keras\src\trainers\data_adapters\data_adapter_utils.py", line 114, in check_data_cardinality
+    raise ValueError(msg)
+ValueError: Data cardinality is ambiguous. Make sure all arrays contain the same number of samples.'x' sizes: 16899
+'y' sizes: 4212
+
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "python\ray\_raylet.pyx", line 1856, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1957, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1862, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1803, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\function_manager.py", line 696, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: Data cardinality is ambiguous. Make sure all arrays contain the same number of samples.'x' sizes: 16899
+'y' sizes: 4212
+
+[2024-12-04 18:52:02,083][flwr][ERROR] - [36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\message_handler\message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\3.FederatedTraining\client.py", line 42, in evaluate
+    loss, accuracy = self.model.evaluate(self.x_test, self.y_test)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\keras\src\utils\traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\keras\src\trainers\data_adapters\data_adapter_utils.py", line 114, in check_data_cardinality
+    raise ValueError(msg)
+ValueError: Data cardinality is ambiguous. Make sure all arrays contain the same number of samples.'x' sizes: 16899
+'y' sizes: 4212
+
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "python\ray\_raylet.pyx", line 1856, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1957, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1862, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1803, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\function_manager.py", line 696, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: Data cardinality is ambiguous. Make sure all arrays contain the same number of samples.'x' sizes: 16899
+'y' sizes: 4212
+[2024-12-04 18:52:02,087][flwr][INFO] - aggregate_evaluate: received 0 results and 1 failures
+[2024-12-04 18:52:02,088][flwr][INFO] - 
+[2024-12-04 18:52:02,089][flwr][INFO] - [ROUND 10]
+[2024-12-04 18:52:02,089][flwr][INFO] - configure_fit: strategy sampled 1 clients (out of 1)
+[2024-12-04 18:52:03,568][flwr][ERROR] - Traceback (most recent call last):
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 94, in _submit_job
+    out_mssg, updated_context = self.actor_pool.get_client_result(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 398, in get_client_result
+    return self._fetch_future_result(cid)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 279, in _fetch_future_result
+    res_cid, out_mssg, updated_context = ray.get(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\worker.py", line 2753, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\worker.py", line 904, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\message_handler\message_handler.py", line 129, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client.py", line 255, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\numpy_client.py", line 259, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\3.FederatedTraining\client.py", line 28, in fit
+    weights = parameters_to_ndarrays(parameters)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\common\parameter.py", line 34, in parameters_to_ndarrays
+    return [bytes_to_ndarray(tensor) for tensor in parameters.tensors]
+AttributeError: 'list' object has no attribute 'tensors'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "python\ray\_raylet.pyx", line 1856, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1957, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1862, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1803, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\function_manager.py", line 696, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: 'list' object has no attribute 'tensors'
+
+[2024-12-04 18:52:03,575][flwr][ERROR] - [36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\message_handler\message_handler.py", line 129, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client.py", line 255, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\numpy_client.py", line 259, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\3.FederatedTraining\client.py", line 28, in fit
+    weights = parameters_to_ndarrays(parameters)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\common\parameter.py", line 34, in parameters_to_ndarrays
+    return [bytes_to_ndarray(tensor) for tensor in parameters.tensors]
+AttributeError: 'list' object has no attribute 'tensors'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "python\ray\_raylet.pyx", line 1856, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1957, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1862, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1803, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\function_manager.py", line 696, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: 'list' object has no attribute 'tensors'
+[2024-12-04 18:52:03,580][flwr][INFO] - aggregate_fit: received 0 results and 1 failures
+[2024-12-04 18:52:12,944][flwr][INFO] - fit progress: (10, 0.1534462869167328, {'mae': 0.34914541244506836}, 112.8199812)
+[2024-12-04 18:52:12,945][flwr][INFO] - configure_evaluate: strategy sampled 1 clients (out of 1)
+[2024-12-04 18:52:14,392][flwr][ERROR] - Traceback (most recent call last):
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_client_proxy.py", line 94, in _submit_job
+    out_mssg, updated_context = self.actor_pool.get_client_result(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 398, in get_client_result
+    return self._fetch_future_result(cid)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 279, in _fetch_future_result
+    res_cid, out_mssg, updated_context = ray.get(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\worker.py", line 2753, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\worker.py", line 904, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\message_handler\message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\3.FederatedTraining\client.py", line 42, in evaluate
+    loss, accuracy = self.model.evaluate(self.x_test, self.y_test)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\keras\src\utils\traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\keras\src\trainers\data_adapters\data_adapter_utils.py", line 114, in check_data_cardinality
+    raise ValueError(msg)
+ValueError: Data cardinality is ambiguous. Make sure all arrays contain the same number of samples.'x' sizes: 16899
+'y' sizes: 4212
+
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "python\ray\_raylet.pyx", line 1856, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1957, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1862, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1803, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\function_manager.py", line 696, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: Data cardinality is ambiguous. Make sure all arrays contain the same number of samples.'x' sizes: 16899
+'y' sizes: 4212
+
+[2024-12-04 18:52:14,400][flwr][ERROR] - [36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\message_handler\message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\client\numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\3.FederatedTraining\client.py", line 42, in evaluate
+    loss, accuracy = self.model.evaluate(self.x_test, self.y_test)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\keras\src\utils\traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\keras\src\trainers\data_adapters\data_adapter_utils.py", line 114, in check_data_cardinality
+    raise ValueError(msg)
+ValueError: Data cardinality is ambiguous. Make sure all arrays contain the same number of samples.'x' sizes: 16899
+'y' sizes: 4212
+
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=23804, ip=127.0.0.1, actor_id=51f06bc8fac59d162c7fa73001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001A543E21A30>)
+  File "python\ray\_raylet.pyx", line 1856, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1957, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1862, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1803, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\_private\function_manager.py", line 696, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: Data cardinality is ambiguous. Make sure all arrays contain the same number of samples.'x' sizes: 16899
+'y' sizes: 4212
+[2024-12-04 18:52:14,405][flwr][INFO] - aggregate_evaluate: received 0 results and 1 failures
+[2024-12-04 18:52:14,407][flwr][INFO] - 
+[2024-12-04 18:52:14,407][flwr][INFO] - [SUMMARY]
+[2024-12-04 18:52:14,407][flwr][INFO] - Run finished 10 round(s) in 114.28s
+[2024-12-04 18:52:14,408][flwr][INFO] - 	History (loss, centralized):
+[2024-12-04 18:52:14,408][flwr][INFO] - 		round 0: 0.1534462869167328
+[2024-12-04 18:52:14,410][flwr][INFO] - 		round 1: 0.1534462869167328
+[2024-12-04 18:52:14,410][flwr][INFO] - 		round 2: 0.1534462869167328
+[2024-12-04 18:52:14,410][flwr][INFO] - 		round 3: 0.1534462869167328
+[2024-12-04 18:52:14,411][flwr][INFO] - 		round 4: 0.1534462869167328
+[2024-12-04 18:52:14,411][flwr][INFO] - 		round 5: 0.1534462869167328
+[2024-12-04 18:52:14,411][flwr][INFO] - 		round 6: 0.1534462869167328
+[2024-12-04 18:52:14,412][flwr][INFO] - 		round 7: 0.1534462869167328
+[2024-12-04 18:52:14,412][flwr][INFO] - 		round 8: 0.1534462869167328
+[2024-12-04 18:52:14,412][flwr][INFO] - 		round 9: 0.1534462869167328
+[2024-12-04 18:52:14,412][flwr][INFO] - 		round 10: 0.1534462869167328
+[2024-12-04 18:52:14,412][flwr][INFO] - 	History (metrics, centralized):
+[2024-12-04 18:52:14,413][flwr][INFO] - 	{'mae': [(0, 0.34914541244506836),
+[2024-12-04 18:52:14,413][flwr][INFO] - 	         (1, 0.34914541244506836),
+[2024-12-04 18:52:14,413][flwr][INFO] - 	         (2, 0.34914541244506836),
+[2024-12-04 18:52:14,413][flwr][INFO] - 	         (3, 0.34914541244506836),
+[2024-12-04 18:52:14,415][flwr][INFO] - 	         (4, 0.34914541244506836),
+[2024-12-04 18:52:14,415][flwr][INFO] - 	         (5, 0.34914541244506836),
+[2024-12-04 18:52:14,415][flwr][INFO] - 	         (6, 0.34914541244506836),
+[2024-12-04 18:52:14,416][flwr][INFO] - 	         (7, 0.34914541244506836),
+[2024-12-04 18:52:14,416][flwr][INFO] - 	         (8, 0.34914541244506836),
+[2024-12-04 18:52:14,416][flwr][INFO] - 	         (9, 0.34914541244506836),
+[2024-12-04 18:52:14,417][flwr][INFO] - 	         (10, 0.34914541244506836)]}
+[2024-12-04 18:52:14,417][flwr][INFO] - 

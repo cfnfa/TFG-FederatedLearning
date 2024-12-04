@@ -60,24 +60,21 @@ def cargar_datos(Cid):
 
 def prepare_test_set():
     """Prepare medical dataset for federated learning."""
-    file_path="C:/Users/clara/Desktop/TFG/Codigo TFG/1.Extract and preprocess/final_data/VVC-extracted.xlsx"
+    file_path = "C:/Users/clara/Desktop/TFG/Codigo TFG/1.Extract and preprocess/final_data/VVC-extracted.xlsx"
     
+    # Cargar y limpiar los datos
     data = pd.read_excel(file_path)
-
     data_cleaned = data[['Bolus', 'Basal', 'CGM(mg/dl)', 'Carb Input']].dropna()
     
     # Normalizar los datos
     scaler = MinMaxScaler(feature_range=(0, 1))
-    test_scaled = scaler.fit_transform(data_cleaned)
+    test_scaled = scaler.fit_transform(data_cleaned)  # Normalizar todo el conjunto
 
-    
-
-    # Preparar datos de entrenamiento
+    # Parámetros para secuencias
     sequence_length = 12
     pasos_adelante = 6
     
-
-    # Preparar datos de prueba
+    # Crear secuencias
     X_test, y_test = [], []
     for i in range(len(test_scaled) - sequence_length - pasos_adelante):  
         X_test.append(test_scaled[i:i+sequence_length, :])
@@ -87,11 +84,16 @@ def prepare_test_set():
     X_test = np.array(X_test, dtype=np.float32)
     y_test = np.array(y_test, dtype=np.float32)
 
+    # Validar que las dimensiones coincidan
+    assert X_test.shape[0] == y_test.shape[0], "X_test y y_test no tienen el mismo número de muestras"
+
+    # Imprimir información sobre los datos
     print("Datos preparados:")
     print(f"  Tamaño del conjunto de prueba: {X_test.shape[0]}")
     print(f"  Dimensiones de las entradas: {X_test.shape[1:]}")
 
-    return  X_test, y_test
+    return X_test, y_test
+
 
         
    
