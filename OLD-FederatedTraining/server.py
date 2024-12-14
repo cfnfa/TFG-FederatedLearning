@@ -4,6 +4,8 @@ from omegaconf import DictConfig
 
 from model import load_lstm_model
 from dataset import prepare_test_set
+import flwr
+from flwr.common import parameters_to_ndarrays
 
 def get_on_fit_config(config: DictConfig):
     """Return function that prepares config to send to clients."""
@@ -31,12 +33,18 @@ def get_evaluate_fn(sequence_length: int, input_dim: int):
     """Define function for global evaluation on the server."""
 
     def evaluate_fn(server_round: int, parameters, config):
-        # Reconstruct the model from the weights received from the clients
+        if not isinstance(parameters, flwr.common.Parameters):
+            raise ValueError("El objeto parameters debe ser una instancia de flwr.common.Parameters")
+        
         model = load_lstm_model(sequence_length, input_dim)
+        weights = parameters_to_ndarrays(parameters)
+        model.set_weights(weights)
+        # Reconstruct the model from the weights received from the clients
+        
         print(f"Pesos recibidos por el servidor: {len(parameters)} capas.")
 
         # Convertimos los parámetros a un formato que pueda usar TensorFlow.
-        weights = [tf.convert_to_tensor(w) for w in parameters]
+        weights = parameters_to_ndarrays(parameters)
         model.set_weights(weights)  # Asignar los pesos directamente
 
         # Compile the model before evaluating (as TensorFlow models need compilation)

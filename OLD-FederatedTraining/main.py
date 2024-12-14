@@ -30,7 +30,8 @@ def main(cfg: DictConfig):
     #Creamos los clientes
     client_fn = generate_client_fn()
     model = load_lstm_model()
-    initial_parameters = ndarrays_to_parameters(model.get_weights())
+    initial_weights = model.get_weights()  # Asegúrate de que esto devuelve una lista de ndarrays
+    inicial_parameters = ndarrays_to_parameters(initial_weights)  # Convertir a flwr.common.Parameters
     ## 4. Define your strategy
     # Using FedAvg strategy for Federated Learning with LSTM
     strategy = fl.server.strategy.FedAvg(
@@ -39,7 +40,7 @@ def main(cfg: DictConfig):
         fraction_evaluate=0.1,  # Fraction of clients to evaluate the model in each round
         min_evaluate_clients=cfg.num_clients_per_round_eval,  # Number of clients to sample for evaluation
         min_available_clients=cfg.num_clients,  # Total clients in the simulation
-        initial_parameters=initial_parameters,
+        initial_parameters=inicial_parameters,
         on_fit_config_fn=get_on_fit_config(cfg.config_fit),  # Custom config for client-side training
         evaluate_fn=get_evaluate_fn(cfg.sequence_length, input_dim=cfg.input_dim),  # Custom evaluate function for the LSTM model
     )

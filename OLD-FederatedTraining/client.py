@@ -5,8 +5,7 @@ from model import load_lstm_model
 from typing import Dict, Tuple
 import tensorflow as tf
 from dataset import cargar_datos
-from flwr.common import Context, ParametersRecord
-from flwr.common import parameters_to_ndarrays, ndarrays_to_parameters
+from flwr.common import Context, ParametersRecord, parameters_to_ndarrays, ndarrays_to_parameters
 
 
 #el cliente es una instancia de la clase de cliente de flower
@@ -24,7 +23,8 @@ class FlowerClient(fl.client.NumPyClient):
     
 
     def fit(self, parameters, config):
-        # Convertir parámetros a pesos
+        # Al crear clientes, el metodo fit recibe parameters del servidor. Estos deben ser del tipo Paremeters de flower. Deben ser convertidos mediante ndarrays_to_parameters en el servidor, antes de distribuirlos a los clientes.
+
         weights = parameters_to_ndarrays(parameters)
         print(f"Pesos recibidos para el cliente (fit): {len(weights)} capas.")
         self.model.set_weights(weights)
@@ -39,14 +39,15 @@ class FlowerClient(fl.client.NumPyClient):
 
     def evaluate(self, parameters, config):
         self.model.set_weights(parameters)
-        loss, accuracy = self.model.evaluate(self.x_test, self.y_test)
+        loss, accuracy = self.model.evaluate(self.x_test, self.y_test, verbose=0)
         return float(loss), len(self.x_test), {"accuracy": accuracy}
 
 
 def generate_client_fn():
-    def client_fn(cid: str):
-        # Convert FlowerClient to a proper Flower client using to_client()
-        data= cargar_datos(int(cid))
+    def client_fn(context: Context):
+        cid = int(context.cid)  # Context tiene el CID del cliente
+        print('este cliente tiene el cid '+ cid)
+        data = cargar_datos(cid)
         return FlowerClient(data).to_client()
     return client_fn
 
