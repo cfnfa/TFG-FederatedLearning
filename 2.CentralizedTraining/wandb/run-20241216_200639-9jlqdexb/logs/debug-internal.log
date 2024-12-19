@@ -1,0 +1,17 @@
+{"time":"2024-12-16T20:06:39.0328505+01:00","level":"INFO","msg":"using version","core version":"0.19.1"}
+{"time":"2024-12-16T20:06:39.0328505+01:00","level":"INFO","msg":"created symlink","path":"C:\\Users\\clara\\Desktop\\TFG\\Codigo TFG\\2.CentralizedTraining\\wandb\\run-20241216_200639-9jlqdexb\\logs\\debug-core.log"}
+{"time":"2024-12-16T20:06:40.1526436+01:00","level":"INFO","msg":"created new stream","id":"9jlqdexb"}
+{"time":"2024-12-16T20:06:40.1526436+01:00","level":"INFO","msg":"stream: started","id":"9jlqdexb"}
+{"time":"2024-12-16T20:06:40.1526436+01:00","level":"INFO","msg":"handler: started","stream_id":"9jlqdexb"}
+{"time":"2024-12-16T20:06:40.1526436+01:00","level":"INFO","msg":"sender: started","stream_id":"9jlqdexb"}
+{"time":"2024-12-16T20:06:40.1531855+01:00","level":"INFO","msg":"writer: Do: started","stream_id":"9jlqdexb"}
+{"time":"2024-12-16T20:06:40.5115414+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-12-16T20:36:20.0363874+01:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-12-16T20:36:20.0387052+01:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-12-16T20:36:20.8019992+01:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-12-16T20:36:21.0297009+01:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2024-12-16T20:36:22.0520313+01:00","level":"INFO","msg":"stream: closing","id":"9jlqdexb"}
+{"time":"2024-12-16T20:36:22.0520313+01:00","level":"INFO","msg":"handler: closed","stream_id":"9jlqdexb"}
+{"time":"2024-12-16T20:36:22.0520313+01:00","level":"INFO","msg":"writer: Close: closed","stream_id":"9jlqdexb"}
+{"time":"2024-12-16T20:36:22.0525407+01:00","level":"INFO","msg":"sender: closed","stream_id":"9jlqdexb"}
+{"time":"2024-12-16T20:36:22.0525407+01:00","level":"INFO","msg":"stream: closed","id":"9jlqdexb"}

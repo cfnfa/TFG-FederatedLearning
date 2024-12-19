@@ -14,6 +14,7 @@ from keras import layers, models, optimizers
 
 
 
+
 # Make TensorFlow log less verbose
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
 def load_model(sequence_length: int = 12, input_dim: int = 4, learning_rate: float = 0.0005):
@@ -32,7 +33,7 @@ def load_model(sequence_length: int = 12, input_dim: int = 4, learning_rate: flo
     
     # Configurar el optimizador y la función de pérdida
     optimizer = optimizers.Adam(learning_rate=learning_rate)
-    model.compile(optimizer=optimizer, loss="mean_squared_error",metrics=["accuracy"])
+    model.compile(optimizer=optimizer, loss="mse",metrics=[keras.metrics.RootMeanSquaredError()])
     
     return model
 

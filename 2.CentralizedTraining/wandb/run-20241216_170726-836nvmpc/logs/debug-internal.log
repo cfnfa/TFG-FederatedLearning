@@ -1,0 +1,16 @@
+{"time":"2024-12-16T17:07:26.1742409+01:00","level":"INFO","msg":"using version","core version":"0.19.1"}
+{"time":"2024-12-16T17:07:26.1742409+01:00","level":"INFO","msg":"created symlink","path":"C:\\Users\\clara\\Desktop\\TFG\\Codigo TFG\\2.CentralizedTraining\\wandb\\run-20241216_170726-836nvmpc\\logs\\debug-core.log"}
+{"time":"2024-12-16T17:07:27.4075837+01:00","level":"INFO","msg":"created new stream","id":"836nvmpc"}
+{"time":"2024-12-16T17:07:27.4080936+01:00","level":"INFO","msg":"stream: started","id":"836nvmpc"}
+{"time":"2024-12-16T17:07:27.4080936+01:00","level":"INFO","msg":"writer: Do: started","stream_id":"836nvmpc"}
+{"time":"2024-12-16T17:07:27.4080936+01:00","level":"INFO","msg":"handler: started","stream_id":"836nvmpc"}
+{"time":"2024-12-16T17:07:27.4080936+01:00","level":"INFO","msg":"sender: started","stream_id":"836nvmpc"}
+{"time":"2024-12-16T17:07:27.6806134+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-12-16T17:08:48.0998276+01:00","level":"INFO","msg":"stream: closing","id":"836nvmpc"}
+{"time":"2024-12-16T17:08:48.0998276+01:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-12-16T17:08:48.5485194+01:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-12-16T17:08:49.1030867+01:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-12-16T17:08:49.3209585+01:00","level":"INFO","msg":"handler: closed","stream_id":"836nvmpc"}
+{"time":"2024-12-16T17:08:49.3209585+01:00","level":"INFO","msg":"sender: closed","stream_id":"836nvmpc"}
+{"time":"2024-12-16T17:08:49.3209585+01:00","level":"INFO","msg":"writer: Close: closed","stream_id":"836nvmpc"}
+{"time":"2024-12-16T17:08:49.3215513+01:00","level":"INFO","msg":"stream: closed","id":"836nvmpc"}

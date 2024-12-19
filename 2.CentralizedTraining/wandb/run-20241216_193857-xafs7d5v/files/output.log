@@ -1,0 +1,96 @@
+C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\keras\src\layers\rnn\rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[1mModel: "sequential"[0m
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃[1m [0m[1mLayer (type)                        [0m[1m [0m┃[1m [0m[1mOutput Shape               [0m[1m [0m┃[1m [0m[1m        Param #[0m[1m [0m┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ lstm ([38;5;33mLSTM[0m)                          │ ([38;5;45mNone[0m, [38;5;34m6[0m, [38;5;34m128[0m)              │          [38;5;34m68,096[0m │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dropout ([38;5;33mDropout[0m)                    │ ([38;5;45mNone[0m, [38;5;34m6[0m, [38;5;34m128[0m)              │               [38;5;34m0[0m │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ lstm_1 ([38;5;33mLSTM[0m)                        │ ([38;5;45mNone[0m, [38;5;34m64[0m)                  │          [38;5;34m49,408[0m │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dropout_1 ([38;5;33mDropout[0m)                  │ ([38;5;45mNone[0m, [38;5;34m64[0m)                  │               [38;5;34m0[0m │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense ([38;5;33mDense[0m)                        │ ([38;5;45mNone[0m, [38;5;34m1[0m)                   │              [38;5;34m65[0m │
+└──────────────────────────────────────┴─────────────────────────────┴─────────────────┘
+[1m Total params: [0m[38;5;34m117,569[0m (459.25 KB)
+[1m Trainable params: [0m[38;5;34m117,569[0m (459.25 KB)
+[1m Non-trainable params: [0m[38;5;34m0[0m (0.00 B)
+Modelo compilado. Iniciando entrenamiento...
+Epoch 1/50
+[1m3827/3827[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m83s[0m 20ms/step - loss: 0.0886 - root_mean_squared_error: 0.0922 - val_loss: 0.0645 - val_root_mean_squared_error: 0.0709
+Epoch 2/50
+[1m3827/3827[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m77s[0m 20ms/step - loss: 0.0696 - root_mean_squared_error: 0.0706 - val_loss: 0.0626 - val_root_mean_squared_error: 0.0688
+Epoch 3/50
+[1m3827/3827[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m97s[0m 25ms/step - loss: 0.0682 - root_mean_squared_error: 0.0692 - val_loss: 0.0627 - val_root_mean_squared_error: 0.0691
+Epoch 4/50
+[1m3827/3827[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m82s[0m 21ms/step - loss: 0.0674 - root_mean_squared_error: 0.0684 - val_loss: 0.0624 - val_root_mean_squared_error: 0.0686
+Epoch 5/50
+[1m3827/3827[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m94s[0m 24ms/step - loss: 0.0675 - root_mean_squared_error: 0.0686 - val_loss: 0.0618 - val_root_mean_squared_error: 0.0679
+Epoch 6/50
+[1m3827/3827[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m85s[0m 22ms/step - loss: 0.0669 - root_mean_squared_error: 0.0680 - val_loss: 0.0639 - val_root_mean_squared_error: 0.0692
+Epoch 7/50
+[1m3827/3827[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m94s[0m 25ms/step - loss: 0.0668 - root_mean_squared_error: 0.0679 - val_loss: 0.0623 - val_root_mean_squared_error: 0.0685
+Epoch 8/50
+[1m3827/3827[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m84s[0m 22ms/step - loss: 0.0662 - root_mean_squared_error: 0.0672 - val_loss: 0.0618 - val_root_mean_squared_error: 0.0681
+Epoch 9/50
+[1m3827/3827[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m84s[0m 22ms/step - loss: 0.0663 - root_mean_squared_error: 0.0673 - val_loss: 0.0618 - val_root_mean_squared_error: 0.0676
+Epoch 10/50
+[1m 344/3827[0m [32m━[0m[37m━━━━━━━━━━━━━━━━━━━[0m [1m1:22[0m 24ms/step - loss: 0.0655 - root_mean_squared_error: 0.0665
+Traceback (most recent call last):
+  File "c:\Users\clara\Desktop\TFG\Codigo TFG\2.CentralizedTraining\modelobueno.py", line 174, in <module>
+    y_pred, model = training_evaluating(X_train, X_test, y_train, y_test, sequence_length)
+  File "c:\Users\clara\Desktop\TFG\Codigo TFG\2.CentralizedTraining\modelobueno.py", line 118, in training_evaluating
+    history = model.fit(X_train, y_train, epochs=wandb.config.epochs, batch_size=wandb.config.batch_size, validation_data=(X_test, y_test),
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\keras\src\utils\traceback_utils.py", line 117, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\keras\src\backend\tensorflow\trainer.py", line 368, in fit
+    logs = self.train_function(iterator)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\keras\src\backend\tensorflow\trainer.py", line 216, in function
+    opt_outputs = multi_step_on_iterator(iterator)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\tensorflow\python\util\traceback_utils.py", line 150, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\tensorflow\python\eager\polymorphic_function\polymorphic_function.py", line 833, in __call__
+    result = self._call(*args, **kwds)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\tensorflow\python\eager\polymorphic_function\polymorphic_function.py", line 878, in _call
+    results = tracing_compilation.call_function(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\tensorflow\python\eager\polymorphic_function\tracing_compilation.py", line 139, in call_function
+    return function._call_flat(  # pylint: disable=protected-access
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\tensorflow\python\eager\polymorphic_function\concrete_function.py", line 1322, in _call_flat
+    return self._inference_function.call_preflattened(args)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\tensorflow\python\eager\polymorphic_function\atomic_function.py", line 216, in call_preflattened
+    flat_outputs = self.call_flat(*args)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\tensorflow\python\eager\polymorphic_function\atomic_function.py", line 242, in call_flat
+    with InterpolateRuntimeError(self):
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\tensorflow\python\eager\polymorphic_function\atomic_function.py", line 645, in __init__
+    self._func = top_level_func
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "c:\Users\clara\Desktop\TFG\Codigo TFG\2.CentralizedTraining\modelobueno.py", line 174, in <module>
+    y_pred, model = training_evaluating(X_train, X_test, y_train, y_test, sequence_length)
+  File "c:\Users\clara\Desktop\TFG\Codigo TFG\2.CentralizedTraining\modelobueno.py", line 118, in training_evaluating
+    history = model.fit(X_train, y_train, epochs=wandb.config.epochs, batch_size=wandb.config.batch_size, validation_data=(X_test, y_test),
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\keras\src\utils\traceback_utils.py", line 117, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\keras\src\backend\tensorflow\trainer.py", line 368, in fit
+    logs = self.train_function(iterator)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\keras\src\backend\tensorflow\trainer.py", line 216, in function
+    opt_outputs = multi_step_on_iterator(iterator)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\tensorflow\python\util\traceback_utils.py", line 150, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\tensorflow\python\eager\polymorphic_function\polymorphic_function.py", line 833, in __call__
+    result = self._call(*args, **kwds)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\tensorflow\python\eager\polymorphic_function\polymorphic_function.py", line 878, in _call
+    results = tracing_compilation.call_function(
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\tensorflow\python\eager\polymorphic_function\tracing_compilation.py", line 139, in call_function
+    return function._call_flat(  # pylint: disable=protected-access
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\tensorflow\python\eager\polymorphic_function\concrete_function.py", line 1322, in _call_flat
+    return self._inference_function.call_preflattened(args)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\tensorflow\python\eager\polymorphic_function\atomic_function.py", line 216, in call_preflattened
+    flat_outputs = self.call_flat(*args)
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\tensorflow\python\eager\polymorphic_function\atomic_function.py", line 242, in call_flat
+    with InterpolateRuntimeError(self):
+  File "C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\tensorflow\python\eager\polymorphic_function\atomic_function.py", line 645, in __init__
+    self._func = top_level_func
+KeyboardInterrupt

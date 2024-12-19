@@ -1,0 +1,60 @@
+C:\Users\clara\anaconda3\envs\tf_gpu\lib\site-packages\keras\src\layers\rnn\rnn.py:200: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+[1mModel: "sequential"[0m
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃[1m [0m[1mLayer (type)                        [0m[1m [0m┃[1m [0m[1mOutput Shape               [0m[1m [0m┃[1m [0m[1m        Param #[0m[1m [0m┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ lstm ([38;5;33mLSTM[0m)                          │ ([38;5;45mNone[0m, [38;5;34m6[0m, [38;5;34m128[0m)              │          [38;5;34m68,096[0m │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dropout ([38;5;33mDropout[0m)                    │ ([38;5;45mNone[0m, [38;5;34m6[0m, [38;5;34m128[0m)              │               [38;5;34m0[0m │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ lstm_1 ([38;5;33mLSTM[0m)                        │ ([38;5;45mNone[0m, [38;5;34m128[0m)                 │         [38;5;34m131,584[0m │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dropout_1 ([38;5;33mDropout[0m)                  │ ([38;5;45mNone[0m, [38;5;34m128[0m)                 │               [38;5;34m0[0m │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense ([38;5;33mDense[0m)                        │ ([38;5;45mNone[0m, [38;5;34m1[0m)                   │             [38;5;34m129[0m │
+└──────────────────────────────────────┴─────────────────────────────┴─────────────────┘
+[1m Total params: [0m[38;5;34m199,809[0m (780.50 KB)
+[1m Trainable params: [0m[38;5;34m199,809[0m (780.50 KB)
+[1m Non-trainable params: [0m[38;5;34m0[0m (0.00 B)
+Modelo compilado. Iniciando entrenamiento...
+Epoch 1/50
+[1m3835/3835[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m78s[0m 19ms/step - loss: 0.0918 - root_mean_squared_error: 0.0967 - val_loss: 0.0645 - val_root_mean_squared_error: 0.0701
+Epoch 2/50
+[1m3835/3835[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m80s[0m 21ms/step - loss: 0.0701 - root_mean_squared_error: 0.0710 - val_loss: 0.0608 - val_root_mean_squared_error: 0.0660
+Epoch 3/50
+[1m3835/3835[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m83s[0m 22ms/step - loss: 0.0675 - root_mean_squared_error: 0.0683 - val_loss: 0.0599 - val_root_mean_squared_error: 0.0652
+Epoch 4/50
+[1m3835/3835[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m91s[0m 24ms/step - loss: 0.0668 - root_mean_squared_error: 0.0676 - val_loss: 0.0605 - val_root_mean_squared_error: 0.0660
+Epoch 5/50
+[1m3835/3835[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m107s[0m 28ms/step - loss: 0.0662 - root_mean_squared_error: 0.0670 - val_loss: 0.0616 - val_root_mean_squared_error: 0.0667
+Epoch 6/50
+[1m3835/3835[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m115s[0m 21ms/step - loss: 0.0659 - root_mean_squared_error: 0.0667 - val_loss: 0.0598 - val_root_mean_squared_error: 0.0653
+Epoch 7/50
+[1m3835/3835[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m87s[0m 23ms/step - loss: 0.0655 - root_mean_squared_error: 0.0663 - val_loss: 0.0605 - val_root_mean_squared_error: 0.0655
+Epoch 8/50
+[1m3835/3835[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m117s[0m 30ms/step - loss: 0.0655 - root_mean_squared_error: 0.0664 - val_loss: 0.0612 - val_root_mean_squared_error: 0.0659
+Epoch 9/50
+[1m3835/3835[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m100s[0m 26ms/step - loss: 0.0658 - root_mean_squared_error: 0.0666 - val_loss: 0.0595 - val_root_mean_squared_error: 0.0650
+Epoch 10/50
+[1m3835/3835[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m86s[0m 22ms/step - loss: 0.0652 - root_mean_squared_error: 0.0661 - val_loss: 0.0616 - val_root_mean_squared_error: 0.0663
+Epoch 11/50
+[1m3835/3835[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m94s[0m 25ms/step - loss: 0.0651 - root_mean_squared_error: 0.0660 - val_loss: 0.0598 - val_root_mean_squared_error: 0.0651
+Epoch 12/50
+[1m3835/3835[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m88s[0m 23ms/step - loss: 0.0650 - root_mean_squared_error: 0.0659 - val_loss: 0.0593 - val_root_mean_squared_error: 0.0644
+Epoch 13/50
+[1m3835/3835[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m93s[0m 24ms/step - loss: 0.0650 - root_mean_squared_error: 0.0659 - val_loss: 0.0611 - val_root_mean_squared_error: 0.0662
+Epoch 14/50
+[1m3835/3835[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m105s[0m 27ms/step - loss: 0.0648 - root_mean_squared_error: 0.0656 - val_loss: 0.0590 - val_root_mean_squared_error: 0.0643
+Epoch 15/50
+[1m3835/3835[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m123s[0m 32ms/step - loss: 0.0650 - root_mean_squared_error: 0.0658 - val_loss: 0.0599 - val_root_mean_squared_error: 0.0648
+Epoch 16/50
+[1m3835/3835[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m121s[0m 32ms/step - loss: 0.0648 - root_mean_squared_error: 0.0656 - val_loss: 0.0601 - val_root_mean_squared_error: 0.0653
+Epoch 17/50
+[1m3835/3835[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m130s[0m 34ms/step - loss: 0.0646 - root_mean_squared_error: 0.0654 - val_loss: 0.0601 - val_root_mean_squared_error: 0.0653
+Epoch 18/50
+[1m3835/3835[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m116s[0m 30ms/step - loss: 0.0644 - root_mean_squared_error: 0.0652 - val_loss: 0.0591 - val_root_mean_squared_error: 0.0643
+Epoch 19/50
+[1m3835/3835[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m108s[0m 28ms/step - loss: 0.0643 - root_mean_squared_error: 0.0651 - val_loss: 0.0621 - val_root_mean_squared_error: 0.0674
+[1m2454/2454[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m22s[0m 9ms/step - loss: 0.0569 - root_mean_squared_error: 0.0652
+[1m2454/2454[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m21s[0m 8ms/step

@@ -25,7 +25,7 @@ clientapp = "tfexample.client_app:app"
 
 [tool.flwr.app.config]
 num-server-rounds = 4
-local-epochs = 3
+local-epochs = 5
 batch-size = 32
 learning-rate = 0.005
 fraction-fit = 1 # Sample 100% of available clients for training

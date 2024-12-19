@@ -1,0 +1,16 @@
+{"time":"2024-12-15T12:16:09.3993451+01:00","level":"INFO","msg":"using version","core version":"0.19.1"}
+{"time":"2024-12-15T12:16:09.3998568+01:00","level":"INFO","msg":"created symlink","path":"C:\\Users\\clara\\Desktop\\TFG\\Codigo TFG\\2.CentralizedTraining\\wandb\\run-20241215_121609-md34txih\\logs\\debug-core.log"}
+{"time":"2024-12-15T12:16:10.4158564+01:00","level":"INFO","msg":"created new stream","id":"md34txih"}
+{"time":"2024-12-15T12:16:10.4158564+01:00","level":"INFO","msg":"stream: started","id":"md34txih"}
+{"time":"2024-12-15T12:16:10.4158564+01:00","level":"INFO","msg":"writer: Do: started","stream_id":"md34txih"}
+{"time":"2024-12-15T12:16:10.4158564+01:00","level":"INFO","msg":"sender: started","stream_id":"md34txih"}
+{"time":"2024-12-15T12:16:10.4158564+01:00","level":"INFO","msg":"handler: started","stream_id":"md34txih"}
+{"time":"2024-12-15T12:16:10.6866307+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-12-15T12:16:11.2036806+01:00","level":"INFO","msg":"stream: closing","id":"md34txih"}
+{"time":"2024-12-15T12:16:11.2042126+01:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-12-15T12:16:11.2042126+01:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-12-15T12:16:11.9471031+01:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-12-15T12:16:12.1658585+01:00","level":"INFO","msg":"handler: closed","stream_id":"md34txih"}
+{"time":"2024-12-15T12:16:12.1658585+01:00","level":"INFO","msg":"writer: Close: closed","stream_id":"md34txih"}
+{"time":"2024-12-15T12:16:12.1658585+01:00","level":"INFO","msg":"sender: closed","stream_id":"md34txih"}
+{"time":"2024-12-15T12:16:12.1658585+01:00","level":"INFO","msg":"stream: closed","id":"md34txih"}

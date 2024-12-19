@@ -9,6 +9,8 @@ from tensorflow.keras.layers import LSTM, Dense, Dropout
 from tensorflow.keras.callbacks import EarlyStopping
 import matplotlib.pyplot as plt
 from sklearn.metrics import mean_squared_error, mean_absolute_error
+from ClarkeErrorGrid import clarke_error_grid
+from ClarkeErrorGrid import zone_percentages
 
 def preparacion_datos():
     ruta_archivos = "C:/Users/clara/Desktop/TFG/Codigo TFG/1.Extract and preprocess/final_data"
@@ -96,7 +98,7 @@ def preparacion_datos():
 
 
 
-def training_evaluating(X_train, X_test, y_train, y_test, sequence_length):
+def training_evaluating(X_train, X_test, y_train, y_test, sequence_length,scaler_test):
     # Definir el modelo LSTM con activaciones ReLU
     model = Sequential()
     model.add(LSTM(64, input_shape=(sequence_length, 4), return_sequences=True, activation='relu'))
@@ -118,6 +120,22 @@ def training_evaluating(X_train, X_test, y_train, y_test, sequence_length):
 
     # Realizar predicciones en el conjunto de prueba
     y_pred = model.predict(X_test)
+
+     # Desnormalizar los valores de prueba reales y predicciones
+    y_test_desnormalized = scaler_test.inverse_transform(
+        np.concatenate([np.zeros((len(y_test), 2)), y_test.reshape(-1, 1), np.zeros((len(y_test), 1))], axis=1))[:, 2]
+    y_pred_desnormalized = scaler_test.inverse_transform(
+        np.concatenate([np.zeros((len(y_pred), 2)), y_pred, np.zeros((len(y_pred), 1))], axis=1))[:, 2]
+    
+    # Calcular y visualizar el error de Clarke
+    print("Calculando y visualizando el error de Clarke...")
+    plot, zone = clarke_error_grid(pd.Series(y_test_desnormalized), pd.Series(y_pred_desnormalized), "Error de Clarke")
+    plot.show()
+
+    # Mostrar porcentajes de cada zona
+    total_percentages = zone_percentages("Modelo LSTM", zone)
+    print("\nPorcentajes de las zonas en el error de Clarke:")
+    print(total_percentages)
 
     return y_pred, model
 
@@ -141,8 +159,10 @@ def visualize(y_test, y_pred, scaler_test):
     plt.show()
 
     # Calcular y mostrar métricas de evaluación
+    rmse_normalizado = np.sqrt(mean_squared_error(y_test, y_pred))
     rmse = np.sqrt(mean_squared_error(y_test_desnormalized, y_pred_desnormalized))
     mae = mean_absolute_error(y_test_desnormalized, y_pred_desnormalized)
+    print(f'Error Cuadrático Medio NORMALIZADO (RMSE): {rmse_normalizado}')
     print(f'Error Cuadrático Medio (RMSE): {rmse}')
     print(f'Error Absoluto Medio (MAE): {mae}')
 
@@ -153,7 +173,7 @@ print("Iniciando la preparación de datos...")
 X_train, X_test, y_train, y_test, scaler_train, scaler_test, data_combined = preparacion_datos()
 
 print("Iniciando el entrenamiento y la evaluación del modelo...")
-y_pred, model = training_evaluating(X_train, X_test, y_train, y_test, sequence_length)
+y_pred, model = training_evaluating(X_train, X_test, y_train, y_test, sequence_length,scaler_test)
 
 print("Visualizando resultados...")
 visualize(y_test, y_pred, scaler_test)
