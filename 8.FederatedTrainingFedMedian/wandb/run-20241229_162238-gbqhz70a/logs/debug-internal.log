@@ -1,0 +1,16 @@
+{"time":"2024-12-29T16:22:38.0690771+01:00","level":"INFO","msg":"using version","core version":"0.19.1"}
+{"time":"2024-12-29T16:22:38.0690771+01:00","level":"INFO","msg":"created symlink","path":"C:\\Users\\clara\\Desktop\\TFG\\Codigo TFG\\5.FederatedTrainingMejorada2\\wandb\\run-20241229_162238-gbqhz70a\\logs\\debug-core.log"}
+{"time":"2024-12-29T16:22:39.0830529+01:00","level":"INFO","msg":"created new stream","id":"gbqhz70a"}
+{"time":"2024-12-29T16:22:39.0830529+01:00","level":"INFO","msg":"stream: started","id":"gbqhz70a"}
+{"time":"2024-12-29T16:22:39.0830529+01:00","level":"INFO","msg":"handler: started","stream_id":"gbqhz70a"}
+{"time":"2024-12-29T16:22:39.0830529+01:00","level":"INFO","msg":"sender: started","stream_id":"gbqhz70a"}
+{"time":"2024-12-29T16:22:39.0830529+01:00","level":"INFO","msg":"writer: Do: started","stream_id":"gbqhz70a"}
+{"time":"2024-12-29T16:22:39.3788386+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-12-29T17:29:41.8273155+01:00","level":"INFO","msg":"stream: closing","id":"gbqhz70a"}
+{"time":"2024-12-29T17:29:41.8273155+01:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-12-29T17:29:41.827821+01:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-12-29T17:29:42.6218373+01:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-12-29T17:29:42.8005895+01:00","level":"INFO","msg":"handler: closed","stream_id":"gbqhz70a"}
+{"time":"2024-12-29T17:29:42.8005895+01:00","level":"INFO","msg":"writer: Close: closed","stream_id":"gbqhz70a"}
+{"time":"2024-12-29T17:29:42.8005895+01:00","level":"INFO","msg":"sender: closed","stream_id":"gbqhz70a"}
+{"time":"2024-12-29T17:29:42.8005895+01:00","level":"INFO","msg":"stream: closed","id":"gbqhz70a"}

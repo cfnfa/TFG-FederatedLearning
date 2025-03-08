@@ -1,0 +1,8 @@
+{"time":"2025-01-09T08:25:42.6082096+01:00","level":"INFO","msg":"using version","core version":"0.19.1"}
+{"time":"2025-01-09T08:25:42.6082096+01:00","level":"INFO","msg":"created symlink","path":"C:\\Users\\clara\\Desktop\\TFG\\Codigo TFG\\8.FederatedTrainingFedMedian\\wandb\\run-20250109_082542-n00kmoq9\\logs\\debug-core.log"}
+{"time":"2025-01-09T08:25:44.0770864+01:00","level":"INFO","msg":"created new stream","id":"n00kmoq9"}
+{"time":"2025-01-09T08:25:44.0776403+01:00","level":"INFO","msg":"stream: started","id":"n00kmoq9"}
+{"time":"2025-01-09T08:25:44.0776403+01:00","level":"INFO","msg":"handler: started","stream_id":"n00kmoq9"}
+{"time":"2025-01-09T08:25:44.0776403+01:00","level":"INFO","msg":"sender: started","stream_id":"n00kmoq9"}
+{"time":"2025-01-09T08:25:44.0776403+01:00","level":"INFO","msg":"writer: Do: started","stream_id":"n00kmoq9"}
+{"time":"2025-01-09T08:25:48.1478906+01:00","level":"INFO","msg":"Starting system monitor"}

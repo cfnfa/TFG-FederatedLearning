@@ -11,11 +11,11 @@ def clean(patients):
     Path(save_dir).mkdir(parents=True, exist_ok=True)
 
     for i in patients:
-        # Ruta del archivo de entrada y del archivo de salida
+        
         input_file_path = 'C:/Users/clara/Desktop/TFG/Ensayo1/Ensayo1/Tidepool/{}.xlsx'.format(i)
         output_file_path = os.path.join(save_dir, '{}-extracted.xlsx'.format(i))
 
-        # Leer las pestañas que nos interesen: "Bolus" y "CGM" del archivo Excel
+        # Seleccionar pestañas de interés dentro del excel
         bolus_df = pd.read_excel(input_file_path, sheet_name='Bolus', parse_dates=['Local Time'])
         cgm_df = pd.read_excel(input_file_path, sheet_name='CGM', parse_dates=['Local Time'])
         basal_df = pd.read_excel(input_file_path, sheet_name='Basal', parse_dates=['Local Time'])

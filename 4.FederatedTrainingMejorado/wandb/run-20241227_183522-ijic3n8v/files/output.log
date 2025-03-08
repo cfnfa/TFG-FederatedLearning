@@ -1,0 +1,21 @@
+[92mINFO [0m:      Starting Flower ServerApp, config: num_rounds=6, no round_timeout
+[92mINFO [0m:
+[92mINFO [0m:      [INIT]
+[92mINFO [0m:      Using initial global parameters provided by strategy
+[92mINFO [0m:      Starting evaluation of initial global parameters
+782/782 - 7s - 9ms/step - loss: 0.1270 - root_mean_squared_error: 0.3564
+[92mINFO [0m:      💡⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️ New best global model found: 0.356385
+[92mINFO [0m:      initial parameters (loss, other metrics): 0.12701037526130676, {'centralized_rmse': 0.35638514161109924}
+[92mINFO [0m:
+[92mINFO [0m:      [ROUND 1]
+[92mINFO [0m:      configure_fit: strategy sampled 11 clients (out of 11)
+[36m(ClientAppActor pid=50668)[0m Cargando el archivo: 3AGM-extracted.xlsx
+[36m(ClientAppActor pid=18112)[0m Datos preparados:
+[36m(ClientAppActor pid=18112)[0m   Tamaño del conjunto de entrenamiento: 14306
+[36m(ClientAppActor pid=18112)[0m   Tamaño del conjunto de prueba: 3564
+[36m(ClientAppActor pid=18112)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=18112)[0m Primeros datos de y_test: [0.5847953 0.5964912 0.5994152 0.6023392 0.6052632]
+[36m(ClientAppActor pid=18112)[0m Configuración del nodo creada: {'partition-id': 1, 'num-partitions': 11}
+[36m(ClientAppActor pid=18112)[0m Este cliente tiene el partition_id 1 ,el node_id 13109908505982378042 y el archivo 2AML-extracted.xlsx
+[36m(ClientAppActor pid=50668)[0m Primeros datos de y_test: [0.9639889  0.97783935 0.97783935 0.9639889  0.9501385 ]
+[36m(ClientAppActor pid=22616)[0m Cargando el archivo: 1GML-extracted.xlsx[32m [repeated 3x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/ray-logging.html#log-deduplication for more options.)[0m

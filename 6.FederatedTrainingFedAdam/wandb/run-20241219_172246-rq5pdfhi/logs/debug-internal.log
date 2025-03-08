@@ -1,0 +1,16 @@
+{"time":"2024-12-19T17:22:47.0216004+01:00","level":"INFO","msg":"using version","core version":"0.19.1"}
+{"time":"2024-12-19T17:22:47.0216004+01:00","level":"INFO","msg":"created symlink","path":"C:\\Users\\clara\\Desktop\\TFG\\Codigo TFG\\4.FederatedTrainingMejorada\\wandb\\run-20241219_172246-rq5pdfhi\\logs\\debug-core.log"}
+{"time":"2024-12-19T17:22:48.2315827+01:00","level":"INFO","msg":"created new stream","id":"rq5pdfhi"}
+{"time":"2024-12-19T17:22:48.2315827+01:00","level":"INFO","msg":"stream: started","id":"rq5pdfhi"}
+{"time":"2024-12-19T17:22:48.2315827+01:00","level":"INFO","msg":"writer: Do: started","stream_id":"rq5pdfhi"}
+{"time":"2024-12-19T17:22:48.2315827+01:00","level":"INFO","msg":"handler: started","stream_id":"rq5pdfhi"}
+{"time":"2024-12-19T17:22:48.2315827+01:00","level":"INFO","msg":"sender: started","stream_id":"rq5pdfhi"}
+{"time":"2024-12-19T17:22:48.6733059+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-12-19T17:47:58.9324937+01:00","level":"INFO","msg":"stream: closing","id":"rq5pdfhi"}
+{"time":"2024-12-19T17:47:58.9324937+01:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-12-19T17:47:59.5760943+01:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-12-19T17:48:00.5067174+01:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-12-19T17:48:00.8104921+01:00","level":"INFO","msg":"handler: closed","stream_id":"rq5pdfhi"}
+{"time":"2024-12-19T17:48:00.8104921+01:00","level":"INFO","msg":"writer: Close: closed","stream_id":"rq5pdfhi"}
+{"time":"2024-12-19T17:48:00.8104921+01:00","level":"INFO","msg":"sender: closed","stream_id":"rq5pdfhi"}
+{"time":"2024-12-19T17:48:00.8116667+01:00","level":"INFO","msg":"stream: closed","id":"rq5pdfhi"}

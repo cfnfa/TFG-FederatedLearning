@@ -1,0 +1,16 @@
+{"time":"2024-12-19T18:05:39.4419369+01:00","level":"INFO","msg":"using version","core version":"0.19.1"}
+{"time":"2024-12-19T18:05:39.4419369+01:00","level":"INFO","msg":"created symlink","path":"C:\\Users\\clara\\Desktop\\TFG\\Codigo TFG\\4.FederatedTrainingMejorada\\wandb\\run-20241219_180539-l888rck3\\logs\\debug-core.log"}
+{"time":"2024-12-19T18:05:40.5648262+01:00","level":"INFO","msg":"created new stream","id":"l888rck3"}
+{"time":"2024-12-19T18:05:40.5648262+01:00","level":"INFO","msg":"stream: started","id":"l888rck3"}
+{"time":"2024-12-19T18:05:40.5648262+01:00","level":"INFO","msg":"sender: started","stream_id":"l888rck3"}
+{"time":"2024-12-19T18:05:40.5648262+01:00","level":"INFO","msg":"handler: started","stream_id":"l888rck3"}
+{"time":"2024-12-19T18:05:40.5648262+01:00","level":"INFO","msg":"writer: Do: started","stream_id":"l888rck3"}
+{"time":"2024-12-19T18:05:40.9738418+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-12-19T19:05:55.3813682+01:00","level":"INFO","msg":"stream: closing","id":"l888rck3"}
+{"time":"2024-12-19T19:05:55.3813682+01:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-12-19T19:05:55.3824155+01:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-12-19T19:05:56.4045103+01:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-12-19T19:05:56.5954653+01:00","level":"INFO","msg":"handler: closed","stream_id":"l888rck3"}
+{"time":"2024-12-19T19:05:56.5954653+01:00","level":"INFO","msg":"writer: Close: closed","stream_id":"l888rck3"}
+{"time":"2024-12-19T19:05:56.5954653+01:00","level":"INFO","msg":"sender: closed","stream_id":"l888rck3"}
+{"time":"2024-12-19T19:05:56.5961319+01:00","level":"INFO","msg":"stream: closed","id":"l888rck3"}

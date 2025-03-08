@@ -1,0 +1,1 @@
+{"centralized_loss":0.003984673880040646,"federated_evaluate_loss":0.005030580547894005,"_runtime":1011.6683596,"_wandb":{"runtime":1011},"federated_evaluate_rmse":0.07052778540434389,"_step":2,"federated_evaluate_pearson":0.9010029707601075,"centralized_rmse":0.06312427669763565,"_timestamp":1.735481473318856e+09}

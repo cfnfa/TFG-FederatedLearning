@@ -1,0 +1,554 @@
+[92mINFO [0m:      Starting Flower ServerApp, config: num_rounds=4, no round_timeout
+[92mINFO [0m:
+[92mINFO [0m:      [INIT]
+[92mINFO [0m:      Using initial global parameters provided by strategy
+[92mINFO [0m:      Starting evaluation of initial global parameters
+969/969 - 14s - 14ms/step - loss: 0.1391 - root_mean_squared_error: 0.3729
+[92mINFO [0m:      💡 New best global model found: 0.372911
+[92mINFO [0m:      initial parameters (loss, other metrics): 0.1390623152256012, {'centralized_rmse': 0.37291058897972107}
+[92mINFO [0m:
+[92mINFO [0m:      [ROUND 1]
+[92mINFO [0m:      configure_fit: strategy sampled 11 clients (out of 11)
+[36m(ClientAppActor pid=42748)[0m Cargando el archivo: 5JMPM-extracted.xlsx
+[36m(ClientAppActor pid=43060)[0m Datos preparados:
+[36m(ClientAppActor pid=43060)[0m   Tamaño del conjunto de entrenamiento: 14306
+[36m(ClientAppActor pid=43060)[0m   Tamaño del conjunto de prueba: 3564
+[36m(ClientAppActor pid=43060)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=43060)[0m Primeros datos de y_test: [0.5847953 0.5964912 0.5994152 0.6023392 0.6052632]
+[36m(ClientAppActor pid=43060)[0m Configuración del nodo creada: {'partition-id': 1, 'num-partitions': 11}
+[36m(ClientAppActor pid=43060)[0m Este cliente tiene el partition_id 1 ,el node_id 3964830358542562293 y el archivo 2AML-extracted.xlsx
+[36m(ClientAppActor pid=35804)[0m Primeros datos de y_test: [0.9639889  0.97783935 0.97783935 0.9639889  0.9501385 ]
+[36m(ClientAppActor pid=43060)[0m Cargando el archivo: 7GCQ-extracted.xlsx[32m [repeated 4x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/ray-logging.html#log-deduplication for more options.)[0m
+[36m(ClientAppActor pid=42748)[0m Datos preparados:[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=42748)[0m   Tamaño del conjunto de entrenamiento: 28653[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=42748)[0m   Tamaño del conjunto de prueba: 7150[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=42748)[0m   Dimensiones de las entradas: (12, 4)[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=42748)[0m Primeros datos de y_test: [0.6260388 0.6426593 0.6565097 0.6814405 0.6980609]
+[36m(ClientAppActor pid=42748)[0m Configuración del nodo creada: {'partition-id': 3, 'num-partitions': 11}[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=42748)[0m Este cliente tiene el partition_id 3 ,el node_id 10872653431261914039 y el archivo 5JMPM-extracted.xlsx[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=38208)[0m Primeros datos de y_test: [0.47368422 0.49861497 0.51246536 0.5401662  0.5567867 ]
+[36m(ClientAppActor pid=35804)[0m Cargando el archivo: 8JLG-extracted.xlsx
+[36m(ClientAppActor pid=43060)[0m Datos preparados:
+[36m(ClientAppActor pid=43060)[0m   Tamaño del conjunto de entrenamiento: 23883
+[36m(ClientAppActor pid=43060)[0m   Tamaño del conjunto de prueba: 5958
+[36m(ClientAppActor pid=43060)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=43060)[0m Primeros datos de y_test: [0.48476455 0.50138503 0.51800555 0.53462607 0.5567867 ]
+[36m(ClientAppActor pid=43060)[0m Configuración del nodo creada: {'partition-id': 4, 'num-partitions': 11}
+[36m(ClientAppActor pid=43060)[0m Este cliente tiene el partition_id 4 ,el node_id 3529873953284234157 y el archivo 7GCQ-extracted.xlsx
+[36m(ClientAppActor pid=35804)[0m Primeros datos de y_test: [0.16620499 0.16066483 0.16343491 0.18836565 0.22437674]
+[36m(ClientAppActor pid=38208)[0m Cargando el archivo: 8MAVS-extracted.xlsx
+[36m(ClientAppActor pid=35804)[0m Datos preparados:
+[36m(ClientAppActor pid=35804)[0m   Tamaño del conjunto de entrenamiento: 22990
+[36m(ClientAppActor pid=35804)[0m   Tamaño del conjunto de prueba: 5735
+[36m(ClientAppActor pid=35804)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=35804)[0m Configuración del nodo creada: {'partition-id': 5, 'num-partitions': 11}
+[36m(ClientAppActor pid=35804)[0m Este cliente tiene el partition_id 5 ,el node_id 3295373844485633404 y el archivo 8JLG-extracted.xlsx
+[36m(ClientAppActor pid=42748)[0m Cargando el archivo: 99CNM-extracted.xlsx
+[36m(ClientAppActor pid=38208)[0m Datos preparados:
+[36m(ClientAppActor pid=38208)[0m   Tamaño del conjunto de entrenamiento: 30118
+[36m(ClientAppActor pid=38208)[0m   Tamaño del conjunto de prueba: 7516
+[36m(ClientAppActor pid=38208)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=38208)[0m Primeros datos de y_test: [0.22437674 0.22160664 0.23545706 0.29085872 0.38227147]
+[36m(ClientAppActor pid=38208)[0m Configuración del nodo creada: {'partition-id': 6, 'num-partitions': 11}
+[36m(ClientAppActor pid=38208)[0m Este cliente tiene el partition_id 6 ,el node_id 17782578206198673712 y el archivo 8MAVS-extracted.xlsx
+[36m(ClientAppActor pid=43060)[0m Cargando el archivo: 9CGL-extracted.xlsx
+[36m(ClientAppActor pid=42748)[0m Datos preparados:
+[36m(ClientAppActor pid=42748)[0m   Tamaño del conjunto de entrenamiento: 25013
+[36m(ClientAppActor pid=42748)[0m   Tamaño del conjunto de prueba: 6240
+[36m(ClientAppActor pid=42748)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=42748)[0m Primeros datos de y_test: [0.2936288  0.30193907 0.30470914 0.30193907 0.30747923]
+[36m(ClientAppActor pid=42748)[0m Configuración del nodo creada: {'partition-id': 7, 'num-partitions': 11}
+[36m(ClientAppActor pid=42748)[0m Este cliente tiene el partition_id 7 ,el node_id 4835927883742217716 y el archivo 99CNM-extracted.xlsx
+[36m(ClientAppActor pid=35804)[0m Cargando el archivo: 9GAG-extracted.xlsx
+[36m(ClientAppActor pid=35804)[0m Datos preparados:
+[36m(ClientAppActor pid=35804)[0m   Tamaño del conjunto de entrenamiento: 8772
+[36m(ClientAppActor pid=35804)[0m   Tamaño del conjunto de prueba: 2180
+[36m(ClientAppActor pid=35804)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=35804)[0m Primeros datos de y_test: [0.23446327 0.22881356 0.2259887  0.22316384 0.21186441]
+[36m(ClientAppActor pid=35804)[0m Configuración del nodo creada: {'partition-id': 9, 'num-partitions': 11}
+[36m(ClientAppActor pid=35804)[0m Este cliente tiene el partition_id 9 ,el node_id 994395234912697666 y el archivo 9GAG-extracted.xlsx
+[36m(ClientAppActor pid=35804)[0m Cargando el archivo: 9SVB-extracted.xlsx
+[36m(ClientAppActor pid=43060)[0m Datos preparados:
+[36m(ClientAppActor pid=43060)[0m   Tamaño del conjunto de entrenamiento: 21263
+[36m(ClientAppActor pid=43060)[0m   Tamaño del conjunto de prueba: 5303
+[36m(ClientAppActor pid=43060)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=43060)[0m Primeros datos de y_test: [0.3434903  0.3767313  0.41551247 0.43490306 0.43490306]
+[36m(ClientAppActor pid=43060)[0m Configuración del nodo creada: {'partition-id': 8, 'num-partitions': 11}
+[36m(ClientAppActor pid=43060)[0m Este cliente tiene el partition_id 8 ,el node_id 14844303839703438303 y el archivo 9CGL-extracted.xlsx
+[36m(ClientAppActor pid=35804)[0m Datos preparados:
+[36m(ClientAppActor pid=35804)[0m   Tamaño del conjunto de entrenamiento: 13633
+[36m(ClientAppActor pid=35804)[0m   Tamaño del conjunto de prueba: 3395
+[36m(ClientAppActor pid=35804)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=35804)[0m Primeros datos de y_test: [0.47091413 0.47368422 0.5096953  0.53462607 0.53739613]
+[36m(ClientAppActor pid=35804)[0m Configuración del nodo creada: {'partition-id': 10, 'num-partitions': 11}
+[36m(ClientAppActor pid=35804)[0m Este cliente tiene el partition_id 10 ,el node_id 10325863548269401849 y el archivo 9SVB-extracted.xlsx
+[92mINFO [0m:      aggregate_fit: received 11 results and 0 failures
+[93mWARNING [0m:   No fit_metrics_aggregation_fn provided
+969/969 - 7s - 7ms/step - loss: 0.0110 - root_mean_squared_error: 0.1050
+[92mINFO [0m:      💡 New best global model found: 0.105041
+[92mINFO [0m:      fit progress: (1, 0.011033575050532818, {'centralized_rmse': 0.10504082590341568}, 433.59841440001037)
+[92mINFO [0m:      configure_evaluate: strategy sampled 8 clients (out of 11)
+[36m(ClientAppActor pid=42748)[0m Cargando el archivo: 8JLG-extracted.xlsx
+[36m(ClientAppActor pid=43060)[0m Datos preparados:
+[36m(ClientAppActor pid=43060)[0m   Tamaño del conjunto de entrenamiento: 14306
+[36m(ClientAppActor pid=43060)[0m   Tamaño del conjunto de prueba: 3564
+[36m(ClientAppActor pid=43060)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=43060)[0m Primeros datos de y_test: [0.5847953 0.5964912 0.5994152 0.6023392 0.6052632]
+[36m(ClientAppActor pid=43060)[0m Configuración del nodo creada: {'partition-id': 1, 'num-partitions': 11}
+[36m(ClientAppActor pid=43060)[0m Este cliente tiene el partition_id 1 ,el node_id 3964830358542562293 y el archivo 2AML-extracted.xlsx
+[36m(ClientAppActor pid=38208)[0m Primeros datos de y_test: [0.9639889  0.97783935 0.97783935 0.9639889  0.9501385 ]
+[36m(ClientAppActor pid=43060)[0m Cargando el archivo: 2AML-extracted.xlsx[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=43060)[0m 112/112 - 2s - 18ms/step - loss: 0.0083 - root_mean_squared_error: 0.0913
+[36m(ClientAppActor pid=42748)[0m Datos preparados:[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=42748)[0m   Tamaño del conjunto de entrenamiento: 22990[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=42748)[0m   Tamaño del conjunto de prueba: 5735[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=42748)[0m   Dimensiones de las entradas: (12, 4)[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=42748)[0m Primeros datos de y_test: [0.16620499 0.16066483 0.16343491 0.18836565 0.22437674]
+[36m(ClientAppActor pid=42748)[0m Configuración del nodo creada: {'partition-id': 5, 'num-partitions': 11}[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=42748)[0m Este cliente tiene el partition_id 5 ,el node_id 3295373844485633404 y el archivo 8JLG-extracted.xlsx[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=35804)[0m Primeros datos de y_test: [0.23446327 0.22881356 0.2259887  0.22316384 0.21186441]
+[36m(ClientAppActor pid=35804)[0m Primeros datos de y_test: [0.47368422 0.49861497 0.51246536 0.5401662  0.5567867 ]
+[36m(ClientAppActor pid=42748)[0m Cargando el archivo: 9SVB-extracted.xlsx[32m [repeated 4x across cluster][0m
+[36m(ClientAppActor pid=42748)[0m 180/180 - 3s - 16ms/step - loss: 0.0111 - root_mean_squared_error: 0.1053[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=43060)[0m Datos preparados:[32m [repeated 4x across cluster][0m
+[36m(ClientAppActor pid=43060)[0m   Tamaño del conjunto de entrenamiento: 30118[32m [repeated 4x across cluster][0m
+[36m(ClientAppActor pid=43060)[0m   Tamaño del conjunto de prueba: 7516[32m [repeated 4x across cluster][0m
+[36m(ClientAppActor pid=43060)[0m   Dimensiones de las entradas: (12, 4)[32m [repeated 4x across cluster][0m
+[36m(ClientAppActor pid=43060)[0m Configuración del nodo creada: {'partition-id': 6, 'num-partitions': 11}[32m [repeated 4x across cluster][0m
+[36m(ClientAppActor pid=43060)[0m Este cliente tiene el partition_id 6 ,el node_id 17782578206198673712 y el archivo 8MAVS-extracted.xlsx[32m [repeated 4x across cluster][0m
+[92mINFO [0m:      aggregate_evaluate: received 8 results and 0 failures
+Se han recibido estas metricas: [(4212, {'rmse': 0.10202322900295258}), (7516, {'rmse': 0.10595663636922836}), (5584, {'rmse': 0.10972876101732254}), (5735, {'rmse': 0.10532192885875702}), (5303, {'rmse': 0.10519097745418549}), (3564, {'rmse': 0.09130347520112991}), (2180, {'rmse': 0.09018730372190475}), (3395, {'rmse': 0.0953381136059761})]
+Processing client with num_examples=4212, metrics={'rmse': 0.10202322900295258}
+Processing client with num_examples=7516, metrics={'rmse': 0.10595663636922836}
+Processing client with num_examples=5584, metrics={'rmse': 0.10972876101732254}
+Processing client with num_examples=5735, metrics={'rmse': 0.10532192885875702}
+Processing client with num_examples=5303, metrics={'rmse': 0.10519097745418549}
+Processing client with num_examples=3564, metrics={'rmse': 0.09130347520112991}
+Processing client with num_examples=2180, metrics={'rmse': 0.09018730372190475}
+Processing client with num_examples=3395, metrics={'rmse': 0.0953381136059761}
+El array de ejemplos es: [4212, 7516, 5584, 5735, 5303, 3564, 2180, 3395]
+lA SUMA DE EJEMPLOS ES=37489
+[92mINFO [0m:
+[92mINFO [0m:      [ROUND 2]
+[92mINFO [0m:      configure_fit: strategy sampled 11 clients (out of 11)
+[36m(ClientAppActor pid=43060)[0m Primeros datos de y_test: [0.22437674 0.22160664 0.23545706 0.29085872 0.38227147][32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=43060)[0m Cargando el archivo: 1GML-extracted.xlsx[32m [repeated 4x across cluster][0m
+[36m(ClientAppActor pid=43060)[0m 235/235 - 3s - 11ms/step - loss: 0.0112 - root_mean_squared_error: 0.1060[32m [repeated 4x across cluster][0m
+[36m(ClientAppActor pid=38208)[0m Datos preparados:
+[36m(ClientAppActor pid=38208)[0m   Tamaño del conjunto de entrenamiento: 14306
+[36m(ClientAppActor pid=38208)[0m   Tamaño del conjunto de prueba: 3564
+[36m(ClientAppActor pid=38208)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=38208)[0m Configuración del nodo creada: {'partition-id': 1, 'num-partitions': 11}
+[36m(ClientAppActor pid=38208)[0m Este cliente tiene el partition_id 1 ,el node_id 3964830358542562293 y el archivo 2AML-extracted.xlsx
+[36m(ClientAppActor pid=42748)[0m Datos preparados:
+[36m(ClientAppActor pid=42748)[0m   Tamaño del conjunto de entrenamiento: 16899
+[36m(ClientAppActor pid=42748)[0m   Tamaño del conjunto de prueba: 4212
+[36m(ClientAppActor pid=42748)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=42748)[0m Primeros datos de y_test: [0.9639889  0.97783935 0.97783935 0.9639889  0.9501385 ]
+[36m(ClientAppActor pid=42748)[0m Configuración del nodo creada: {'partition-id': 2, 'num-partitions': 11}
+[36m(ClientAppActor pid=42748)[0m Este cliente tiene el partition_id 2 ,el node_id 11170619732747614573 y el archivo 3AGM-extracted.xlsx
+[36m(ClientAppActor pid=38208)[0m Primeros datos de y_test: [0.5847953 0.5964912 0.5994152 0.6023392 0.6052632]
+[36m(ClientAppActor pid=35804)[0m Primeros datos de y_test: [0.6260388 0.6426593 0.6565097 0.6814405 0.6980609]
+[36m(ClientAppActor pid=38208)[0m Cargando el archivo: 7GCQ-extracted.xlsx
+[36m(ClientAppActor pid=35804)[0m Datos preparados:[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=35804)[0m   Tamaño del conjunto de entrenamiento: 28653[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=35804)[0m   Tamaño del conjunto de prueba: 7150[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=35804)[0m   Dimensiones de las entradas: (12, 4)[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=43060)[0m Primeros datos de y_test: [0.47368422 0.49861497 0.51246536 0.5401662  0.5567867 ]
+[36m(ClientAppActor pid=35804)[0m Configuración del nodo creada: {'partition-id': 3, 'num-partitions': 11}[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=35804)[0m Este cliente tiene el partition_id 3 ,el node_id 10872653431261914039 y el archivo 5JMPM-extracted.xlsx[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=42748)[0m Cargando el archivo: 8JLG-extracted.xlsx
+[36m(ClientAppActor pid=38208)[0m Datos preparados:
+[36m(ClientAppActor pid=38208)[0m   Tamaño del conjunto de entrenamiento: 23883
+[36m(ClientAppActor pid=38208)[0m   Tamaño del conjunto de prueba: 5958
+[36m(ClientAppActor pid=38208)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=38208)[0m Primeros datos de y_test: [0.48476455 0.50138503 0.51800555 0.53462607 0.5567867 ]
+[36m(ClientAppActor pid=38208)[0m Configuración del nodo creada: {'partition-id': 4, 'num-partitions': 11}
+[36m(ClientAppActor pid=38208)[0m Este cliente tiene el partition_id 4 ,el node_id 3529873953284234157 y el archivo 7GCQ-extracted.xlsx
+[36m(ClientAppActor pid=43060)[0m Cargando el archivo: 8MAVS-extracted.xlsx
+[36m(ClientAppActor pid=42748)[0m Datos preparados:
+[36m(ClientAppActor pid=42748)[0m   Tamaño del conjunto de entrenamiento: 22990
+[36m(ClientAppActor pid=42748)[0m   Tamaño del conjunto de prueba: 5735
+[36m(ClientAppActor pid=42748)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=42748)[0m Primeros datos de y_test: [0.16620499 0.16066483 0.16343491 0.18836565 0.22437674]
+[36m(ClientAppActor pid=42748)[0m Configuración del nodo creada: {'partition-id': 5, 'num-partitions': 11}
+[36m(ClientAppActor pid=42748)[0m Este cliente tiene el partition_id 5 ,el node_id 3295373844485633404 y el archivo 8JLG-extracted.xlsx
+[36m(ClientAppActor pid=43060)[0m Datos preparados:
+[36m(ClientAppActor pid=43060)[0m   Tamaño del conjunto de entrenamiento: 30118
+[36m(ClientAppActor pid=43060)[0m   Tamaño del conjunto de prueba: 7516
+[36m(ClientAppActor pid=43060)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=43060)[0m Primeros datos de y_test: [0.22437674 0.22160664 0.23545706 0.29085872 0.38227147]
+[36m(ClientAppActor pid=43060)[0m Configuración del nodo creada: {'partition-id': 6, 'num-partitions': 11}
+[36m(ClientAppActor pid=43060)[0m Este cliente tiene el partition_id 6 ,el node_id 17782578206198673712 y el archivo 8MAVS-extracted.xlsx
+[36m(ClientAppActor pid=35804)[0m Cargando el archivo: 99CNM-extracted.xlsx
+[36m(ClientAppActor pid=35804)[0m Datos preparados:
+[36m(ClientAppActor pid=35804)[0m   Tamaño del conjunto de entrenamiento: 25013
+[36m(ClientAppActor pid=35804)[0m   Tamaño del conjunto de prueba: 6240
+[36m(ClientAppActor pid=35804)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=35804)[0m Primeros datos de y_test: [0.2936288  0.30193907 0.30470914 0.30193907 0.30747923]
+[36m(ClientAppActor pid=35804)[0m Configuración del nodo creada: {'partition-id': 7, 'num-partitions': 11}
+[36m(ClientAppActor pid=35804)[0m Este cliente tiene el partition_id 7 ,el node_id 4835927883742217716 y el archivo 99CNM-extracted.xlsx
+[36m(ClientAppActor pid=38208)[0m Cargando el archivo: 9CGL-extracted.xlsx
+[36m(ClientAppActor pid=42748)[0m Cargando el archivo: 9GAG-extracted.xlsx
+[36m(ClientAppActor pid=38208)[0m Datos preparados:
+[36m(ClientAppActor pid=38208)[0m   Tamaño del conjunto de entrenamiento: 21263
+[36m(ClientAppActor pid=38208)[0m   Tamaño del conjunto de prueba: 5303
+[36m(ClientAppActor pid=38208)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=38208)[0m Primeros datos de y_test: [0.3434903  0.3767313  0.41551247 0.43490306 0.43490306]
+[36m(ClientAppActor pid=38208)[0m Configuración del nodo creada: {'partition-id': 8, 'num-partitions': 11}
+[36m(ClientAppActor pid=38208)[0m Este cliente tiene el partition_id 8 ,el node_id 14844303839703438303 y el archivo 9CGL-extracted.xlsx
+[36m(ClientAppActor pid=43060)[0m Cargando el archivo: 9SVB-extracted.xlsx
+[36m(ClientAppActor pid=42748)[0m Datos preparados:
+[36m(ClientAppActor pid=42748)[0m   Tamaño del conjunto de entrenamiento: 8772
+[36m(ClientAppActor pid=42748)[0m   Tamaño del conjunto de prueba: 2180
+[36m(ClientAppActor pid=42748)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=42748)[0m Primeros datos de y_test: [0.23446327 0.22881356 0.2259887  0.22316384 0.21186441]
+[36m(ClientAppActor pid=42748)[0m Configuración del nodo creada: {'partition-id': 9, 'num-partitions': 11}
+[36m(ClientAppActor pid=42748)[0m Este cliente tiene el partition_id 9 ,el node_id 994395234912697666 y el archivo 9GAG-extracted.xlsx
+[36m(ClientAppActor pid=43060)[0m Datos preparados:
+[36m(ClientAppActor pid=43060)[0m   Tamaño del conjunto de entrenamiento: 13633
+[36m(ClientAppActor pid=43060)[0m   Tamaño del conjunto de prueba: 3395
+[36m(ClientAppActor pid=43060)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=43060)[0m Primeros datos de y_test: [0.47091413 0.47368422 0.5096953  0.53462607 0.53739613]
+[36m(ClientAppActor pid=43060)[0m Configuración del nodo creada: {'partition-id': 10, 'num-partitions': 11}
+[36m(ClientAppActor pid=43060)[0m Este cliente tiene el partition_id 10 ,el node_id 10325863548269401849 y el archivo 9SVB-extracted.xlsx
+[92mINFO [0m:      aggregate_fit: received 11 results and 0 failures
+969/969 - 8s - 8ms/step - loss: 0.0050 - root_mean_squared_error: 0.0709
+[92mINFO [0m:      💡 New best global model found: 0.070892
+[92mINFO [0m:      fit progress: (2, 0.005025661084800959, {'centralized_rmse': 0.07089189440011978}, 922.842285700026)
+[92mINFO [0m:      configure_evaluate: strategy sampled 8 clients (out of 11)
+[36m(ClientAppActor pid=42748)[0m Cargando el archivo: 5JMPM-extracted.xlsx
+[36m(ClientAppActor pid=35804)[0m Datos preparados:
+[36m(ClientAppActor pid=35804)[0m   Tamaño del conjunto de entrenamiento: 14306
+[36m(ClientAppActor pid=35804)[0m   Tamaño del conjunto de prueba: 3564
+[36m(ClientAppActor pid=35804)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=35804)[0m Primeros datos de y_test: [0.5847953 0.5964912 0.5994152 0.6023392 0.6052632]
+[36m(ClientAppActor pid=35804)[0m Configuración del nodo creada: {'partition-id': 1, 'num-partitions': 11}
+[36m(ClientAppActor pid=35804)[0m Este cliente tiene el partition_id 1 ,el node_id 3964830358542562293 y el archivo 2AML-extracted.xlsx
+[36m(ClientAppActor pid=38208)[0m Primeros datos de y_test: [0.9639889  0.97783935 0.97783935 0.9639889  0.9501385 ]
+[36m(ClientAppActor pid=35804)[0m 112/112 - 2s - 20ms/step - loss: 0.0034 - root_mean_squared_error: 0.0584
+[36m(ClientAppActor pid=35804)[0m Cargando el archivo: 8JLG-extracted.xlsx[32m [repeated 4x across cluster][0m
+[36m(ClientAppActor pid=42748)[0m Datos preparados:[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=42748)[0m   Tamaño del conjunto de entrenamiento: 28653[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=42748)[0m   Tamaño del conjunto de prueba: 7150[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=42748)[0m   Dimensiones de las entradas: (12, 4)[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=42748)[0m Primeros datos de y_test: [0.6260388 0.6426593 0.6565097 0.6814405 0.6980609]
+[36m(ClientAppActor pid=42748)[0m Configuración del nodo creada: {'partition-id': 3, 'num-partitions': 11}[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=42748)[0m Este cliente tiene el partition_id 3 ,el node_id 10872653431261914039 y el archivo 5JMPM-extracted.xlsx[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=43060)[0m Primeros datos de y_test: [0.47368422 0.49861497 0.51246536 0.5401662  0.5567867 ]
+[36m(ClientAppActor pid=42748)[0m 224/224 - 3s - 15ms/step - loss: 0.0049 - root_mean_squared_error: 0.0698[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=42748)[0m Cargando el archivo: 9SVB-extracted.xlsx[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=43060)[0m Primeros datos de y_test: [0.23446327 0.22881356 0.2259887  0.22316384 0.21186441]
+[36m(ClientAppActor pid=42748)[0m Datos preparados:[32m [repeated 4x across cluster][0m
+[36m(ClientAppActor pid=42748)[0m   Tamaño del conjunto de entrenamiento: 13633[32m [repeated 4x across cluster][0m
+[36m(ClientAppActor pid=42748)[0m   Tamaño del conjunto de prueba: 3395[32m [repeated 4x across cluster][0m
+[36m(ClientAppActor pid=42748)[0m   Dimensiones de las entradas: (12, 4)[32m [repeated 4x across cluster][0m
+[36m(ClientAppActor pid=42748)[0m Configuración del nodo creada: {'partition-id': 10, 'num-partitions': 11}[32m [repeated 4x across cluster][0m
+[36m(ClientAppActor pid=42748)[0m Este cliente tiene el partition_id 10 ,el node_id 10325863548269401849 y el archivo 9SVB-extracted.xlsx[32m [repeated 4x across cluster][0m
+[92mINFO [0m:      aggregate_evaluate: received 8 results and 0 failures
+Se han recibido estas metricas: [(5735, {'rmse': 0.0706847757101059}), (4212, {'rmse': 0.07244085520505905}), (7150, {'rmse': 0.06982520967721939}), (3564, {'rmse': 0.05843903124332428}), (5584, {'rmse': 0.0734238252043724}), (2180, {'rmse': 0.05782056972384453}), (3395, {'rmse': 0.06278572976589203}), (5303, {'rmse': 0.07721307873725891})]
+Processing client with num_examples=5735, metrics={'rmse': 0.0706847757101059}
+Processing client with num_examples=4212, metrics={'rmse': 0.07244085520505905}
+Processing client with num_examples=7150, metrics={'rmse': 0.06982520967721939}
+Processing client with num_examples=3564, metrics={'rmse': 0.05843903124332428}
+Processing client with num_examples=5584, metrics={'rmse': 0.0734238252043724}
+Processing client with num_examples=2180, metrics={'rmse': 0.05782056972384453}
+Processing client with num_examples=3395, metrics={'rmse': 0.06278572976589203}
+Processing client with num_examples=5303, metrics={'rmse': 0.07721307873725891}
+El array de ejemplos es: [5735, 4212, 7150, 3564, 5584, 2180, 3395, 5303]
+lA SUMA DE EJEMPLOS ES=37123
+[36m(ClientAppActor pid=42748)[0m 107/107 - 2s - 14ms/step - loss: 0.0039 - root_mean_squared_error: 0.0628[32m [repeated 4x across cluster][0m
+[92mINFO [0m:
+[36m(ClientAppActor pid=42748)[0m Primeros datos de y_test: [0.47091413 0.47368422 0.5096953  0.53462607 0.53739613][32m [repeated 3x across cluster][0m
+[92mINFO [0m:      [ROUND 3]
+[92mINFO [0m:      configure_fit: strategy sampled 11 clients (out of 11)
+[36m(ClientAppActor pid=42748)[0m Cargando el archivo: 1GML-extracted.xlsx
+[36m(ClientAppActor pid=35804)[0m Datos preparados:
+[36m(ClientAppActor pid=35804)[0m   Tamaño del conjunto de entrenamiento: 14306
+[36m(ClientAppActor pid=35804)[0m   Tamaño del conjunto de prueba: 3564
+[36m(ClientAppActor pid=35804)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=35804)[0m Configuración del nodo creada: {'partition-id': 1, 'num-partitions': 11}
+[36m(ClientAppActor pid=35804)[0m Este cliente tiene el partition_id 1 ,el node_id 3964830358542562293 y el archivo 2AML-extracted.xlsx
+[36m(ClientAppActor pid=38208)[0m Datos preparados:
+[36m(ClientAppActor pid=38208)[0m   Tamaño del conjunto de entrenamiento: 16899
+[36m(ClientAppActor pid=38208)[0m   Tamaño del conjunto de prueba: 4212
+[36m(ClientAppActor pid=38208)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=38208)[0m Primeros datos de y_test: [0.9639889  0.97783935 0.97783935 0.9639889  0.9501385 ]
+[36m(ClientAppActor pid=38208)[0m Configuración del nodo creada: {'partition-id': 2, 'num-partitions': 11}
+[36m(ClientAppActor pid=38208)[0m Este cliente tiene el partition_id 2 ,el node_id 11170619732747614573 y el archivo 3AGM-extracted.xlsx
+[36m(ClientAppActor pid=35804)[0m Primeros datos de y_test: [0.5847953 0.5964912 0.5994152 0.6023392 0.6052632]
+[36m(ClientAppActor pid=43060)[0m Cargando el archivo: 5JMPM-extracted.xlsx[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=43060)[0m Primeros datos de y_test: [0.6260388 0.6426593 0.6565097 0.6814405 0.6980609]
+[36m(ClientAppActor pid=43060)[0m Datos preparados:[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=43060)[0m   Tamaño del conjunto de entrenamiento: 28653[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=43060)[0m   Tamaño del conjunto de prueba: 7150[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=43060)[0m   Dimensiones de las entradas: (12, 4)[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=42748)[0m Primeros datos de y_test: [0.47368422 0.49861497 0.51246536 0.5401662  0.5567867 ]
+[36m(ClientAppActor pid=43060)[0m Configuración del nodo creada: {'partition-id': 3, 'num-partitions': 11}[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=43060)[0m Este cliente tiene el partition_id 3 ,el node_id 10872653431261914039 y el archivo 5JMPM-extracted.xlsx[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=35804)[0m Cargando el archivo: 7GCQ-extracted.xlsx
+[36m(ClientAppActor pid=38208)[0m Cargando el archivo: 8JLG-extracted.xlsx
+[36m(ClientAppActor pid=35804)[0m Datos preparados:
+[36m(ClientAppActor pid=35804)[0m   Tamaño del conjunto de entrenamiento: 23883
+[36m(ClientAppActor pid=35804)[0m   Tamaño del conjunto de prueba: 5958
+[36m(ClientAppActor pid=35804)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=35804)[0m Primeros datos de y_test: [0.48476455 0.50138503 0.51800555 0.53462607 0.5567867 ]
+[36m(ClientAppActor pid=35804)[0m Configuración del nodo creada: {'partition-id': 4, 'num-partitions': 11}
+[36m(ClientAppActor pid=35804)[0m Este cliente tiene el partition_id 4 ,el node_id 3529873953284234157 y el archivo 7GCQ-extracted.xlsx
+[36m(ClientAppActor pid=38208)[0m Primeros datos de y_test: [0.16620499 0.16066483 0.16343491 0.18836565 0.22437674]
+[36m(ClientAppActor pid=38208)[0m Datos preparados:
+[36m(ClientAppActor pid=38208)[0m   Tamaño del conjunto de entrenamiento: 22990
+[36m(ClientAppActor pid=38208)[0m   Tamaño del conjunto de prueba: 5735
+[36m(ClientAppActor pid=38208)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=38208)[0m Configuración del nodo creada: {'partition-id': 5, 'num-partitions': 11}
+[36m(ClientAppActor pid=38208)[0m Este cliente tiene el partition_id 5 ,el node_id 3295373844485633404 y el archivo 8JLG-extracted.xlsx
+[36m(ClientAppActor pid=42748)[0m Cargando el archivo: 8MAVS-extracted.xlsx
+[36m(ClientAppActor pid=42748)[0m Datos preparados:
+[36m(ClientAppActor pid=42748)[0m   Tamaño del conjunto de entrenamiento: 30118
+[36m(ClientAppActor pid=42748)[0m   Tamaño del conjunto de prueba: 7516
+[36m(ClientAppActor pid=42748)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=42748)[0m Primeros datos de y_test: [0.22437674 0.22160664 0.23545706 0.29085872 0.38227147]
+[36m(ClientAppActor pid=42748)[0m Configuración del nodo creada: {'partition-id': 6, 'num-partitions': 11}
+[36m(ClientAppActor pid=42748)[0m Este cliente tiene el partition_id 6 ,el node_id 17782578206198673712 y el archivo 8MAVS-extracted.xlsx
+[36m(ClientAppActor pid=43060)[0m Cargando el archivo: 99CNM-extracted.xlsx
+[36m(ClientAppActor pid=43060)[0m Datos preparados:
+[36m(ClientAppActor pid=43060)[0m   Tamaño del conjunto de entrenamiento: 25013
+[36m(ClientAppActor pid=43060)[0m   Tamaño del conjunto de prueba: 6240
+[36m(ClientAppActor pid=43060)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=43060)[0m Primeros datos de y_test: [0.2936288  0.30193907 0.30470914 0.30193907 0.30747923]
+[36m(ClientAppActor pid=43060)[0m Configuración del nodo creada: {'partition-id': 7, 'num-partitions': 11}
+[36m(ClientAppActor pid=43060)[0m Este cliente tiene el partition_id 7 ,el node_id 4835927883742217716 y el archivo 99CNM-extracted.xlsx
+[36m(ClientAppActor pid=35804)[0m Cargando el archivo: 9CGL-extracted.xlsx
+[36m(ClientAppActor pid=35804)[0m Datos preparados:
+[36m(ClientAppActor pid=35804)[0m   Tamaño del conjunto de entrenamiento: 21263
+[36m(ClientAppActor pid=35804)[0m   Tamaño del conjunto de prueba: 5303
+[36m(ClientAppActor pid=35804)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=35804)[0m Primeros datos de y_test: [0.3434903  0.3767313  0.41551247 0.43490306 0.43490306]
+[36m(ClientAppActor pid=35804)[0m Configuración del nodo creada: {'partition-id': 8, 'num-partitions': 11}
+[36m(ClientAppActor pid=35804)[0m Este cliente tiene el partition_id 8 ,el node_id 14844303839703438303 y el archivo 9CGL-extracted.xlsx
+[36m(ClientAppActor pid=38208)[0m Cargando el archivo: 9GAG-extracted.xlsx
+[36m(ClientAppActor pid=38208)[0m Datos preparados:
+[36m(ClientAppActor pid=38208)[0m   Tamaño del conjunto de entrenamiento: 8772
+[36m(ClientAppActor pid=38208)[0m   Tamaño del conjunto de prueba: 2180
+[36m(ClientAppActor pid=38208)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=38208)[0m Primeros datos de y_test: [0.23446327 0.22881356 0.2259887  0.22316384 0.21186441]
+[36m(ClientAppActor pid=38208)[0m Configuración del nodo creada: {'partition-id': 9, 'num-partitions': 11}
+[36m(ClientAppActor pid=38208)[0m Este cliente tiene el partition_id 9 ,el node_id 994395234912697666 y el archivo 9GAG-extracted.xlsx
+[36m(ClientAppActor pid=42748)[0m Cargando el archivo: 9SVB-extracted.xlsx
+[36m(ClientAppActor pid=42748)[0m Datos preparados:
+[36m(ClientAppActor pid=42748)[0m   Tamaño del conjunto de entrenamiento: 13633
+[36m(ClientAppActor pid=42748)[0m   Tamaño del conjunto de prueba: 3395
+[36m(ClientAppActor pid=42748)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=42748)[0m Primeros datos de y_test: [0.47091413 0.47368422 0.5096953  0.53462607 0.53739613]
+[36m(ClientAppActor pid=42748)[0m Configuración del nodo creada: {'partition-id': 10, 'num-partitions': 11}
+[36m(ClientAppActor pid=42748)[0m Este cliente tiene el partition_id 10 ,el node_id 10325863548269401849 y el archivo 9SVB-extracted.xlsx
+[92mINFO [0m:      aggregate_fit: received 11 results and 0 failures
+969/969 - 8s - 8ms/step - loss: 0.0047 - root_mean_squared_error: 0.0685
+[92mINFO [0m:      💡 New best global model found: 0.068541
+[92mINFO [0m:      fit progress: (3, 0.004697824828326702, {'centralized_rmse': 0.06854067742824554}, 1445.2255309000611)
+[92mINFO [0m:      configure_evaluate: strategy sampled 8 clients (out of 11)
+[36m(ClientAppActor pid=42748)[0m Cargando el archivo: 1GML-extracted.xlsx
+[36m(ClientAppActor pid=35804)[0m Datos preparados:
+[36m(ClientAppActor pid=35804)[0m   Tamaño del conjunto de entrenamiento: 14306
+[36m(ClientAppActor pid=35804)[0m   Tamaño del conjunto de prueba: 3564
+[36m(ClientAppActor pid=35804)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=35804)[0m Primeros datos de y_test: [0.5847953 0.5964912 0.5994152 0.6023392 0.6052632]
+[36m(ClientAppActor pid=35804)[0m Configuración del nodo creada: {'partition-id': 1, 'num-partitions': 11}
+[36m(ClientAppActor pid=35804)[0m Este cliente tiene el partition_id 1 ,el node_id 3964830358542562293 y el archivo 2AML-extracted.xlsx
+[36m(ClientAppActor pid=42748)[0m Primeros datos de y_test: [0.47368422 0.49861497 0.51246536 0.5401662  0.5567867 ]
+[36m(ClientAppActor pid=43060)[0m Cargando el archivo: 5JMPM-extracted.xlsx[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=35804)[0m 112/112 - 2s - 21ms/step - loss: 0.0032 - root_mean_squared_error: 0.0563
+[36m(ClientAppActor pid=43060)[0m Datos preparados:[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=43060)[0m   Tamaño del conjunto de entrenamiento: 28653[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=43060)[0m   Tamaño del conjunto de prueba: 7150[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=43060)[0m   Dimensiones de las entradas: (12, 4)[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=43060)[0m Primeros datos de y_test: [0.6260388 0.6426593 0.6565097 0.6814405 0.6980609]
+[36m(ClientAppActor pid=43060)[0m Configuración del nodo creada: {'partition-id': 3, 'num-partitions': 11}[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=43060)[0m Este cliente tiene el partition_id 3 ,el node_id 10872653431261914039 y el archivo 5JMPM-extracted.xlsx[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=38208)[0m Primeros datos de y_test: [0.48476455 0.50138503 0.51800555 0.53462607 0.5567867 ]
+[36m(ClientAppActor pid=43060)[0m Cargando el archivo: 9SVB-extracted.xlsx[32m [repeated 4x across cluster][0m
+[36m(ClientAppActor pid=43060)[0m 224/224 - 4s - 18ms/step - loss: 0.0047 - root_mean_squared_error: 0.0684[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=35804)[0m Primeros datos de y_test: [0.16620499 0.16066483 0.16343491 0.18836565 0.22437674]
+[36m(ClientAppActor pid=38208)[0m Datos preparados:[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=38208)[0m   Tamaño del conjunto de entrenamiento: 21263[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=38208)[0m   Tamaño del conjunto de prueba: 5303[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=38208)[0m   Dimensiones de las entradas: (12, 4)[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=38208)[0m Configuración del nodo creada: {'partition-id': 8, 'num-partitions': 11}[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=38208)[0m Este cliente tiene el partition_id 8 ,el node_id 14844303839703438303 y el archivo 9CGL-extracted.xlsx[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=35804)[0m 180/180 - 3s - 17ms/step - loss: 0.0047 - root_mean_squared_error: 0.0688
+[36m(ClientAppActor pid=42748)[0m Primeros datos de y_test: [0.22437674 0.22160664 0.23545706 0.29085872 0.38227147][32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=43060)[0m 107/107 - 2s - 21ms/step - loss: 0.0036 - root_mean_squared_error: 0.0598
+[36m(ClientAppActor pid=42748)[0m Datos preparados:[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=42748)[0m   Tamaño del conjunto de entrenamiento: 30118[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=42748)[0m   Tamaño del conjunto de prueba: 7516[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=42748)[0m   Dimensiones de las entradas: (12, 4)[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=42748)[0m Configuración del nodo creada: {'partition-id': 6, 'num-partitions': 11}[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=42748)[0m Este cliente tiene el partition_id 6 ,el node_id 17782578206198673712 y el archivo 8MAVS-extracted.xlsx[32m [repeated 2x across cluster][0m
+[92mINFO [0m:      aggregate_evaluate: received 8 results and 0 failures
+Se han recibido estas metricas: [(3564, {'rmse': 0.056318964809179306}), (5303, {'rmse': 0.07589206844568253}), (7516, {'rmse': 0.06841584295034409}), (7150, {'rmse': 0.06835658848285675}), (5584, {'rmse': 0.07180257886648178}), (5735, {'rmse': 0.06881795823574066}), (3395, {'rmse': 0.05979029834270477}), (5958, {'rmse': 0.055806782096624374})]
+Processing client with num_examples=3564, metrics={'rmse': 0.056318964809179306}
+Processing client with num_examples=5303, metrics={'rmse': 0.07589206844568253}
+Processing client with num_examples=7516, metrics={'rmse': 0.06841584295034409}
+Processing client with num_examples=7150, metrics={'rmse': 0.06835658848285675}
+Processing client with num_examples=5584, metrics={'rmse': 0.07180257886648178}
+Processing client with num_examples=5735, metrics={'rmse': 0.06881795823574066}
+Processing client with num_examples=3395, metrics={'rmse': 0.05979029834270477}
+Processing client with num_examples=5958, metrics={'rmse': 0.055806782096624374}
+El array de ejemplos es: [3564, 5303, 7516, 7150, 5584, 5735, 3395, 5958]
+lA SUMA DE EJEMPLOS ES=44205
+[92mINFO [0m:
+[92mINFO [0m:      [ROUND 4]
+[92mINFO [0m:      configure_fit: strategy sampled 11 clients (out of 11)
+[36m(ClientAppActor pid=42748)[0m Cargando el archivo: 1GML-extracted.xlsx
+[36m(ClientAppActor pid=38208)[0m Primeros datos de y_test: [0.5847953 0.5964912 0.5994152 0.6023392 0.6052632]
+[36m(ClientAppActor pid=42748)[0m 235/235 - 3s - 13ms/step - loss: 0.0047 - root_mean_squared_error: 0.0684[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=43060)[0m Primeros datos de y_test: [0.9639889  0.97783935 0.97783935 0.9639889  0.9501385 ]
+[36m(ClientAppActor pid=42748)[0m Datos preparados:[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=42748)[0m   Tamaño del conjunto de entrenamiento: 22386[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=42748)[0m   Tamaño del conjunto de prueba: 5584[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=42748)[0m   Dimensiones de las entradas: (12, 4)[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=42748)[0m Configuración del nodo creada: {'partition-id': 0, 'num-partitions': 11}[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=42748)[0m Este cliente tiene el partition_id 0 ,el node_id 1791950711626349784 y el archivo 1GML-extracted.xlsx[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=43060)[0m Cargando el archivo: 3AGM-extracted.xlsx[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=35804)[0m Primeros datos de y_test: [0.6260388 0.6426593 0.6565097 0.6814405 0.6980609]
+[36m(ClientAppActor pid=42748)[0m Primeros datos de y_test: [0.47368422 0.49861497 0.51246536 0.5401662  0.5567867 ]
+[36m(ClientAppActor pid=35804)[0m Datos preparados:
+[36m(ClientAppActor pid=35804)[0m   Tamaño del conjunto de entrenamiento: 28653
+[36m(ClientAppActor pid=35804)[0m   Tamaño del conjunto de prueba: 7150
+[36m(ClientAppActor pid=35804)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=35804)[0m Configuración del nodo creada: {'partition-id': 3, 'num-partitions': 11}
+[36m(ClientAppActor pid=35804)[0m Este cliente tiene el partition_id 3 ,el node_id 10872653431261914039 y el archivo 5JMPM-extracted.xlsx
+[36m(ClientAppActor pid=38208)[0m Cargando el archivo: 7GCQ-extracted.xlsx
+[36m(ClientAppActor pid=38208)[0m Datos preparados:
+[36m(ClientAppActor pid=38208)[0m   Tamaño del conjunto de entrenamiento: 23883
+[36m(ClientAppActor pid=38208)[0m   Tamaño del conjunto de prueba: 5958
+[36m(ClientAppActor pid=38208)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=38208)[0m Primeros datos de y_test:
+[36m(ClientAppActor pid=38208)[0m [0.48476455 0.50138503 0.51800555 0.53462607 0.5567867 ]
+[36m(ClientAppActor pid=38208)[0m Configuración del nodo creada: {'partition-id': 4, 'num-partitions': 11}
+[36m(ClientAppActor pid=38208)[0m Este cliente tiene el partition_id 4 ,el node_id 3529873953284234157 y el archivo 7GCQ-extracted.xlsx
+[36m(ClientAppActor pid=43060)[0m Cargando el archivo: 8JLG-extracted.xlsx
+[36m(ClientAppActor pid=42748)[0m Cargando el archivo: 8MAVS-extracted.xlsx
+[36m(ClientAppActor pid=43060)[0m Datos preparados:
+[36m(ClientAppActor pid=43060)[0m   Tamaño del conjunto de entrenamiento: 22990
+[36m(ClientAppActor pid=43060)[0m   Tamaño del conjunto de prueba: 5735
+[36m(ClientAppActor pid=43060)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=43060)[0m Primeros datos de y_test: [0.16620499 0.16066483 0.16343491 0.18836565 0.22437674]
+[36m(ClientAppActor pid=43060)[0m Configuración del nodo creada: {'partition-id': 5, 'num-partitions': 11}
+[36m(ClientAppActor pid=43060)[0m Este cliente tiene el partition_id 5 ,el node_id 3295373844485633404 y el archivo 8JLG-extracted.xlsx
+[36m(ClientAppActor pid=42748)[0m Datos preparados:
+[36m(ClientAppActor pid=42748)[0m   Tamaño del conjunto de entrenamiento: 30118
+[36m(ClientAppActor pid=42748)[0m   Tamaño del conjunto de prueba: 7516
+[36m(ClientAppActor pid=42748)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=42748)[0m Primeros datos de y_test: [0.22437674 0.22160664 0.23545706 0.29085872 0.38227147]
+[36m(ClientAppActor pid=42748)[0m Configuración del nodo creada: {'partition-id': 6, 'num-partitions': 11}
+[36m(ClientAppActor pid=42748)[0m Este cliente tiene el partition_id 6 ,el node_id 17782578206198673712 y el archivo 8MAVS-extracted.xlsx
+[36m(ClientAppActor pid=35804)[0m Cargando el archivo: 99CNM-extracted.xlsx
+[36m(ClientAppActor pid=35804)[0m Datos preparados:
+[36m(ClientAppActor pid=35804)[0m   Tamaño del conjunto de entrenamiento: 25013
+[36m(ClientAppActor pid=35804)[0m   Tamaño del conjunto de prueba: 6240
+[36m(ClientAppActor pid=35804)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=35804)[0m Primeros datos de y_test: [0.2936288  0.30193907 0.30470914 0.30193907 0.30747923]
+[36m(ClientAppActor pid=35804)[0m Configuración del nodo creada: {'partition-id': 7, 'num-partitions': 11}
+[36m(ClientAppActor pid=35804)[0m Este cliente tiene el partition_id 7 ,el node_id 4835927883742217716 y el archivo 99CNM-extracted.xlsx
+[36m(ClientAppActor pid=43060)[0m Cargando el archivo: 9CGL-extracted.xlsx
+[36m(ClientAppActor pid=38208)[0m Datos preparados:
+[36m(ClientAppActor pid=38208)[0m   Tamaño del conjunto de entrenamiento: 8772
+[36m(ClientAppActor pid=38208)[0m   Tamaño del conjunto de prueba: 2180
+[36m(ClientAppActor pid=38208)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=38208)[0m Primeros datos de y_test: [0.23446327 0.22881356 0.2259887  0.22316384 0.21186441]
+[36m(ClientAppActor pid=38208)[0m Configuración del nodo creada: {'partition-id': 9, 'num-partitions': 11}
+[36m(ClientAppActor pid=38208)[0m Este cliente tiene el partition_id 9 ,el node_id 994395234912697666 y el archivo 9GAG-extracted.xlsx
+[36m(ClientAppActor pid=38208)[0m Cargando el archivo: 9GAG-extracted.xlsx
+[36m(ClientAppActor pid=43060)[0m Datos preparados:
+[36m(ClientAppActor pid=43060)[0m   Tamaño del conjunto de entrenamiento: 21263
+[36m(ClientAppActor pid=43060)[0m   Tamaño del conjunto de prueba: 5303
+[36m(ClientAppActor pid=43060)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=43060)[0m Primeros datos de y_test: [0.3434903  0.3767313  0.41551247 0.43490306 0.43490306]
+[36m(ClientAppActor pid=43060)[0m Configuración del nodo creada: {'partition-id': 8, 'num-partitions': 11}
+[36m(ClientAppActor pid=43060)[0m Este cliente tiene el partition_id 8 ,el node_id 14844303839703438303 y el archivo 9CGL-extracted.xlsx
+[36m(ClientAppActor pid=42748)[0m Cargando el archivo: 9SVB-extracted.xlsx
+[36m(ClientAppActor pid=42748)[0m Datos preparados:
+[36m(ClientAppActor pid=42748)[0m   Tamaño del conjunto de entrenamiento: 13633
+[36m(ClientAppActor pid=42748)[0m   Tamaño del conjunto de prueba: 3395
+[36m(ClientAppActor pid=42748)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=42748)[0m Primeros datos de y_test: [0.47091413 0.47368422 0.5096953  0.53462607 0.53739613]
+[36m(ClientAppActor pid=42748)[0m Configuración del nodo creada: {'partition-id': 10, 'num-partitions': 11}
+[36m(ClientAppActor pid=42748)[0m Este cliente tiene el partition_id 10 ,el node_id 10325863548269401849 y el archivo 9SVB-extracted.xlsx
+[92mINFO [0m:      aggregate_fit: received 11 results and 0 failures
+969/969 - 7s - 8ms/step - loss: 0.0044 - root_mean_squared_error: 0.0665
+[92mINFO [0m:      💡 New best global model found: 0.066548
+[92mINFO [0m:      fit progress: (4, 0.004428612533956766, {'centralized_rmse': 0.06654781848192215}, 1972.473035800038)
+[92mINFO [0m:      configure_evaluate: strategy sampled 8 clients (out of 11)
+[36m(ClientAppActor pid=42748)[0m Cargando el archivo: 1GML-extracted.xlsx
+[36m(ClientAppActor pid=43060)[0m Datos preparados:
+[36m(ClientAppActor pid=43060)[0m   Tamaño del conjunto de entrenamiento: 14306
+[36m(ClientAppActor pid=43060)[0m   Tamaño del conjunto de prueba: 3564
+[36m(ClientAppActor pid=43060)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=43060)[0m Primeros datos de y_test: [0.5847953 0.5964912 0.5994152 0.6023392 0.6052632]
+[36m(ClientAppActor pid=43060)[0m Configuración del nodo creada: {'partition-id': 1, 'num-partitions': 11}
+[36m(ClientAppActor pid=43060)[0m Este cliente tiene el partition_id 1 ,el node_id 3964830358542562293 y el archivo 2AML-extracted.xlsx
+[36m(ClientAppActor pid=42748)[0m Primeros datos de y_test: [0.47368422 0.49861497 0.51246536 0.5401662  0.5567867 ]
+[36m(ClientAppActor pid=43060)[0m 112/112 - 2s - 18ms/step - loss: 0.0031 - root_mean_squared_error: 0.0555
+[36m(ClientAppActor pid=43060)[0m Cargando el archivo: 2AML-extracted.xlsx[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=35804)[0m Datos preparados:[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=35804)[0m   Tamaño del conjunto de entrenamiento: 28653[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=35804)[0m   Tamaño del conjunto de prueba: 7150[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=35804)[0m   Dimensiones de las entradas: (12, 4)[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=35804)[0m Primeros datos de y_test: [0.6260388 0.6426593 0.6565097 0.6814405 0.6980609]
+[36m(ClientAppActor pid=35804)[0m Configuración del nodo creada: {'partition-id': 3, 'num-partitions': 11}[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=35804)[0m Este cliente tiene el partition_id 3 ,el node_id 10872653431261914039 y el archivo 5JMPM-extracted.xlsx[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=38208)[0m Primeros datos de y_test: [0.48476455 0.50138503 0.51800555 0.53462607 0.5567867 ]
+[36m(ClientAppActor pid=35804)[0m 224/224 - 4s - 16ms/step - loss: 0.0046 - root_mean_squared_error: 0.0678[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=35804)[0m Cargando el archivo: 9SVB-extracted.xlsx[32m [repeated 4x across cluster][0m
+[36m(ClientAppActor pid=43060)[0m Primeros datos de y_test:
+[36m(ClientAppActor pid=43060)[0m
+[36m(ClientAppActor pid=43060)[0m [0.22437674 0.22160664 0.23545706 0.29085872 0.38227147]
+[36m(ClientAppActor pid=42748)[0m Datos preparados:[32m [repeated 4x across cluster][0m
+[36m(ClientAppActor pid=42748)[0m   Tamaño del conjunto de entrenamiento: 25013[32m [repeated 4x across cluster][0m
+[36m(ClientAppActor pid=42748)[0m   Tamaño del conjunto de prueba: 6240[32m [repeated 4x across cluster][0m
+[36m(ClientAppActor pid=42748)[0m   Dimensiones de las entradas: (12, 4)[32m [repeated 4x across cluster][0m
+[36m(ClientAppActor pid=42748)[0m Configuración del nodo creada: {'partition-id': 7, 'num-partitions': 11}[32m [repeated 4x across cluster][0m
+[36m(ClientAppActor pid=42748)[0m Este cliente tiene el partition_id 7 ,el node_id 4835927883742217716 y el archivo 99CNM-extracted.xlsx[32m [repeated 4x across cluster][0m
+[36m(ClientAppActor pid=35804)[0m 107/107 - 2s - 23ms/step - loss: 0.0032 - root_mean_squared_error: 0.0570
+[36m(ClientAppActor pid=43060)[0m 235/235 - 3s - 14ms/step - loss: 0.0045 - root_mean_squared_error: 0.0667
+[92mINFO [0m:      aggregate_evaluate: received 8 results and 0 failures
+Se han recibido estas metricas: [(3564, {'rmse': 0.05549374222755432}), (3395, {'rmse': 0.056950658559799194}), (5584, {'rmse': 0.06958487629890442}), (6240, {'rmse': 0.06622957438230515}), (7516, {'rmse': 0.06672883778810501}), (7150, {'rmse': 0.0678270012140274}), (5303, {'rmse': 0.07393031567335129}), (5958, {'rmse': 0.055160295218229294})]
+Processing client with num_examples=3564, metrics={'rmse': 0.05549374222755432}
+Processing client with num_examples=3395, metrics={'rmse': 0.056950658559799194}
+Processing client with num_examples=5584, metrics={'rmse': 0.06958487629890442}
+Processing client with num_examples=6240, metrics={'rmse': 0.06622957438230515}
+Processing client with num_examples=7516, metrics={'rmse': 0.06672883778810501}
+Processing client with num_examples=7150, metrics={'rmse': 0.0678270012140274}
+Processing client with num_examples=5303, metrics={'rmse': 0.07393031567335129}
+Processing client with num_examples=5958, metrics={'rmse': 0.055160295218229294}
+El array de ejemplos es: [3564, 3395, 5584, 6240, 7516, 7150, 5303, 5958]
+lA SUMA DE EJEMPLOS ES=44710
+[36m(ClientAppActor pid=42748)[0m Primeros datos de y_test: [0.2936288  0.30193907 0.30470914 0.30193907 0.30747923][32m [repeated 3x across cluster][0m
+[92mINFO [0m:
+[92mINFO [0m:      [SUMMARY]
+[92mINFO [0m:      Run finished 4 round(s) in 1990.82s
+[92mINFO [0m:      	History (loss, distributed):
+[92mINFO [0m:      		round 1: 0.010564475816633863
+[92mINFO [0m:      		round 2: 0.0048535902425064755
+[92mINFO [0m:      		round 3: 0.004458293184801724
+[92mINFO [0m:      		round 4: 0.004246673679420463
+[92mINFO [0m:      	History (loss, centralized):
+[92mINFO [0m:      		round 0: 0.1390623152256012
+[92mINFO [0m:      		round 1: 0.011033575050532818
+[92mINFO [0m:      		round 2: 0.005025661084800959
+[92mINFO [0m:      		round 3: 0.004697824828326702
+[92mINFO [0m:      		round 4: 0.004428612533956766
+[92mINFO [0m:      	History (metrics, distributed, evaluate):
+[92mINFO [0m:      	{'rmse': [(1, 0.10259951292111476),
+[92mINFO [0m:      	          (2, 0.0694095579129536),
+[92mINFO [0m:      	          (3, 0.06644589920353261),
+[92mINFO [0m:      	          (4, 0.06486594012368314)]}
+[92mINFO [0m:      	History (metrics, centralized):
+[92mINFO [0m:      	{'centralized_rmse': [(0, 0.37291058897972107),
+[92mINFO [0m:      	                      (1, 0.10504082590341568),
+[92mINFO [0m:      	                      (2, 0.07089189440011978),
+[92mINFO [0m:      	                      (3, 0.06854067742824554),
+[92mINFO [0m:      	                      (4, 0.06654781848192215)]}
+[92mINFO [0m:
+[36m(ClientAppActor pid=42748)[0m 195/195 - 3s - 17ms/step - loss: 0.0044 - root_mean_squared_error: 0.0662[32m [repeated 2x across cluster][0m

@@ -1,0 +1,85 @@
+[92mINFO [0m:      Starting Flower ServerApp, config: num_rounds=4, no round_timeout
+[92mINFO [0m:
+[92mINFO [0m:      [INIT]
+[92mINFO [0m:      Using initial global parameters provided by strategy
+[92mINFO [0m:      Starting evaluation of initial global parameters
+969/969 - 6s - 7ms/step - loss: 0.1489 - root_mean_squared_error: 0.3858
+[92mINFO [0m:      💡 New best global model found: 0.385835
+[92mINFO [0m:      initial parameters (loss, other metrics): 0.1488688439130783, {'centralized_rmse': 0.3858352601528168}
+[92mINFO [0m:
+[92mINFO [0m:      [ROUND 1]
+[92mINFO [0m:      configure_fit: strategy sampled 11 clients (out of 11)
+[91mERROR [0m:     An exception occured!! The current node timed out during startup. This could happen because some of the Ray processes failed to startup.
+[91mERROR [0m:     Traceback (most recent call last):
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\node.py", line 318, in __init__
+    ray._private.services.wait_for_node(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\services.py", line 464, in wait_for_node
+    raise TimeoutError(
+TimeoutError: Timed out after 60 seconds while waiting for node to startup. Did not find socket name tcp://127.0.0.1:54187 in the list of object store socket names.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\server\superlink\fleet\vce\vce_api.py", line 191, in run_api
+    backend = backend_fn()
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\server\superlink\fleet\vce\vce_api.py", line 341, in backend_fn
+    return backend_type(backend_config)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\server\superlink\fleet\vce\backend\raybackend.py", line 51, in __init__
+    self.init_ray(backend_config)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\server\superlink\fleet\vce\backend\raybackend.py", line 112, in init_ray
+    ray.init(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\worker.py", line 1645, in init
+    _global_node = ray._private.node.Node(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\node.py", line 323, in __init__
+    raise Exception(
+Exception: The current node timed out during startup. This could happen because some of the Ray processes failed to startup.
+
+[93mWARNING [0m:   Stopping Simulation Engine.
+[91mERROR [0m:     An exception occurred !! local variable 'backend' referenced before assignment
+[91mERROR [0m:     Traceback (most recent call last):
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\node.py", line 318, in __init__
+    ray._private.services.wait_for_node(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\services.py", line 464, in wait_for_node
+    raise TimeoutError(
+TimeoutError: Timed out after 60 seconds while waiting for node to startup. Did not find socket name tcp://127.0.0.1:54187 in the list of object store socket names.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\server\superlink\fleet\vce\vce_api.py", line 191, in run_api
+    backend = backend_fn()
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\server\superlink\fleet\vce\vce_api.py", line 341, in backend_fn
+    return backend_type(backend_config)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\server\superlink\fleet\vce\backend\raybackend.py", line 51, in __init__
+    self.init_ray(backend_config)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\server\superlink\fleet\vce\backend\raybackend.py", line 112, in init_ray
+    ray.init(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\worker.py", line 1645, in init
+    _global_node = ray._private.node.Node(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\node.py", line 323, in __init__
+    raise Exception(
+Exception: The current node timed out during startup. This could happen because some of the Ray processes failed to startup.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\server\superlink\fleet\vce\vce_api.py", line 246, in run_api
+    raise RuntimeError("Simulation Engine crashed.") from ex
+RuntimeError: Simulation Engine crashed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\simulation\run_simulation.py", line 360, in _main_loop
+    vce.start_vce(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\server\superlink\fleet\vce\vce_api.py", line 393, in start_vce
+    raise ex
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\server\superlink\fleet\vce\vce_api.py", line 374, in start_vce
+    run_api(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\server\superlink\fleet\vce\vce_api.py", line 251, in run_api
+    backend.terminate()
+UnboundLocalError: local variable 'backend' referenced before assignment

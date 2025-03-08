@@ -1,0 +1,889 @@
+[92mINFO [0m:      Starting Flower ServerApp, config: num_rounds=6, no round_timeout
+[92mINFO [0m:
+[92mINFO [0m:      [INIT]
+[92mINFO [0m:      Using initial global parameters provided by strategy
+[92mINFO [0m:      Starting evaluation of initial global parameters
+782/782 - 12s - 15ms/step - loss: 0.1253 - root_mean_squared_error: 0.3539
+[92mINFO [0m:      💡⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️ New best global model found: 0.353908
+[92mINFO [0m:      initial parameters (loss, other metrics): 0.12525098025798798, {'centralized_rmse': 0.35390815138816833}
+[92mINFO [0m:
+[92mINFO [0m:      [ROUND 1]
+[92mINFO [0m:      configure_fit: strategy sampled 11 clients (out of 11)
+[36m(ClientAppActor pid=26016)[0m Cargando el archivo: 2AML-extracted.xlsx
+[36m(ClientAppActor pid=26016)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names
+[36m(ClientAppActor pid=26016)[0m   warnings.warn(
+[36m(ClientAppActor pid=26016)[0m Datos preparados:
+[36m(ClientAppActor pid=26016)[0m   Tamaño del conjunto de entrenamiento: 14306
+[36m(ClientAppActor pid=26016)[0m   Tamaño del conjunto de prueba: 3564
+[36m(ClientAppActor pid=26016)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=26016)[0m Primeros datos de y_test: [0.55401665 0.565097   0.56786704 0.5706371  0.5734072 ]
+[36m(ClientAppActor pid=26016)[0m Configuración del nodo creada: {'partition-id': 1, 'num-partitions': 11}
+[36m(ClientAppActor pid=26016)[0m Este cliente tiene el partition_id 1 ,el node_id 17983733397095533957 y el archivo 2AML-extracted.xlsx
+[36m(ClientAppActor pid=26080)[0m Cargando el archivo: 1GML-extracted.xlsx[32m [repeated 3x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/ray-logging.html#log-deduplication for more options.)[0m
+[36m(ClientAppActor pid=26116)[0m Primeros datos de y_test: [0.6260388 0.6426593 0.6565097 0.6814405 0.6980609]
+[36m(ClientAppActor pid=26116)[0m Datos preparados:[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=26116)[0m   Tamaño del conjunto de entrenamiento: 28653[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=26116)[0m   Tamaño del conjunto de prueba: 7150[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=26116)[0m   Dimensiones de las entradas: (12, 4)[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=26080)[0m Primeros datos de y_test: [0.47368422 0.49861497 0.51246536 0.5401662  0.5567867 ][32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=26116)[0m Configuración del nodo creada: {'partition-id': 3, 'num-partitions': 11}[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=26116)[0m Este cliente tiene el partition_id 3 ,el node_id 8656681451842320612 y el archivo 5JMPM-extracted.xlsx[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=26016)[0m Cargando el archivo: 7GCQ-extracted.xlsx
+[36m(ClientAppActor pid=26032)[0m Cargando el archivo: 8CGL-extracted.xlsx
+[36m(ClientAppActor pid=26016)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names[32m [repeated 4x across cluster][0m
+[36m(ClientAppActor pid=26016)[0m   warnings.warn([32m [repeated 4x across cluster][0m
+[36m(ClientAppActor pid=26016)[0m Datos preparados:
+[36m(ClientAppActor pid=26016)[0m   Tamaño del conjunto de entrenamiento: 23883
+[36m(ClientAppActor pid=26016)[0m   Tamaño del conjunto de prueba: 5958
+[36m(ClientAppActor pid=26016)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=26016)[0m Primeros datos de y_test: [0.48476455 0.50138503 0.51800555 0.53462607 0.5567867 ]
+[36m(ClientAppActor pid=26016)[0m Configuración del nodo creada: {'partition-id': 4, 'num-partitions': 11}
+[36m(ClientAppActor pid=26016)[0m Este cliente tiene el partition_id 4 ,el node_id 6463341553057904587 y el archivo 7GCQ-extracted.xlsx
+[36m(ClientAppActor pid=26032)[0m Primeros datos de y_test: [0.3434903  0.3767313  0.41551247 0.43490306 0.43490306]
+[36m(ClientAppActor pid=26080)[0m Cargando el archivo: 8GAG-extracted.xlsx
+[36m(ClientAppActor pid=26032)[0m Datos preparados:
+[36m(ClientAppActor pid=26032)[0m   Tamaño del conjunto de entrenamiento: 21263
+[36m(ClientAppActor pid=26032)[0m   Tamaño del conjunto de prueba: 5303
+[36m(ClientAppActor pid=26032)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=26032)[0m Configuración del nodo creada: {'partition-id': 5, 'num-partitions': 11}
+[36m(ClientAppActor pid=26032)[0m Este cliente tiene el partition_id 5 ,el node_id 6238163209886533050 y el archivo 8CGL-extracted.xlsx
+[36m(ClientAppActor pid=26080)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=26080)[0m   warnings.warn([32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=26080)[0m Datos preparados:
+[36m(ClientAppActor pid=26080)[0m   Tamaño del conjunto de entrenamiento: 8772
+[36m(ClientAppActor pid=26080)[0m   Tamaño del conjunto de prueba: 2180
+[36m(ClientAppActor pid=26080)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=26080)[0m Primeros datos de y_test: [0.2299169  0.22437674 0.22160664 0.21883656 0.20775624]
+[36m(ClientAppActor pid=26080)[0m Configuración del nodo creada: {'partition-id': 6, 'num-partitions': 11}
+[36m(ClientAppActor pid=26080)[0m Este cliente tiene el partition_id 6 ,el node_id 10044080796283720339 y el archivo 8GAG-extracted.xlsx
+[36m(ClientAppActor pid=26116)[0m Cargando el archivo: 8JLG-extracted.xlsx
+[36m(ClientAppActor pid=26116)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names
+[36m(ClientAppActor pid=26116)[0m   warnings.warn(
+[36m(ClientAppActor pid=26116)[0m Datos preparados:
+[36m(ClientAppActor pid=26116)[0m   Tamaño del conjunto de entrenamiento: 22990
+[36m(ClientAppActor pid=26116)[0m   Tamaño del conjunto de prueba: 5735
+[36m(ClientAppActor pid=26116)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=26116)[0m Primeros datos de y_test: [0.16620499 0.16066483 0.16343491 0.18836565 0.22437674]
+[36m(ClientAppActor pid=26116)[0m Configuración del nodo creada: {'partition-id': 7, 'num-partitions': 11}
+[36m(ClientAppActor pid=26116)[0m Este cliente tiene el partition_id 7 ,el node_id 11906524450152625427 y el archivo 8JLG-extracted.xlsx
+[36m(ClientAppActor pid=26016)[0m Cargando el archivo: 8MAVS-extracted.xlsx
+[36m(ClientAppActor pid=26080)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names
+[36m(ClientAppActor pid=26080)[0m   warnings.warn(
+[36m(ClientAppActor pid=26080)[0m Datos preparados:
+[36m(ClientAppActor pid=26080)[0m   Tamaño del conjunto de entrenamiento: 13633
+[36m(ClientAppActor pid=26080)[0m   Tamaño del conjunto de prueba: 3395
+[36m(ClientAppActor pid=26080)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=26080)[0m Primeros datos de y_test: [0.47091413 0.47368422 0.5096953  0.53462607 0.53739613]
+[36m(ClientAppActor pid=26080)[0m Configuración del nodo creada: {'partition-id': 9, 'num-partitions': 11}
+[36m(ClientAppActor pid=26080)[0m Este cliente tiene el partition_id 9 ,el node_id 7428035957676373451 y el archivo 8SVB-extracted.xlsx
+[36m(ClientAppActor pid=26080)[0m Cargando el archivo: 8SVB-extracted.xlsx
+[36m(ClientAppActor pid=26032)[0m Cargando el archivo: 8VVC-extracted.xlsx
+[36m(ClientAppActor pid=26016)[0m Datos preparados:
+[36m(ClientAppActor pid=26016)[0m   Tamaño del conjunto de entrenamiento: 30118
+[36m(ClientAppActor pid=26016)[0m   Tamaño del conjunto de prueba: 7516
+[36m(ClientAppActor pid=26016)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=26016)[0m Primeros datos de y_test: [0.22437674 0.22160664 0.23545706 0.29085872 0.38227147]
+[36m(ClientAppActor pid=26016)[0m Configuración del nodo creada: {'partition-id': 8, 'num-partitions': 11}
+[36m(ClientAppActor pid=26016)[0m Este cliente tiene el partition_id 8 ,el node_id 12488254105034953688 y el archivo 8MAVS-extracted.xlsx
+[36m(ClientAppActor pid=26032)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=26032)[0m   warnings.warn([32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=26032)[0m Datos preparados:
+[36m(ClientAppActor pid=26032)[0m   Tamaño del conjunto de entrenamiento: 31005
+[36m(ClientAppActor pid=26032)[0m   Tamaño del conjunto de prueba: 7738
+[36m(ClientAppActor pid=26032)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=26032)[0m Primeros datos de y_test: [0.40443215 0.4265928  0.44321328 0.45152354 0.46537396]
+[36m(ClientAppActor pid=26032)[0m Configuración del nodo creada: {'partition-id': 10, 'num-partitions': 11}
+[36m(ClientAppActor pid=26032)[0m Este cliente tiene el partition_id 10 ,el node_id 14125605756059445529 y el archivo 8VVC-extracted.xlsx
+[92mINFO [0m:      aggregate_fit: received 11 results and 0 failures
+[93mWARNING [0m:   No fit_metrics_aggregation_fn provided
+782/782 - 6s - 7ms/step - loss: 0.0079 - root_mean_squared_error: 0.0888
+[92mINFO [0m:      💡⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️ New best global model found: 0.088809
+[92mINFO [0m:      fit progress: (1, 0.007887011393904686, {'centralized_rmse': 0.08880884945392609}, 437.6161107999942)
+[92mINFO [0m:      configure_evaluate: strategy sampled 8 clients (out of 11)
+[36m(ClientAppActor pid=26032)[0m Cargando el archivo: 5JMPM-extracted.xlsx
+[36m(ClientAppActor pid=26116)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names
+[36m(ClientAppActor pid=26116)[0m   warnings.warn(
+[36m(ClientAppActor pid=26116)[0m Datos preparados:
+[36m(ClientAppActor pid=26116)[0m   Tamaño del conjunto de entrenamiento: 14306
+[36m(ClientAppActor pid=26116)[0m   Tamaño del conjunto de prueba: 3564
+[36m(ClientAppActor pid=26116)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=26116)[0m Primeros datos de y_test: [0.55401665 0.565097   0.56786704 0.5706371  0.5734072 ]
+[36m(ClientAppActor pid=26116)[0m Configuración del nodo creada: {'partition-id': 1, 'num-partitions': 11}
+[36m(ClientAppActor pid=26116)[0m Este cliente tiene el partition_id 1 ,el node_id 17983733397095533957 y el archivo 2AML-extracted.xlsx
+[36m(ClientAppActor pid=26116)[0m 56/56 - 2s - 30ms/step - loss: 0.0068 - root_mean_squared_error: 0.0823
+[36m(ClientAppActor pid=26116)[0m Cargando el archivo: 2AML-extracted.xlsx[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=26080)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names
+[36m(ClientAppActor pid=26080)[0m   warnings.warn(
+[36m(ClientAppActor pid=26080)[0m Primeros datos de y_test:
+[36m(ClientAppActor pid=26080)[0m [0.48476455 0.50138503 0.51800555 0.53462607 0.5567867 ]
+[91mERROR [0m:     An exception was raised when processing a message by RayBackend
+[91mERROR [0m:     [36mray::ClientAppActor.run()[39m (pid=26116, ip=127.0.0.1, actor_id=08eb40d0aeefdcad5623baf401000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x0000025781D83EE0>)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\message_handler\message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\5.FederatedTrainingMejorada2\tfexample\client_app.py", line 57, in evaluate
+    np.concatenate([np.zeros((len(y_pred), 2)), y_pred, np.zeros((len(y_pred), 1))], axis=1))[:, 2]
+ValueError: all the input arrays must have same number of dimensions, but the array at index 0 has 2 dimension(s) and the array at index 1 has 1 dimension(s)
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=26116, ip=127.0.0.1, actor_id=08eb40d0aeefdcad5623baf401000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x0000025781D83EE0>)
+  File "python\ray\_raylet.pyx", line 1883, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1984, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1889, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1830, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\function_manager.py", line 724, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException:
+Exception ClientAppException occurred. Message: all the input arrays must have same number of dimensions, but the array at index 0 has 2 dimension(s) and the array at index 1 has 1 dimension(s)
+[91mERROR [0m:     Traceback (most recent call last):
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\server\superlink\fleet\vce\vce_api.py", line 112, in worker
+    out_mssg, updated_context = backend.process_message(message, context)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\server\superlink\fleet\vce\backend\raybackend.py", line 186, in process_message
+    raise ex
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\server\superlink\fleet\vce\backend\raybackend.py", line 174, in process_message
+    ) = self.pool.fetch_result_and_return_actor_to_pool(future)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 477, in fetch_result_and_return_actor_to_pool
+    _, out_mssg, updated_context = ray.get(future)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\worker.py", line 2667, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\worker.py", line 864, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=26116, ip=127.0.0.1, actor_id=08eb40d0aeefdcad5623baf401000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x0000025781D83EE0>)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\message_handler\message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\5.FederatedTrainingMejorada2\tfexample\client_app.py", line 57, in evaluate
+    np.concatenate([np.zeros((len(y_pred), 2)), y_pred, np.zeros((len(y_pred), 1))], axis=1))[:, 2]
+ValueError: all the input arrays must have same number of dimensions, but the array at index 0 has 2 dimension(s) and the array at index 1 has 1 dimension(s)
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=26116, ip=127.0.0.1, actor_id=08eb40d0aeefdcad5623baf401000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x0000025781D83EE0>)
+  File "python\ray\_raylet.pyx", line 1883, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1984, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1889, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1830, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\function_manager.py", line 724, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException:
+Exception ClientAppException occurred. Message: all the input arrays must have same number of dimensions, but the array at index 0 has 2 dimension(s) and the array at index 1 has 1 dimension(s)
+[36m(ClientAppActor pid=26016)[0m Datos preparados:[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=26016)[0m   Tamaño del conjunto de entrenamiento: 31005[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=26016)[0m   Tamaño del conjunto de prueba: 7738[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=26016)[0m   Dimensiones de las entradas: (12, 4)[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=26016)[0m Configuración del nodo creada: {'partition-id': 10, 'num-partitions': 11}[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=26016)[0m Este cliente tiene el partition_id 10 ,el node_id 14125605756059445529 y el archivo 8VVC-extracted.xlsx[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=26016)[0m 121/121 - 3s - 27ms/step - loss: 0.0097 - root_mean_squared_error: 0.0982[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=26116)[0m Cargando el archivo: 8GAG-extracted.xlsx
+[36m(ClientAppActor pid=26016)[0m Primeros datos de y_test: [0.40443215 0.4265928  0.44321328 0.45152354 0.46537396][32m [repeated 2x across cluster][0m
+
+[36m(ClientAppActor pid=26116)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=26116)[0m   warnings.warn([32m [repeated 3x across cluster][0m
+[91mERROR [0m:     An exception was raised when processing a message by RayBackend
+[91mERROR [0m:     [36mray::ClientAppActor.run()[39m (pid=26080, ip=127.0.0.1, actor_id=1b2aa70c747e31100981eeb301000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001BD62F4D2D0>)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\message_handler\message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\5.FederatedTrainingMejorada2\tfexample\client_app.py", line 57, in evaluate
+    np.concatenate([np.zeros((len(y_pred), 2)), y_pred, np.zeros((len(y_pred), 1))], axis=1))[:, 2]
+ValueError: all the input arrays must have same number of dimensions, but the array at index 0 has 2 dimension(s) and the array at index 1 has 1 dimension(s)
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=26080, ip=127.0.0.1, actor_id=1b2aa70c747e31100981eeb301000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001BD62F4D2D0>)
+  File "python\ray\_raylet.pyx", line 1883, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1984, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1889, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1830, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\function_manager.py", line 724, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException:
+Exception ClientAppException occurred. Message: all the input arrays must have same number of dimensions, but the array at index 0 has 2 dimension(s) and the array at index 1 has 1 dimension(s)
+[91mERROR [0m:     Traceback (most recent call last):
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\server\superlink\fleet\vce\vce_api.py", line 112, in worker
+    out_mssg, updated_context = backend.process_message(message, context)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\server\superlink\fleet\vce\backend\raybackend.py", line 186, in process_message
+    raise ex
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\server\superlink\fleet\vce\backend\raybackend.py", line 174, in process_message
+    ) = self.pool.fetch_result_and_return_actor_to_pool(future)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 477, in fetch_result_and_return_actor_to_pool
+    _, out_mssg, updated_context = ray.get(future)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\worker.py", line 2667, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\worker.py", line 864, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=26080, ip=127.0.0.1, actor_id=1b2aa70c747e31100981eeb301000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001BD62F4D2D0>)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\message_handler\message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\5.FederatedTrainingMejorada2\tfexample\client_app.py", line 57, in evaluate
+    np.concatenate([np.zeros((len(y_pred), 2)), y_pred, np.zeros((len(y_pred), 1))], axis=1))[:, 2]
+ValueError: all the input arrays must have same number of dimensions, but the array at index 0 has 2 dimension(s) and the array at index 1 has 1 dimension(s)
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=26080, ip=127.0.0.1, actor_id=1b2aa70c747e31100981eeb301000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001BD62F4D2D0>)
+  File "python\ray\_raylet.pyx", line 1883, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1984, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1889, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1830, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\function_manager.py", line 724, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException:
+Exception ClientAppException occurred. Message: all the input arrays must have same number of dimensions, but the array at index 0 has 2 dimension(s) and the array at index 1 has 1 dimension(s)
+[36m(ClientAppActor pid=26080)[0m Cargando el archivo: 8JLG-extracted.xlsx
+[36m(ClientAppActor pid=26116)[0m Datos preparados:
+[36m(ClientAppActor pid=26116)[0m   Tamaño del conjunto de entrenamiento: 8772
+[36m(ClientAppActor pid=26116)[0m   Tamaño del conjunto de prueba: 2180
+[36m(ClientAppActor pid=26116)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=26116)[0m Configuración del nodo creada: {'partition-id': 6, 'num-partitions': 11}
+[36m(ClientAppActor pid=26116)[0m Este cliente tiene el partition_id 6 ,el node_id 10044080796283720339 y el archivo 8GAG-extracted.xlsx
+
+[91mERROR [0m:     An exception was raised when processing a message by RayBackend
+[91mERROR [0m:     [36mray::ClientAppActor.run()[39m (pid=26032, ip=127.0.0.1, actor_id=20fba543254b355d511cb5a101000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x00000229B3C2D1B0>)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\message_handler\message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\5.FederatedTrainingMejorada2\tfexample\client_app.py", line 57, in evaluate
+    np.concatenate([np.zeros((len(y_pred), 2)), y_pred, np.zeros((len(y_pred), 1))], axis=1))[:, 2]
+ValueError: all the input arrays must have same number of dimensions, but the array at index 0 has 2 dimension(s) and the array at index 1 has 1 dimension(s)
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=26032, ip=127.0.0.1, actor_id=20fba543254b355d511cb5a101000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x00000229B3C2D1B0>)
+  File "python\ray\_raylet.pyx", line 1883, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1984, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1889, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1830, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\function_manager.py", line 724, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException:
+Exception ClientAppException occurred. Message: all the input arrays must have same number of dimensions, but the array at index 0 has 2 dimension(s) and the array at index 1 has 1 dimension(s)
+[91mERROR [0m:     Traceback (most recent call last):
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\server\superlink\fleet\vce\vce_api.py", line 112, in worker
+    out_mssg, updated_context = backend.process_message(message, context)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\server\superlink\fleet\vce\backend\raybackend.py", line 186, in process_message
+    raise ex
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\server\superlink\fleet\vce\backend\raybackend.py", line 174, in process_message
+    ) = self.pool.fetch_result_and_return_actor_to_pool(future)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 477, in fetch_result_and_return_actor_to_pool
+    _, out_mssg, updated_context = ray.get(future)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\worker.py", line 2667, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\worker.py", line 864, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=26032, ip=127.0.0.1, actor_id=20fba543254b355d511cb5a101000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x00000229B3C2D1B0>)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\message_handler\message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\5.FederatedTrainingMejorada2\tfexample\client_app.py", line 57, in evaluate
+    np.concatenate([np.zeros((len(y_pred), 2)), y_pred, np.zeros((len(y_pred), 1))], axis=1))[:, 2]
+ValueError: all the input arrays must have same number of dimensions, but the array at index 0 has 2 dimension(s) and the array at index 1 has 1 dimension(s)
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=26032, ip=127.0.0.1, actor_id=20fba543254b355d511cb5a101000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x00000229B3C2D1B0>)
+  File "python\ray\_raylet.pyx", line 1883, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1984, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1889, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1830, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\function_manager.py", line 724, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException:
+Exception ClientAppException occurred. Message: all the input arrays must have same number of dimensions, but the array at index 0 has 2 dimension(s) and the array at index 1 has 1 dimension(s)
+
+[91mERROR [0m:     An exception was raised when processing a message by RayBackend
+[91mERROR [0m:     [36mray::ClientAppActor.run()[39m (pid=26016, ip=127.0.0.1, actor_id=0b7e9d3f428331f5ec686d9b01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001EDAF69D1B0>)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\message_handler\message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\5.FederatedTrainingMejorada2\tfexample\client_app.py", line 57, in evaluate
+    np.concatenate([np.zeros((len(y_pred), 2)), y_pred, np.zeros((len(y_pred), 1))], axis=1))[:, 2]
+ValueError: all the input arrays must have same number of dimensions, but the array at index 0 has 2 dimension(s) and the array at index 1 has 1 dimension(s)
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=26016, ip=127.0.0.1, actor_id=0b7e9d3f428331f5ec686d9b01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001EDAF69D1B0>)
+  File "python\ray\_raylet.pyx", line 1883, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1984, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1889, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1830, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\function_manager.py", line 724, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException:
+Exception ClientAppException occurred. Message: all the input arrays must have same number of dimensions, but the array at index 0 has 2 dimension(s) and the array at index 1 has 1 dimension(s)
+[91mERROR [0m:     Traceback (most recent call last):
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\server\superlink\fleet\vce\vce_api.py", line 112, in worker
+    out_mssg, updated_context = backend.process_message(message, context)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\server\superlink\fleet\vce\backend\raybackend.py", line 186, in process_message
+    raise ex
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\server\superlink\fleet\vce\backend\raybackend.py", line 174, in process_message
+    ) = self.pool.fetch_result_and_return_actor_to_pool(future)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 477, in fetch_result_and_return_actor_to_pool
+    _, out_mssg, updated_context = ray.get(future)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\worker.py", line 2667, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\worker.py", line 864, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=26016, ip=127.0.0.1, actor_id=0b7e9d3f428331f5ec686d9b01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001EDAF69D1B0>)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\message_handler\message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\5.FederatedTrainingMejorada2\tfexample\client_app.py", line 57, in evaluate
+    np.concatenate([np.zeros((len(y_pred), 2)), y_pred, np.zeros((len(y_pred), 1))], axis=1))[:, 2]
+ValueError: all the input arrays must have same number of dimensions, but the array at index 0 has 2 dimension(s) and the array at index 1 has 1 dimension(s)
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=26016, ip=127.0.0.1, actor_id=0b7e9d3f428331f5ec686d9b01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001EDAF69D1B0>)
+  File "python\ray\_raylet.pyx", line 1883, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1984, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1889, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1830, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\function_manager.py", line 724, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException:
+Exception ClientAppException occurred. Message: all the input arrays must have same number of dimensions, but the array at index 0 has 2 dimension(s) and the array at index 1 has 1 dimension(s)
+[36m(ClientAppActor pid=26116)[0m 35/35 - 2s - 71ms/step - loss: 0.0068 - root_mean_squared_error: 0.0825
+[36m(ClientAppActor pid=26116)[0m Primeros datos de y_test: [0.2299169  0.22437674 0.22160664 0.21883656 0.20775624]
+
+[91mERROR [0m:     An exception was raised when processing a message by RayBackend
+[91mERROR [0m:     [36mray::ClientAppActor.run()[39m (pid=26116, ip=127.0.0.1, actor_id=08eb40d0aeefdcad5623baf401000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x0000025781D83EE0>)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\message_handler\message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\5.FederatedTrainingMejorada2\tfexample\client_app.py", line 57, in evaluate
+    np.concatenate([np.zeros((len(y_pred), 2)), y_pred, np.zeros((len(y_pred), 1))], axis=1))[:, 2]
+ValueError: all the input arrays must have same number of dimensions, but the array at index 0 has 2 dimension(s) and the array at index 1 has 1 dimension(s)
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=26116, ip=127.0.0.1, actor_id=08eb40d0aeefdcad5623baf401000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x0000025781D83EE0>)
+  File "python\ray\_raylet.pyx", line 1883, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1984, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1889, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1830, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\function_manager.py", line 724, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException:
+Exception ClientAppException occurred. Message: all the input arrays must have same number of dimensions, but the array at index 0 has 2 dimension(s) and the array at index 1 has 1 dimension(s)
+[91mERROR [0m:     Traceback (most recent call last):
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\server\superlink\fleet\vce\vce_api.py", line 112, in worker
+    out_mssg, updated_context = backend.process_message(message, context)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\server\superlink\fleet\vce\backend\raybackend.py", line 186, in process_message
+    raise ex
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\server\superlink\fleet\vce\backend\raybackend.py", line 174, in process_message
+    ) = self.pool.fetch_result_and_return_actor_to_pool(future)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 477, in fetch_result_and_return_actor_to_pool
+    _, out_mssg, updated_context = ray.get(future)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\worker.py", line 2667, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\worker.py", line 864, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=26116, ip=127.0.0.1, actor_id=08eb40d0aeefdcad5623baf401000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x0000025781D83EE0>)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\message_handler\message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\5.FederatedTrainingMejorada2\tfexample\client_app.py", line 57, in evaluate
+    np.concatenate([np.zeros((len(y_pred), 2)), y_pred, np.zeros((len(y_pred), 1))], axis=1))[:, 2]
+ValueError: all the input arrays must have same number of dimensions, but the array at index 0 has 2 dimension(s) and the array at index 1 has 1 dimension(s)
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=26116, ip=127.0.0.1, actor_id=08eb40d0aeefdcad5623baf401000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x0000025781D83EE0>)
+  File "python\ray\_raylet.pyx", line 1883, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1984, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1889, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1830, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\function_manager.py", line 724, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException:
+Exception ClientAppException occurred. Message: all the input arrays must have same number of dimensions, but the array at index 0 has 2 dimension(s) and the array at index 1 has 1 dimension(s)
+
+[36m(ClientAppActor pid=26016)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names
+[36m(ClientAppActor pid=26016)[0m   warnings.warn(
+[36m(ClientAppActor pid=26016)[0m Datos preparados:
+[36m(ClientAppActor pid=26016)[0m   Tamaño del conjunto de entrenamiento: 13633
+[36m(ClientAppActor pid=26016)[0m   Tamaño del conjunto de prueba: 3395
+[36m(ClientAppActor pid=26016)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=26016)[0m Primeros datos de y_test: [0.47091413 0.47368422 0.5096953  0.53462607 0.53739613]
+[36m(ClientAppActor pid=26016)[0m Configuración del nodo creada: {'partition-id': 9, 'num-partitions': 11}
+[36m(ClientAppActor pid=26016)[0m Este cliente tiene el partition_id 9 ,el node_id 7428035957676373451 y el archivo 8SVB-extracted.xlsx
+[36m(ClientAppActor pid=26016)[0m Cargando el archivo: 8SVB-extracted.xlsx[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=26080)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names
+[36m(ClientAppActor pid=26080)[0m   warnings.warn(
+[36m(ClientAppActor pid=26016)[0m 54/54 - 1s - 27ms/step - loss: 0.0080 - root_mean_squared_error: 0.0893
+[91mERROR [0m:     An exception was raised when processing a message by RayBackend
+[91mERROR [0m:     [36mray::ClientAppActor.run()[39m (pid=26016, ip=127.0.0.1, actor_id=0b7e9d3f428331f5ec686d9b01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001EDAF69D1B0>)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\message_handler\message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\5.FederatedTrainingMejorada2\tfexample\client_app.py", line 57, in evaluate
+    np.concatenate([np.zeros((len(y_pred), 2)), y_pred, np.zeros((len(y_pred), 1))], axis=1))[:, 2]
+ValueError: all the input arrays must have same number of dimensions, but the array at index 0 has 2 dimension(s) and the array at index 1 has 1 dimension(s)
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=26016, ip=127.0.0.1, actor_id=0b7e9d3f428331f5ec686d9b01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001EDAF69D1B0>)
+  File "python\ray\_raylet.pyx", line 1883, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1984, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1889, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1830, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\function_manager.py", line 724, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException:
+Exception ClientAppException occurred. Message: all the input arrays must have same number of dimensions, but the array at index 0 has 2 dimension(s) and the array at index 1 has 1 dimension(s)
+[91mERROR [0m:     Traceback (most recent call last):
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\server\superlink\fleet\vce\vce_api.py", line 112, in worker
+    out_mssg, updated_context = backend.process_message(message, context)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\server\superlink\fleet\vce\backend\raybackend.py", line 186, in process_message
+    raise ex
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\server\superlink\fleet\vce\backend\raybackend.py", line 174, in process_message
+    ) = self.pool.fetch_result_and_return_actor_to_pool(future)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 477, in fetch_result_and_return_actor_to_pool
+    _, out_mssg, updated_context = ray.get(future)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\worker.py", line 2667, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\worker.py", line 864, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=26016, ip=127.0.0.1, actor_id=0b7e9d3f428331f5ec686d9b01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001EDAF69D1B0>)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\message_handler\message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\5.FederatedTrainingMejorada2\tfexample\client_app.py", line 57, in evaluate
+    np.concatenate([np.zeros((len(y_pred), 2)), y_pred, np.zeros((len(y_pred), 1))], axis=1))[:, 2]
+ValueError: all the input arrays must have same number of dimensions, but the array at index 0 has 2 dimension(s) and the array at index 1 has 1 dimension(s)
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=26016, ip=127.0.0.1, actor_id=0b7e9d3f428331f5ec686d9b01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001EDAF69D1B0>)
+  File "python\ray\_raylet.pyx", line 1883, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1984, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1889, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1830, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\function_manager.py", line 724, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException:
+Exception ClientAppException occurred. Message: all the input arrays must have same number of dimensions, but the array at index 0 has 2 dimension(s) and the array at index 1 has 1 dimension(s)
+
+[91mERROR [0m:     An exception was raised when processing a message by RayBackend
+[91mERROR [0m:     [36mray::ClientAppActor.run()[39m (pid=26080, ip=127.0.0.1, actor_id=1b2aa70c747e31100981eeb301000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001BD62F4D2D0>)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\message_handler\message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\5.FederatedTrainingMejorada2\tfexample\client_app.py", line 57, in evaluate
+    np.concatenate([np.zeros((len(y_pred), 2)), y_pred, np.zeros((len(y_pred), 1))], axis=1))[:, 2]
+ValueError: all the input arrays must have same number of dimensions, but the array at index 0 has 2 dimension(s) and the array at index 1 has 1 dimension(s)
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=26080, ip=127.0.0.1, actor_id=1b2aa70c747e31100981eeb301000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001BD62F4D2D0>)
+  File "python\ray\_raylet.pyx", line 1883, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1984, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1889, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1830, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\function_manager.py", line 724, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException:
+Exception ClientAppException occurred. Message: all the input arrays must have same number of dimensions, but the array at index 0 has 2 dimension(s) and the array at index 1 has 1 dimension(s)
+[91mERROR [0m:     Traceback (most recent call last):
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\server\superlink\fleet\vce\vce_api.py", line 112, in worker
+    out_mssg, updated_context = backend.process_message(message, context)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\server\superlink\fleet\vce\backend\raybackend.py", line 186, in process_message
+    raise ex
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\server\superlink\fleet\vce\backend\raybackend.py", line 174, in process_message
+    ) = self.pool.fetch_result_and_return_actor_to_pool(future)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 477, in fetch_result_and_return_actor_to_pool
+    _, out_mssg, updated_context = ray.get(future)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\worker.py", line 2667, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\worker.py", line 864, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=26080, ip=127.0.0.1, actor_id=1b2aa70c747e31100981eeb301000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001BD62F4D2D0>)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\message_handler\message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\5.FederatedTrainingMejorada2\tfexample\client_app.py", line 57, in evaluate
+    np.concatenate([np.zeros((len(y_pred), 2)), y_pred, np.zeros((len(y_pred), 1))], axis=1))[:, 2]
+ValueError: all the input arrays must have same number of dimensions, but the array at index 0 has 2 dimension(s) and the array at index 1 has 1 dimension(s)
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=26080, ip=127.0.0.1, actor_id=1b2aa70c747e31100981eeb301000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001BD62F4D2D0>)
+  File "python\ray\_raylet.pyx", line 1883, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1984, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1889, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1830, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\function_manager.py", line 724, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException:
+Exception ClientAppException occurred. Message: all the input arrays must have same number of dimensions, but the array at index 0 has 2 dimension(s) and the array at index 1 has 1 dimension(s)
+[36m(ClientAppActor pid=26032)[0m Datos preparados:[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=26032)[0m   Tamaño del conjunto de entrenamiento: 30118[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=26032)[0m   Tamaño del conjunto de prueba: 7516[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=26032)[0m   Dimensiones de las entradas: (12, 4)[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=26032)[0m Primeros datos de y_test: [0.22437674 0.22160664 0.23545706 0.29085872 0.38227147][32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=26032)[0m Configuración del nodo creada: {'partition-id': 8, 'num-partitions': 11}[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=26032)[0m Este cliente tiene el partition_id 8 ,el node_id 12488254105034953688 y el archivo 8MAVS-extracted.xlsx[32m [repeated 2x across cluster][0m
+
+[91mERROR [0m:     An exception was raised when processing a message by RayBackend
+[91mERROR [0m:     [36mray::ClientAppActor.run()[39m (pid=26032, ip=127.0.0.1, actor_id=20fba543254b355d511cb5a101000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x00000229B3C2D1B0>)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\message_handler\message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\5.FederatedTrainingMejorada2\tfexample\client_app.py", line 57, in evaluate
+    np.concatenate([np.zeros((len(y_pred), 2)), y_pred, np.zeros((len(y_pred), 1))], axis=1))[:, 2]
+ValueError: all the input arrays must have same number of dimensions, but the array at index 0 has 2 dimension(s) and the array at index 1 has 1 dimension(s)
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=26032, ip=127.0.0.1, actor_id=20fba543254b355d511cb5a101000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x00000229B3C2D1B0>)
+  File "python\ray\_raylet.pyx", line 1883, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1984, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1889, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1830, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\function_manager.py", line 724, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException:
+Exception ClientAppException occurred. Message: all the input arrays must have same number of dimensions, but the array at index 0 has 2 dimension(s) and the array at index 1 has 1 dimension(s)
+[91mERROR [0m:     Traceback (most recent call last):
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\server\superlink\fleet\vce\vce_api.py", line 112, in worker
+    out_mssg, updated_context = backend.process_message(message, context)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\server\superlink\fleet\vce\backend\raybackend.py", line 186, in process_message
+    raise ex
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\server\superlink\fleet\vce\backend\raybackend.py", line 174, in process_message
+    ) = self.pool.fetch_result_and_return_actor_to_pool(future)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 477, in fetch_result_and_return_actor_to_pool
+    _, out_mssg, updated_context = ray.get(future)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\worker.py", line 2667, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\worker.py", line 864, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=26032, ip=127.0.0.1, actor_id=20fba543254b355d511cb5a101000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x00000229B3C2D1B0>)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\message_handler\message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\5.FederatedTrainingMejorada2\tfexample\client_app.py", line 57, in evaluate
+    np.concatenate([np.zeros((len(y_pred), 2)), y_pred, np.zeros((len(y_pred), 1))], axis=1))[:, 2]
+ValueError: all the input arrays must have same number of dimensions, but the array at index 0 has 2 dimension(s) and the array at index 1 has 1 dimension(s)
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=26032, ip=127.0.0.1, actor_id=20fba543254b355d511cb5a101000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x00000229B3C2D1B0>)
+  File "python\ray\_raylet.pyx", line 1883, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1984, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1889, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1830, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\function_manager.py", line 724, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException:
+Exception ClientAppException occurred. Message: all the input arrays must have same number of dimensions, but the array at index 0 has 2 dimension(s) and the array at index 1 has 1 dimension(s)
+
+[92mINFO [0m:      aggregate_evaluate: received 0 results and 8 failures
+[92mINFO [0m:
+[92mINFO [0m:      [ROUND 2]
+[92mINFO [0m:      configure_fit: strategy sampled 11 clients (out of 11)
+[36m(ClientAppActor pid=26032)[0m Cargando el archivo: 1GML-extracted.xlsx
+[36m(ClientAppActor pid=26032)[0m 118/118 - 3s - 25ms/step - loss: 0.0101 - root_mean_squared_error: 0.1003[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=26080)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=26080)[0m   warnings.warn([32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=26080)[0m Primeros datos de y_test: [0.55401665 0.565097   0.56786704 0.5706371  0.5734072 ]
+[36m(ClientAppActor pid=26080)[0m Datos preparados:
+[36m(ClientAppActor pid=26080)[0m   Tamaño del conjunto de entrenamiento: 14306
+[36m(ClientAppActor pid=26080)[0m   Tamaño del conjunto de prueba: 3564
+[36m(ClientAppActor pid=26080)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=26080)[0m Configuración del nodo creada: {'partition-id': 1, 'num-partitions': 11}
+[36m(ClientAppActor pid=26080)[0m Este cliente tiene el partition_id 1 ,el node_id 17983733397095533957 y el archivo 2AML-extracted.xlsx
+[36m(ClientAppActor pid=26016)[0m Datos preparados:
+[36m(ClientAppActor pid=26016)[0m   Tamaño del conjunto de entrenamiento: 16899
+[36m(ClientAppActor pid=26016)[0m   Tamaño del conjunto de prueba: 4212
+[36m(ClientAppActor pid=26016)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=26016)[0m Configuración del nodo creada: {'partition-id': 2, 'num-partitions': 11}
+[36m(ClientAppActor pid=26016)[0m Este cliente tiene el partition_id 2 ,el node_id 13678564441106224167 y el archivo 3AGM-extracted.xlsx
+[36m(ClientAppActor pid=26116)[0m Cargando el archivo: 5JMPM-extracted.xlsx[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=26116)[0m Primeros datos de y_test: [0.6260388 0.6426593 0.6565097 0.6814405 0.6980609]
+[36m(ClientAppActor pid=26032)[0m Primeros datos de y_test: [0.47368422 0.49861497 0.51246536 0.5401662  0.5567867 ][32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=26116)[0m Datos preparados:[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=26116)[0m   Tamaño del conjunto de entrenamiento: 28653[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=26116)[0m   Tamaño del conjunto de prueba: 7150[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=26116)[0m   Dimensiones de las entradas: (12, 4)[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=26116)[0m Configuración del nodo creada: {'partition-id': 3, 'num-partitions': 11}[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=26116)[0m Este cliente tiene el partition_id 3 ,el node_id 8656681451842320612 y el archivo 5JMPM-extracted.xlsx[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=26080)[0m Cargando el archivo: 7GCQ-extracted.xlsx
+[36m(ClientAppActor pid=26016)[0m Cargando el archivo: 8CGL-extracted.xlsx
+[36m(ClientAppActor pid=26080)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names[32m [repeated 4x across cluster][0m
+[36m(ClientAppActor pid=26080)[0m   warnings.warn([32m [repeated 4x across cluster][0m
+[36m(ClientAppActor pid=26080)[0m Datos preparados:
+[36m(ClientAppActor pid=26080)[0m   Tamaño del conjunto de entrenamiento: 23883
+[36m(ClientAppActor pid=26080)[0m   Tamaño del conjunto de prueba: 5958
+[36m(ClientAppActor pid=26080)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=26080)[0m Primeros datos de y_test: [0.48476455 0.50138503 0.51800555 0.53462607 0.5567867 ]
+[36m(ClientAppActor pid=26080)[0m Configuración del nodo creada: {'partition-id': 4, 'num-partitions': 11}
+[36m(ClientAppActor pid=26080)[0m Este cliente tiene el partition_id 4 ,el node_id 6463341553057904587 y el archivo 7GCQ-extracted.xlsx
+[36m(ClientAppActor pid=26016)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names
+[36m(ClientAppActor pid=26016)[0m   warnings.warn(
+[36m(ClientAppActor pid=26016)[0m Primeros datos de y_test: [0.3434903  0.3767313  0.41551247 0.43490306 0.43490306]
+[36m(ClientAppActor pid=26016)[0m Datos preparados:
+[36m(ClientAppActor pid=26016)[0m   Tamaño del conjunto de entrenamiento: 21263
+[36m(ClientAppActor pid=26016)[0m   Tamaño del conjunto de prueba: 5303
+[36m(ClientAppActor pid=26016)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=26016)[0m Configuración del nodo creada: {'partition-id': 5, 'num-partitions': 11}
+[36m(ClientAppActor pid=26016)[0m Este cliente tiene el partition_id 5 ,el node_id 6238163209886533050 y el archivo 8CGL-extracted.xlsx
+[36m(ClientAppActor pid=26032)[0m Cargando el archivo: 8GAG-extracted.xlsx
+[36m(ClientAppActor pid=26032)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names
+[36m(ClientAppActor pid=26032)[0m   warnings.warn(
+[36m(ClientAppActor pid=26032)[0m Datos preparados:
+[36m(ClientAppActor pid=26032)[0m   Tamaño del conjunto de entrenamiento: 8772
+[36m(ClientAppActor pid=26032)[0m   Tamaño del conjunto de prueba: 2180
+[36m(ClientAppActor pid=26032)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=26032)[0m Primeros datos de y_test: [0.2299169  0.22437674 0.22160664 0.21883656 0.20775624]
+[36m(ClientAppActor pid=26032)[0m Configuración del nodo creada: {'partition-id': 6, 'num-partitions': 11}
+[36m(ClientAppActor pid=26032)[0m Este cliente tiene el partition_id 6 ,el node_id 10044080796283720339 y el archivo 8GAG-extracted.xlsx
+[36m(ClientAppActor pid=26116)[0m Cargando el archivo: 8JLG-extracted.xlsx
+[36m(ClientAppActor pid=26116)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names
+[36m(ClientAppActor pid=26116)[0m   warnings.warn(
+[36m(ClientAppActor pid=26116)[0m Datos preparados:
+[36m(ClientAppActor pid=26116)[0m   Tamaño del conjunto de entrenamiento: 22990
+[36m(ClientAppActor pid=26116)[0m   Tamaño del conjunto de prueba: 5735
+[36m(ClientAppActor pid=26116)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=26116)[0m Primeros datos de y_test: [0.16620499 0.16066483 0.16343491 0.18836565 0.22437674]
+[36m(ClientAppActor pid=26116)[0m Configuración del nodo creada: {'partition-id': 7, 'num-partitions': 11}
+[36m(ClientAppActor pid=26116)[0m Este cliente tiene el partition_id 7 ,el node_id 11906524450152625427 y el archivo 8JLG-extracted.xlsx
+[36m(ClientAppActor pid=26032)[0m Cargando el archivo: 8MAVS-extracted.xlsx
+[36m(ClientAppActor pid=26016)[0m Cargando el archivo: 8SVB-extracted.xlsx
+[36m(ClientAppActor pid=26032)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names
+[36m(ClientAppActor pid=26032)[0m   warnings.warn(
+[36m(ClientAppActor pid=26032)[0m Datos preparados:
+[36m(ClientAppActor pid=26032)[0m   Tamaño del conjunto de entrenamiento: 30118
+[36m(ClientAppActor pid=26032)[0m   Tamaño del conjunto de prueba: 7516
+[36m(ClientAppActor pid=26032)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=26032)[0m Primeros datos de y_test: [0.22437674 0.22160664 0.23545706 0.29085872 0.38227147]
+[36m(ClientAppActor pid=26032)[0m Configuración del nodo creada: {'partition-id': 8, 'num-partitions': 11}
+[36m(ClientAppActor pid=26032)[0m Este cliente tiene el partition_id 8 ,el node_id 12488254105034953688 y el archivo 8MAVS-extracted.xlsx
+[36m(ClientAppActor pid=26080)[0m Cargando el archivo: 8VVC-extracted.xlsx
+[36m(ClientAppActor pid=26016)[0m Datos preparados:
+[36m(ClientAppActor pid=26016)[0m   Tamaño del conjunto de entrenamiento: 13633
+[36m(ClientAppActor pid=26016)[0m   Tamaño del conjunto de prueba: 3395
+[36m(ClientAppActor pid=26016)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=26016)[0m Primeros datos de y_test: [0.47091413 0.47368422 0.5096953  0.53462607 0.53739613]
+[36m(ClientAppActor pid=26016)[0m Configuración del nodo creada: {'partition-id': 9, 'num-partitions': 11}
+[36m(ClientAppActor pid=26016)[0m Este cliente tiene el partition_id 9 ,el node_id 7428035957676373451 y el archivo 8SVB-extracted.xlsx
+[36m(ClientAppActor pid=26080)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=26080)[0m   warnings.warn([32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=26080)[0m Datos preparados:
+[36m(ClientAppActor pid=26080)[0m   Tamaño del conjunto de entrenamiento: 31005
+[36m(ClientAppActor pid=26080)[0m   Tamaño del conjunto de prueba: 7738
+[36m(ClientAppActor pid=26080)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=26080)[0m Primeros datos de y_test: [0.40443215 0.4265928  0.44321328 0.45152354 0.46537396]
+[36m(ClientAppActor pid=26080)[0m Configuración del nodo creada: {'partition-id': 10, 'num-partitions': 11}
+[36m(ClientAppActor pid=26080)[0m Este cliente tiene el partition_id 10 ,el node_id 14125605756059445529 y el archivo 8VVC-extracted.xlsx
+[92mINFO [0m:      aggregate_fit: received 11 results and 0 failures

@@ -1,0 +1,22 @@
+2025-01-10 01:32:33,726 INFO    Thread-1 (server_th_with_start_checks):7188 [wandb_setup.py:_flush():68] Current SDK version is 0.19.1
+2025-01-10 01:32:33,726 INFO    Thread-1 (server_th_with_start_checks):7188 [wandb_setup.py:_flush():68] Configure stats pid to 7188
+2025-01-10 01:32:33,726 INFO    Thread-1 (server_th_with_start_checks):7188 [wandb_setup.py:_flush():68] Loading settings from C:\Users\clara\.config\wandb\settings
+2025-01-10 01:32:33,727 INFO    Thread-1 (server_th_with_start_checks):7188 [wandb_setup.py:_flush():68] Loading settings from C:\Users\clara\Desktop\TFG\Codigo TFG\8.FederatedTrainingFedMedian\wandb\settings
+2025-01-10 01:32:33,727 INFO    Thread-1 (server_th_with_start_checks):7188 [wandb_setup.py:_flush():68] Loading settings from environment variables
+2025-01-10 01:32:33,727 INFO    Thread-1 (server_th_with_start_checks):7188 [wandb_init.py:_log_setup():528] Logging user logs to C:\Users\clara\Desktop\TFG\Codigo TFG\8.FederatedTrainingFedMedian\wandb\run-20250110_013233-8t1718vi\logs\debug.log
+2025-01-10 01:32:33,727 INFO    Thread-1 (server_th_with_start_checks):7188 [wandb_init.py:_log_setup():529] Logging internal logs to C:\Users\clara\Desktop\TFG\Codigo TFG\8.FederatedTrainingFedMedian\wandb\run-20250110_013233-8t1718vi\logs\debug-internal.log
+2025-01-10 01:32:33,727 INFO    Thread-1 (server_th_with_start_checks):7188 [wandb_init.py:init():644] calling init triggers
+2025-01-10 01:32:33,727 INFO    Thread-1 (server_th_with_start_checks):7188 [wandb_init.py:init():650] wandb.init called with sweep_config: {}
+config: {}
+2025-01-10 01:32:33,727 INFO    Thread-1 (server_th_with_start_checks):7188 [wandb_init.py:init():680] starting backend
+2025-01-10 01:32:33,727 INFO    Thread-1 (server_th_with_start_checks):7188 [wandb_init.py:init():684] sending inform_init request
+2025-01-10 01:32:33,743 INFO    Thread-1 (server_th_with_start_checks):7188 [backend.py:_multiprocessing_setup():104] multiprocessing start_methods=spawn, using: spawn
+2025-01-10 01:32:33,744 INFO    Thread-1 (server_th_with_start_checks):7188 [wandb_init.py:init():697] backend started and connected
+2025-01-10 01:32:33,746 INFO    Thread-1 (server_th_with_start_checks):7188 [wandb_init.py:init():790] updated telemetry
+2025-01-10 01:32:33,804 INFO    Thread-1 (server_th_with_start_checks):7188 [wandb_init.py:init():822] communicating run to backend with 90.0 second timeout
+2025-01-10 01:32:35,152 INFO    Thread-1 (server_th_with_start_checks):7188 [wandb_init.py:init():874] starting run threads in backend
+2025-01-10 01:32:39,617 INFO    Thread-1 (server_th_with_start_checks):7188 [wandb_run.py:_console_start():2374] atexit reg
+2025-01-10 01:32:39,618 INFO    Thread-1 (server_th_with_start_checks):7188 [wandb_run.py:_redirect():2224] redirect: wrap_raw
+2025-01-10 01:32:39,618 INFO    Thread-1 (server_th_with_start_checks):7188 [wandb_run.py:_redirect():2289] Wrapping output streams.
+2025-01-10 01:32:39,618 INFO    Thread-1 (server_th_with_start_checks):7188 [wandb_run.py:_redirect():2314] Redirects installed.
+2025-01-10 01:32:39,627 INFO    Thread-1 (server_th_with_start_checks):7188 [wandb_init.py:init():916] run started, returning control to user process

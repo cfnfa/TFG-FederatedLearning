@@ -1,0 +1,8 @@
+{"time":"2024-12-29T14:29:21.960958+01:00","level":"INFO","msg":"using version","core version":"0.19.1"}
+{"time":"2024-12-29T14:29:21.960958+01:00","level":"INFO","msg":"created symlink","path":"C:\\Users\\clara\\Desktop\\TFG\\Codigo TFG\\5.FederatedTrainingMejorada2\\wandb\\run-20241229_142921-hyrgs5ia\\logs\\debug-core.log"}
+{"time":"2024-12-29T14:29:23.4280427+01:00","level":"INFO","msg":"created new stream","id":"hyrgs5ia"}
+{"time":"2024-12-29T14:29:23.4280427+01:00","level":"INFO","msg":"stream: started","id":"hyrgs5ia"}
+{"time":"2024-12-29T14:29:23.4280427+01:00","level":"INFO","msg":"handler: started","stream_id":"hyrgs5ia"}
+{"time":"2024-12-29T14:29:23.4286277+01:00","level":"INFO","msg":"sender: started","stream_id":"hyrgs5ia"}
+{"time":"2024-12-29T14:29:23.4286277+01:00","level":"INFO","msg":"writer: Do: started","stream_id":"hyrgs5ia"}
+{"time":"2024-12-29T14:29:23.9534669+01:00","level":"INFO","msg":"Starting system monitor"}

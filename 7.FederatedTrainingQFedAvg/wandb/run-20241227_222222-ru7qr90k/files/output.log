@@ -1,0 +1,1073 @@
+[92mINFO [0m:      Starting Flower ServerApp, config: num_rounds=6, no round_timeout
+[92mINFO [0m:
+[92mINFO [0m:      [INIT]
+[92mINFO [0m:      Using initial global parameters provided by strategy
+[92mINFO [0m:      Starting evaluation of initial global parameters
+782/782 - 5s - 6ms/step - loss: 0.1336 - root_mean_squared_error: 0.3656
+[92mINFO [0m:      💡⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️ New best global model found: 0.365564
+[92mINFO [0m:      initial parameters (loss, other metrics): 0.13363690674304962, {'centralized_rmse': 0.3655638098716736}
+[92mINFO [0m:
+[92mINFO [0m:      [ROUND 1]
+[92mINFO [0m:      configure_fit: strategy sampled 11 clients (out of 11)
+[36m(ClientAppActor pid=19048)[0m Mínimos globales: [ 0.  0. 39.  0.]
+[36m(ClientAppActor pid=19048)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=19048)[0m Cargando el archivo: 8JLG-extracted.xlsx
+[36m(ClientAppActor pid=13600)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names
+[36m(ClientAppActor pid=13600)[0m   warnings.warn(
+[36m(ClientAppActor pid=13600)[0m Datos preparados:
+[36m(ClientAppActor pid=13600)[0m   Tamaño del conjunto de entrenamiento: 13633
+[36m(ClientAppActor pid=13600)[0m   Tamaño del conjunto de prueba: 3395
+[36m(ClientAppActor pid=13600)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=13600)[0m Primeros datos de y_test: [0.47091413 0.47368422 0.5096953  0.53462607 0.53739613]
+[36m(ClientAppActor pid=13600)[0m Configuración del nodo creada: {'partition-id': 9, 'num-partitions': 11}
+[36m(ClientAppActor pid=13600)[0m Este cliente tiene el partition_id 9 ,el node_id 6003442238636791310 y el archivo 8SVB-extracted.xlsx
+[36m(ClientAppActor pid=4056)[0m Primeros datos de y_test: [0.9639889  0.97783935 0.97783935 0.9639889  0.9501385 ]
+[36m(ClientAppActor pid=3480)[0m Mínimos globales: [ 0.  0. 39.  0.][32m [repeated 3x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/ray-logging.html#log-deduplication for more options.)[0m
+[36m(ClientAppActor pid=3480)[0m Máximos globales: [ 25.        1.01325 400.      200.     ][32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m Cargando el archivo: 7GCQ-extracted.xlsx[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m Datos preparados:[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m   Tamaño del conjunto de entrenamiento: 23883[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m   Tamaño del conjunto de prueba: 5958[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m   Dimensiones de las entradas: (12, 4)[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m Primeros datos de y_test: [0.16620499 0.16066483 0.16343491 0.18836565 0.22437674]
+[36m(ClientAppActor pid=3480)[0m Configuración del nodo creada: {'partition-id': 4, 'num-partitions': 11}[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m Este cliente tiene el partition_id 4 ,el node_id 13963588918310472169 y el archivo 7GCQ-extracted.xlsx[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m Primeros datos de y_test: [0.48476455 0.50138503 0.51800555 0.53462607 0.5567867 ]
+[36m(ClientAppActor pid=13600)[0m Mínimos globales: [ 0.  0. 39.  0.]
+[36m(ClientAppActor pid=13600)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=13600)[0m Cargando el archivo: 1GML-extracted.xlsx
+[36m(ClientAppActor pid=4056)[0m Mínimos globales: [ 0.  0. 39.  0.]
+[36m(ClientAppActor pid=4056)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=4056)[0m Cargando el archivo: 2AML-extracted.xlsx
+[36m(ClientAppActor pid=13600)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names[32m [repeated 4x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m   warnings.warn([32m [repeated 4x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m Primeros datos de y_test: [0.47368422 0.49861497 0.51246536 0.5401662  0.5567867 ]
+[36m(ClientAppActor pid=4056)[0m Datos preparados:[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m   Tamaño del conjunto de entrenamiento: 14306[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m   Tamaño del conjunto de prueba: 3564[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m   Dimensiones de las entradas: (12, 4)[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m Configuración del nodo creada: {'partition-id': 1, 'num-partitions': 11}[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m Este cliente tiene el partition_id 1 ,el node_id 6702852490079147453 y el archivo 2AML-extracted.xlsx[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m   warnings.warn([32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m Primeros datos de y_test: [0.6260388 0.6426593 0.6565097 0.6814405 0.6980609]
+[36m(ClientAppActor pid=19048)[0m Mínimos globales: [ 0.  0. 39.  0.]
+[36m(ClientAppActor pid=19048)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=19048)[0m Cargando el archivo: 5JMPM-extracted.xlsx
+[36m(ClientAppActor pid=4056)[0m Primeros datos de y_test: [0.55401665 0.565097   0.56786704 0.5706371  0.5734072 ]
+[36m(ClientAppActor pid=19048)[0m Datos preparados:
+[36m(ClientAppActor pid=19048)[0m   Tamaño del conjunto de entrenamiento: 28653
+[36m(ClientAppActor pid=19048)[0m   Tamaño del conjunto de prueba: 7150
+[36m(ClientAppActor pid=19048)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=19048)[0m Configuración del nodo creada: {'partition-id': 3, 'num-partitions': 11}
+[36m(ClientAppActor pid=19048)[0m Este cliente tiene el partition_id 3 ,el node_id 8986872085204467341 y el archivo 5JMPM-extracted.xlsx
+[36m(ClientAppActor pid=3480)[0m Mínimos globales: [ 0.  0. 39.  0.]
+[36m(ClientAppActor pid=3480)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=3480)[0m Cargando el archivo: 8CGL-extracted.xlsx
+[36m(ClientAppActor pid=3480)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names
+[36m(ClientAppActor pid=3480)[0m   warnings.warn(
+[36m(ClientAppActor pid=3480)[0m Datos preparados:
+[36m(ClientAppActor pid=3480)[0m   Tamaño del conjunto de entrenamiento: 21263
+[36m(ClientAppActor pid=3480)[0m   Tamaño del conjunto de prueba: 5303
+[36m(ClientAppActor pid=3480)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=3480)[0m Primeros datos de y_test: [0.3434903  0.3767313  0.41551247 0.43490306 0.43490306]
+[36m(ClientAppActor pid=3480)[0m Configuración del nodo creada: {'partition-id': 5, 'num-partitions': 11}
+[36m(ClientAppActor pid=3480)[0m Este cliente tiene el partition_id 5 ,el node_id 13378712986945472921 y el archivo 8CGL-extracted.xlsx
+[36m(ClientAppActor pid=4056)[0m Mínimos globales: [ 0.  0. 39.  0.]
+[36m(ClientAppActor pid=4056)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=4056)[0m Cargando el archivo: 8GAG-extracted.xlsx
+[36m(ClientAppActor pid=4056)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names
+[36m(ClientAppActor pid=4056)[0m   warnings.warn(
+[36m(ClientAppActor pid=4056)[0m Datos preparados:
+[36m(ClientAppActor pid=4056)[0m   Tamaño del conjunto de entrenamiento: 8772
+[36m(ClientAppActor pid=4056)[0m   Tamaño del conjunto de prueba: 2180
+[36m(ClientAppActor pid=4056)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=4056)[0m Primeros datos de y_test: [0.2299169  0.22437674 0.22160664 0.21883656 0.20775624]
+[36m(ClientAppActor pid=4056)[0m Configuración del nodo creada: {'partition-id': 6, 'num-partitions': 11}
+[36m(ClientAppActor pid=4056)[0m Este cliente tiene el partition_id 6 ,el node_id 4980261154963260417 y el archivo 8GAG-extracted.xlsx
+[36m(ClientAppActor pid=13600)[0m Mínimos globales: [ 0.  0. 39.  0.]
+[36m(ClientAppActor pid=13600)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=13600)[0m Cargando el archivo: 8MAVS-extracted.xlsx
+[36m(ClientAppActor pid=13600)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names
+[36m(ClientAppActor pid=13600)[0m   warnings.warn(
+[36m(ClientAppActor pid=13600)[0m Datos preparados:
+[36m(ClientAppActor pid=13600)[0m   Tamaño del conjunto de entrenamiento: 30118
+[36m(ClientAppActor pid=13600)[0m   Tamaño del conjunto de prueba: 7516
+[36m(ClientAppActor pid=13600)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=13600)[0m Primeros datos de y_test: [0.22437674 0.22160664 0.23545706 0.29085872 0.38227147]
+[36m(ClientAppActor pid=13600)[0m Configuración del nodo creada: {'partition-id': 8, 'num-partitions': 11}
+[36m(ClientAppActor pid=13600)[0m Este cliente tiene el partition_id 8 ,el node_id 5244531344316911069 y el archivo 8MAVS-extracted.xlsx
+[36m(ClientAppActor pid=19048)[0m Mínimos globales: [ 0.  0. 39.  0.]
+[36m(ClientAppActor pid=19048)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=19048)[0m Cargando el archivo: 8VVC-extracted.xlsx
+[36m(ClientAppActor pid=19048)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names
+[36m(ClientAppActor pid=19048)[0m   warnings.warn(
+[36m(ClientAppActor pid=19048)[0m Datos preparados:
+[36m(ClientAppActor pid=19048)[0m   Tamaño del conjunto de entrenamiento: 31005
+[36m(ClientAppActor pid=19048)[0m   Tamaño del conjunto de prueba: 7738
+[36m(ClientAppActor pid=19048)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=19048)[0m Primeros datos de y_test: [0.40443215 0.4265928  0.44321328 0.45152354 0.46537396]
+[36m(ClientAppActor pid=19048)[0m Configuración del nodo creada: {'partition-id': 10, 'num-partitions': 11}
+[36m(ClientAppActor pid=19048)[0m Este cliente tiene el partition_id 10 ,el node_id 6226779963427498849 y el archivo 8VVC-extracted.xlsx
+[92mINFO [0m:      aggregate_fit: received 11 results and 0 failures
+[93mWARNING [0m:   No fit_metrics_aggregation_fn provided
+782/782 - 7s - 9ms/step - loss: 0.0062 - root_mean_squared_error: 0.0789
+[92mINFO [0m:      💡⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️ New best global model found: 0.078924
+[92mINFO [0m:      fit progress: (1, 0.006229044403880835, {'centralized_rmse': 0.07892429828643799}, 673.8928299999998)
+[92mINFO [0m:      configure_evaluate: strategy sampled 8 clients (out of 11)
+[36m(ClientAppActor pid=3480)[0m Mínimos globales: [ 0.  0. 39.  0.]
+[36m(ClientAppActor pid=3480)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=3480)[0m Cargando el archivo: 8CGL-extracted.xlsx
+[36m(ClientAppActor pid=3480)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names
+[36m(ClientAppActor pid=3480)[0m   warnings.warn(
+[36m(ClientAppActor pid=3480)[0m Datos preparados:
+[36m(ClientAppActor pid=3480)[0m   Tamaño del conjunto de entrenamiento: 21263
+[36m(ClientAppActor pid=3480)[0m   Tamaño del conjunto de prueba: 5303
+[36m(ClientAppActor pid=3480)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=3480)[0m Primeros datos de y_test: [0.3434903  0.3767313  0.41551247 0.43490306 0.43490306]
+[36m(ClientAppActor pid=3480)[0m Configuración del nodo creada: {'partition-id': 5, 'num-partitions': 11}
+[36m(ClientAppActor pid=3480)[0m Este cliente tiene el partition_id 5 ,el node_id 13378712986945472921 y el archivo 8CGL-extracted.xlsx
+[36m(ClientAppActor pid=19048)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names
+[36m(ClientAppActor pid=19048)[0m   warnings.warn(
+[36m(ClientAppActor pid=19048)[0m Primeros datos de y_test: [0.47368422 0.49861497 0.51246536 0.5401662  0.5567867 ]
+[36m(ClientAppActor pid=19048)[0m Mínimos globales: [ 0.  0. 39.  0.][32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m Máximos globales: [ 25.        1.01325 400.      200.     ][32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m Cargando el archivo: 1GML-extracted.xlsx[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m 83/83 - 2s - 29ms/step - loss: 0.0081 - root_mean_squared_error: 0.0898
+[36m(ClientAppActor pid=13600)[0m Datos preparados:[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m   Tamaño del conjunto de entrenamiento: 28653[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m   Tamaño del conjunto de prueba: 7150[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m   Dimensiones de las entradas: (12, 4)[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m Primeros datos de y_test: [0.6260388 0.6426593 0.6565097 0.6814405 0.6980609]
+[36m(ClientAppActor pid=13600)[0m Configuración del nodo creada: {'partition-id': 3, 'num-partitions': 11}[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m Este cliente tiene el partition_id 3 ,el node_id 8986872085204467341 y el archivo 5JMPM-extracted.xlsx[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m Primeros datos de y_test: [0.48476455 0.50138503 0.51800555 0.53462607 0.5567867 ]
+[36m(ClientAppActor pid=3480)[0m Mínimos globales: [ 0.  0. 39.  0.]
+[36m(ClientAppActor pid=3480)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=3480)[0m Cargando el archivo: 8GAG-extracted.xlsx
+[36m(ClientAppActor pid=13600)[0m 112/112 - 3s - 30ms/step - loss: 0.0093 - root_mean_squared_error: 0.0964[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m   warnings.warn([32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m Datos preparados:
+[36m(ClientAppActor pid=3480)[0m   Tamaño del conjunto de entrenamiento: 8772
+[36m(ClientAppActor pid=3480)[0m   Tamaño del conjunto de prueba: 2180
+[36m(ClientAppActor pid=3480)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=3480)[0m Primeros datos de y_test: [0.2299169  0.22437674 0.22160664 0.21883656 0.20775624]
+[36m(ClientAppActor pid=3480)[0m Configuración del nodo creada: {'partition-id': 6, 'num-partitions': 11}
+[36m(ClientAppActor pid=3480)[0m Este cliente tiene el partition_id 6 ,el node_id 4980261154963260417 y el archivo 8GAG-extracted.xlsx
+[36m(ClientAppActor pid=13600)[0m Mínimos globales: [ 0.  0. 39.  0.][32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m Máximos globales: [ 25.        1.01325 400.      200.     ][32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m Cargando el archivo: 8VVC-extracted.xlsx[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m 35/35 - 1s - 39ms/step - loss: 0.0055 - root_mean_squared_error: 0.0740
+[36m(ClientAppActor pid=19048)[0m 90/90 - 2s - 18ms/step - loss: 0.0087 - root_mean_squared_error: 0.0935
+[36m(ClientAppActor pid=13600)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m   warnings.warn([32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m Datos preparados:[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m   Tamaño del conjunto de entrenamiento: 31005[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m   Tamaño del conjunto de prueba: 7738[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m   Dimensiones de las entradas: (12, 4)[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m Primeros datos de y_test: [0.40443215 0.4265928  0.44321328 0.45152354 0.46537396][32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m Configuración del nodo creada: {'partition-id': 10, 'num-partitions': 11}[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m Este cliente tiene el partition_id 10 ,el node_id 6226779963427498849 y el archivo 8VVC-extracted.xlsx[32m [repeated 3x across cluster][0m
+[92mINFO [0m:      aggregate_evaluate: received 8 results and 0 failures
+Se han recibido estas metricas: [(7150, {'rmse': 0.09636285901069641}), (5584, {'rmse': 0.09808127582073212}), (7516, {'rmse': 0.09670503437519073}), (7738, {'rmse': 0.09354231506586075}), (5958, {'rmse': 0.07600173354148865}), (5735, {'rmse': 0.09353108704090118}), (2180, {'rmse': 0.07404670119285583}), (5303, {'rmse': 0.0897757038474083})]
+Processing client with num_examples=7150, metrics={'rmse': 0.09636285901069641}
+Processing client with num_examples=5584, metrics={'rmse': 0.09808127582073212}
+Processing client with num_examples=7516, metrics={'rmse': 0.09670503437519073}
+Processing client with num_examples=7738, metrics={'rmse': 0.09354231506586075}
+Processing client with num_examples=5958, metrics={'rmse': 0.07600173354148865}
+Processing client with num_examples=5735, metrics={'rmse': 0.09353108704090118}
+Processing client with num_examples=2180, metrics={'rmse': 0.07404670119285583}
+Processing client with num_examples=5303, metrics={'rmse': 0.0897757038474083}
+El array de ejemplos es: [7150, 5584, 7516, 7738, 5958, 5735, 2180, 5303]
+lA SUMA DE EJEMPLOS ES=47164
+[92mINFO [0m:
+[92mINFO [0m:      [ROUND 2]
+[92mINFO [0m:      configure_fit: strategy sampled 11 clients (out of 11)
+[36m(ClientAppActor pid=3480)[0m Mínimos globales: [ 0.  0. 39.  0.]
+[36m(ClientAppActor pid=3480)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=3480)[0m Cargando el archivo: 3AGM-extracted.xlsx
+[36m(ClientAppActor pid=13600)[0m 121/121 - 2s - 16ms/step - loss: 0.0088 - root_mean_squared_error: 0.0935[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m Mínimos globales: [ 0.  0. 39.  0.]
+[36m(ClientAppActor pid=13600)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=13600)[0m Cargando el archivo: 7GCQ-extracted.xlsx
+[36m(ClientAppActor pid=3480)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names
+[36m(ClientAppActor pid=3480)[0m   warnings.warn(
+[36m(ClientAppActor pid=3480)[0m Datos preparados:
+[36m(ClientAppActor pid=3480)[0m   Tamaño del conjunto de entrenamiento: 16899
+[36m(ClientAppActor pid=3480)[0m   Tamaño del conjunto de prueba: 4212
+[36m(ClientAppActor pid=3480)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=3480)[0m Primeros datos de y_test: [0.9639889  0.97783935 0.97783935 0.9639889  0.9501385 ]
+[36m(ClientAppActor pid=3480)[0m Configuración del nodo creada: {'partition-id': 2, 'num-partitions': 11}
+[36m(ClientAppActor pid=3480)[0m Este cliente tiene el partition_id 2 ,el node_id 14607305286812764964 y el archivo 3AGM-extracted.xlsx
+[36m(ClientAppActor pid=19048)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names
+[36m(ClientAppActor pid=19048)[0m   warnings.warn(
+[36m(ClientAppActor pid=19048)[0m Mínimos globales: [ 0.  0. 39.  0.][32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m Máximos globales: [ 25.        1.01325 400.      200.     ][32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m Cargando el archivo: 2AML-extracted.xlsx[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m Datos preparados:[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m   Tamaño del conjunto de entrenamiento: 23883[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m   Tamaño del conjunto de prueba: 5958[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m   Dimensiones de las entradas: (12, 4)[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m Primeros datos de y_test: [0.48476455 0.50138503 0.51800555 0.53462607 0.5567867 ][32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m Configuración del nodo creada: {'partition-id': 4, 'num-partitions': 11}[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m Este cliente tiene el partition_id 4 ,el node_id 13963588918310472169 y el archivo 7GCQ-extracted.xlsx[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m Mínimos globales: [ 0.  0. 39.  0.]
+[36m(ClientAppActor pid=19048)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=19048)[0m Cargando el archivo: 5JMPM-extracted.xlsx
+[36m(ClientAppActor pid=3480)[0m Mínimos globales: [ 0.  0. 39.  0.]
+[36m(ClientAppActor pid=3480)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=3480)[0m Cargando el archivo: 8CGL-extracted.xlsx
+[36m(ClientAppActor pid=19048)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m   warnings.warn([32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m Datos preparados:
+[36m(ClientAppActor pid=19048)[0m   Tamaño del conjunto de entrenamiento: 28653
+[36m(ClientAppActor pid=19048)[0m   Tamaño del conjunto de prueba: 7150
+[36m(ClientAppActor pid=19048)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=19048)[0m Primeros datos de y_test: [0.6260388 0.6426593 0.6565097 0.6814405 0.6980609]
+[36m(ClientAppActor pid=19048)[0m Configuración del nodo creada: {'partition-id': 3, 'num-partitions': 11}
+[36m(ClientAppActor pid=19048)[0m Este cliente tiene el partition_id 3 ,el node_id 8986872085204467341 y el archivo 5JMPM-extracted.xlsx
+[36m(ClientAppActor pid=4056)[0m Mínimos globales: [ 0.  0. 39.  0.]
+[36m(ClientAppActor pid=4056)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=4056)[0m Cargando el archivo: 8GAG-extracted.xlsx
+[36m(ClientAppActor pid=13600)[0m Mínimos globales: [ 0.  0. 39.  0.]
+[36m(ClientAppActor pid=13600)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=13600)[0m Cargando el archivo: 8JLG-extracted.xlsx
+[36m(ClientAppActor pid=4056)[0m Datos preparados:[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m   Tamaño del conjunto de entrenamiento: 8772[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m   Tamaño del conjunto de prueba: 2180[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m   Dimensiones de las entradas: (12, 4)[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m Primeros datos de y_test: [0.2299169  0.22437674 0.22160664 0.21883656 0.20775624][32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m Configuración del nodo creada: {'partition-id': 6, 'num-partitions': 11}[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m Este cliente tiene el partition_id 6 ,el node_id 4980261154963260417 y el archivo 8GAG-extracted.xlsx[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m   warnings.warn([32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m Datos preparados:
+[36m(ClientAppActor pid=13600)[0m   Tamaño del conjunto de entrenamiento: 22990
+[36m(ClientAppActor pid=13600)[0m   Tamaño del conjunto de prueba: 5735
+[36m(ClientAppActor pid=13600)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=13600)[0m Primeros datos de y_test: [0.16620499 0.16066483 0.16343491 0.18836565 0.22437674]
+[36m(ClientAppActor pid=13600)[0m Configuración del nodo creada: {'partition-id': 7, 'num-partitions': 11}
+[36m(ClientAppActor pid=13600)[0m Este cliente tiene el partition_id 7 ,el node_id 12763529022514411388 y el archivo 8JLG-extracted.xlsx
+[36m(ClientAppActor pid=4056)[0m Mínimos globales: [ 0.  0. 39.  0.]
+[36m(ClientAppActor pid=4056)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=4056)[0m Cargando el archivo: 8MAVS-extracted.xlsx
+[36m(ClientAppActor pid=4056)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names
+[36m(ClientAppActor pid=4056)[0m   warnings.warn(
+[36m(ClientAppActor pid=4056)[0m Datos preparados:
+[36m(ClientAppActor pid=4056)[0m   Tamaño del conjunto de entrenamiento: 30118
+[36m(ClientAppActor pid=4056)[0m   Tamaño del conjunto de prueba: 7516
+[36m(ClientAppActor pid=4056)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=4056)[0m Primeros datos de y_test: [0.22437674 0.22160664 0.23545706 0.29085872 0.38227147]
+[36m(ClientAppActor pid=4056)[0m Configuración del nodo creada: {'partition-id': 8, 'num-partitions': 11}
+[36m(ClientAppActor pid=4056)[0m Este cliente tiene el partition_id 8 ,el node_id 5244531344316911069 y el archivo 8MAVS-extracted.xlsx
+[36m(ClientAppActor pid=3480)[0m Mínimos globales: [ 0.  0. 39.  0.]
+[36m(ClientAppActor pid=3480)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=3480)[0m Cargando el archivo: 8SVB-extracted.xlsx
+[36m(ClientAppActor pid=3480)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names
+[36m(ClientAppActor pid=3480)[0m   warnings.warn(
+[36m(ClientAppActor pid=3480)[0m Datos preparados:
+[36m(ClientAppActor pid=3480)[0m   Tamaño del conjunto de entrenamiento: 13633
+[36m(ClientAppActor pid=3480)[0m   Tamaño del conjunto de prueba: 3395
+[36m(ClientAppActor pid=3480)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=3480)[0m Primeros datos de y_test: [0.47091413 0.47368422 0.5096953  0.53462607 0.53739613]
+[36m(ClientAppActor pid=3480)[0m Configuración del nodo creada: {'partition-id': 9, 'num-partitions': 11}
+[36m(ClientAppActor pid=3480)[0m Este cliente tiene el partition_id 9 ,el node_id 6003442238636791310 y el archivo 8SVB-extracted.xlsx
+[36m(ClientAppActor pid=19048)[0m Mínimos globales: [ 0.  0. 39.  0.]
+[36m(ClientAppActor pid=19048)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=19048)[0m Cargando el archivo: 8VVC-extracted.xlsx
+[36m(ClientAppActor pid=19048)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names
+[36m(ClientAppActor pid=19048)[0m   warnings.warn(
+[36m(ClientAppActor pid=19048)[0m Datos preparados:
+[36m(ClientAppActor pid=19048)[0m   Tamaño del conjunto de entrenamiento: 31005
+[36m(ClientAppActor pid=19048)[0m   Tamaño del conjunto de prueba: 7738
+[36m(ClientAppActor pid=19048)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=19048)[0m Primeros datos de y_test: [0.40443215 0.4265928  0.44321328 0.45152354 0.46537396]
+[36m(ClientAppActor pid=19048)[0m Configuración del nodo creada: {'partition-id': 10, 'num-partitions': 11}
+[36m(ClientAppActor pid=19048)[0m Este cliente tiene el partition_id 10 ,el node_id 6226779963427498849 y el archivo 8VVC-extracted.xlsx
+[92mINFO [0m:      aggregate_fit: received 11 results and 0 failures
+782/782 - 7s - 8ms/step - loss: 0.0039 - root_mean_squared_error: 0.0623
+[92mINFO [0m:      💡⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️ New best global model found: 0.062321
+[92mINFO [0m:      fit progress: (2, 0.003883883124217391, {'centralized_rmse': 0.062320809811353683}, 1590.7775935999998)
+[92mINFO [0m:      configure_evaluate: strategy sampled 8 clients (out of 11)
+[36m(ClientAppActor pid=3480)[0m Mínimos globales: [ 0.  0. 39.  0.]
+[36m(ClientAppActor pid=3480)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=3480)[0m Cargando el archivo: 7GCQ-extracted.xlsx
+[36m(ClientAppActor pid=13600)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names
+[36m(ClientAppActor pid=13600)[0m   warnings.warn(
+[36m(ClientAppActor pid=13600)[0m Datos preparados:
+[36m(ClientAppActor pid=13600)[0m   Tamaño del conjunto de entrenamiento: 21263
+[36m(ClientAppActor pid=13600)[0m   Tamaño del conjunto de prueba: 5303
+[36m(ClientAppActor pid=13600)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=13600)[0m Primeros datos de y_test: [0.3434903  0.3767313  0.41551247 0.43490306 0.43490306]
+[36m(ClientAppActor pid=13600)[0m Configuración del nodo creada: {'partition-id': 5, 'num-partitions': 11}
+[36m(ClientAppActor pid=13600)[0m Este cliente tiene el partition_id 5 ,el node_id 13378712986945472921 y el archivo 8CGL-extracted.xlsx
+[36m(ClientAppActor pid=4056)[0m Mínimos globales: [ 0.  0. 39.  0.][32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m Máximos globales: [ 25.        1.01325 400.      200.     ][32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m Cargando el archivo: 5JMPM-extracted.xlsx[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m Primeros datos de y_test: [0.47368422 0.49861497 0.51246536 0.5401662  0.5567867 ]
+[36m(ClientAppActor pid=13600)[0m 83/83 - 2s - 27ms/step - loss: 0.0060 - root_mean_squared_error: 0.0777
+[36m(ClientAppActor pid=4056)[0m Datos preparados:[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m   Tamaño del conjunto de entrenamiento: 28653[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m   Tamaño del conjunto de prueba: 7150[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m   Dimensiones de las entradas: (12, 4)[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m Primeros datos de y_test: [0.6260388 0.6426593 0.6565097 0.6814405 0.6980609]
+[36m(ClientAppActor pid=4056)[0m Configuración del nodo creada: {'partition-id': 3, 'num-partitions': 11}[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m Este cliente tiene el partition_id 3 ,el node_id 8986872085204467341 y el archivo 5JMPM-extracted.xlsx[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m Primeros datos de y_test: [0.48476455 0.50138503 0.51800555 0.53462607 0.5567867 ]
+[36m(ClientAppActor pid=13600)[0m Mínimos globales: [ 0.  0. 39.  0.]
+[36m(ClientAppActor pid=13600)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=13600)[0m Cargando el archivo: 8GAG-extracted.xlsx
+[36m(ClientAppActor pid=4056)[0m 112/112 - 3s - 23ms/step - loss: 0.0059 - root_mean_squared_error: 0.0766[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names[32m [repeated 4x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m   warnings.warn([32m [repeated 4x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m Datos preparados:
+[36m(ClientAppActor pid=13600)[0m   Tamaño del conjunto de entrenamiento: 8772
+[36m(ClientAppActor pid=13600)[0m   Tamaño del conjunto de prueba: 2180
+[36m(ClientAppActor pid=13600)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=13600)[0m Primeros datos de y_test: [0.2299169  0.22437674 0.22160664 0.21883656 0.20775624]
+[36m(ClientAppActor pid=13600)[0m Configuración del nodo creada: {'partition-id': 6, 'num-partitions': 11}
+[36m(ClientAppActor pid=13600)[0m Este cliente tiene el partition_id 6 ,el node_id 4980261154963260417 y el archivo 8GAG-extracted.xlsx
+[36m(ClientAppActor pid=4056)[0m Mínimos globales: [ 0.  0. 39.  0.][32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m Máximos globales: [ 25.        1.01325 400.      200.     ][32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m Cargando el archivo: 8VVC-extracted.xlsx[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m 54/54 - 1s - 25ms/step - loss: 0.0040 - root_mean_squared_error: 0.0635[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m   warnings.warn([32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m Datos preparados:[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m   Tamaño del conjunto de entrenamiento: 30118[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m   Tamaño del conjunto de prueba: 7516[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m   Dimensiones de las entradas: (12, 4)[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m Primeros datos de y_test: [0.22437674 0.22160664 0.23545706 0.29085872 0.38227147][32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m Configuración del nodo creada: {'partition-id': 8, 'num-partitions': 11}[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m Este cliente tiene el partition_id 8 ,el node_id 5244531344316911069 y el archivo 8MAVS-extracted.xlsx[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m 121/121 - 2s - 13ms/step - loss: 0.0052 - root_mean_squared_error: 0.0723[32m [repeated 2x across cluster][0m
+[92mINFO [0m:      aggregate_evaluate: received 8 results and 0 failures
+Se han recibido estas metricas: [(7150, {'rmse': 0.07658585160970688}), (2180, {'rmse': 0.056598108261823654}), (7516, {'rmse': 0.07277528941631317}), (5958, {'rmse': 0.05769369751214981}), (3395, {'rmse': 0.06352290511131287}), (7738, {'rmse': 0.07232185453176498}), (5584, {'rmse': 0.07638686150312424}), (5303, {'rmse': 0.07767298817634583})]
+Processing client with num_examples=7150, metrics={'rmse': 0.07658585160970688}
+Processing client with num_examples=2180, metrics={'rmse': 0.056598108261823654}
+Processing client with num_examples=7516, metrics={'rmse': 0.07277528941631317}
+Processing client with num_examples=5958, metrics={'rmse': 0.05769369751214981}
+Processing client with num_examples=3395, metrics={'rmse': 0.06352290511131287}
+Processing client with num_examples=7738, metrics={'rmse': 0.07232185453176498}
+Processing client with num_examples=5584, metrics={'rmse': 0.07638686150312424}
+Processing client with num_examples=5303, metrics={'rmse': 0.07767298817634583}
+El array de ejemplos es: [7150, 2180, 7516, 5958, 3395, 7738, 5584, 5303]
+lA SUMA DE EJEMPLOS ES=44824
+[92mINFO [0m:
+[92mINFO [0m:      [ROUND 3]
+[92mINFO [0m:      configure_fit: strategy sampled 11 clients (out of 11)
+[36m(ClientAppActor pid=3480)[0m Mínimos globales: [ 0.  0. 39.  0.]
+[36m(ClientAppActor pid=3480)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=4056)[0m Datos preparados:
+[36m(ClientAppActor pid=4056)[0m   Tamaño del conjunto de entrenamiento: 31005
+[36m(ClientAppActor pid=4056)[0m   Tamaño del conjunto de prueba: 7738
+[36m(ClientAppActor pid=4056)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=4056)[0m Primeros datos de y_test: [0.40443215 0.4265928  0.44321328 0.45152354 0.46537396]
+[36m(ClientAppActor pid=4056)[0m Configuración del nodo creada: {'partition-id': 10, 'num-partitions': 11}
+[36m(ClientAppActor pid=4056)[0m Este cliente tiene el partition_id 10 ,el node_id 6226779963427498849 y el archivo 8VVC-extracted.xlsx
+[36m(ClientAppActor pid=3480)[0m Cargando el archivo: 3AGM-extracted.xlsx
+[36m(ClientAppActor pid=3480)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m   warnings.warn([32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m Datos preparados:
+[36m(ClientAppActor pid=3480)[0m   Tamaño del conjunto de entrenamiento: 16899
+[36m(ClientAppActor pid=3480)[0m   Tamaño del conjunto de prueba: 4212
+[36m(ClientAppActor pid=3480)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=3480)[0m Primeros datos de y_test: [0.9639889  0.97783935 0.97783935 0.9639889  0.9501385 ]
+[36m(ClientAppActor pid=3480)[0m Configuración del nodo creada: {'partition-id': 2, 'num-partitions': 11}
+[36m(ClientAppActor pid=3480)[0m Este cliente tiene el partition_id 2 ,el node_id 14607305286812764964 y el archivo 3AGM-extracted.xlsx
+[36m(ClientAppActor pid=4056)[0m Mínimos globales: [ 0.  0. 39.  0.][32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m Máximos globales: [ 25.        1.01325 400.      200.     ][32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m Cargando el archivo: 1GML-extracted.xlsx[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m Primeros datos de y_test: [0.6260388 0.6426593 0.6565097 0.6814405 0.6980609]
+[36m(ClientAppActor pid=13600)[0m Datos preparados:[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m   Tamaño del conjunto de entrenamiento: 28653[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m   Tamaño del conjunto de prueba: 7150[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m   Dimensiones de las entradas: (12, 4)[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m Primeros datos de y_test: [0.47368422 0.49861497 0.51246536 0.5401662  0.5567867 ][32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m Configuración del nodo creada: {'partition-id': 3, 'num-partitions': 11}[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m Este cliente tiene el partition_id 3 ,el node_id 8986872085204467341 y el archivo 5JMPM-extracted.xlsx[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m Mínimos globales: [ 0.  0. 39.  0.]
+[36m(ClientAppActor pid=19048)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=19048)[0m Cargando el archivo: 7GCQ-extracted.xlsx
+[36m(ClientAppActor pid=3480)[0m Mínimos globales: [ 0.  0. 39.  0.]
+[36m(ClientAppActor pid=3480)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=3480)[0m Cargando el archivo: 8CGL-extracted.xlsx
+[36m(ClientAppActor pid=19048)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names[32m [repeated 4x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m   warnings.warn([32m [repeated 4x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m Primeros datos de y_test: [0.3434903  0.3767313  0.41551247 0.43490306 0.43490306]
+[36m(ClientAppActor pid=3480)[0m Datos preparados:[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m   Tamaño del conjunto de entrenamiento: 21263[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m   Tamaño del conjunto de prueba: 5303[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m   Dimensiones de las entradas: (12, 4)[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m Primeros datos de y_test: [0.48476455 0.50138503 0.51800555 0.53462607 0.5567867 ]
+[36m(ClientAppActor pid=3480)[0m Configuración del nodo creada: {'partition-id': 5, 'num-partitions': 11}[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m Este cliente tiene el partition_id 5 ,el node_id 13378712986945472921 y el archivo 8CGL-extracted.xlsx[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m Mínimos globales: [ 0.  0. 39.  0.]
+[36m(ClientAppActor pid=4056)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=4056)[0m Cargando el archivo: 8GAG-extracted.xlsx
+[36m(ClientAppActor pid=4056)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m   warnings.warn([32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m Mínimos globales: [ 0.  0. 39.  0.]
+[36m(ClientAppActor pid=13600)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=13600)[0m Cargando el archivo: 8JLG-extracted.xlsx
+[36m(ClientAppActor pid=4056)[0m Primeros datos de y_test: [0.2299169  0.22437674 0.22160664 0.21883656 0.20775624]
+[36m(ClientAppActor pid=4056)[0m Datos preparados:
+[36m(ClientAppActor pid=4056)[0m   Tamaño del conjunto de entrenamiento: 8772
+[36m(ClientAppActor pid=4056)[0m   Tamaño del conjunto de prueba: 2180
+[36m(ClientAppActor pid=4056)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=4056)[0m Configuración del nodo creada: {'partition-id': 6, 'num-partitions': 11}
+[36m(ClientAppActor pid=4056)[0m Este cliente tiene el partition_id 6 ,el node_id 4980261154963260417 y el archivo 8GAG-extracted.xlsx
+[36m(ClientAppActor pid=13600)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names
+[36m(ClientAppActor pid=13600)[0m   warnings.warn(
+[36m(ClientAppActor pid=13600)[0m Datos preparados:
+[36m(ClientAppActor pid=13600)[0m   Tamaño del conjunto de entrenamiento: 22990
+[36m(ClientAppActor pid=13600)[0m   Tamaño del conjunto de prueba: 5735
+[36m(ClientAppActor pid=13600)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=13600)[0m Primeros datos de y_test: [0.16620499 0.16066483 0.16343491 0.18836565 0.22437674]
+[36m(ClientAppActor pid=13600)[0m Configuración del nodo creada: {'partition-id': 7, 'num-partitions': 11}
+[36m(ClientAppActor pid=13600)[0m Este cliente tiene el partition_id 7 ,el node_id 12763529022514411388 y el archivo 8JLG-extracted.xlsx
+[36m(ClientAppActor pid=4056)[0m Mínimos globales: [ 0.  0. 39.  0.]
+[36m(ClientAppActor pid=4056)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=4056)[0m Cargando el archivo: 8MAVS-extracted.xlsx
+[36m(ClientAppActor pid=4056)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names
+[36m(ClientAppActor pid=4056)[0m   warnings.warn(
+[36m(ClientAppActor pid=4056)[0m Datos preparados:
+[36m(ClientAppActor pid=4056)[0m   Tamaño del conjunto de entrenamiento: 30118
+[36m(ClientAppActor pid=4056)[0m   Tamaño del conjunto de prueba: 7516
+[36m(ClientAppActor pid=4056)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=4056)[0m Primeros datos de y_test: [0.22437674 0.22160664 0.23545706 0.29085872 0.38227147]
+[36m(ClientAppActor pid=4056)[0m Configuración del nodo creada: {'partition-id': 8, 'num-partitions': 11}
+[36m(ClientAppActor pid=4056)[0m Este cliente tiene el partition_id 8 ,el node_id 5244531344316911069 y el archivo 8MAVS-extracted.xlsx
+[36m(ClientAppActor pid=3480)[0m Mínimos globales: [ 0.  0. 39.  0.]
+[36m(ClientAppActor pid=3480)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=3480)[0m Cargando el archivo: 8SVB-extracted.xlsx
+[36m(ClientAppActor pid=19048)[0m Mínimos globales: [ 0.  0. 39.  0.]
+[36m(ClientAppActor pid=19048)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=3480)[0m Datos preparados:
+[36m(ClientAppActor pid=3480)[0m   Tamaño del conjunto de entrenamiento: 13633
+[36m(ClientAppActor pid=3480)[0m   Tamaño del conjunto de prueba: 3395
+[36m(ClientAppActor pid=3480)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=3480)[0m Primeros datos de y_test: [0.47091413 0.47368422 0.5096953  0.53462607 0.53739613]
+[36m(ClientAppActor pid=3480)[0m Configuración del nodo creada: {'partition-id': 9, 'num-partitions': 11}
+[36m(ClientAppActor pid=3480)[0m Este cliente tiene el partition_id 9 ,el node_id 6003442238636791310 y el archivo 8SVB-extracted.xlsx
+[36m(ClientAppActor pid=19048)[0m Cargando el archivo: 8VVC-extracted.xlsx
+[36m(ClientAppActor pid=19048)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m   warnings.warn([32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m Datos preparados:
+[36m(ClientAppActor pid=19048)[0m   Tamaño del conjunto de entrenamiento: 31005
+[36m(ClientAppActor pid=19048)[0m   Tamaño del conjunto de prueba: 7738
+[36m(ClientAppActor pid=19048)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=19048)[0m Primeros datos de y_test: [0.40443215 0.4265928  0.44321328 0.45152354 0.46537396]
+[36m(ClientAppActor pid=19048)[0m Configuración del nodo creada: {'partition-id': 10, 'num-partitions': 11}
+[36m(ClientAppActor pid=19048)[0m Este cliente tiene el partition_id 10 ,el node_id 6226779963427498849 y el archivo 8VVC-extracted.xlsx
+[92mINFO [0m:      aggregate_fit: received 11 results and 0 failures
+782/782 - 5s - 6ms/step - loss: 0.0035 - root_mean_squared_error: 0.0594
+[92mINFO [0m:      💡⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️ New best global model found: 0.059359
+[92mINFO [0m:      fit progress: (3, 0.0035234512761235237, {'centralized_rmse': 0.05935866758227348}, 2222.6778269)
+[92mINFO [0m:      configure_evaluate: strategy sampled 8 clients (out of 11)
+[36m(ClientAppActor pid=13600)[0m Mínimos globales: [ 0.  0. 39.  0.]
+[36m(ClientAppActor pid=13600)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=13600)[0m Cargando el archivo: 5JMPM-extracted.xlsx
+[36m(ClientAppActor pid=3480)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names
+[36m(ClientAppActor pid=3480)[0m   warnings.warn(
+[36m(ClientAppActor pid=3480)[0m Datos preparados:
+[36m(ClientAppActor pid=3480)[0m   Tamaño del conjunto de entrenamiento: 16899
+[36m(ClientAppActor pid=3480)[0m   Tamaño del conjunto de prueba: 4212
+[36m(ClientAppActor pid=3480)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=3480)[0m Primeros datos de y_test: [0.9639889  0.97783935 0.97783935 0.9639889  0.9501385 ]
+[36m(ClientAppActor pid=3480)[0m Configuración del nodo creada: {'partition-id': 2, 'num-partitions': 11}
+[36m(ClientAppActor pid=3480)[0m Este cliente tiene el partition_id 2 ,el node_id 14607305286812764964 y el archivo 3AGM-extracted.xlsx
+[36m(ClientAppActor pid=4056)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names
+[36m(ClientAppActor pid=4056)[0m   warnings.warn(
+[36m(ClientAppActor pid=13600)[0m Primeros datos de y_test: [0.6260388 0.6426593 0.6565097 0.6814405 0.6980609]
+[36m(ClientAppActor pid=4056)[0m Mínimos globales: [ 0.  0. 39.  0.][32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m Máximos globales: [ 25.        1.01325 400.      200.     ][32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m Cargando el archivo: 2AML-extracted.xlsx[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m 56/56 - 1s - 25ms/step - loss: 0.0030 - root_mean_squared_error: 0.0548
+[36m(ClientAppActor pid=13600)[0m Datos preparados:[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m   Tamaño del conjunto de entrenamiento: 28653[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m   Tamaño del conjunto de prueba: 7150[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m   Dimensiones de las entradas: (12, 4)[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m Primeros datos de y_test: [0.47368422 0.49861497 0.51246536 0.5401662  0.5567867 ][32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m Configuración del nodo creada: {'partition-id': 3, 'num-partitions': 11}[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m Este cliente tiene el partition_id 3 ,el node_id 8986872085204467341 y el archivo 5JMPM-extracted.xlsx[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m Mínimos globales: [ 0.  0. 39.  0.]
+[36m(ClientAppActor pid=3480)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=3480)[0m Cargando el archivo: 8GAG-extracted.xlsx
+[36m(ClientAppActor pid=13600)[0m 112/112 - 2s - 19ms/step - loss: 0.0057 - root_mean_squared_error: 0.0755[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m Mínimos globales: [ 0.  0. 39.  0.]
+[36m(ClientAppActor pid=4056)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=4056)[0m Cargando el archivo: 7GCQ-extracted.xlsx
+[36m(ClientAppActor pid=3480)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m   warnings.warn([32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m Primeros datos de y_test: [0.2299169  0.22437674 0.22160664 0.21883656 0.20775624]
+[36m(ClientAppActor pid=19048)[0m Datos preparados:[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m   Tamaño del conjunto de entrenamiento: 22990[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m   Tamaño del conjunto de prueba: 5735[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m   Dimensiones de las entradas: (12, 4)[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m Primeros datos de y_test: [0.48476455 0.50138503 0.51800555 0.53462607 0.5567867 ]
+[36m(ClientAppActor pid=19048)[0m Configuración del nodo creada: {'partition-id': 7, 'num-partitions': 11}[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m Este cliente tiene el partition_id 7 ,el node_id 12763529022514411388 y el archivo 8JLG-extracted.xlsx[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m 35/35 - 1s - 32ms/step - loss: 0.0029 - root_mean_squared_error: 0.0537
+[36m(ClientAppActor pid=4056)[0m 94/94 - 2s - 16ms/step - loss: 0.0031 - root_mean_squared_error: 0.0553
+[36m(ClientAppActor pid=13600)[0m Mínimos globales: [ 0.  0. 39.  0.][32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m Máximos globales: [ 25.        1.01325 400.      200.     ][32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m Cargando el archivo: 8VVC-extracted.xlsx[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m Primeros datos de y_test: [0.16620499 0.16066483 0.16343491 0.18836565 0.22437674]
+[36m(ClientAppActor pid=13600)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m   warnings.warn([32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m Primeros datos de y_test: [0.40443215 0.4265928  0.44321328 0.45152354 0.46537396]
+[92mINFO [0m:      aggregate_evaluate: received 8 results and 0 failures
+Se han recibido estas metricas: [(7738, {'rmse': 0.06806378811597824}), (5584, {'rmse': 0.07216713577508926}), (5735, {'rmse': 0.06909803301095963}), (4212, {'rmse': 0.07284458726644516}), (5958, {'rmse': 0.05526529252529144}), (7150, {'rmse': 0.07548903673887253}), (2180, {'rmse': 0.05371156707406044}), (3564, {'rmse': 0.054776210337877274})]
+Processing client with num_examples=7738, metrics={'rmse': 0.06806378811597824}
+Processing client with num_examples=5584, metrics={'rmse': 0.07216713577508926}
+Processing client with num_examples=5735, metrics={'rmse': 0.06909803301095963}
+Processing client with num_examples=4212, metrics={'rmse': 0.07284458726644516}
+Processing client with num_examples=5958, metrics={'rmse': 0.05526529252529144}
+Processing client with num_examples=7150, metrics={'rmse': 0.07548903673887253}
+Processing client with num_examples=2180, metrics={'rmse': 0.05371156707406044}
+Processing client with num_examples=3564, metrics={'rmse': 0.054776210337877274}
+El array de ejemplos es: [7738, 5584, 5735, 4212, 5958, 7150, 2180, 3564]
+lA SUMA DE EJEMPLOS ES=42121
+[92mINFO [0m:
+[92mINFO [0m:      [ROUND 4]
+[92mINFO [0m:      configure_fit: strategy sampled 11 clients (out of 11)
+[36m(ClientAppActor pid=13600)[0m Datos preparados:
+[36m(ClientAppActor pid=13600)[0m   Tamaño del conjunto de entrenamiento: 31005
+[36m(ClientAppActor pid=13600)[0m   Tamaño del conjunto de prueba: 7738
+[36m(ClientAppActor pid=13600)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=13600)[0m Configuración del nodo creada: {'partition-id': 10, 'num-partitions': 11}
+[36m(ClientAppActor pid=13600)[0m Este cliente tiene el partition_id 10 ,el node_id 6226779963427498849 y el archivo 8VVC-extracted.xlsx
+[36m(ClientAppActor pid=13600)[0m 121/121 - 1s - 11ms/step - loss: 0.0046 - root_mean_squared_error: 0.0681[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m Mínimos globales: [ 0.  0. 39.  0.]
+[36m(ClientAppActor pid=19048)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=19048)[0m Cargando el archivo: 2AML-extracted.xlsx
+[36m(ClientAppActor pid=3480)[0m Mínimos globales: [ 0.  0. 39.  0.]
+[36m(ClientAppActor pid=3480)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=3480)[0m Cargando el archivo: 5JMPM-extracted.xlsx
+[36m(ClientAppActor pid=19048)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names
+[36m(ClientAppActor pid=19048)[0m   warnings.warn(
+[36m(ClientAppActor pid=19048)[0m Datos preparados:
+[36m(ClientAppActor pid=19048)[0m   Tamaño del conjunto de entrenamiento: 14306
+[36m(ClientAppActor pid=19048)[0m   Tamaño del conjunto de prueba: 3564
+[36m(ClientAppActor pid=19048)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=19048)[0m Primeros datos de y_test: [0.55401665 0.565097   0.56786704 0.5706371  0.5734072 ]
+[36m(ClientAppActor pid=19048)[0m Configuración del nodo creada: {'partition-id': 1, 'num-partitions': 11}
+[36m(ClientAppActor pid=19048)[0m Este cliente tiene el partition_id 1 ,el node_id 6702852490079147453 y el archivo 2AML-extracted.xlsx
+[36m(ClientAppActor pid=4056)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names
+[36m(ClientAppActor pid=4056)[0m   warnings.warn(
+[36m(ClientAppActor pid=3480)[0m Primeros datos de y_test: [0.6260388 0.6426593 0.6565097 0.6814405 0.6980609]
+[36m(ClientAppActor pid=4056)[0m Mínimos globales: [ 0.  0. 39.  0.][32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m Máximos globales: [ 25.        1.01325 400.      200.     ][32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m Cargando el archivo: 3AGM-extracted.xlsx[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m Datos preparados:[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m   Tamaño del conjunto de entrenamiento: 28653[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m   Tamaño del conjunto de prueba: 7150[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m   Dimensiones de las entradas: (12, 4)[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m Primeros datos de y_test: [0.47368422 0.49861497 0.51246536 0.5401662  0.5567867 ][32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m Configuración del nodo creada: {'partition-id': 3, 'num-partitions': 11}[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m Este cliente tiene el partition_id 3 ,el node_id 8986872085204467341 y el archivo 5JMPM-extracted.xlsx[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m Mínimos globales: [ 0.  0. 39.  0.]
+[36m(ClientAppActor pid=19048)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=19048)[0m Cargando el archivo: 7GCQ-extracted.xlsx
+[36m(ClientAppActor pid=19048)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m   warnings.warn([32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m Mínimos globales: [ 0.  0. 39.  0.]
+[36m(ClientAppActor pid=4056)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=4056)[0m Cargando el archivo: 8CGL-extracted.xlsx
+[36m(ClientAppActor pid=4056)[0m Primeros datos de y_test: [0.3434903  0.3767313  0.41551247 0.43490306 0.43490306]
+[36m(ClientAppActor pid=4056)[0m Datos preparados:[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m   Tamaño del conjunto de entrenamiento: 21263[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m   Tamaño del conjunto de prueba: 5303[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m   Dimensiones de las entradas: (12, 4)[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m Primeros datos de y_test: [0.48476455 0.50138503 0.51800555 0.53462607 0.5567867 ]
+[36m(ClientAppActor pid=4056)[0m Configuración del nodo creada: {'partition-id': 5, 'num-partitions': 11}[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m Este cliente tiene el partition_id 5 ,el node_id 13378712986945472921 y el archivo 8CGL-extracted.xlsx[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m Mínimos globales: [ 0.  0. 39.  0.]
+[36m(ClientAppActor pid=13600)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=13600)[0m Cargando el archivo: 8GAG-extracted.xlsx
+[36m(ClientAppActor pid=13600)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m   warnings.warn([32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m Primeros datos de y_test: [0.2299169  0.22437674 0.22160664 0.21883656 0.20775624]
+[36m(ClientAppActor pid=13600)[0m Datos preparados:
+[36m(ClientAppActor pid=13600)[0m   Tamaño del conjunto de entrenamiento: 8772
+[36m(ClientAppActor pid=13600)[0m   Tamaño del conjunto de prueba: 2180
+[36m(ClientAppActor pid=13600)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=13600)[0m Configuración del nodo creada: {'partition-id': 6, 'num-partitions': 11}
+[36m(ClientAppActor pid=13600)[0m Este cliente tiene el partition_id 6 ,el node_id 4980261154963260417 y el archivo 8GAG-extracted.xlsx
+[36m(ClientAppActor pid=3480)[0m Mínimos globales: [ 0.  0. 39.  0.]
+[36m(ClientAppActor pid=3480)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=3480)[0m Cargando el archivo: 8JLG-extracted.xlsx
+[36m(ClientAppActor pid=3480)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names
+[36m(ClientAppActor pid=3480)[0m   warnings.warn(
+[36m(ClientAppActor pid=3480)[0m Datos preparados:
+[36m(ClientAppActor pid=3480)[0m   Tamaño del conjunto de entrenamiento: 22990
+[36m(ClientAppActor pid=3480)[0m   Tamaño del conjunto de prueba: 5735
+[36m(ClientAppActor pid=3480)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=3480)[0m Primeros datos de y_test: [0.16620499 0.16066483 0.16343491 0.18836565 0.22437674]
+[36m(ClientAppActor pid=3480)[0m Configuración del nodo creada: {'partition-id': 7, 'num-partitions': 11}
+[36m(ClientAppActor pid=3480)[0m Este cliente tiene el partition_id 7 ,el node_id 12763529022514411388 y el archivo 8JLG-extracted.xlsx
+[36m(ClientAppActor pid=13600)[0m Mínimos globales: [ 0.  0. 39.  0.]
+[36m(ClientAppActor pid=13600)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=13600)[0m Cargando el archivo: 8MAVS-extracted.xlsx
+[36m(ClientAppActor pid=13600)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names
+[36m(ClientAppActor pid=13600)[0m   warnings.warn(
+[36m(ClientAppActor pid=13600)[0m Datos preparados:
+[36m(ClientAppActor pid=13600)[0m   Tamaño del conjunto de entrenamiento: 30118
+[36m(ClientAppActor pid=13600)[0m   Tamaño del conjunto de prueba: 7516
+[36m(ClientAppActor pid=13600)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=13600)[0m Primeros datos de y_test: [0.22437674 0.22160664 0.23545706 0.29085872 0.38227147]
+[36m(ClientAppActor pid=13600)[0m Configuración del nodo creada: {'partition-id': 8, 'num-partitions': 11}
+[36m(ClientAppActor pid=13600)[0m Este cliente tiene el partition_id 8 ,el node_id 5244531344316911069 y el archivo 8MAVS-extracted.xlsx
+[36m(ClientAppActor pid=19048)[0m Mínimos globales: [ 0.  0. 39.  0.]
+[36m(ClientAppActor pid=19048)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=19048)[0m Cargando el archivo: 8SVB-extracted.xlsx
+[36m(ClientAppActor pid=4056)[0m Mínimos globales: [ 0.  0. 39.  0.]
+[36m(ClientAppActor pid=4056)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=4056)[0m Cargando el archivo: 8VVC-extracted.xlsx
+[36m(ClientAppActor pid=4056)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m   warnings.warn([32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m Datos preparados:[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m   Tamaño del conjunto de entrenamiento: 31005[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m   Tamaño del conjunto de prueba: 7738[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m   Dimensiones de las entradas: (12, 4)[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m Primeros datos de y_test: [0.40443215 0.4265928  0.44321328 0.45152354 0.46537396][32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m Configuración del nodo creada: {'partition-id': 10, 'num-partitions': 11}[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m Este cliente tiene el partition_id 10 ,el node_id 6226779963427498849 y el archivo 8VVC-extracted.xlsx[32m [repeated 2x across cluster][0m
+[92mINFO [0m:      aggregate_fit: received 11 results and 0 failures
+782/782 - 5s - 6ms/step - loss: 0.0034 - root_mean_squared_error: 0.0583
+[92mINFO [0m:      💡⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️ New best global model found: 0.058275
+[92mINFO [0m:      fit progress: (4, 0.0033959539141505957, {'centralized_rmse': 0.05827481299638748}, 2786.1639586)
+[92mINFO [0m:      configure_evaluate: strategy sampled 8 clients (out of 11)
+[36m(ClientAppActor pid=13600)[0m Mínimos globales: [ 0.  0. 39.  0.]
+[36m(ClientAppActor pid=13600)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=13600)[0m Cargando el archivo: 3AGM-extracted.xlsx
+[36m(ClientAppActor pid=4056)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names
+[36m(ClientAppActor pid=4056)[0m   warnings.warn(
+[36m(ClientAppActor pid=4056)[0m Datos preparados:
+[36m(ClientAppActor pid=4056)[0m   Tamaño del conjunto de entrenamiento: 14306
+[36m(ClientAppActor pid=4056)[0m   Tamaño del conjunto de prueba: 3564
+[36m(ClientAppActor pid=4056)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=4056)[0m Primeros datos de y_test: [0.55401665 0.565097   0.56786704 0.5706371  0.5734072 ]
+[36m(ClientAppActor pid=4056)[0m Configuración del nodo creada: {'partition-id': 1, 'num-partitions': 11}
+[36m(ClientAppActor pid=4056)[0m Este cliente tiene el partition_id 1 ,el node_id 6702852490079147453 y el archivo 2AML-extracted.xlsx
+[36m(ClientAppActor pid=13600)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names
+[36m(ClientAppActor pid=13600)[0m   warnings.warn(
+[36m(ClientAppActor pid=4056)[0m 56/56 - 1s - 25ms/step - loss: 0.0029 - root_mean_squared_error: 0.0535
+[36m(ClientAppActor pid=3480)[0m Primeros datos de y_test: [0.3434903  0.3767313  0.41551247 0.43490306 0.43490306]
+[36m(ClientAppActor pid=3480)[0m Mínimos globales: [ 0.  0. 39.  0.][32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m Máximos globales: [ 25.        1.01325 400.      200.     ][32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m Cargando el archivo: 8CGL-extracted.xlsx[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m Datos preparados:[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m   Tamaño del conjunto de entrenamiento: 23883[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m   Tamaño del conjunto de prueba: 5958[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m   Dimensiones de las entradas: (12, 4)[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m Primeros datos de y_test: [0.48476455 0.50138503 0.51800555 0.53462607 0.5567867 ][32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m Configuración del nodo creada: {'partition-id': 4, 'num-partitions': 11}[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m Este cliente tiene el partition_id 4 ,el node_id 13963588918310472169 y el archivo 7GCQ-extracted.xlsx[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m 94/94 - 2s - 19ms/step - loss: 0.0030 - root_mean_squared_error: 0.0549[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m Mínimos globales: [ 0.  0. 39.  0.]
+[36m(ClientAppActor pid=13600)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=13600)[0m Cargando el archivo: 8MAVS-extracted.xlsx
+[36m(ClientAppActor pid=4056)[0m Mínimos globales: [ 0.  0. 39.  0.]
+[36m(ClientAppActor pid=4056)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=4056)[0m Cargando el archivo: 8GAG-extracted.xlsx
+[36m(ClientAppActor pid=4056)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m   warnings.warn([32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m Primeros datos de y_test: [0.2299169  0.22437674 0.22160664 0.21883656 0.20775624]
+[36m(ClientAppActor pid=13600)[0m Datos preparados:[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m   Tamaño del conjunto de entrenamiento: 30118[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m   Tamaño del conjunto de prueba: 7516[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m   Dimensiones de las entradas: (12, 4)[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m Configuración del nodo creada: {'partition-id': 8, 'num-partitions': 11}[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m Este cliente tiene el partition_id 8 ,el node_id 5244531344316911069 y el archivo 8MAVS-extracted.xlsx[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m 35/35 - 1s - 34ms/step - loss: 0.0028 - root_mean_squared_error: 0.0528
+[36m(ClientAppActor pid=3480)[0m 54/54 - 1s - 22ms/step - loss: 0.0033 - root_mean_squared_error: 0.0579
+[36m(ClientAppActor pid=3480)[0m Mínimos globales: [ 0.  0. 39.  0.][32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m Máximos globales: [ 25.        1.01325 400.      200.     ][32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m Cargando el archivo: 8SVB-extracted.xlsx[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m   warnings.warn([32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m Primeros datos de y_test: [0.40443215 0.4265928  0.44321328 0.45152354 0.46537396][32m [repeated 3x across cluster][0m
+[92mINFO [0m:      aggregate_evaluate: received 8 results and 0 failures
+Se han recibido estas metricas: [(5958, {'rmse': 0.054857224225997925}), (2180, {'rmse': 0.052756648510694504}), (4212, {'rmse': 0.07116442173719406}), (3395, {'rmse': 0.057877667248249054}), (5303, {'rmse': 0.07679636776447296}), (7516, {'rmse': 0.0683688372373581}), (3564, {'rmse': 0.053483352065086365}), (7738, {'rmse': 0.06691033393144608})]
+Processing client with num_examples=5958, metrics={'rmse': 0.054857224225997925}
+Processing client with num_examples=2180, metrics={'rmse': 0.052756648510694504}
+Processing client with num_examples=4212, metrics={'rmse': 0.07116442173719406}
+Processing client with num_examples=3395, metrics={'rmse': 0.057877667248249054}
+Processing client with num_examples=5303, metrics={'rmse': 0.07679636776447296}
+Processing client with num_examples=7516, metrics={'rmse': 0.0683688372373581}
+Processing client with num_examples=3564, metrics={'rmse': 0.053483352065086365}
+Processing client with num_examples=7738, metrics={'rmse': 0.06691033393144608}
+El array de ejemplos es: [5958, 2180, 4212, 3395, 5303, 7516, 3564, 7738]
+lA SUMA DE EJEMPLOS ES=39866
+[92mINFO [0m:
+[92mINFO [0m:      [ROUND 5]
+[92mINFO [0m:      configure_fit: strategy sampled 11 clients (out of 11)
+[36m(ClientAppActor pid=19048)[0m Datos preparados:
+[36m(ClientAppActor pid=19048)[0m   Tamaño del conjunto de entrenamiento: 31005
+[36m(ClientAppActor pid=19048)[0m   Tamaño del conjunto de prueba: 7738
+[36m(ClientAppActor pid=19048)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=19048)[0m Configuración del nodo creada: {'partition-id': 10, 'num-partitions': 11}
+[36m(ClientAppActor pid=19048)[0m Este cliente tiene el partition_id 10 ,el node_id 6226779963427498849 y el archivo 8VVC-extracted.xlsx
+[36m(ClientAppActor pid=19048)[0m 121/121 - 1s - 11ms/step - loss: 0.0045 - root_mean_squared_error: 0.0669[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m Mínimos globales: [ 0.  0. 39.  0.]
+[36m(ClientAppActor pid=4056)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=4056)[0m Cargando el archivo: 5JMPM-extracted.xlsx
+[36m(ClientAppActor pid=13600)[0m Mínimos globales: [ 0.  0. 39.  0.]
+[36m(ClientAppActor pid=13600)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=13600)[0m Cargando el archivo: 2AML-extracted.xlsx
+[36m(ClientAppActor pid=13600)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names
+[36m(ClientAppActor pid=13600)[0m   warnings.warn(
+[36m(ClientAppActor pid=13600)[0m Datos preparados:
+[36m(ClientAppActor pid=13600)[0m   Tamaño del conjunto de entrenamiento: 14306
+[36m(ClientAppActor pid=13600)[0m   Tamaño del conjunto de prueba: 3564
+[36m(ClientAppActor pid=13600)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=13600)[0m Primeros datos de y_test: [0.55401665 0.565097   0.56786704 0.5706371  0.5734072 ]
+[36m(ClientAppActor pid=13600)[0m Configuración del nodo creada: {'partition-id': 1, 'num-partitions': 11}
+[36m(ClientAppActor pid=13600)[0m Este cliente tiene el partition_id 1 ,el node_id 6702852490079147453 y el archivo 2AML-extracted.xlsx
+[36m(ClientAppActor pid=3480)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names
+[36m(ClientAppActor pid=3480)[0m   warnings.warn(
+[36m(ClientAppActor pid=4056)[0m Primeros datos de y_test: [0.6260388 0.6426593 0.6565097 0.6814405 0.6980609]
+[36m(ClientAppActor pid=13600)[0m Mínimos globales: [ 0.  0. 39.  0.][32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m Máximos globales: [ 25.        1.01325 400.      200.     ][32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m Cargando el archivo: 7GCQ-extracted.xlsx[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m Datos preparados:[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m   Tamaño del conjunto de entrenamiento: 28653[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m   Tamaño del conjunto de prueba: 7150[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m   Dimensiones de las entradas: (12, 4)[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m Primeros datos de y_test: [0.47368422 0.49861497 0.51246536 0.5401662  0.5567867 ][32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m Configuración del nodo creada: {'partition-id': 3, 'num-partitions': 11}[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m Este cliente tiene el partition_id 3 ,el node_id 8986872085204467341 y el archivo 5JMPM-extracted.xlsx[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m   warnings.warn([32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m Primeros datos de y_test: [0.3434903  0.3767313  0.41551247 0.43490306 0.43490306]
+[36m(ClientAppActor pid=19048)[0m Mínimos globales: [ 0.  0. 39.  0.][32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m Máximos globales: [ 25.        1.01325 400.      200.     ][32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m Cargando el archivo: 8GAG-extracted.xlsx[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m Datos preparados:[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m   Tamaño del conjunto de entrenamiento: 21263[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m   Tamaño del conjunto de prueba: 5303[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m   Dimensiones de las entradas: (12, 4)[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m Primeros datos de y_test: [0.48476455 0.50138503 0.51800555 0.53462607 0.5567867 ]
+[36m(ClientAppActor pid=3480)[0m Configuración del nodo creada: {'partition-id': 5, 'num-partitions': 11}[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m Este cliente tiene el partition_id 5 ,el node_id 13378712986945472921 y el archivo 8CGL-extracted.xlsx[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m Primeros datos de y_test: [0.2299169  0.22437674 0.22160664 0.21883656 0.20775624]
+[36m(ClientAppActor pid=4056)[0m Mínimos globales: [ 0.  0. 39.  0.]
+[36m(ClientAppActor pid=4056)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=4056)[0m Cargando el archivo: 8JLG-extracted.xlsx
+[36m(ClientAppActor pid=19048)[0m Datos preparados:
+[36m(ClientAppActor pid=19048)[0m   Tamaño del conjunto de entrenamiento: 8772
+[36m(ClientAppActor pid=19048)[0m   Tamaño del conjunto de prueba: 2180
+[36m(ClientAppActor pid=19048)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=19048)[0m Configuración del nodo creada: {'partition-id': 6, 'num-partitions': 11}
+[36m(ClientAppActor pid=19048)[0m Este cliente tiene el partition_id 6 ,el node_id 4980261154963260417 y el archivo 8GAG-extracted.xlsx
+[36m(ClientAppActor pid=4056)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m   warnings.warn([32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m Datos preparados:
+[36m(ClientAppActor pid=4056)[0m   Tamaño del conjunto de entrenamiento: 22990
+[36m(ClientAppActor pid=4056)[0m   Tamaño del conjunto de prueba: 5735
+[36m(ClientAppActor pid=4056)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=4056)[0m Primeros datos de y_test: [0.16620499 0.16066483 0.16343491 0.18836565 0.22437674]
+[36m(ClientAppActor pid=4056)[0m Configuración del nodo creada: {'partition-id': 7, 'num-partitions': 11}
+[36m(ClientAppActor pid=4056)[0m Este cliente tiene el partition_id 7 ,el node_id 12763529022514411388 y el archivo 8JLG-extracted.xlsx
+[36m(ClientAppActor pid=19048)[0m Mínimos globales: [ 0.  0. 39.  0.]
+[36m(ClientAppActor pid=19048)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=19048)[0m Cargando el archivo: 8MAVS-extracted.xlsx
+[36m(ClientAppActor pid=19048)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names
+[36m(ClientAppActor pid=19048)[0m   warnings.warn(
+[36m(ClientAppActor pid=19048)[0m Datos preparados:
+[36m(ClientAppActor pid=19048)[0m   Tamaño del conjunto de entrenamiento: 30118
+[36m(ClientAppActor pid=19048)[0m   Tamaño del conjunto de prueba: 7516
+[36m(ClientAppActor pid=19048)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=19048)[0m Primeros datos de y_test: [0.22437674 0.22160664 0.23545706 0.29085872 0.38227147]
+[36m(ClientAppActor pid=19048)[0m Configuración del nodo creada: {'partition-id': 8, 'num-partitions': 11}
+[36m(ClientAppActor pid=19048)[0m Este cliente tiene el partition_id 8 ,el node_id 5244531344316911069 y el archivo 8MAVS-extracted.xlsx
+[36m(ClientAppActor pid=3480)[0m Mínimos globales: [ 0.  0. 39.  0.][32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m Máximos globales: [ 25.        1.01325 400.      200.     ][32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m Cargando el archivo: 8VVC-extracted.xlsx[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names
+[36m(ClientAppActor pid=13600)[0m   warnings.warn(
+[36m(ClientAppActor pid=3480)[0m Datos preparados:[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m   Tamaño del conjunto de entrenamiento: 31005[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m   Tamaño del conjunto de prueba: 7738[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m   Dimensiones de las entradas: (12, 4)[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m Primeros datos de y_test: [0.40443215 0.4265928  0.44321328 0.45152354 0.46537396][32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m Configuración del nodo creada: {'partition-id': 10, 'num-partitions': 11}[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m Este cliente tiene el partition_id 10 ,el node_id 6226779963427498849 y el archivo 8VVC-extracted.xlsx[32m [repeated 2x across cluster][0m
+[92mINFO [0m:      aggregate_fit: received 11 results and 0 failures
+782/782 - 5s - 6ms/step - loss: 0.0033 - root_mean_squared_error: 0.0577
+[92mINFO [0m:      💡⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️ New best global model found: 0.057679
+[92mINFO [0m:      fit progress: (5, 0.0033268658444285393, {'centralized_rmse': 0.05767899006605148}, 3354.1586852)
+[92mINFO [0m:      configure_evaluate: strategy sampled 8 clients (out of 11)
+[36m(ClientAppActor pid=19048)[0m Mínimos globales: [ 0.  0. 39.  0.]
+[36m(ClientAppActor pid=19048)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=19048)[0m Cargando el archivo: 2AML-extracted.xlsx
+[36m(ClientAppActor pid=19048)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m   warnings.warn([32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m Datos preparados:
+[36m(ClientAppActor pid=19048)[0m   Tamaño del conjunto de entrenamiento: 14306
+[36m(ClientAppActor pid=19048)[0m   Tamaño del conjunto de prueba: 3564
+[36m(ClientAppActor pid=19048)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=19048)[0m Primeros datos de y_test: [0.55401665 0.565097   0.56786704 0.5706371  0.5734072 ]
+[36m(ClientAppActor pid=19048)[0m Configuración del nodo creada: {'partition-id': 1, 'num-partitions': 11}
+[36m(ClientAppActor pid=19048)[0m Este cliente tiene el partition_id 1 ,el node_id 6702852490079147453 y el archivo 2AML-extracted.xlsx
+[36m(ClientAppActor pid=19048)[0m 56/56 - 1s - 23ms/step - loss: 0.0029 - root_mean_squared_error: 0.0537
+[36m(ClientAppActor pid=4056)[0m Primeros datos de y_test: [0.6260388 0.6426593 0.6565097 0.6814405 0.6980609]
+[36m(ClientAppActor pid=13600)[0m Mínimos globales: [ 0.  0. 39.  0.][32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m Máximos globales: [ 25.        1.01325 400.      200.     ][32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m Cargando el archivo: 3AGM-extracted.xlsx[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m Datos preparados:[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m   Tamaño del conjunto de entrenamiento: 28653[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m   Tamaño del conjunto de prueba: 7150[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m   Dimensiones de las entradas: (12, 4)[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m Primeros datos de y_test: [0.9639889  0.97783935 0.97783935 0.9639889  0.9501385 ][32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m Configuración del nodo creada: {'partition-id': 3, 'num-partitions': 11}[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m Este cliente tiene el partition_id 3 ,el node_id 8986872085204467341 y el archivo 5JMPM-extracted.xlsx[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m 112/112 - 2s - 19ms/step - loss: 0.0058 - root_mean_squared_error: 0.0760[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m Mínimos globales: [ 0.  0. 39.  0.]
+[36m(ClientAppActor pid=19048)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=19048)[0m Cargando el archivo: 7GCQ-extracted.xlsx
+[36m(ClientAppActor pid=3480)[0m Mínimos globales: [ 0.  0. 39.  0.]
+[36m(ClientAppActor pid=3480)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=3480)[0m Cargando el archivo: 8JLG-extracted.xlsx
+[36m(ClientAppActor pid=19048)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names[32m [repeated 4x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m   warnings.warn([32m [repeated 4x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m Datos preparados:
+[36m(ClientAppActor pid=19048)[0m   Tamaño del conjunto de entrenamiento: 23883
+[36m(ClientAppActor pid=19048)[0m   Tamaño del conjunto de prueba: 5958
+[36m(ClientAppActor pid=19048)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=19048)[0m Primeros datos de y_test: [0.48476455 0.50138503 0.51800555 0.53462607 0.5567867 ]
+[36m(ClientAppActor pid=19048)[0m Configuración del nodo creada: {'partition-id': 4, 'num-partitions': 11}
+[36m(ClientAppActor pid=19048)[0m Este cliente tiene el partition_id 4 ,el node_id 13963588918310472169 y el archivo 7GCQ-extracted.xlsx
+[36m(ClientAppActor pid=13600)[0m Primeros datos de y_test: [0.2299169  0.22437674 0.22160664 0.21883656 0.20775624]
+[36m(ClientAppActor pid=13600)[0m 35/35 - 1s - 35ms/step - loss: 0.0027 - root_mean_squared_error: 0.0521
+[36m(ClientAppActor pid=19048)[0m 94/94 - 2s - 20ms/step - loss: 0.0030 - root_mean_squared_error: 0.0549
+[36m(ClientAppActor pid=4056)[0m Mínimos globales: [ 0.  0. 39.  0.][32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m Máximos globales: [ 25.        1.01325 400.      200.     ][32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m Cargando el archivo: 8SVB-extracted.xlsx[32m [repeated 2x across cluster][0m
+[92mINFO [0m:      aggregate_evaluate: received 8 results and 0 failures
+Se han recibido estas metricas: [(3564, {'rmse': 0.053686290979385376}), (4212, {'rmse': 0.0716848373413086}), (7150, {'rmse': 0.07597317546606064}), (2180, {'rmse': 0.052118781954050064}), (3395, {'rmse': 0.05696000158786774}), (5584, {'rmse': 0.07159850001335144}), (5735, {'rmse': 0.0671907514333725}), (5958, {'rmse': 0.05494058132171631})]
+Processing client with num_examples=3564, metrics={'rmse': 0.053686290979385376}
+Processing client with num_examples=4212, metrics={'rmse': 0.0716848373413086}
+Processing client with num_examples=7150, metrics={'rmse': 0.07597317546606064}
+Processing client with num_examples=2180, metrics={'rmse': 0.052118781954050064}
+Processing client with num_examples=3395, metrics={'rmse': 0.05696000158786774}
+Processing client with num_examples=5584, metrics={'rmse': 0.07159850001335144}
+Processing client with num_examples=5735, metrics={'rmse': 0.0671907514333725}
+Processing client with num_examples=5958, metrics={'rmse': 0.05494058132171631}
+El array de ejemplos es: [3564, 4212, 7150, 2180, 3395, 5584, 5735, 5958]
+lA SUMA DE EJEMPLOS ES=37778
+[92mINFO [0m:
+[92mINFO [0m:      [ROUND 6]
+[92mINFO [0m:      configure_fit: strategy sampled 11 clients (out of 11)
+[36m(ClientAppActor pid=4056)[0m Datos preparados:[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m   Tamaño del conjunto de entrenamiento: 13633[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m   Tamaño del conjunto de prueba: 3395[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m   Dimensiones de las entradas: (12, 4)[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m Configuración del nodo creada: {'partition-id': 9, 'num-partitions': 11}[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m Este cliente tiene el partition_id 9 ,el node_id 6003442238636791310 y el archivo 8SVB-extracted.xlsx[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m Primeros datos de y_test: [0.47091413 0.47368422 0.5096953  0.53462607 0.53739613][32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m 54/54 - 1s - 23ms/step - loss: 0.0032 - root_mean_squared_error: 0.0570[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m Mínimos globales: [ 0.  0. 39.  0.]
+[36m(ClientAppActor pid=3480)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=3480)[0m Cargando el archivo: 2AML-extracted.xlsx
+[36m(ClientAppActor pid=19048)[0m Mínimos globales: [ 0.  0. 39.  0.]
+[36m(ClientAppActor pid=19048)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=19048)[0m Cargando el archivo: 3AGM-extracted.xlsx
+[36m(ClientAppActor pid=13600)[0m Máximos globales:
+[36m(ClientAppActor pid=13600)[0m [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=3480)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names[32m [repeated 4x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m   warnings.warn([32m [repeated 4x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m Primeros datos de y_test: [0.55401665 0.565097   0.56786704 0.5706371  0.5734072 ]
+[36m(ClientAppActor pid=13600)[0m Datos preparados:[32m [repeated 4x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m   Tamaño del conjunto de entrenamiento: 28653[32m [repeated 4x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m   Tamaño del conjunto de prueba: 7150[32m [repeated 4x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m   Dimensiones de las entradas: (12, 4)[32m [repeated 4x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m Configuración del nodo creada: {'partition-id': 3, 'num-partitions': 11}[32m [repeated 4x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m Este cliente tiene el partition_id 3 ,el node_id 8986872085204467341 y el archivo 5JMPM-extracted.xlsx[32m [repeated 4x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m Primeros datos de y_test: [0.6260388 0.6426593 0.6565097 0.6814405 0.6980609]
+[36m(ClientAppActor pid=4056)[0m Mínimos globales: [ 0.  0. 39.  0.][32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=4056)[0m Cargando el archivo: 1GML-extracted.xlsx[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=4056)[0m Primeros datos de y_test: [0.47368422 0.49861497 0.51246536 0.5401662  0.5567867 ][32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m Mínimos globales: [ 0.  0. 39.  0.]
+[36m(ClientAppActor pid=3480)[0m Cargando el archivo: 7GCQ-extracted.xlsx
+[36m(ClientAppActor pid=19048)[0m Mínimos globales: [ 0.  0. 39.  0.]
+[36m(ClientAppActor pid=19048)[0m Cargando el archivo: 8CGL-extracted.xlsx
+[36m(ClientAppActor pid=3480)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names[32m [repeated 4x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m   warnings.warn([32m [repeated 4x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m Datos preparados:
+[36m(ClientAppActor pid=3480)[0m   Tamaño del conjunto de entrenamiento: 23883
+[36m(ClientAppActor pid=3480)[0m   Tamaño del conjunto de prueba: 5958
+[36m(ClientAppActor pid=3480)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=3480)[0m Configuración del nodo creada: {'partition-id': 4, 'num-partitions': 11}
+[36m(ClientAppActor pid=3480)[0m Este cliente tiene el partition_id 4 ,el node_id 13963588918310472169 y el archivo 7GCQ-extracted.xlsx
+[36m(ClientAppActor pid=19048)[0m Primeros datos de y_test: [0.3434903  0.3767313  0.41551247 0.43490306 0.43490306]
+[36m(ClientAppActor pid=19048)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=3480)[0m Primeros datos de y_test: [0.48476455 0.50138503 0.51800555 0.53462607 0.5567867 ]
+[36m(ClientAppActor pid=4056)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=4056)[0m Mínimos globales: [ 0.  0. 39.  0.]
+[36m(ClientAppActor pid=4056)[0m Cargando el archivo: 8GAG-extracted.xlsx
+[36m(ClientAppActor pid=19048)[0m Datos preparados:
+[36m(ClientAppActor pid=19048)[0m   Tamaño del conjunto de entrenamiento: 21263
+[36m(ClientAppActor pid=19048)[0m   Tamaño del conjunto de prueba: 5303
+[36m(ClientAppActor pid=19048)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=19048)[0m Configuración del nodo creada: {'partition-id': 5, 'num-partitions': 11}
+[36m(ClientAppActor pid=19048)[0m Este cliente tiene el partition_id 5 ,el node_id 13378712986945472921 y el archivo 8CGL-extracted.xlsx
+[36m(ClientAppActor pid=4056)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m   warnings.warn([32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m Datos preparados:
+[36m(ClientAppActor pid=4056)[0m   Tamaño del conjunto de entrenamiento: 8772
+[36m(ClientAppActor pid=4056)[0m   Tamaño del conjunto de prueba: 2180
+[36m(ClientAppActor pid=4056)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=4056)[0m Primeros datos de y_test: [0.2299169  0.22437674 0.22160664 0.21883656 0.20775624]
+[36m(ClientAppActor pid=4056)[0m Configuración del nodo creada: {'partition-id': 6, 'num-partitions': 11}
+[36m(ClientAppActor pid=4056)[0m Este cliente tiene el partition_id 6 ,el node_id 4980261154963260417 y el archivo 8GAG-extracted.xlsx
+[36m(ClientAppActor pid=13600)[0m Mínimos globales: [ 0.  0. 39.  0.]
+[36m(ClientAppActor pid=13600)[0m Cargando el archivo: 8JLG-extracted.xlsx
+[36m(ClientAppActor pid=13600)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=13600)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names
+[36m(ClientAppActor pid=13600)[0m   warnings.warn(
+[36m(ClientAppActor pid=13600)[0m Datos preparados:
+[36m(ClientAppActor pid=13600)[0m   Tamaño del conjunto de entrenamiento: 22990
+[36m(ClientAppActor pid=13600)[0m   Tamaño del conjunto de prueba: 5735
+[36m(ClientAppActor pid=13600)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=13600)[0m Primeros datos de y_test: [0.16620499 0.16066483 0.16343491 0.18836565 0.22437674]
+[36m(ClientAppActor pid=13600)[0m Configuración del nodo creada: {'partition-id': 7, 'num-partitions': 11}
+[36m(ClientAppActor pid=13600)[0m Este cliente tiene el partition_id 7 ,el node_id 12763529022514411388 y el archivo 8JLG-extracted.xlsx
+[36m(ClientAppActor pid=4056)[0m Mínimos globales: [ 0.  0. 39.  0.]
+[36m(ClientAppActor pid=4056)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=4056)[0m Cargando el archivo: 8MAVS-extracted.xlsx
+[36m(ClientAppActor pid=4056)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names
+[36m(ClientAppActor pid=4056)[0m   warnings.warn(
+[36m(ClientAppActor pid=4056)[0m Datos preparados:
+[36m(ClientAppActor pid=4056)[0m   Tamaño del conjunto de entrenamiento: 30118
+[36m(ClientAppActor pid=4056)[0m   Tamaño del conjunto de prueba: 7516
+[36m(ClientAppActor pid=4056)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=4056)[0m Primeros datos de y_test: [0.22437674 0.22160664 0.23545706 0.29085872 0.38227147]
+[36m(ClientAppActor pid=4056)[0m Configuración del nodo creada: {'partition-id': 8, 'num-partitions': 11}
+[36m(ClientAppActor pid=4056)[0m Este cliente tiene el partition_id 8 ,el node_id 5244531344316911069 y el archivo 8MAVS-extracted.xlsx
+[36m(ClientAppActor pid=3480)[0m Mínimos globales: [ 0.  0. 39.  0.]
+[36m(ClientAppActor pid=3480)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=3480)[0m Cargando el archivo: 8SVB-extracted.xlsx
+[36m(ClientAppActor pid=19048)[0m Mínimos globales: [ 0.  0. 39.  0.]
+[36m(ClientAppActor pid=19048)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=19048)[0m Cargando el archivo: 8VVC-extracted.xlsx
+[36m(ClientAppActor pid=19048)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m   warnings.warn([32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m Datos preparados:[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m   Tamaño del conjunto de entrenamiento: 31005[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m   Tamaño del conjunto de prueba: 7738[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m   Dimensiones de las entradas: (12, 4)[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m Primeros datos de y_test: [0.40443215 0.4265928  0.44321328 0.45152354 0.46537396][32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m Configuración del nodo creada: {'partition-id': 10, 'num-partitions': 11}[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m Este cliente tiene el partition_id 10 ,el node_id 6226779963427498849 y el archivo 8VVC-extracted.xlsx[32m [repeated 2x across cluster][0m
+[92mINFO [0m:      aggregate_fit: received 11 results and 0 failures
+782/782 - 5s - 6ms/step - loss: 0.0035 - root_mean_squared_error: 0.0595
+[92mINFO [0m:      fit progress: (6, 0.0035404039081186056, {'centralized_rmse': 0.059501294046640396}, 3923.624855)
+[92mINFO [0m:      configure_evaluate: strategy sampled 8 clients (out of 11)
+[36m(ClientAppActor pid=13600)[0m Mínimos globales: [ 0.  0. 39.  0.]
+[36m(ClientAppActor pid=13600)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=13600)[0m Cargando el archivo: 8VVC-extracted.xlsx
+[36m(ClientAppActor pid=19048)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names
+[36m(ClientAppActor pid=19048)[0m   warnings.warn(
+[36m(ClientAppActor pid=19048)[0m Datos preparados:
+[36m(ClientAppActor pid=19048)[0m   Tamaño del conjunto de entrenamiento: 21263
+[36m(ClientAppActor pid=19048)[0m   Tamaño del conjunto de prueba: 5303
+[36m(ClientAppActor pid=19048)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=19048)[0m Primeros datos de y_test: [0.3434903  0.3767313  0.41551247 0.43490306 0.43490306]
+[36m(ClientAppActor pid=19048)[0m Configuración del nodo creada: {'partition-id': 5, 'num-partitions': 11}
+[36m(ClientAppActor pid=19048)[0m Este cliente tiene el partition_id 5 ,el node_id 13378712986945472921 y el archivo 8CGL-extracted.xlsx
+[36m(ClientAppActor pid=4056)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names
+[36m(ClientAppActor pid=4056)[0m   warnings.warn(
+[36m(ClientAppActor pid=19048)[0m Mínimos globales: [ 0.  0. 39.  0.][32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m Máximos globales: [ 25.        1.01325 400.      200.     ][32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m Cargando el archivo: 8CGL-extracted.xlsx[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m 83/83 - 2s - 22ms/step - loss: 0.0060 - root_mean_squared_error: 0.0775
+[36m(ClientAppActor pid=3480)[0m Datos preparados:[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m   Tamaño del conjunto de entrenamiento: 30118[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m   Tamaño del conjunto de prueba: 7516[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m   Dimensiones de las entradas: (12, 4)[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m Primeros datos de y_test: [0.22437674 0.22160664 0.23545706 0.29085872 0.38227147][32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m Configuración del nodo creada: {'partition-id': 8, 'num-partitions': 11}[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m Este cliente tiene el partition_id 8 ,el node_id 5244531344316911069 y el archivo 8MAVS-extracted.xlsx[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m Mínimos globales: [ 0.  0. 39.  0.]
+[36m(ClientAppActor pid=19048)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=19048)[0m Cargando el archivo: 3AGM-extracted.xlsx
+[36m(ClientAppActor pid=3480)[0m 118/118 - 2s - 21ms/step - loss: 0.0046 - root_mean_squared_error: 0.0677[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m Mínimos globales: [ 0.  0. 39.  0.]
+[36m(ClientAppActor pid=4056)[0m Máximos globales: [ 25.        1.01325 400.      200.     ]
+[36m(ClientAppActor pid=4056)[0m Cargando el archivo: 5JMPM-extracted.xlsx
+[36m(ClientAppActor pid=13600)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=13600)[0m   warnings.warn([32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m Primeros datos de y_test: [0.9639889  0.97783935 0.97783935 0.9639889  0.9501385 ]
+[36m(ClientAppActor pid=3480)[0m Datos preparados:[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m   Tamaño del conjunto de entrenamiento: 13633[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m   Tamaño del conjunto de prueba: 3395[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m   Dimensiones de las entradas: (12, 4)[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m Primeros datos de y_test: [0.47091413 0.47368422 0.5096953  0.53462607 0.53739613][32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m Configuración del nodo creada: {'partition-id': 9, 'num-partitions': 11}[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m Este cliente tiene el partition_id 9 ,el node_id 6003442238636791310 y el archivo 8SVB-extracted.xlsx[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=19048)[0m 66/66 - 2s - 24ms/step - loss: 0.0051 - root_mean_squared_error: 0.0714[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m Mínimos globales: [ 0.  0. 39.  0.][32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m Máximos globales: [ 25.        1.01325 400.      200.     ][32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=3480)[0m Cargando el archivo: 8SVB-extracted.xlsx[32m [repeated 2x across cluster][0m
+[92mINFO [0m:      aggregate_evaluate: received 8 results and 0 failures
+Se han recibido estas metricas: [(5303, {'rmse': 0.07751086354255676}), (7150, {'rmse': 0.07491859048604965}), (7516, {'rmse': 0.06767960637807846}), (5735, {'rmse': 0.06730078160762787}), (7738, {'rmse': 0.0660056620836258}), (2180, {'rmse': 0.05342258885502815}), (4212, {'rmse': 0.07143696397542953}), (3395, {'rmse': 0.05763306841254234})]
+Processing client with num_examples=5303, metrics={'rmse': 0.07751086354255676}
+Processing client with num_examples=7150, metrics={'rmse': 0.07491859048604965}
+Processing client with num_examples=7516, metrics={'rmse': 0.06767960637807846}
+Processing client with num_examples=5735, metrics={'rmse': 0.06730078160762787}
+Processing client with num_examples=7738, metrics={'rmse': 0.0660056620836258}
+Processing client with num_examples=2180, metrics={'rmse': 0.05342258885502815}
+Processing client with num_examples=4212, metrics={'rmse': 0.07143696397542953}
+Processing client with num_examples=3395, metrics={'rmse': 0.05763306841254234}
+El array de ejemplos es: [5303, 7150, 7516, 5735, 7738, 2180, 4212, 3395]
+lA SUMA DE EJEMPLOS ES=43229
+[92mINFO [0m:
+[92mINFO [0m:      [SUMMARY]
+[92mINFO [0m:      Run finished 6 round(s) in 4031.65s
+[92mINFO [0m:      	History (loss, distributed):
+[92mINFO [0m:      		round 1: 0.008425640939445709
+[92mINFO [0m:      		round 2: 0.005071110238531642
+[92mINFO [0m:      		round 3: 0.004524745955154612
+[92mINFO [0m:      		round 4: 0.004212761106200732
+[92mINFO [0m:      		round 5: 0.004304702837061377
+[92mINFO [0m:      		round 6: 0.004744515197161816
+[92mINFO [0m:      	History (loss, centralized):
+[92mINFO [0m:      		round 0: 0.13363690674304962
+[92mINFO [0m:      		round 1: 0.006229044403880835
+[92mINFO [0m:      		round 2: 0.003883883124217391
+[92mINFO [0m:      		round 3: 0.0035234512761235237
+[92mINFO [0m:      		round 4: 0.0033959539141505957
+[92mINFO [0m:      		round 5: 0.0033268658444285393
+[92mINFO [0m:      		round 6: 0.0035404039081186056
+[92mINFO [0m:      	History (metrics, distributed, evaluate):
+[92mINFO [0m:      	{'rmse': [(1, 0.09146949446984991),
+[92mINFO [0m:      	          (2, 0.07084199768434077),
+[92mINFO [0m:      	          (3, 0.06680962833047482),
+[92mINFO [0m:      	          (4, 0.06440491170443881),
+[92mINFO [0m:      	          (5, 0.06501037105259215),
+[92mINFO [0m:      	          (6, 0.0685911714781967)]}
+[92mINFO [0m:      	History (metrics, centralized):
+[92mINFO [0m:      	{'centralized_rmse': [(0, 0.3655638098716736),
+[92mINFO [0m:      	                      (1, 0.07892429828643799),
+[92mINFO [0m:      	                      (2, 0.062320809811353683),
+[92mINFO [0m:      	                      (3, 0.05935866758227348),
+[92mINFO [0m:      	                      (4, 0.05827481299638748),
+[92mINFO [0m:      	                      (5, 0.05767899006605148),
+[92mINFO [0m:      	                      (6, 0.059501294046640396)]}
+[92mINFO [0m:
+[36m(ClientAppActor pid=4056)[0m Datos preparados:
+[36m(ClientAppActor pid=4056)[0m   Tamaño del conjunto de entrenamiento: 28653
+[36m(ClientAppActor pid=4056)[0m   Tamaño del conjunto de prueba: 7150
+[36m(ClientAppActor pid=4056)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=4056)[0m Primeros datos de y_test: [0.6260388 0.6426593 0.6565097 0.6814405 0.6980609]
+[36m(ClientAppActor pid=4056)[0m Configuración del nodo creada: {'partition-id': 3, 'num-partitions': 11}
+[36m(ClientAppActor pid=4056)[0m Este cliente tiene el partition_id 3 ,el node_id 8986872085204467341 y el archivo 5JMPM-extracted.xlsx
+[36m(ClientAppActor pid=4056)[0m 112/112 - 1s - 13ms/step - loss: 0.0056 - root_mean_squared_error: 0.0749[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=4056)[0m   warnings.warn([32m [repeated 3x across cluster][0m

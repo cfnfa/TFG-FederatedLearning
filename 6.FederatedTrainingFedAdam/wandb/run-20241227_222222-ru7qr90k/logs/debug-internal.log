@@ -1,0 +1,27 @@
+{"time":"2024-12-27T22:22:22.0741626+01:00","level":"INFO","msg":"using version","core version":"0.19.1"}
+{"time":"2024-12-27T22:22:22.0741626+01:00","level":"INFO","msg":"created symlink","path":"C:\\Users\\clara\\Desktop\\TFG\\Codigo TFG\\4.FederatedTrainingMejorada\\wandb\\run-20241227_222222-ru7qr90k\\logs\\debug-core.log"}
+{"time":"2024-12-27T22:22:23.5611401+01:00","level":"INFO","msg":"created new stream","id":"ru7qr90k"}
+{"time":"2024-12-27T22:22:23.5616452+01:00","level":"INFO","msg":"stream: started","id":"ru7qr90k"}
+{"time":"2024-12-27T22:22:23.5616452+01:00","level":"INFO","msg":"writer: Do: started","stream_id":"ru7qr90k"}
+{"time":"2024-12-27T22:22:23.5616452+01:00","level":"INFO","msg":"handler: started","stream_id":"ru7qr90k"}
+{"time":"2024-12-27T22:22:23.5616452+01:00","level":"INFO","msg":"sender: started","stream_id":"ru7qr90k"}
+{"time":"2024-12-27T22:22:23.7883813+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-12-27T23:01:39.2166517+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/clara-fuertes-4pal-universidad-polit-cnica-de-madrid/glucose_prediction_FLOWER/ru7qr90k/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2024-12-27T23:01:41.6390272+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/clara-fuertes-4pal-universidad-polit-cnica-de-madrid/glucose_prediction_FLOWER/ru7qr90k/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2024-12-27T23:01:46.5881819+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/clara-fuertes-4pal-universidad-polit-cnica-de-madrid/glucose_prediction_FLOWER/ru7qr90k/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2024-12-27T23:01:55.42266+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/clara-fuertes-4pal-universidad-polit-cnica-de-madrid/glucose_prediction_FLOWER/ru7qr90k/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2024-12-27T23:02:00.0960548+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 192.168.1.50:50534->35.186.228.49:443: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond."}
+{"time":"2024-12-27T23:02:02.5283114+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2024-12-27T23:02:07.069173+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2024-12-27T23:02:15.3587759+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/clara-fuertes-4pal-universidad-polit-cnica-de-madrid/glucose_prediction_FLOWER/ru7qr90k/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2024-12-27T23:02:16.7824113+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2024-12-27T23:02:52.2662268+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp 35.186.228.49:443: connectex: An established connection was aborted by the software in your host machine."}
+{"time":"2024-12-27T23:02:54.0190493+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/clara-fuertes-4pal-universidad-polit-cnica-de-madrid/glucose_prediction_FLOWER/ru7qr90k/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2024-12-27T23:29:43.2682948+01:00","level":"INFO","msg":"stream: closing","id":"ru7qr90k"}
+{"time":"2024-12-27T23:29:43.2682948+01:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-12-27T23:29:43.269384+01:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-12-27T23:29:44.2150264+01:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-12-27T23:29:44.4537583+01:00","level":"INFO","msg":"writer: Close: closed","stream_id":"ru7qr90k"}
+{"time":"2024-12-27T23:29:44.4537583+01:00","level":"INFO","msg":"handler: closed","stream_id":"ru7qr90k"}
+{"time":"2024-12-27T23:29:44.4537583+01:00","level":"INFO","msg":"sender: closed","stream_id":"ru7qr90k"}
+{"time":"2024-12-27T23:29:44.4537583+01:00","level":"INFO","msg":"stream: closed","id":"ru7qr90k"}

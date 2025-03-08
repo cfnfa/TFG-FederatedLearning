@@ -1,0 +1,32 @@
+{"time":"2025-01-08T16:40:51.9225923+01:00","level":"INFO","msg":"using version","core version":"0.19.1"}
+{"time":"2025-01-08T16:40:51.9225923+01:00","level":"INFO","msg":"created symlink","path":"C:\\Users\\clara\\Desktop\\TFG\\Codigo TFG\\8.FederatedTrainingFedMedian\\wandb\\run-20250108_164051-7iqm7er7\\logs\\debug-core.log"}
+{"time":"2025-01-08T16:40:53.5504979+01:00","level":"INFO","msg":"created new stream","id":"7iqm7er7"}
+{"time":"2025-01-08T16:40:53.5504979+01:00","level":"INFO","msg":"stream: started","id":"7iqm7er7"}
+{"time":"2025-01-08T16:40:53.5504979+01:00","level":"INFO","msg":"sender: started","stream_id":"7iqm7er7"}
+{"time":"2025-01-08T16:40:53.5504979+01:00","level":"INFO","msg":"writer: Do: started","stream_id":"7iqm7er7"}
+{"time":"2025-01-08T16:40:53.5504979+01:00","level":"INFO","msg":"handler: started","stream_id":"7iqm7er7"}
+{"time":"2025-01-08T16:40:54.1044736+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-01-08T17:24:19.5640258+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/clara-fuertes-4pal-universidad-polit-cnica-de-madrid/glucose_prediction_FLOWER/7iqm7er7/file_stream\": unexpected EOF"}
+{"time":"2025-01-08T17:35:01.9731348+01:00","level":"INFO","msg":"api: retrying HTTP error","status":500,"url":"https://api.wandb.ai/files/clara-fuertes-4pal-universidad-polit-cnica-de-madrid/glucose_prediction_FLOWER/7iqm7er7/file_stream","body":"{\"error\":\"context deadline exceeded\"}"}
+{"time":"2025-01-08T17:35:09.9659722+01:00","level":"INFO","msg":"api: retrying HTTP error","status":500,"url":"https://api.wandb.ai/files/clara-fuertes-4pal-universidad-polit-cnica-de-madrid/glucose_prediction_FLOWER/7iqm7er7/file_stream","body":"{\"error\":\"context deadline exceeded\"}"}
+{"time":"2025-01-08T17:35:20.1418053+01:00","level":"INFO","msg":"api: retrying HTTP error","status":500,"url":"https://api.wandb.ai/files/clara-fuertes-4pal-universidad-polit-cnica-de-madrid/glucose_prediction_FLOWER/7iqm7er7/file_stream","body":"{\"error\":\"context deadline exceeded\"}"}
+{"time":"2025-01-08T17:35:30.3706301+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": net/http: request canceled (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-01-08T17:35:33.6150718+01:00","level":"INFO","msg":"api: retrying HTTP error","status":500,"url":"https://api.wandb.ai/files/clara-fuertes-4pal-universidad-polit-cnica-de-madrid/glucose_prediction_FLOWER/7iqm7er7/file_stream","body":"{\"error\":\"context deadline exceeded\"}"}
+{"time":"2025-01-08T17:36:02.4259482+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded"}
+{"time":"2025-01-08T17:36:09.1112229+01:00","level":"INFO","msg":"api: retrying HTTP error","status":500,"url":"https://api.wandb.ai/graphql","body":"{\"error\":\"An internal error occurred. Please contact support.\"}"}
+{"time":"2025-01-08T17:36:24.5792207+01:00","level":"INFO","msg":"api: retrying HTTP error","status":500,"url":"https://api.wandb.ai/graphql","body":"{\"error\":\"An internal error occurred. Please contact support.\"}"}
+{"time":"2025-01-08T17:36:36.0948091+01:00","level":"INFO","msg":"api: retrying HTTP error","status":500,"url":"https://api.wandb.ai/files/clara-fuertes-4pal-universidad-polit-cnica-de-madrid/glucose_prediction_FLOWER/7iqm7er7/file_stream","body":"{\"error\":\"An internal error occurred. Please contact support.\"}"}
+{"time":"2025-01-08T17:37:12.2393406+01:00","level":"INFO","msg":"api: retrying HTTP error","status":500,"url":"https://api.wandb.ai/graphql","body":"{\"error\":\"An internal error occurred. Please contact support.\"}"}
+{"time":"2025-01-08T18:02:31.8294247+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/clara-fuertes-4pal-universidad-polit-cnica-de-madrid/glucose_prediction_FLOWER/7iqm7er7/file_stream\": unexpected EOF"}
+{"time":"2025-01-08T19:38:44.9929555+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 172.20.2.52:50217->35.186.228.49:443: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond."}
+{"time":"2025-01-08T19:59:46.0100918+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/clara-fuertes-4pal-universidad-polit-cnica-de-madrid/glucose_prediction_FLOWER/7iqm7er7/file_stream\": unexpected EOF"}
+{"time":"2025-01-08T21:28:45.7488902+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded"}
+{"time":"2025-01-09T00:26:18.5829115+01:00","level":"INFO","msg":"api: retrying HTTP error","status":502,"url":"https://api.wandb.ai/files/clara-fuertes-4pal-universidad-polit-cnica-de-madrid/glucose_prediction_FLOWER/7iqm7er7/file_stream","body":"\n<html><head>\n<meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<title>502 Server Error</title>\n</head>\n<body text=#000000 bgcolor=#ffffff>\n<h1>Error: Server Error</h1>\n<h2>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.</h2>\n<h2></h2>\n</body></html>\n"}
+{"time":"2025-01-09T01:30:50.1682664+01:00","level":"INFO","msg":"stream: closing","id":"7iqm7er7"}
+{"time":"2025-01-09T01:30:50.1682664+01:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-01-09T01:30:50.1699519+01:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-01-09T01:30:51.2502393+01:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-01-09T01:30:51.5245314+01:00","level":"INFO","msg":"handler: closed","stream_id":"7iqm7er7"}
+{"time":"2025-01-09T01:30:51.5245314+01:00","level":"INFO","msg":"writer: Close: closed","stream_id":"7iqm7er7"}
+{"time":"2025-01-09T01:30:51.5245314+01:00","level":"INFO","msg":"sender: closed","stream_id":"7iqm7er7"}
+{"time":"2025-01-09T01:30:51.5245314+01:00","level":"INFO","msg":"stream: closed","id":"7iqm7er7"}

@@ -1,0 +1,16 @@
+{"time":"2024-12-17T22:26:59.1214679+01:00","level":"INFO","msg":"using version","core version":"0.19.1"}
+{"time":"2024-12-17T22:26:59.1214679+01:00","level":"INFO","msg":"created symlink","path":"C:\\Users\\clara\\Desktop\\TFG\\Codigo TFG\\4.FederatedTrainingMejorada\\wandb\\run-20241217_222659-gr61pvtk\\logs\\debug-core.log"}
+{"time":"2024-12-17T22:27:00.3861805+01:00","level":"INFO","msg":"created new stream","id":"gr61pvtk"}
+{"time":"2024-12-17T22:27:00.3938266+01:00","level":"INFO","msg":"writer: Do: started","stream_id":"gr61pvtk"}
+{"time":"2024-12-17T22:27:00.3978271+01:00","level":"INFO","msg":"sender: started","stream_id":"gr61pvtk"}
+{"time":"2024-12-17T22:27:00.3988268+01:00","level":"INFO","msg":"stream: started","id":"gr61pvtk"}
+{"time":"2024-12-17T22:27:00.3938266+01:00","level":"INFO","msg":"handler: started","stream_id":"gr61pvtk"}
+{"time":"2024-12-17T22:27:03.8851583+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-12-17T22:34:01.9778811+01:00","level":"INFO","msg":"stream: closing","id":"gr61pvtk"}
+{"time":"2024-12-17T22:34:01.9778811+01:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-12-17T22:34:01.9791142+01:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-12-17T22:34:02.6451576+01:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-12-17T22:34:02.8455775+01:00","level":"INFO","msg":"handler: closed","stream_id":"gr61pvtk"}
+{"time":"2024-12-17T22:34:02.8455775+01:00","level":"INFO","msg":"writer: Close: closed","stream_id":"gr61pvtk"}
+{"time":"2024-12-17T22:34:02.8455775+01:00","level":"INFO","msg":"sender: closed","stream_id":"gr61pvtk"}
+{"time":"2024-12-17T22:34:02.8461018+01:00","level":"INFO","msg":"stream: closed","id":"gr61pvtk"}

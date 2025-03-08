@@ -1,0 +1,18 @@
+{"time":"2025-01-07T18:54:07.8616028+01:00","level":"INFO","msg":"using version","core version":"0.19.1"}
+{"time":"2025-01-07T18:54:07.8616028+01:00","level":"INFO","msg":"created symlink","path":"C:\\Users\\clara\\Desktop\\TFG\\Codigo TFG\\5.FederatedTrainingMejorada2\\wandb\\run-20250107_185407-coq0ibna\\logs\\debug-core.log"}
+{"time":"2025-01-07T18:54:09.4000647+01:00","level":"INFO","msg":"created new stream","id":"coq0ibna"}
+{"time":"2025-01-07T18:54:09.4000647+01:00","level":"INFO","msg":"stream: started","id":"coq0ibna"}
+{"time":"2025-01-07T18:54:09.4000647+01:00","level":"INFO","msg":"writer: Do: started","stream_id":"coq0ibna"}
+{"time":"2025-01-07T18:54:09.4000647+01:00","level":"INFO","msg":"sender: started","stream_id":"coq0ibna"}
+{"time":"2025-01-07T18:54:09.4000647+01:00","level":"INFO","msg":"handler: started","stream_id":"coq0ibna"}
+{"time":"2025-01-07T18:54:09.6310053+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-01-08T08:15:44.3508082+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/clara-fuertes-4pal-universidad-polit-cnica-de-madrid/glucose_prediction_FLOWER/coq0ibna/file_stream\": read tcp 192.168.1.50:61691->35.186.228.49:443: wsarecv: An existing connection was forcibly closed by the remote host."}
+{"time":"2025-01-08T09:38:07.921443+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/clara-fuertes-4pal-universidad-polit-cnica-de-madrid/glucose_prediction_FLOWER/coq0ibna/file_stream\": net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-01-08T10:18:20.4527711+01:00","level":"INFO","msg":"stream: closing","id":"coq0ibna"}
+{"time":"2025-01-08T10:18:20.4527711+01:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-01-08T10:18:20.5105303+01:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-01-08T10:18:21.5337743+01:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-01-08T10:18:21.6984794+01:00","level":"INFO","msg":"handler: closed","stream_id":"coq0ibna"}
+{"time":"2025-01-08T10:18:21.6984794+01:00","level":"INFO","msg":"writer: Close: closed","stream_id":"coq0ibna"}
+{"time":"2025-01-08T10:18:21.6984794+01:00","level":"INFO","msg":"sender: closed","stream_id":"coq0ibna"}
+{"time":"2025-01-08T10:18:21.6984794+01:00","level":"INFO","msg":"stream: closed","id":"coq0ibna"}

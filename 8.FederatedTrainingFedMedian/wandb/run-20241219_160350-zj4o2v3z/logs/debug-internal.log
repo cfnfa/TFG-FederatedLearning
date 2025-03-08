@@ -1,0 +1,8 @@
+{"time":"2024-12-19T16:03:50.6779027+01:00","level":"INFO","msg":"using version","core version":"0.19.1"}
+{"time":"2024-12-19T16:03:50.6779027+01:00","level":"INFO","msg":"created symlink","path":"C:\\Users\\clara\\Desktop\\TFG\\Codigo TFG\\4.FederatedTrainingMejorada\\wandb\\run-20241219_160350-zj4o2v3z\\logs\\debug-core.log"}
+{"time":"2024-12-19T16:03:51.8082588+01:00","level":"INFO","msg":"created new stream","id":"zj4o2v3z"}
+{"time":"2024-12-19T16:03:51.808771+01:00","level":"INFO","msg":"stream: started","id":"zj4o2v3z"}
+{"time":"2024-12-19T16:03:51.808771+01:00","level":"INFO","msg":"writer: Do: started","stream_id":"zj4o2v3z"}
+{"time":"2024-12-19T16:03:51.8097877+01:00","level":"INFO","msg":"handler: started","stream_id":"zj4o2v3z"}
+{"time":"2024-12-19T16:03:51.8097877+01:00","level":"INFO","msg":"sender: started","stream_id":"zj4o2v3z"}
+{"time":"2024-12-19T16:03:52.1841902+01:00","level":"INFO","msg":"Starting system monitor"}

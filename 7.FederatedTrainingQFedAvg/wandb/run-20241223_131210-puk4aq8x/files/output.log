@@ -1,0 +1,119 @@
+[92mINFO [0m:      Starting Flower ServerApp, config: num_rounds=10, no round_timeout
+[92mINFO [0m:
+[92mINFO [0m:      [INIT]
+[92mINFO [0m:      Using initial global parameters provided by strategy
+[92mINFO [0m:      Starting evaluation of initial global parameters
+782/782 - 8s - 11ms/step - loss: 0.3414 - root_mean_squared_error: 0.3706
+[92mINFO [0m:      💡 New best global model found: 0.370555
+[92mINFO [0m:      initial parameters (loss, other metrics): 0.3414105474948883, {'centralized_rmse': 0.3705548942089081}
+[92mINFO [0m:
+[92mINFO [0m:      [ROUND 1]
+[92mINFO [0m:      configure_fit: strategy sampled 4 clients (out of 4)
+[36m(ClientAppActor pid=29348)[0m Cargando el archivo: 5JMPM-extracted.xlsx
+[36m(ClientAppActor pid=23536)[0m Cargando el archivo: 2AML-extracted.xlsx[32m [repeated 4x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/ray-logging.html#log-deduplication for more options.)[0m
+[36m(ClientAppActor pid=29348)[0m Cargando el archivo: 7GCQ-extracted.xlsx[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=34700)[0m Datos preparados:
+[36m(ClientAppActor pid=34700)[0m   Tamaño del conjunto de entrenamiento: 44656
+[36m(ClientAppActor pid=34700)[0m   Tamaño del conjunto de prueba: 11151
+[36m(ClientAppActor pid=34700)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=34700)[0m Primeros datos de y_test: [0.22437674 0.22437674 0.22160664 0.21883656 0.2299169 ]
+[36m(ClientAppActor pid=34700)[0m Configuración del nodo creada: {'partition-id': 3, 'num-partitions': 4}
+[36m(ClientAppActor pid=34700)[0m Este cliente tiene el partition_id 3 ,el node_id 13226552773404726110 y el archivo ['9SVB-extracted.xlsx', '9VVC-extracted.xlsx']
+[36m(ClientAppActor pid=38404)[0m Cargando el archivo: 9CGL-extracted.xlsx[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=23536)[0m Primeros datos de y_test: [0.18282549 0.17728531 0.17451523 0.17174515 0.16343491]
+[36m(ClientAppActor pid=34700)[0m Epoch 1/28
+[36m(ClientAppActor pid=38404)[0m Datos preparados:[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=38404)[0m   Tamaño del conjunto de entrenamiento: 60190[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=38404)[0m   Tamaño del conjunto de prueba: 15034[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=38404)[0m   Dimensiones de las entradas: (12, 4)[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=38404)[0m Primeros datos de y_test: [0.16620499 0.18559557 0.19113573 0.21052632 0.2465374 ]
+[36m(ClientAppActor pid=38404)[0m Configuración del nodo creada: {'partition-id': 2, 'num-partitions': 4}[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=38404)[0m Este cliente tiene el partition_id 2 ,el node_id 15291443103521499255 y el archivo ['8MAVS-extracted.xlsx', '9CGL-extracted.xlsx', '9GAG-extracted.xlsx'][32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=38404)[0m Cargando el archivo: 9GAG-extracted.xlsx[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=23536)[0m Epoch 1/28
+[36m(ClientAppActor pid=38404)[0m Epoch 1/28
+[36m(ClientAppActor pid=29348)[0m Primeros datos de y_test: [0.48199445 0.5152355  0.5152355  0.5207756  0.5263158 ]
+[36m(ClientAppActor pid=29348)[0m Datos preparados:
+[36m(ClientAppActor pid=29348)[0m   Tamaño del conjunto de entrenamiento: 75563
+[36m(ClientAppActor pid=29348)[0m   Tamaño del conjunto de prueba: 18878
+[36m(ClientAppActor pid=29348)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=29348)[0m Configuración del nodo creada: {'partition-id': 1, 'num-partitions': 4}
+[36m(ClientAppActor pid=29348)[0m Este cliente tiene el partition_id 1 ,el node_id 15195036181859798091 y el archivo ['5JMPM-extracted.xlsx', '7GCQ-extracted.xlsx', '8JLG-extracted.xlsx']
+[36m(ClientAppActor pid=29348)[0m Epoch 1/28
+[36m(ClientAppActor pid=34700)[0m
+[36m(ClientAppActor pid=34700)[0m [1m  1/698[0m [37m━━━━━━━━━━━━━━━━━━━━[0m [1m2:36:42[0m 13s/step - loss: 0.3286 - root_mean_squared_error: 0.3286
+[36m(ClientAppActor pid=34700)[0m [1m  3/698[0m [37m━━━━━━━━━━━━━━━━━━━━[0m [1m24s[0m 35ms/step - loss: 0.3546 - root_mean_squared_error: 0.3556
+[36m(ClientAppActor pid=34700)[0m
+[36m(ClientAppActor pid=34700)[0m [1m  5/698[0m [37m━━━━━━━━━━━━━━━━━━━━[0m [1m24s[0m 36ms/step - loss: 0.3527 - root_mean_squared_error: 0.3542
+[36m(ClientAppActor pid=34700)[0m [1m  7/698[0m [37m━━━━━━━━━━━━━━━━━━━━[0m [1m23s[0m 34ms/step - loss: 0.3502 - root_mean_squared_error: 0.3518
+[36m(ClientAppActor pid=34700)[0m
+[36m(ClientAppActor pid=34700)[0m [1m  9/698[0m [37m━━━━━━━━━━━━━━━━━━━━[0m [1m24s[0m 35ms/step - loss: 0.3482 - root_mean_squared_error: 0.3498
+[36m(ClientAppActor pid=34700)[0m [1m 11/698[0m [37m━━━━━━━━━━━━━━━━━━━━[0m [1m24s[0m 35ms/step - loss: 0.3456 - root_mean_squared_error: 0.3471
+[36m(ClientAppActor pid=34700)[0m [32m [repeated 67x across cluster][0m
+[36m(ClientAppActor pid=34700)[0m [1m122/698[0m [32m━━━[0m[37m━━━━━━━━━━━━━━━━━[0m [1m24s[0m 42ms/step - loss: 0.1998 - root_mean_squared_error: 0.2150[32m [repeated 118x across cluster][0m
+[36m(ClientAppActor pid=34700)[0m [32m [repeated 77x across cluster][0m
+[36m(ClientAppActor pid=34700)[0m [1m247/698[0m [32m━━━━━━━[0m[37m━━━━━━━━━━━━━[0m [1m18s[0m 41ms/step - loss: 0.1653 - root_mean_squared_error: 0.1790[32m [repeated 129x across cluster][0m
+[36m(ClientAppActor pid=34700)[0m [32m [repeated 69x across cluster][0m
+[36m(ClientAppActor pid=34700)[0m [1m362/698[0m [32m━━━━━━━━━━[0m[37m━━━━━━━━━━[0m [1m14s[0m 42ms/step - loss: 0.1505 - root_mean_squared_error: 0.1628[32m [repeated 127x across cluster][0m
+[36m(ClientAppActor pid=34700)[0m [32m [repeated 98x across cluster][0m
+[36m(ClientAppActor pid=34700)[0m [1m472/698[0m [32m━━━━━━━━━━━━━[0m[37m━━━━━━━[0m [1m9s[0m 43ms/step - loss: 0.1414 - root_mean_squared_error: 0.1528[32m [repeated 158x across cluster][0m
+[36m(ClientAppActor pid=34700)[0m [32m [repeated 132x across cluster][0m
+[36m(ClientAppActor pid=34700)[0m [1m550/698[0m [32m━━━━━━━━━━━━━━━[0m[37m━━━━━[0m [1m6s[0m 46ms/step - loss: 0.1367 - root_mean_squared_error: 0.1474[32m [repeated 197x across cluster][0m
+[36m(ClientAppActor pid=34700)[0m [32m [repeated 97x across cluster][0m
+[36m(ClientAppActor pid=34700)[0m [1m626/698[0m [32m━━━━━━━━━━━━━━━━━[0m[37m━━━[0m [1m3s[0m 48ms/step - loss: 0.1328 - root_mean_squared_error: 0.1431[32m [repeated 183x across cluster][0m
+[36m(ClientAppActor pid=34700)[0m [32m [repeated 82x across cluster][0m
+[36m(ClientAppActor pid=34700)[0m [1m698/698[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 51ms/step - loss: 0.1298 - root_mean_squared_error: 0.1397[32m [repeated 195x across cluster][0m
+[36m(ClientAppActor pid=34700)[0m Epoch 2/28
+[36m(ClientAppActor pid=34700)[0m [32m [repeated 115x across cluster][0m
+[36m(ClientAppActor pid=34700)[0m [1m 74/698[0m [32m━━[0m[37m━━━━━━━━━━━━━━━━━━[0m [1m38s[0m 62ms/step - loss: 0.0840 - root_mean_squared_error: 0.0845[32m [repeated 200x across cluster][0m
+[36m(ClientAppActor pid=23536)[0m Epoch 2/28
+[36m(ClientAppActor pid=34700)[0m [32m [repeated 162x across cluster][0m
+[36m(ClientAppActor pid=34700)[0m [1m164/698[0m [32m━━━━[0m[37m━━━━━━━━━━━━━━━━[0m [1m31s[0m 59ms/step - loss: 0.0841 - root_mean_squared_error: 0.0848[32m [repeated 215x across cluster][0m
+[36m(ClientAppActor pid=34700)[0m [32m [repeated 123x across cluster][0m
+[36m(ClientAppActor pid=34700)[0m [1m256/698[0m [32m━━━━━━━[0m[37m━━━━━━━━━━━━━[0m [1m25s[0m 58ms/step - loss: 0.0838 - root_mean_squared_error: 0.0846[32m [repeated 204x across cluster][0m
+[36m(ClientAppActor pid=23536)[0m [32m [repeated 206x across cluster][0m
+[36m(ClientAppActor pid=23536)[0m [1m172/838[0m [32m━━━━[0m[37m━━━━━━━━━━━━━━━━[0m [1m39s[0m 60ms/step - loss: 0.0867 - root_mean_squared_error: 0.0874[32m [repeated 277x across cluster][0m
+[36m(ClientAppActor pid=38404)[0m [32m [repeated 156x across cluster][0m
+[36m(ClientAppActor pid=38404)[0m [1m704/941[0m [32m━━━━━━━━━━━━━━[0m[37m━━━━━━[0m [1m14s[0m 62ms/step - loss: 0.1311 - root_mean_squared_error: 0.1412[32m [repeated 263x across cluster][0m
+[36m(ClientAppActor pid=34700)[0m [32m [repeated 169x across cluster][0m
+[36m(ClientAppActor pid=34700)[0m [1m488/698[0m [32m━━━━━━━━━━━━━[0m[37m━━━━━━━[0m [1m12s[0m 61ms/step - loss: 0.0832 - root_mean_squared_error: 0.0840[32m [repeated 285x across cluster][0m
+[36m(ClientAppActor pid=34700)[0m [32m [repeated 125x across cluster][0m
+[36m(ClientAppActor pid=34700)[0m [1m570/698[0m [32m━━━━━━━━━━━━━━━━[0m[37m━━━━[0m [1m7s[0m 62ms/step - loss: 0.0830 - root_mean_squared_error: 0.0838[32m [repeated 263x across cluster][0m
+[36m(ClientAppActor pid=34700)[0m [32m [repeated 114x across cluster][0m
+[36m(ClientAppActor pid=34700)[0m [1m635/698[0m [32m━━━━━━━━━━━━━━━━━━[0m[37m━━[0m [1m3s[0m 63ms/step - loss: 0.0828 - root_mean_squared_error: 0.0837[32m [repeated 259x across cluster][0m
+[36m(ClientAppActor pid=38404)[0m Epoch 2/28
+[36m(ClientAppActor pid=34700)[0m [32m [repeated 96x across cluster][0m
+[36m(ClientAppActor pid=34700)[0m [1m  2/698[0m [37m━━━━━━━━━━━━━━━━━━━━[0m [1m39s[0m 57ms/step - loss: 0.0857 - root_mean_squared_error: 0.0860  [32m [repeated 248x across cluster][0m
+[36m(ClientAppActor pid=34700)[0m Epoch 3/28
+[36m(ClientAppActor pid=34700)[0m [32m [repeated 177x across cluster][0m
+[36m(ClientAppActor pid=34700)[0m [1m 71/698[0m [32m━━[0m[37m━━━━━━━━━━━━━━━━━━[0m [1m45s[0m 73ms/step - loss: 0.0816 - root_mean_squared_error: 0.0825[32m [repeated 274x across cluster][0m
+[36m(ClientAppActor pid=34700)[0m [32m [repeated 160x across cluster][0m
+[36m(ClientAppActor pid=34700)[0m [1m140/698[0m [32m━━━━[0m[37m━━━━━━━━━━━━━━━━[0m [1m41s[0m 74ms/step - loss: 0.0811 - root_mean_squared_error: 0.0821[32m [repeated 262x across cluster][0m
+[36m(ClientAppActor pid=34700)[0m [32m [repeated 168x across cluster][0m
+[36m(ClientAppActor pid=34700)[0m [1m204/698[0m [32m━━━━━[0m[37m━━━━━━━━━━━━━━━[0m [1m37s[0m 75ms/step - loss: 0.0807 - root_mean_squared_error: 0.0817[32m [repeated 245x across cluster][0m
+[36m(ClientAppActor pid=29348)[0m [32m [repeated 135x across cluster][0m
+[36m(ClientAppActor pid=29348)[0m [1m 728/1181[0m [32m━━━━━━━━━━━━[0m[37m━━━━━━━━[0m [1m31s[0m 69ms/step - loss: 0.1273 - root_mean_squared_error: 0.1397[32m [repeated 274x across cluster][0m
+[36m(ClientAppActor pid=23536)[0m Epoch 3/28
+[36m(ClientAppActor pid=34700)[0m [32m [repeated 156x across cluster][0m
+[36m(ClientAppActor pid=34700)[0m [1m362/698[0m [32m━━━━━━━━━━[0m[37m━━━━━━━━━━[0m [1m24s[0m 71ms/step - loss: 0.0796 - root_mean_squared_error: 0.0806[32m [repeated 267x across cluster][0m
+[36m(ClientAppActor pid=34700)[0m [32m [repeated 151x across cluster][0m
+[36m(ClientAppActor pid=34700)[0m [1m435/698[0m [32m━━━━━━━━━━━━[0m[37m━━━━━━━━[0m [1m18s[0m 72ms/step - loss: 0.0792 - root_mean_squared_error: 0.0803[32m [repeated 275x across cluster][0m
+[36m(ClientAppActor pid=23536)[0m [32m [repeated 191x across cluster][0m
+[36m(ClientAppActor pid=23536)[0m [1m198/838[0m [32m━━━━[0m[37m━━━━━━━━━━━━━━━━[0m [1m46s[0m 72ms/step - loss: 0.0786 - root_mean_squared_error: 0.0795[32m [repeated 277x across cluster][0m
+[36m(ClientAppActor pid=29348)[0m [32m [repeated 142x across cluster][0m
+[36m(ClientAppActor pid=29348)[0m [1m1031/1181[0m [32m━━━━━━━━━━━━━━━━━[0m[37m━━━[0m [1m10s[0m 69ms/step - loss: 0.1177 - root_mean_squared_error: 0.1285[32m [repeated 256x across cluster][0m
+[36m(ClientAppActor pid=34700)[0m [32m [repeated 137x across cluster][0m
+[36m(ClientAppActor pid=34700)[0m [1m653/698[0m [32m━━━━━━━━━━━━━━━━━━[0m[37m━━[0m [1m3s[0m 71ms/step - loss: 0.0786 - root_mean_squared_error: 0.0796[32m [repeated 279x across cluster][0m
+[36m(ClientAppActor pid=34700)[0m Epoch 4/28
+[36m(ClientAppActor pid=23536)[0m [32m [repeated 146x across cluster][0m
+[36m(ClientAppActor pid=23536)[0m [1m414/838[0m [32m━━━━━━━━━[0m[37m━━━━━━━━━━━[0m [1m30s[0m 71ms/step - loss: 0.0782 - root_mean_squared_error: 0.0790[32m [repeated 256x across cluster][0m
+[36m(ClientAppActor pid=29348)[0m Epoch 2/28
+[36m(ClientAppActor pid=29348)[0m [32m [repeated 149x across cluster][0m
+[36m(ClientAppActor pid=29348)[0m [1m  80/1181[0m [32m━[0m[37m━━━━━━━━━━━━━━━━━━━[0m [1m1:04[0m 59ms/step - loss: 0.0791 - root_mean_squared_error: 0.0796[32m [repeated 221x across cluster][0m
+[36m(ClientAppActor pid=38404)[0m Epoch 3/28
+[36m(ClientAppActor pid=29348)[0m [32m [repeated 150x across cluster][0m
+[36m(ClientAppActor pid=29348)[0m [1m 171/1181[0m [32m━━[0m[37m━━━━━━━━━━━━━━━━━━[0m [1m57s[0m 57ms/step - loss: 0.0784 - root_mean_squared_error: 0.0789[32m [repeated 209x across cluster][0m
+[36m(ClientAppActor pid=23536)[0m [32m [repeated 130x across cluster][0m
+[36m(ClientAppActor pid=23536)[0m [1m681/838[0m [32m━━━━━━━━━━━━━━━━[0m[37m━━━━[0m [1m10s[0m 65ms/step - loss: 0.0779 - root_mean_squared_error: 0.0787[32m [repeated 241x across cluster][0m
+[36m(ClientAppActor pid=29348)[0m [32m [repeated 126x across cluster][0m
+[36m(ClientAppActor pid=29348)[0m [1m 348/1181[0m [32m━━━━━[0m[37m━━━━━━━━━━━━━━━[0m [1m47s[0m 57ms/step - loss: 0.0780 - root_mean_squared_error: 0.0785[32m [repeated 235x across cluster][0m

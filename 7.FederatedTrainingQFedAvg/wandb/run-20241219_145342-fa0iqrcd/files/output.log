@@ -1,0 +1,9 @@
+[92mINFO [0m:      Starting Flower ServerApp, config: num_rounds=3, no round_timeout
+[92mINFO [0m:
+[92mINFO [0m:      [INIT]
+[92mINFO [0m:      Using initial global parameters provided by strategy
+[92mINFO [0m:      Starting evaluation of initial global parameters
+[92mINFO [0m:      💡 New best global model found: 0.368290
+[92mINFO [0m:      initial parameters (loss, other metrics): 0.13563767075538635, {'centralized_rmse': 0.3682901859283447}
+[92mINFO [0m:
+[92mINFO [0m:      [ROUND 1]

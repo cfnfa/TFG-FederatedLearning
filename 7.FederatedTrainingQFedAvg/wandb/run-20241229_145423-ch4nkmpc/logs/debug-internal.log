@@ -1,0 +1,16 @@
+{"time":"2024-12-29T14:54:23.4655683+01:00","level":"INFO","msg":"using version","core version":"0.19.1"}
+{"time":"2024-12-29T14:54:23.4655683+01:00","level":"INFO","msg":"created symlink","path":"C:\\Users\\clara\\Desktop\\TFG\\Codigo TFG\\5.FederatedTrainingMejorada2\\wandb\\run-20241229_145423-ch4nkmpc\\logs\\debug-core.log"}
+{"time":"2024-12-29T14:54:24.4807601+01:00","level":"INFO","msg":"created new stream","id":"ch4nkmpc"}
+{"time":"2024-12-29T14:54:24.4807601+01:00","level":"INFO","msg":"stream: started","id":"ch4nkmpc"}
+{"time":"2024-12-29T14:54:24.4807601+01:00","level":"INFO","msg":"writer: Do: started","stream_id":"ch4nkmpc"}
+{"time":"2024-12-29T14:54:24.4807601+01:00","level":"INFO","msg":"handler: started","stream_id":"ch4nkmpc"}
+{"time":"2024-12-29T14:54:24.4807601+01:00","level":"INFO","msg":"sender: started","stream_id":"ch4nkmpc"}
+{"time":"2024-12-29T14:54:24.7052538+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-12-29T15:11:15.1307376+01:00","level":"INFO","msg":"stream: closing","id":"ch4nkmpc"}
+{"time":"2024-12-29T15:11:15.1307376+01:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-12-29T15:11:15.5607601+01:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-12-29T15:11:16.1959576+01:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-12-29T15:11:16.3698252+01:00","level":"INFO","msg":"handler: closed","stream_id":"ch4nkmpc"}
+{"time":"2024-12-29T15:11:16.3698252+01:00","level":"INFO","msg":"writer: Close: closed","stream_id":"ch4nkmpc"}
+{"time":"2024-12-29T15:11:16.3698252+01:00","level":"INFO","msg":"sender: closed","stream_id":"ch4nkmpc"}
+{"time":"2024-12-29T15:11:16.3705243+01:00","level":"INFO","msg":"stream: closed","id":"ch4nkmpc"}

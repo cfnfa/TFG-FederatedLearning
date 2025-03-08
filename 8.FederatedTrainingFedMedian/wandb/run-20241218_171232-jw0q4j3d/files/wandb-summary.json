@@ -1,0 +1,1 @@
+{"rmse":0.1577207241140851,"_wandb":{"runtime":1401},"_timestamp":1.7345397517778738e+09,"_runtime":1401.3580791,"_step":5,"centralized_loss":0.028304941952228546,"centralized_rmse":0.1682407259941101,"federated_evaluate_loss":0.025123028911174693}

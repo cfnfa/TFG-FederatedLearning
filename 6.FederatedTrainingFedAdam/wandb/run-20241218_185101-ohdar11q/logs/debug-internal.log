@@ -1,0 +1,16 @@
+{"time":"2024-12-18T18:51:01.3336585+01:00","level":"INFO","msg":"using version","core version":"0.19.1"}
+{"time":"2024-12-18T18:51:01.3336585+01:00","level":"INFO","msg":"created symlink","path":"C:\\Users\\clara\\Desktop\\TFG\\Codigo TFG\\4.FederatedTrainingMejorada\\wandb\\run-20241218_185101-ohdar11q\\logs\\debug-core.log"}
+{"time":"2024-12-18T18:51:02.3532247+01:00","level":"INFO","msg":"created new stream","id":"ohdar11q"}
+{"time":"2024-12-18T18:51:02.3532247+01:00","level":"INFO","msg":"stream: started","id":"ohdar11q"}
+{"time":"2024-12-18T18:51:02.3532247+01:00","level":"INFO","msg":"writer: Do: started","stream_id":"ohdar11q"}
+{"time":"2024-12-18T18:51:02.3532247+01:00","level":"INFO","msg":"sender: started","stream_id":"ohdar11q"}
+{"time":"2024-12-18T18:51:02.3532247+01:00","level":"INFO","msg":"handler: started","stream_id":"ohdar11q"}
+{"time":"2024-12-18T18:51:02.6265731+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-12-18T20:04:53.3777147+01:00","level":"INFO","msg":"stream: closing","id":"ohdar11q"}
+{"time":"2024-12-18T20:04:53.3777147+01:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-12-18T20:04:53.7584916+01:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-12-18T20:04:54.6233826+01:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-12-18T20:04:54.8135686+01:00","level":"INFO","msg":"handler: closed","stream_id":"ohdar11q"}
+{"time":"2024-12-18T20:04:54.8135686+01:00","level":"INFO","msg":"sender: closed","stream_id":"ohdar11q"}
+{"time":"2024-12-18T20:04:54.8135686+01:00","level":"INFO","msg":"writer: Close: closed","stream_id":"ohdar11q"}
+{"time":"2024-12-18T20:04:54.8140885+01:00","level":"INFO","msg":"stream: closed","id":"ohdar11q"}

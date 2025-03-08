@@ -1,0 +1,902 @@
+[92mINFO [0m:      Starting Flower ServerApp, config: num_rounds=6, no round_timeout
+[92mINFO [0m:
+[92mINFO [0m:      [INIT]
+[92mINFO [0m:      Using initial global parameters provided by strategy
+[92mINFO [0m:      Starting evaluation of initial global parameters
+782/782 - 11s - 14ms/step - loss: 0.1329 - root_mean_squared_error: 0.3646
+[92mINFO [0m:      💡⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️ New best global model found: 0.364593
+[92mINFO [0m:      initial parameters (loss, other metrics): 0.13292795419692993, {'centralized_rmse': 0.36459285020828247}
+[92mINFO [0m:
+[92mINFO [0m:      [ROUND 1]
+[92mINFO [0m:      configure_fit: strategy sampled 11 clients (out of 11)
+[36m(ClientAppActor pid=23648)[0m Cargando el archivo: 8CGL-extracted.xlsx
+[36m(ClientAppActor pid=18784)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names
+[36m(ClientAppActor pid=18784)[0m   warnings.warn(
+[36m(ClientAppActor pid=18784)[0m Datos preparados:
+[36m(ClientAppActor pid=18784)[0m   Tamaño del conjunto de entrenamiento: 16899
+[36m(ClientAppActor pid=18784)[0m   Tamaño del conjunto de prueba: 4212
+[36m(ClientAppActor pid=18784)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=18784)[0m Primeros datos de y_test: [0.9639889  0.97783935 0.97783935 0.9639889  0.9501385 ]
+[36m(ClientAppActor pid=18784)[0m Configuración del nodo creada: {'partition-id': 2, 'num-partitions': 11}
+[36m(ClientAppActor pid=18784)[0m Este cliente tiene el partition_id 2 ,el node_id 18333645887261919504 y el archivo 3AGM-extracted.xlsx
+[36m(ClientAppActor pid=23648)[0m Primeros datos de y_test: [0.3434903  0.3767313  0.41551247 0.43490306 0.43490306]
+[36m(ClientAppActor pid=336)[0m Cargando el archivo: 8MAVS-extracted.xlsx[32m [repeated 3x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/ray-logging.html#log-deduplication for more options.)[0m
+[36m(ClientAppActor pid=336)[0m Datos preparados:[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=336)[0m   Tamaño del conjunto de entrenamiento: 30118[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=336)[0m   Tamaño del conjunto de prueba: 7516[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=336)[0m   Dimensiones de las entradas: (12, 4)[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=19604)[0m Primeros datos de y_test: [0.48476455 0.50138503 0.51800555 0.53462607 0.5567867 ]
+[36m(ClientAppActor pid=336)[0m Configuración del nodo creada: {'partition-id': 8, 'num-partitions': 11}[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=336)[0m Este cliente tiene el partition_id 8 ,el node_id 7279788262349955528 y el archivo 8MAVS-extracted.xlsx[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=336)[0m Primeros datos de y_test: [0.22437674 0.22160664 0.23545706 0.29085872 0.38227147]
+[36m(ClientAppActor pid=18784)[0m Cargando el archivo: 1GML-extracted.xlsx
+[36m(ClientAppActor pid=19604)[0m Cargando el archivo: 2AML-extracted.xlsx
+[36m(ClientAppActor pid=19604)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names[32m [repeated 4x across cluster][0m
+[36m(ClientAppActor pid=19604)[0m   warnings.warn([32m [repeated 4x across cluster][0m
+[36m(ClientAppActor pid=19604)[0m Primeros datos de y_test: [0.55401665 0.565097   0.56786704 0.5706371  0.5734072 ]
+[36m(ClientAppActor pid=19604)[0m Datos preparados:
+[36m(ClientAppActor pid=19604)[0m   Tamaño del conjunto de entrenamiento: 14306
+[36m(ClientAppActor pid=19604)[0m   Tamaño del conjunto de prueba: 3564
+[36m(ClientAppActor pid=19604)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=19604)[0m Configuración del nodo creada: {'partition-id': 1, 'num-partitions': 11}
+[36m(ClientAppActor pid=19604)[0m Este cliente tiene el partition_id 1 ,el node_id 5964666572621988169 y el archivo 2AML-extracted.xlsx
+[36m(ClientAppActor pid=23648)[0m Cargando el archivo: 5JMPM-extracted.xlsx
+[36m(ClientAppActor pid=18784)[0m Datos preparados:
+[36m(ClientAppActor pid=18784)[0m   Tamaño del conjunto de entrenamiento: 22386
+[36m(ClientAppActor pid=18784)[0m   Tamaño del conjunto de prueba: 5584
+[36m(ClientAppActor pid=18784)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=18784)[0m Configuración del nodo creada: {'partition-id': 0, 'num-partitions': 11}
+[36m(ClientAppActor pid=18784)[0m Este cliente tiene el partition_id 0 ,el node_id 10974806378372030667 y el archivo 1GML-extracted.xlsx
+[36m(ClientAppActor pid=23648)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=23648)[0m   warnings.warn([32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=23648)[0m Primeros datos de y_test: [0.6260388 0.6426593 0.6565097 0.6814405 0.6980609]
+[36m(ClientAppActor pid=18784)[0m Primeros datos de y_test: [0.47368422 0.49861497 0.51246536 0.5401662  0.5567867 ]
+[36m(ClientAppActor pid=336)[0m Cargando el archivo: 8GAG-extracted.xlsx
+[36m(ClientAppActor pid=23648)[0m Datos preparados:
+[36m(ClientAppActor pid=23648)[0m   Tamaño del conjunto de entrenamiento: 28653
+[36m(ClientAppActor pid=23648)[0m   Tamaño del conjunto de prueba: 7150
+[36m(ClientAppActor pid=23648)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=23648)[0m Configuración del nodo creada: {'partition-id': 3, 'num-partitions': 11}
+[36m(ClientAppActor pid=23648)[0m Este cliente tiene el partition_id 3 ,el node_id 506252594460099454 y el archivo 5JMPM-extracted.xlsx
+[36m(ClientAppActor pid=336)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names
+[36m(ClientAppActor pid=336)[0m   warnings.warn(
+[36m(ClientAppActor pid=336)[0m Datos preparados:
+[36m(ClientAppActor pid=336)[0m   Tamaño del conjunto de entrenamiento: 8772
+[36m(ClientAppActor pid=336)[0m   Tamaño del conjunto de prueba: 2180
+[36m(ClientAppActor pid=336)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=336)[0m Primeros datos de y_test: [0.2299169  0.22437674 0.22160664 0.21883656 0.20775624]
+[36m(ClientAppActor pid=336)[0m Configuración del nodo creada: {'partition-id': 6, 'num-partitions': 11}
+[36m(ClientAppActor pid=336)[0m Este cliente tiene el partition_id 6 ,el node_id 2841197753254431381 y el archivo 8GAG-extracted.xlsx
+[36m(ClientAppActor pid=19604)[0m Cargando el archivo: 8JLG-extracted.xlsx
+[36m(ClientAppActor pid=19604)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names
+[36m(ClientAppActor pid=19604)[0m   warnings.warn(
+[36m(ClientAppActor pid=19604)[0m Datos preparados:
+[36m(ClientAppActor pid=19604)[0m   Tamaño del conjunto de entrenamiento: 22990
+[36m(ClientAppActor pid=19604)[0m   Tamaño del conjunto de prueba: 5735
+[36m(ClientAppActor pid=19604)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=19604)[0m Primeros datos de y_test: [0.16620499 0.16066483 0.16343491 0.18836565 0.22437674]
+[36m(ClientAppActor pid=19604)[0m Configuración del nodo creada: {'partition-id': 7, 'num-partitions': 11}
+[36m(ClientAppActor pid=19604)[0m Este cliente tiene el partition_id 7 ,el node_id 3978323868026725139 y el archivo 8JLG-extracted.xlsx
+[36m(ClientAppActor pid=18784)[0m Cargando el archivo: 8SVB-extracted.xlsx
+[36m(ClientAppActor pid=18784)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names
+[36m(ClientAppActor pid=18784)[0m   warnings.warn(
+[36m(ClientAppActor pid=18784)[0m Datos preparados:
+[36m(ClientAppActor pid=18784)[0m   Tamaño del conjunto de entrenamiento: 13633
+[36m(ClientAppActor pid=18784)[0m   Tamaño del conjunto de prueba: 3395
+[36m(ClientAppActor pid=18784)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=18784)[0m Primeros datos de y_test: [0.47091413 0.47368422 0.5096953  0.53462607 0.53739613]
+[36m(ClientAppActor pid=18784)[0m Configuración del nodo creada: {'partition-id': 9, 'num-partitions': 11}
+[36m(ClientAppActor pid=18784)[0m Este cliente tiene el partition_id 9 ,el node_id 16660927928521274299 y el archivo 8SVB-extracted.xlsx
+[36m(ClientAppActor pid=336)[0m Cargando el archivo: 8VVC-extracted.xlsx
+[36m(ClientAppActor pid=336)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names
+[36m(ClientAppActor pid=336)[0m   warnings.warn(
+[36m(ClientAppActor pid=336)[0m Datos preparados:
+[36m(ClientAppActor pid=336)[0m   Tamaño del conjunto de entrenamiento: 31005
+[36m(ClientAppActor pid=336)[0m   Tamaño del conjunto de prueba: 7738
+[36m(ClientAppActor pid=336)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=336)[0m Primeros datos de y_test: [0.40443215 0.4265928  0.44321328 0.45152354 0.46537396]
+[36m(ClientAppActor pid=336)[0m Configuración del nodo creada: {'partition-id': 10, 'num-partitions': 11}
+[36m(ClientAppActor pid=336)[0m Este cliente tiene el partition_id 10 ,el node_id 17615776232371493629 y el archivo 8VVC-extracted.xlsx
+[92mINFO [0m:      aggregate_fit: received 11 results and 0 failures
+[93mWARNING [0m:   No fit_metrics_aggregation_fn provided
+782/782 - 6s - 7ms/step - loss: 0.0072 - root_mean_squared_error: 0.0849
+[92mINFO [0m:      💡⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️ New best global model found: 0.084894
+[92mINFO [0m:      fit progress: (1, 0.007207030430436134, {'centralized_rmse': 0.08489423245191574}, 400.89637230000517)
+[92mINFO [0m:      configure_evaluate: strategy sampled 8 clients (out of 11)
+[36m(ClientAppActor pid=23648)[0m Cargando el archivo: 8CGL-extracted.xlsx
+[36m(ClientAppActor pid=336)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names
+[36m(ClientAppActor pid=336)[0m   warnings.warn(
+[36m(ClientAppActor pid=336)[0m Datos preparados:
+[36m(ClientAppActor pid=336)[0m   Tamaño del conjunto de entrenamiento: 16899
+[36m(ClientAppActor pid=336)[0m   Tamaño del conjunto de prueba: 4212
+[36m(ClientAppActor pid=336)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=336)[0m Primeros datos de y_test: [0.9639889  0.97783935 0.97783935 0.9639889  0.9501385 ]
+[36m(ClientAppActor pid=336)[0m Configuración del nodo creada: {'partition-id': 2, 'num-partitions': 11}
+[36m(ClientAppActor pid=336)[0m Este cliente tiene el partition_id 2 ,el node_id 18333645887261919504 y el archivo 3AGM-extracted.xlsx
+[36m(ClientAppActor pid=23648)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names
+[36m(ClientAppActor pid=23648)[0m   warnings.warn(
+[36m(ClientAppActor pid=23648)[0m Primeros datos de y_test: [0.3434903  0.3767313  0.41551247 0.43490306 0.43490306]
+[36m(ClientAppActor pid=336)[0m 66/66 - 2s - 27ms/step - loss: 0.0093 - root_mean_squared_error: 0.0965
+[36m(ClientAppActor pid=336)[0m Cargando el archivo: 3AGM-extracted.xlsx[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=19604)[0m Datos preparados:[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=19604)[0m   Tamaño del conjunto de entrenamiento: 28653[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=19604)[0m   Tamaño del conjunto de prueba: 7150[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=19604)[0m   Dimensiones de las entradas: (12, 4)[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=18784)[0m Primeros datos de y_test: [0.48476455 0.50138503 0.51800555 0.53462607 0.5567867 ]
+[36m(ClientAppActor pid=19604)[0m Configuración del nodo creada: {'partition-id': 3, 'num-partitions': 11}[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=19604)[0m Este cliente tiene el partition_id 3 ,el node_id 506252594460099454 y el archivo 5JMPM-extracted.xlsx[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=336)[0m Input Warning: the maximum reference value 400.0 or the maximum prediction value 488.8550349473953 exceeds the normal physiological range of glucose (<400 mg/dl).
+[36m(ClientAppActor pid=19604)[0m Primeros datos de y_test: [0.6260388 0.6426593 0.6565097 0.6814405 0.6980609]
+[36m(ClientAppActor pid=19604)[0m 112/112 - 3s - 25ms/step - loss: 0.0110 - root_mean_squared_error: 0.1050[32m [repeated 3x across cluster][0m
+[91mERROR [0m:     An exception was raised when processing a message by RayBackend
+[91mERROR [0m:     An exception was raised when processing a message by RayBackend
+[91mERROR [0m:     An exception was raised when processing a message by RayBackend
+[91mERROR [0m:     [36mray::ClientAppActor.run()[39m (pid=23648, ip=127.0.0.1, actor_id=1c31378e7a0dd28474f6181a01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x0000021BCAB0F7C0>)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\message_handler\message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\5.FederatedTrainingMejorada2\tfexample\client_app.py", line 68, in evaluate
+    _, zone = clarke_error_grid(y_test_desnormalized, y_pred_desnormalized,  "Clarke Error Grid")
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\5.FederatedTrainingMejorada2\tfexample\task.py", line 307, in clarke_error_grid
+    if (ref_values.iloc[i] <= 70 and pred_values.iloc[i] <= 70) or (
+AttributeError: 'numpy.ndarray' object has no attribute 'iloc'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=23648, ip=127.0.0.1, actor_id=1c31378e7a0dd28474f6181a01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x0000021BCAB0F7C0>)
+  File "python\ray\_raylet.pyx", line 1883, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1984, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1889, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1830, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\function_manager.py", line 724, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException:
+Exception ClientAppException occurred. Message: 'numpy.ndarray' object has no attribute 'iloc'
+[91mERROR [0m:     [36mray::ClientAppActor.run()[39m (pid=18784, ip=127.0.0.1, actor_id=a26475db72be49fc9737c5ea01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001CB386DF760>)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\message_handler\message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\5.FederatedTrainingMejorada2\tfexample\client_app.py", line 68, in evaluate
+    _, zone = clarke_error_grid(y_test_desnormalized, y_pred_desnormalized,  "Clarke Error Grid")
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\5.FederatedTrainingMejorada2\tfexample\task.py", line 307, in clarke_error_grid
+    if (ref_values.iloc[i] <= 70 and pred_values.iloc[i] <= 70) or (
+AttributeError: 'numpy.ndarray' object has no attribute 'iloc'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=18784, ip=127.0.0.1, actor_id=a26475db72be49fc9737c5ea01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001CB386DF760>)
+  File "python\ray\_raylet.pyx", line 1883, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1984, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1889, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1830, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\function_manager.py", line 724, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException:
+Exception ClientAppException occurred. Message: 'numpy.ndarray' object has no attribute 'iloc'
+[91mERROR [0m:     [36mray::ClientAppActor.run()[39m (pid=336, ip=127.0.0.1, actor_id=4112bc7bfcfe7ffab02f6c3a01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001D26730F760>)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\message_handler\message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\5.FederatedTrainingMejorada2\tfexample\client_app.py", line 68, in evaluate
+    _, zone = clarke_error_grid(y_test_desnormalized, y_pred_desnormalized,  "Clarke Error Grid")
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\5.FederatedTrainingMejorada2\tfexample\task.py", line 307, in clarke_error_grid
+    if (ref_values.iloc[i] <= 70 and pred_values.iloc[i] <= 70) or (
+AttributeError: 'numpy.ndarray' object has no attribute 'iloc'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=336, ip=127.0.0.1, actor_id=4112bc7bfcfe7ffab02f6c3a01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001D26730F760>)
+  File "python\ray\_raylet.pyx", line 1883, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1984, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1889, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1830, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\function_manager.py", line 724, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException:
+Exception ClientAppException occurred. Message: 'numpy.ndarray' object has no attribute 'iloc'
+[91mERROR [0m:     Traceback (most recent call last):
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\server\superlink\fleet\vce\vce_api.py", line 112, in worker
+    out_mssg, updated_context = backend.process_message(message, context)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\server\superlink\fleet\vce\backend\raybackend.py", line 186, in process_message
+    raise ex
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\server\superlink\fleet\vce\backend\raybackend.py", line 174, in process_message
+    ) = self.pool.fetch_result_and_return_actor_to_pool(future)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 477, in fetch_result_and_return_actor_to_pool
+    _, out_mssg, updated_context = ray.get(future)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\worker.py", line 2667, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\worker.py", line 864, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=23648, ip=127.0.0.1, actor_id=1c31378e7a0dd28474f6181a01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x0000021BCAB0F7C0>)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\message_handler\message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\5.FederatedTrainingMejorada2\tfexample\client_app.py", line 68, in evaluate
+    _, zone = clarke_error_grid(y_test_desnormalized, y_pred_desnormalized,  "Clarke Error Grid")
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\5.FederatedTrainingMejorada2\tfexample\task.py", line 307, in clarke_error_grid
+    if (ref_values.iloc[i] <= 70 and pred_values.iloc[i] <= 70) or (
+AttributeError: 'numpy.ndarray' object has no attribute 'iloc'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=23648, ip=127.0.0.1, actor_id=1c31378e7a0dd28474f6181a01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x0000021BCAB0F7C0>)
+  File "python\ray\_raylet.pyx", line 1883, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1984, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1889, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1830, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\function_manager.py", line 724, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException:
+Exception ClientAppException occurred. Message: 'numpy.ndarray' object has no attribute 'iloc'
+
+[91mERROR [0m:     Traceback (most recent call last):
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\server\superlink\fleet\vce\vce_api.py", line 112, in worker
+    out_mssg, updated_context = backend.process_message(message, context)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\server\superlink\fleet\vce\backend\raybackend.py", line 186, in process_message
+    raise ex
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\server\superlink\fleet\vce\backend\raybackend.py", line 174, in process_message
+    ) = self.pool.fetch_result_and_return_actor_to_pool(future)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 477, in fetch_result_and_return_actor_to_pool
+    _, out_mssg, updated_context = ray.get(future)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\worker.py", line 2667, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\worker.py", line 864, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=18784, ip=127.0.0.1, actor_id=a26475db72be49fc9737c5ea01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001CB386DF760>)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\message_handler\message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\5.FederatedTrainingMejorada2\tfexample\client_app.py", line 68, in evaluate
+    _, zone = clarke_error_grid(y_test_desnormalized, y_pred_desnormalized,  "Clarke Error Grid")
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\5.FederatedTrainingMejorada2\tfexample\task.py", line 307, in clarke_error_grid
+    if (ref_values.iloc[i] <= 70 and pred_values.iloc[i] <= 70) or (
+AttributeError: 'numpy.ndarray' object has no attribute 'iloc'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=18784, ip=127.0.0.1, actor_id=a26475db72be49fc9737c5ea01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001CB386DF760>)
+  File "python\ray\_raylet.pyx", line 1883, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1984, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1889, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1830, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\function_manager.py", line 724, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException:
+Exception ClientAppException occurred. Message: 'numpy.ndarray' object has no attribute 'iloc'
+
+[91mERROR [0m:     Traceback (most recent call last):
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\server\superlink\fleet\vce\vce_api.py", line 112, in worker
+    out_mssg, updated_context = backend.process_message(message, context)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\server\superlink\fleet\vce\backend\raybackend.py", line 186, in process_message
+    raise ex
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\server\superlink\fleet\vce\backend\raybackend.py", line 174, in process_message
+    ) = self.pool.fetch_result_and_return_actor_to_pool(future)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 477, in fetch_result_and_return_actor_to_pool
+    _, out_mssg, updated_context = ray.get(future)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\worker.py", line 2667, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\worker.py", line 864, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=336, ip=127.0.0.1, actor_id=4112bc7bfcfe7ffab02f6c3a01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001D26730F760>)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\message_handler\message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\5.FederatedTrainingMejorada2\tfexample\client_app.py", line 68, in evaluate
+    _, zone = clarke_error_grid(y_test_desnormalized, y_pred_desnormalized,  "Clarke Error Grid")
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\5.FederatedTrainingMejorada2\tfexample\task.py", line 307, in clarke_error_grid
+    if (ref_values.iloc[i] <= 70 and pred_values.iloc[i] <= 70) or (
+AttributeError: 'numpy.ndarray' object has no attribute 'iloc'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=336, ip=127.0.0.1, actor_id=4112bc7bfcfe7ffab02f6c3a01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001D26730F760>)
+  File "python\ray\_raylet.pyx", line 1883, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1984, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1889, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1830, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\function_manager.py", line 724, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException:
+Exception ClientAppException occurred. Message: 'numpy.ndarray' object has no attribute 'iloc'
+[36m(ClientAppActor pid=23648)[0m Cargando el archivo: 8MAVS-extracted.xlsx
+
+[91mERROR [0m:     An exception was raised when processing a message by RayBackend
+[91mERROR [0m:     [36mray::ClientAppActor.run()[39m (pid=19604, ip=127.0.0.1, actor_id=e0280e70dfae13dbd38fefcb01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x0000015F8281D1B0>)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\message_handler\message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\5.FederatedTrainingMejorada2\tfexample\client_app.py", line 68, in evaluate
+    _, zone = clarke_error_grid(y_test_desnormalized, y_pred_desnormalized,  "Clarke Error Grid")
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\5.FederatedTrainingMejorada2\tfexample\task.py", line 307, in clarke_error_grid
+    if (ref_values.iloc[i] <= 70 and pred_values.iloc[i] <= 70) or (
+AttributeError: 'numpy.ndarray' object has no attribute 'iloc'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=19604, ip=127.0.0.1, actor_id=e0280e70dfae13dbd38fefcb01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x0000015F8281D1B0>)
+  File "python\ray\_raylet.pyx", line 1883, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1984, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1889, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1830, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\function_manager.py", line 724, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException:
+Exception ClientAppException occurred. Message: 'numpy.ndarray' object has no attribute 'iloc'
+[91mERROR [0m:     Traceback (most recent call last):
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\server\superlink\fleet\vce\vce_api.py", line 112, in worker
+    out_mssg, updated_context = backend.process_message(message, context)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\server\superlink\fleet\vce\backend\raybackend.py", line 186, in process_message
+    raise ex
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\server\superlink\fleet\vce\backend\raybackend.py", line 174, in process_message
+    ) = self.pool.fetch_result_and_return_actor_to_pool(future)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 477, in fetch_result_and_return_actor_to_pool
+    _, out_mssg, updated_context = ray.get(future)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\worker.py", line 2667, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\worker.py", line 864, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=19604, ip=127.0.0.1, actor_id=e0280e70dfae13dbd38fefcb01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x0000015F8281D1B0>)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\message_handler\message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\5.FederatedTrainingMejorada2\tfexample\client_app.py", line 68, in evaluate
+    _, zone = clarke_error_grid(y_test_desnormalized, y_pred_desnormalized,  "Clarke Error Grid")
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\5.FederatedTrainingMejorada2\tfexample\task.py", line 307, in clarke_error_grid
+    if (ref_values.iloc[i] <= 70 and pred_values.iloc[i] <= 70) or (
+AttributeError: 'numpy.ndarray' object has no attribute 'iloc'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=19604, ip=127.0.0.1, actor_id=e0280e70dfae13dbd38fefcb01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x0000015F8281D1B0>)
+  File "python\ray\_raylet.pyx", line 1883, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1984, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1889, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1830, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\function_manager.py", line 724, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException:
+Exception ClientAppException occurred. Message: 'numpy.ndarray' object has no attribute 'iloc'
+[36m(ClientAppActor pid=19604)[0m Input Warning: the maximum reference value 400.0 or the maximum prediction value 460.97819793224335 exceeds the normal physiological range of glucose (<400 mg/dl).[32m [repeated 3x across cluster][0m
+
+[36m(ClientAppActor pid=336)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=336)[0m   warnings.warn([32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=336)[0m Datos preparados:
+[36m(ClientAppActor pid=336)[0m   Tamaño del conjunto de entrenamiento: 8772
+[36m(ClientAppActor pid=336)[0m   Tamaño del conjunto de prueba: 2180
+[36m(ClientAppActor pid=336)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=336)[0m Primeros datos de y_test: [0.2299169  0.22437674 0.22160664 0.21883656 0.20775624]
+[36m(ClientAppActor pid=336)[0m Configuración del nodo creada: {'partition-id': 6, 'num-partitions': 11}
+[36m(ClientAppActor pid=336)[0m Este cliente tiene el partition_id 6 ,el node_id 2841197753254431381 y el archivo 8GAG-extracted.xlsx
+[36m(ClientAppActor pid=336)[0m 35/35 - 1s - 40ms/step - loss: 0.0059 - root_mean_squared_error: 0.0770
+[36m(ClientAppActor pid=19604)[0m Cargando el archivo: 8SVB-extracted.xlsx[32m [repeated 3x across cluster][0m
+[91mERROR [0m:     An exception was raised when processing a message by RayBackend
+[91mERROR [0m:     [36mray::ClientAppActor.run()[39m (pid=336, ip=127.0.0.1, actor_id=4112bc7bfcfe7ffab02f6c3a01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001D26730F760>)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\message_handler\message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\5.FederatedTrainingMejorada2\tfexample\client_app.py", line 68, in evaluate
+    _, zone = clarke_error_grid(y_test_desnormalized, y_pred_desnormalized,  "Clarke Error Grid")
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\5.FederatedTrainingMejorada2\tfexample\task.py", line 307, in clarke_error_grid
+    if (ref_values.iloc[i] <= 70 and pred_values.iloc[i] <= 70) or (
+AttributeError: 'numpy.ndarray' object has no attribute 'iloc'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=336, ip=127.0.0.1, actor_id=4112bc7bfcfe7ffab02f6c3a01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001D26730F760>)
+  File "python\ray\_raylet.pyx", line 1883, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1984, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1889, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1830, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\function_manager.py", line 724, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException:
+Exception ClientAppException occurred. Message: 'numpy.ndarray' object has no attribute 'iloc'
+[91mERROR [0m:     Traceback (most recent call last):
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\server\superlink\fleet\vce\vce_api.py", line 112, in worker
+    out_mssg, updated_context = backend.process_message(message, context)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\server\superlink\fleet\vce\backend\raybackend.py", line 186, in process_message
+    raise ex
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\server\superlink\fleet\vce\backend\raybackend.py", line 174, in process_message
+    ) = self.pool.fetch_result_and_return_actor_to_pool(future)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 477, in fetch_result_and_return_actor_to_pool
+    _, out_mssg, updated_context = ray.get(future)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\worker.py", line 2667, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\worker.py", line 864, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=336, ip=127.0.0.1, actor_id=4112bc7bfcfe7ffab02f6c3a01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001D26730F760>)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\message_handler\message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\5.FederatedTrainingMejorada2\tfexample\client_app.py", line 68, in evaluate
+    _, zone = clarke_error_grid(y_test_desnormalized, y_pred_desnormalized,  "Clarke Error Grid")
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\5.FederatedTrainingMejorada2\tfexample\task.py", line 307, in clarke_error_grid
+    if (ref_values.iloc[i] <= 70 and pred_values.iloc[i] <= 70) or (
+AttributeError: 'numpy.ndarray' object has no attribute 'iloc'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=336, ip=127.0.0.1, actor_id=4112bc7bfcfe7ffab02f6c3a01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001D26730F760>)
+  File "python\ray\_raylet.pyx", line 1883, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1984, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1889, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1830, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\function_manager.py", line 724, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException:
+Exception ClientAppException occurred. Message: 'numpy.ndarray' object has no attribute 'iloc'
+[36m(ClientAppActor pid=19604)[0m 54/54 - 2s - 31ms/step - loss: 0.0071 - root_mean_squared_error: 0.0841
+[36m(ClientAppActor pid=23648)[0m Datos preparados:[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=23648)[0m   Tamaño del conjunto de entrenamiento: 30118[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=23648)[0m   Tamaño del conjunto de prueba: 7516[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=23648)[0m   Dimensiones de las entradas: (12, 4)[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=23648)[0m Primeros datos de y_test: [0.22437674 0.22160664 0.23545706 0.29085872 0.38227147][32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=23648)[0m Configuración del nodo creada: {'partition-id': 8, 'num-partitions': 11}[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=23648)[0m Este cliente tiene el partition_id 8 ,el node_id 7279788262349955528 y el archivo 8MAVS-extracted.xlsx[32m [repeated 3x across cluster][0m
+
+[91mERROR [0m:     An exception was raised when processing a message by RayBackend
+[91mERROR [0m:     [36mray::ClientAppActor.run()[39m (pid=19604, ip=127.0.0.1, actor_id=e0280e70dfae13dbd38fefcb01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x0000015F8281D1B0>)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\message_handler\message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\5.FederatedTrainingMejorada2\tfexample\client_app.py", line 68, in evaluate
+    _, zone = clarke_error_grid(y_test_desnormalized, y_pred_desnormalized,  "Clarke Error Grid")
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\5.FederatedTrainingMejorada2\tfexample\task.py", line 307, in clarke_error_grid
+    if (ref_values.iloc[i] <= 70 and pred_values.iloc[i] <= 70) or (
+AttributeError: 'numpy.ndarray' object has no attribute 'iloc'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=19604, ip=127.0.0.1, actor_id=e0280e70dfae13dbd38fefcb01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x0000015F8281D1B0>)
+  File "python\ray\_raylet.pyx", line 1883, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1984, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1889, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1830, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\function_manager.py", line 724, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException:
+Exception ClientAppException occurred. Message: 'numpy.ndarray' object has no attribute 'iloc'
+[91mERROR [0m:     Traceback (most recent call last):
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\server\superlink\fleet\vce\vce_api.py", line 112, in worker
+    out_mssg, updated_context = backend.process_message(message, context)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\server\superlink\fleet\vce\backend\raybackend.py", line 186, in process_message
+    raise ex
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\server\superlink\fleet\vce\backend\raybackend.py", line 174, in process_message
+    ) = self.pool.fetch_result_and_return_actor_to_pool(future)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 477, in fetch_result_and_return_actor_to_pool
+    _, out_mssg, updated_context = ray.get(future)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\worker.py", line 2667, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\worker.py", line 864, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=19604, ip=127.0.0.1, actor_id=e0280e70dfae13dbd38fefcb01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x0000015F8281D1B0>)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\message_handler\message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\5.FederatedTrainingMejorada2\tfexample\client_app.py", line 68, in evaluate
+    _, zone = clarke_error_grid(y_test_desnormalized, y_pred_desnormalized,  "Clarke Error Grid")
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\5.FederatedTrainingMejorada2\tfexample\task.py", line 307, in clarke_error_grid
+    if (ref_values.iloc[i] <= 70 and pred_values.iloc[i] <= 70) or (
+AttributeError: 'numpy.ndarray' object has no attribute 'iloc'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=19604, ip=127.0.0.1, actor_id=e0280e70dfae13dbd38fefcb01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x0000015F8281D1B0>)
+  File "python\ray\_raylet.pyx", line 1883, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1984, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1889, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1830, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\function_manager.py", line 724, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException:
+Exception ClientAppException occurred. Message: 'numpy.ndarray' object has no attribute 'iloc'
+[36m(ClientAppActor pid=18784)[0m Input Warning: the maximum reference value 400.0 or the maximum prediction value 468.2323604822159 exceeds the normal physiological range of glucose (<400 mg/dl).
+
+[91mERROR [0m:     An exception was raised when processing a message by RayBackend
+[91mERROR [0m:     [36mray::ClientAppActor.run()[39m (pid=18784, ip=127.0.0.1, actor_id=a26475db72be49fc9737c5ea01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001CB386DF760>)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\message_handler\message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\5.FederatedTrainingMejorada2\tfexample\client_app.py", line 68, in evaluate
+    _, zone = clarke_error_grid(y_test_desnormalized, y_pred_desnormalized,  "Clarke Error Grid")
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\5.FederatedTrainingMejorada2\tfexample\task.py", line 307, in clarke_error_grid
+    if (ref_values.iloc[i] <= 70 and pred_values.iloc[i] <= 70) or (
+AttributeError: 'numpy.ndarray' object has no attribute 'iloc'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=18784, ip=127.0.0.1, actor_id=a26475db72be49fc9737c5ea01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001CB386DF760>)
+  File "python\ray\_raylet.pyx", line 1883, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1984, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1889, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1830, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\function_manager.py", line 724, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException:
+Exception ClientAppException occurred. Message: 'numpy.ndarray' object has no attribute 'iloc'
+[91mERROR [0m:     Traceback (most recent call last):
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\server\superlink\fleet\vce\vce_api.py", line 112, in worker
+    out_mssg, updated_context = backend.process_message(message, context)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\server\superlink\fleet\vce\backend\raybackend.py", line 186, in process_message
+    raise ex
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\server\superlink\fleet\vce\backend\raybackend.py", line 174, in process_message
+    ) = self.pool.fetch_result_and_return_actor_to_pool(future)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 477, in fetch_result_and_return_actor_to_pool
+    _, out_mssg, updated_context = ray.get(future)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\worker.py", line 2667, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\worker.py", line 864, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=18784, ip=127.0.0.1, actor_id=a26475db72be49fc9737c5ea01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001CB386DF760>)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\message_handler\message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\5.FederatedTrainingMejorada2\tfexample\client_app.py", line 68, in evaluate
+    _, zone = clarke_error_grid(y_test_desnormalized, y_pred_desnormalized,  "Clarke Error Grid")
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\5.FederatedTrainingMejorada2\tfexample\task.py", line 307, in clarke_error_grid
+    if (ref_values.iloc[i] <= 70 and pred_values.iloc[i] <= 70) or (
+AttributeError: 'numpy.ndarray' object has no attribute 'iloc'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=18784, ip=127.0.0.1, actor_id=a26475db72be49fc9737c5ea01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x000001CB386DF760>)
+  File "python\ray\_raylet.pyx", line 1883, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1984, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1889, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1830, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\function_manager.py", line 724, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException:
+Exception ClientAppException occurred. Message: 'numpy.ndarray' object has no attribute 'iloc'
+
+[91mERROR [0m:     An exception was raised when processing a message by RayBackend
+[91mERROR [0m:     [36mray::ClientAppActor.run()[39m (pid=23648, ip=127.0.0.1, actor_id=1c31378e7a0dd28474f6181a01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x0000021BCAB0F7C0>)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\message_handler\message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\5.FederatedTrainingMejorada2\tfexample\client_app.py", line 68, in evaluate
+    _, zone = clarke_error_grid(y_test_desnormalized, y_pred_desnormalized,  "Clarke Error Grid")
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\5.FederatedTrainingMejorada2\tfexample\task.py", line 307, in clarke_error_grid
+    if (ref_values.iloc[i] <= 70 and pred_values.iloc[i] <= 70) or (
+AttributeError: 'numpy.ndarray' object has no attribute 'iloc'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=23648, ip=127.0.0.1, actor_id=1c31378e7a0dd28474f6181a01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x0000021BCAB0F7C0>)
+  File "python\ray\_raylet.pyx", line 1883, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1984, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1889, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1830, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\function_manager.py", line 724, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException:
+Exception ClientAppException occurred. Message: 'numpy.ndarray' object has no attribute 'iloc'
+[91mERROR [0m:     Traceback (most recent call last):
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\server\superlink\fleet\vce\vce_api.py", line 112, in worker
+    out_mssg, updated_context = backend.process_message(message, context)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\server\superlink\fleet\vce\backend\raybackend.py", line 186, in process_message
+    raise ex
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\server\superlink\fleet\vce\backend\raybackend.py", line 174, in process_message
+    ) = self.pool.fetch_result_and_return_actor_to_pool(future)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 477, in fetch_result_and_return_actor_to_pool
+    _, out_mssg, updated_context = ray.get(future)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\worker.py", line 2667, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\worker.py", line 864, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=23648, ip=127.0.0.1, actor_id=1c31378e7a0dd28474f6181a01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x0000021BCAB0F7C0>)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\message_handler\message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\client\numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\5.FederatedTrainingMejorada2\tfexample\client_app.py", line 68, in evaluate
+    _, zone = clarke_error_grid(y_test_desnormalized, y_pred_desnormalized,  "Clarke Error Grid")
+  File "C:\Users\clara\Desktop\TFG\Codigo TFG\5.FederatedTrainingMejorada2\tfexample\task.py", line 307, in clarke_error_grid
+    if (ref_values.iloc[i] <= 70 and pred_values.iloc[i] <= 70) or (
+AttributeError: 'numpy.ndarray' object has no attribute 'iloc'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=23648, ip=127.0.0.1, actor_id=1c31378e7a0dd28474f6181a01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x0000021BCAB0F7C0>)
+  File "python\ray\_raylet.pyx", line 1883, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1984, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1889, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 1830, in ray._raylet.execute_task.function_executor
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\_private\function_manager.py", line 724, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\ray\util\tracing\tracing_helper.py", line 467, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\flwr\simulation\ray_transport\ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException:
+Exception ClientAppException occurred. Message: 'numpy.ndarray' object has no attribute 'iloc'
+[36m(ClientAppActor pid=23648)[0m 118/118 - 3s - 25ms/step - loss: 0.0102 - root_mean_squared_error: 0.1010[32m [repeated 2x across cluster][0m
+
+[92mINFO [0m:      aggregate_evaluate: received 0 results and 8 failures
+[92mINFO [0m:
+[92mINFO [0m:      [ROUND 2]
+[92mINFO [0m:      configure_fit: strategy sampled 11 clients (out of 11)
+[36m(ClientAppActor pid=23648)[0m Cargando el archivo: 1GML-extracted.xlsx
+[36m(ClientAppActor pid=18784)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names[32m [repeated 4x across cluster][0m
+[36m(ClientAppActor pid=18784)[0m   warnings.warn([32m [repeated 4x across cluster][0m
+[36m(ClientAppActor pid=18784)[0m Datos preparados:
+[36m(ClientAppActor pid=18784)[0m   Tamaño del conjunto de entrenamiento: 14306
+[36m(ClientAppActor pid=18784)[0m   Tamaño del conjunto de prueba: 3564
+[36m(ClientAppActor pid=18784)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=18784)[0m Primeros datos de y_test: [0.55401665 0.565097   0.56786704 0.5706371  0.5734072 ]
+[36m(ClientAppActor pid=18784)[0m Configuración del nodo creada: {'partition-id': 1, 'num-partitions': 11}
+[36m(ClientAppActor pid=18784)[0m Este cliente tiene el partition_id 1 ,el node_id 5964666572621988169 y el archivo 2AML-extracted.xlsx
+[36m(ClientAppActor pid=23648)[0m Input Warning: the maximum reference value 375.00000137090683 or the maximum prediction value 422.97158646583557 exceeds the normal physiological range of glucose (<400 mg/dl).
+[36m(ClientAppActor pid=336)[0m Primeros datos de y_test:
+[36m(ClientAppActor pid=336)[0m Cargando el archivo: 5JMPM-extracted.xlsx[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=336)[0m [0.6260388 0.6426593 0.6565097 0.6814405 0.6980609]
+[36m(ClientAppActor pid=336)[0m Datos preparados:[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=336)[0m   Tamaño del conjunto de entrenamiento: 28653[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=336)[0m   Tamaño del conjunto de prueba: 7150[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=336)[0m   Dimensiones de las entradas: (12, 4)[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=23648)[0m Primeros datos de y_test: [0.47368422 0.49861497 0.51246536 0.5401662  0.5567867 ][32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=336)[0m Configuración del nodo creada: {'partition-id': 3, 'num-partitions': 11}[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=336)[0m Este cliente tiene el partition_id 3 ,el node_id 506252594460099454 y el archivo 5JMPM-extracted.xlsx[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=18784)[0m Cargando el archivo: 7GCQ-extracted.xlsx
+[36m(ClientAppActor pid=19604)[0m Cargando el archivo: 8CGL-extracted.xlsx
+[36m(ClientAppActor pid=18784)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names[32m [repeated 4x across cluster][0m
+[36m(ClientAppActor pid=18784)[0m   warnings.warn([32m [repeated 4x across cluster][0m
+[36m(ClientAppActor pid=18784)[0m Datos preparados:
+[36m(ClientAppActor pid=18784)[0m   Tamaño del conjunto de entrenamiento: 23883
+[36m(ClientAppActor pid=18784)[0m   Tamaño del conjunto de prueba: 5958
+[36m(ClientAppActor pid=18784)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=18784)[0m Primeros datos de y_test: [0.48476455 0.50138503 0.51800555 0.53462607 0.5567867 ]
+[36m(ClientAppActor pid=18784)[0m Configuración del nodo creada: {'partition-id': 4, 'num-partitions': 11}
+[36m(ClientAppActor pid=18784)[0m Este cliente tiene el partition_id 4 ,el node_id 10297208490343075886 y el archivo 7GCQ-extracted.xlsx
+[36m(ClientAppActor pid=19604)[0m Primeros datos de y_test: [0.3434903  0.3767313  0.41551247 0.43490306 0.43490306]
+[36m(ClientAppActor pid=23648)[0m Cargando el archivo: 8GAG-extracted.xlsx
+[36m(ClientAppActor pid=23648)[0m Datos preparados:[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=23648)[0m   Tamaño del conjunto de entrenamiento: 8772[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=23648)[0m   Tamaño del conjunto de prueba: 2180[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=23648)[0m   Dimensiones de las entradas: (12, 4)[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=23648)[0m Configuración del nodo creada: {'partition-id': 6, 'num-partitions': 11}[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=23648)[0m Este cliente tiene el partition_id 6 ,el node_id 2841197753254431381 y el archivo 8GAG-extracted.xlsx[32m [repeated 2x across cluster][0m
+[36m(ClientAppActor pid=23648)[0m Primeros datos de y_test: [0.2299169  0.22437674 0.22160664 0.21883656 0.20775624]
+[36m(ClientAppActor pid=336)[0m Cargando el archivo: 8JLG-extracted.xlsx
+[36m(ClientAppActor pid=23648)[0m Cargando el archivo: 8MAVS-extracted.xlsx
+[36m(ClientAppActor pid=336)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names[32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=336)[0m   warnings.warn([32m [repeated 3x across cluster][0m
+[36m(ClientAppActor pid=336)[0m Datos preparados:
+[36m(ClientAppActor pid=336)[0m   Tamaño del conjunto de entrenamiento: 22990
+[36m(ClientAppActor pid=336)[0m   Tamaño del conjunto de prueba: 5735
+[36m(ClientAppActor pid=336)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=336)[0m Primeros datos de y_test: [0.16620499 0.16066483 0.16343491 0.18836565 0.22437674]
+[36m(ClientAppActor pid=336)[0m Configuración del nodo creada: {'partition-id': 7, 'num-partitions': 11}
+[36m(ClientAppActor pid=336)[0m Este cliente tiene el partition_id 7 ,el node_id 3978323868026725139 y el archivo 8JLG-extracted.xlsx
+[36m(ClientAppActor pid=23648)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names
+[36m(ClientAppActor pid=23648)[0m   warnings.warn(
+[36m(ClientAppActor pid=23648)[0m Datos preparados:
+[36m(ClientAppActor pid=23648)[0m   Tamaño del conjunto de entrenamiento: 30118
+[36m(ClientAppActor pid=23648)[0m   Tamaño del conjunto de prueba: 7516
+[36m(ClientAppActor pid=23648)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=23648)[0m Primeros datos de y_test: [0.22437674 0.22160664 0.23545706 0.29085872 0.38227147]
+[36m(ClientAppActor pid=23648)[0m Configuración del nodo creada: {'partition-id': 8, 'num-partitions': 11}
+[36m(ClientAppActor pid=23648)[0m Este cliente tiene el partition_id 8 ,el node_id 7279788262349955528 y el archivo 8MAVS-extracted.xlsx
+[36m(ClientAppActor pid=19604)[0m Cargando el archivo: 8SVB-extracted.xlsx
+[36m(ClientAppActor pid=18784)[0m Cargando el archivo: 8VVC-extracted.xlsx
+[36m(ClientAppActor pid=19604)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names
+[36m(ClientAppActor pid=19604)[0m   warnings.warn(
+[36m(ClientAppActor pid=19604)[0m Datos preparados:
+[36m(ClientAppActor pid=19604)[0m   Tamaño del conjunto de entrenamiento: 13633
+[36m(ClientAppActor pid=19604)[0m   Tamaño del conjunto de prueba: 3395
+[36m(ClientAppActor pid=19604)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=19604)[0m Primeros datos de y_test: [0.47091413 0.47368422 0.5096953  0.53462607 0.53739613]
+[36m(ClientAppActor pid=19604)[0m Configuración del nodo creada: {'partition-id': 9, 'num-partitions': 11}
+[36m(ClientAppActor pid=19604)[0m Este cliente tiene el partition_id 9 ,el node_id 16660927928521274299 y el archivo 8SVB-extracted.xlsx
+[36m(ClientAppActor pid=18784)[0m C:\Users\clara\anaconda3\envs\flower-3.10.12\lib\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but MinMaxScaler was fitted without feature names
+[36m(ClientAppActor pid=18784)[0m   warnings.warn(
+[36m(ClientAppActor pid=18784)[0m Datos preparados:
+[36m(ClientAppActor pid=18784)[0m   Tamaño del conjunto de entrenamiento: 31005
+[36m(ClientAppActor pid=18784)[0m   Tamaño del conjunto de prueba: 7738
+[36m(ClientAppActor pid=18784)[0m   Dimensiones de las entradas: (12, 4)
+[36m(ClientAppActor pid=18784)[0m Primeros datos de y_test: [0.40443215 0.4265928  0.44321328 0.45152354 0.46537396]
+[36m(ClientAppActor pid=18784)[0m Configuración del nodo creada: {'partition-id': 10, 'num-partitions': 11}
+[36m(ClientAppActor pid=18784)[0m Este cliente tiene el partition_id 10 ,el node_id 17615776232371493629 y el archivo 8VVC-extracted.xlsx

@@ -1,0 +1,18 @@
+{"time":"2024-12-18T00:00:33.2163585+01:00","level":"INFO","msg":"using version","core version":"0.19.1"}
+{"time":"2024-12-18T00:00:33.2166011+01:00","level":"INFO","msg":"created symlink","path":"C:\\Users\\clara\\Desktop\\TFG\\Codigo TFG\\4.FederatedTrainingMejorada\\wandb\\run-20241218_000033-4pmiadf9\\logs\\debug-core.log"}
+{"time":"2024-12-18T00:00:34.9260377+01:00","level":"INFO","msg":"created new stream","id":"4pmiadf9"}
+{"time":"2024-12-18T00:00:34.9265775+01:00","level":"INFO","msg":"stream: started","id":"4pmiadf9"}
+{"time":"2024-12-18T00:00:34.9265775+01:00","level":"INFO","msg":"handler: started","stream_id":"4pmiadf9"}
+{"time":"2024-12-18T00:00:34.9271157+01:00","level":"INFO","msg":"writer: Do: started","stream_id":"4pmiadf9"}
+{"time":"2024-12-18T00:00:34.9271157+01:00","level":"INFO","msg":"sender: started","stream_id":"4pmiadf9"}
+{"time":"2024-12-18T00:00:35.2533655+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-12-18T00:02:51.2690249+01:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": net/http: request canceled (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2024-12-18T00:04:09.5679858+01:00","level":"INFO","msg":"api: retrying HTTP error","status":502,"url":"https://api.wandb.ai/files/clara-fuertes-4pal-universidad-polit-cnica-de-madrid/glucose_prediction_FLOWER/4pmiadf9/file_stream","body":"\n<html><head>\n<meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<title>502 Server Error</title>\n</head>\n<body text=#000000 bgcolor=#ffffff>\n<h1>Error: Server Error</h1>\n<h2>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.</h2>\n<h2></h2>\n</body></html>\n"}
+{"time":"2024-12-18T00:07:48.0047332+01:00","level":"INFO","msg":"stream: closing","id":"4pmiadf9"}
+{"time":"2024-12-18T00:07:48.0056197+01:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-12-18T00:07:48.0100426+01:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-12-18T00:07:48.657794+01:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-12-18T00:07:49.0092913+01:00","level":"INFO","msg":"handler: closed","stream_id":"4pmiadf9"}
+{"time":"2024-12-18T00:07:49.0092913+01:00","level":"INFO","msg":"writer: Close: closed","stream_id":"4pmiadf9"}
+{"time":"2024-12-18T00:07:49.0092913+01:00","level":"INFO","msg":"sender: closed","stream_id":"4pmiadf9"}
+{"time":"2024-12-18T00:07:49.0100151+01:00","level":"INFO","msg":"stream: closed","id":"4pmiadf9"}
